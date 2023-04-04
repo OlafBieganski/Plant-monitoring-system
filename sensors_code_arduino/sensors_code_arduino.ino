@@ -22,18 +22,27 @@ void setup()
 
 void loop()
 {
-  Serial.println("\n");
+  //Serial.println("\n");
 
   int chk = DHT11.read(DHT11PIN);
 
-  Serial.print("Read sensor: ");
+  Serial.print(float(DHT11.humidity));
+  Serial.print(" ");
+  Serial.print((float)DHT11.temperature);
+  Serial.print(" ");
+  Serial.print(analogRead(GROUND_SENSOR));
+  Serial.print(" ");
+  Serial.print(lightMeter.readLightLevel());
+  Serial.print("\n");
+
+  //Serial.print("Read sensor: ");
   /*switch (chk)
   {
     case DHTLIB_OK: 
     Serial.println("OK"); 
   }*/
 
-  Serial.print("Humidity (%): ");
+  /*Serial.print("Humidity (%): ");
   Serial.println((float)DHT11.humidity, 2);
 
   Serial.print("Temperature (°C): ");
@@ -43,7 +52,7 @@ void loop()
   Serial.println(analogRead(GROUND_SENSOR));
 
   Serial.print("Sunlihgt level (lux): ");
-  Serial.println(lightMeter.readLightLevel());
+  Serial.println(lightMeter.readLightLevel());*/
 
   delay(1000);
 }
