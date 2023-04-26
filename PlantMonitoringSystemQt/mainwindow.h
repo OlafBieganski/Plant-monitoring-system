@@ -16,6 +16,9 @@ public:
     ~MainWindow();
 
 private slots:
+    /*!
+     * \brief creates connection with serial port and receives data
+     */
     void on_pushButton_measure_clicked();
 
 private:

@@ -4,7 +4,6 @@
 #include <QPixmap>
 #include <QDebug>
 #include <QtSerialPort>
-#include <QtSerialPortInfo>
 
 void readData(QSerialPort & serial) {
     QByteArray data = serial.readAll();
@@ -43,7 +42,7 @@ void MainWindow::on_pushButton_measure_clicked()
     }
 
     QSerialPort serial;
-    serial.setPortName("COM3");
+    serial.setPortName("/dev/ttyS1");
     serial.setBaudRate(QSerialPort::Baud9600);
     serial.setDataBits(QSerialPort::Data8);
     serial.setParity(QSerialPort::NoParity);
