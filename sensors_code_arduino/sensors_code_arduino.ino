@@ -37,7 +37,7 @@ BH1750 lightMeter;
 
 void setup()
 {
-  Serial.begin(9600);
+  Serial.begin(9600, SERIAL_8N1);
   Wire.begin();
   lightMeter.begin();
   /*Serial.println(F("BH1750 Test"));
@@ -54,14 +54,14 @@ void loop()
   int chk = DHT11.read(DHT11PIN);
   int ground = analogRead(GROUND_SENSOR);
   int sunlight = lightMeter.readLightLevel();
-  float temperature = (float)DHT11.temperature;
-  float humidity = float(DHT11.humidity);
+  int temperature = DHT11.temperature;
+  int humidity = DHT11.humidity;
 
-  uint8_t temperatureBytes[sizeof(float)];
-  valueToBytes<float>(temperature, temperatureBytes);
+  uint8_t temperatureBytes[sizeof(int)];
+  valueToBytes<int>(temperature, temperatureBytes);
 
-  uint8_t humidityBytes[sizeof(float)];
-  valueToBytes<float>(humidity, humidityBytes);
+  uint8_t humidityBytes[sizeof(int)];
+  valueToBytes<int>(humidity, humidityBytes);
 
   uint8_t groundBytes[sizeof(int)];
   valueToBytes<int>(ground, groundBytes);
@@ -69,11 +69,11 @@ void loop()
   uint8_t sunlightBytes[sizeof(int)];
   valueToBytes<int>(sunlight, sunlightBytes);
 
-  int bytesAmount = 2*sizeof(float) + 2*sizeof(int);
+  int bytesAmount = 4*sizeof(int);
   uint8_t dataCRC[bytesAmount];
-  memcpy(dataCRC, temperatureBytes, sizeof(float));
-  memcpy(dataCRC + sizeof(float), humidityBytes, sizeof(float));
-  memcpy(dataCRC + sizeof(float), groundBytes, sizeof(int));
+  memcpy(dataCRC, temperatureBytes, sizeof(int));
+  memcpy(dataCRC + sizeof(int), humidityBytes, sizeof(int));
+  memcpy(dataCRC + sizeof(int), groundBytes, sizeof(int));
   memcpy(dataCRC + sizeof(int), sunlightBytes, sizeof(int));
 
   uint8_t crc8 = calculateCRC8(dataCRC, bytesAmount);
@@ -90,8 +90,8 @@ void loop()
   Serial.print(sunlight);
   Serial.print(" ");
   Serial.print(crc8);
-  Serial.print(" T");
-  Serial.print("\n");
+  Serial.print(" T ");
+  //Serial.flush();
 
   //Serial.print("Read sensor: ");
   /*switch (chk)

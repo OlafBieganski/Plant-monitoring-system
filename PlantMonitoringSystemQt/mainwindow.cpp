@@ -5,26 +5,16 @@
 #include <QDebug>
 #include <QtSerialPort>
 
-void readData(QSerialPort & serial) {
-    QByteArray data = serial.readAll();
-    if (data.size() >= 3 && data[0] == 'H' && data[2] == 'T') {
-        // Odczytaj dane z ramki
-        int value = data[1];
-        // Przetwórz dane i wyświetl w aplikacji
-        qDebug() << "Received data:" << value;
-    }
-}
-
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    QPixmap plantPicture("/mnt/c/Users/olafb/OneDrive/Obrazy/roslina_zdrowa.png");
+    QPixmap plantPicture("C:/Users/olafb/OneDrive/Obrazy/roslina_zdrowa.png");
     ui->label_plant_pic->setPixmap(plantPicture);
     ui->label_plant_pic->setAlignment(Qt::AlignCenter);
     ui->label_plant_state->setAlignment(Qt::AlignCenter);
-
+    serial = new QSerialPort(this);
 }
 
 MainWindow::~MainWindow()
@@ -41,29 +31,44 @@ void MainWindow::on_pushButton_measure_clicked()
         qDebug() << port.portName();
     }
 
-    QSerialPort serial;
-    serial.setPortName("/dev/ttyS1");
-    serial.setBaudRate(QSerialPort::Baud9600);
-    serial.setDataBits(QSerialPort::Data8);
-    serial.setParity(QSerialPort::NoParity);
-    serial.setStopBits(QSerialPort::OneStop);
-    serial.setFlowControl(QSerialPort::NoFlowControl);
+    serial->setPortName("COM1");
+    serial->setBaudRate(QSerialPort::Baud9600);
+    serial->setDataBits(QSerialPort::Data8);
+    serial->setParity(QSerialPort::NoParity);
+    serial->setStopBits(QSerialPort::OneStop);
+    serial->setFlowControl(QSerialPort::NoFlowControl);
 
     // Open the serial port
-    if (!serial.open(QIODevice::ReadWrite)) {
-        QSerialPort::SerialPortError error_code = serial.error();
+    if (!serial->open(QSerialPort::ReadOnly)) {
+        QSerialPort::SerialPortError error_code = serial->error();
         qDebug() << "Failed to open serial port";
         qDebug() << "Error code: " << error_code;
         return;
     }
 
-    // Read data from the serial port
-    QObject::connect(&serial, &QSerialPort::readyRead, [&]() {
-        QByteArray data = serial.readAll();
-        qDebug() << "Received data:" << data;
-    });
+    // wait until enough data is available
+    while(serial->bytesAvailable() < 60){
+        if(serial->waitForReadyRead() == false){
+            qDebug() << "Error in void MainWindow::on_pushButton_measure_clicked(): " << serial->error();
+            return;
+        }
+    }
 
-    // Send data to the serial port
-    QByteArray sendData = "Hello Arduino!";
-    serial.write(sendData);
+    // find the beginning of the frame in incoming data
+    char byte = '0';
+    do{
+        serial->read(&byte, 1);
+    }while(byte != 'H');
+
+    // parse the data frame
+    int trash, temperature, humidity, ground, sunlight, crc8;
+    QTextStream arduinoData(serial);
+    arduinoData >> trash >> temperature >> humidity >> ground >> sunlight >> crc8;
+    qDebug() << "Dane: " <<  trash;
+    qDebug() << temperature;
+    qDebug() << humidity;
+    qDebug() << ground;
+    qDebug() << sunlight;
+    qDebug() << crc8;
+    serial->close();
 }
