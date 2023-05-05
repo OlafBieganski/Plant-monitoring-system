@@ -24,32 +24,14 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_measure_clicked()
 {
-    qDebug() << "clicked";
-    QList<QSerialPortInfo> ports = QSerialPortInfo::availablePorts();
-    qDebug() << ports.size();
-    foreach (const QSerialPortInfo &port, ports) {
-        qDebug() << port.portName();
-    }
-
-    serial->setPortName("COM1");
-    serial->setBaudRate(QSerialPort::Baud9600);
-    serial->setDataBits(QSerialPort::Data8);
-    serial->setParity(QSerialPort::NoParity);
-    serial->setStopBits(QSerialPort::OneStop);
-    serial->setFlowControl(QSerialPort::NoFlowControl);
-
-    // Open the serial port
-    if (!serial->open(QSerialPort::ReadOnly)) {
-        QSerialPort::SerialPortError error_code = serial->error();
-        qDebug() << "Failed to open serial port";
-        qDebug() << "Error code: " << error_code;
+    if(!serial->isOpen()){
+        QMessageBox::information(this, "Port szeregowy", "Nie podłączono do żadnego portu szeregowego");
         return;
     }
-
     // wait until enough data is available
     while(serial->bytesAvailable() < 60){
-        if(serial->waitForReadyRead() == false){
-            qDebug() << "Error in void MainWindow::on_pushButton_measure_clicked(): " << serial->error();
+        if(serial->waitForReadyRead(5000) == false){
+            QMessageBox::information(this, serial->portName(), "Przekroczono czas transmisji: dane nie zostały odebrane.");
             return;
         }
     }
@@ -70,5 +52,18 @@ void MainWindow::on_pushButton_measure_clicked()
     qDebug() << ground;
     qDebug() << sunlight;
     qDebug() << crc8;
-    serial->close();
 }
+
+void MainWindow::on_actionWybierz_port_szeregowy_triggered()
+{
+    com_window = new PortSelection(this, serial);
+    com_window->setModal(true);
+    com_window->show();
+}
+
+
+void MainWindow::on_actionWykresy_triggered()
+{
+
+}
+

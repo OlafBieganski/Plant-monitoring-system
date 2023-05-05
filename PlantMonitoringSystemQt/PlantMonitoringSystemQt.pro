@@ -18,15 +18,21 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    portselection.cpp
 
 HEADERS += \
-    mainwindow.h
+    mainwindow.h \
+    portselection.h
 
 FORMS += \
-    mainwindow.ui
+    mainwindow.ui \
+    portselection.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES += \
+    Resources.qrc

@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <QSerialPort>
+#include <portselection.h>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -21,11 +22,15 @@ private slots:
      * \brief creates connection with a serial port and receives data
      */
     void on_pushButton_measure_clicked();
+    void on_actionWybierz_port_szeregowy_triggered();
+
+    void on_actionWykresy_triggered();
+
 private:
     Ui::MainWindow *ui;
-
     QSerialPort* serial;
     char* serial_buffer;
     int buffer_size;
+    PortSelection* com_window;
 };
 #endif // MAINWINDOW_H

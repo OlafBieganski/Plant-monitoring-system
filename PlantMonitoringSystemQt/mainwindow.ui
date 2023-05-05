@@ -96,17 +96,35 @@
     </item>
    </layout>
   </widget>
+  <widget class="QStatusBar" name="statusbar"/>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
      <width>816</width>
-     <height>20</height>
+     <height>25</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuPort_COM">
+    <property name="title">
+     <string>Opcje</string>
+    </property>
+    <addaction name="actionWybierz_port_szeregowy"/>
+    <addaction name="actionWykresy"/>
+   </widget>
+   <addaction name="menuPort_COM"/>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionWybierz_port_szeregowy">
+   <property name="text">
+    <string>Wybierz port szeregowy</string>
+   </property>
+  </action>
+  <action name="actionWykresy">
+   <property name="text">
+    <string>Wykresy</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>
