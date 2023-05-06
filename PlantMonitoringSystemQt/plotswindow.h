@@ -15,6 +15,10 @@ public:
     explicit PlotsWindow(QWidget *parent = nullptr);
     ~PlotsWindow();
 
+signals:
+    void switch_window();
+    void change_serial_port();
+
 private slots:
     void on_actionWybierz_port_szeregowy_triggered();
 

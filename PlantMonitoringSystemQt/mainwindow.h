@@ -33,6 +33,6 @@ private:
     char* serial_buffer;
     int buffer_size;
     PortSelection* com_window;
-    PlotsWindow* second_window;
+    PlotsWindow* second_window = nullptr;
 };
 #endif // MAINWINDOW_H

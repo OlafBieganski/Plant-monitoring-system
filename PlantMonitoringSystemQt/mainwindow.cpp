@@ -67,17 +67,13 @@ void MainWindow::on_actionWybierz_port_szeregowy_triggered()
 
 void MainWindow::on_actionWykresy_triggered()
 {
-    second_window = new PlotsWindow(this);
-    connect(second_window, SIGNAL(destroyed()), this, SLOT(onSecondWindowClosed()));
+    if(second_window == nullptr) second_window = new PlotsWindow(this);
+    connect(second_window, &PlotsWindow::switch_window, this, &MainWindow::onSecondWindowClosed);
     second_window->show();
     hide();
-    qDebug() << "halo";
 }
 
 void MainWindow::onSecondWindowClosed(){
-    this->activateWindow();
-    this->raise();
-    this->show();
-    qDebug() << "Dziala";
+    show();
 }
 

@@ -15,12 +15,13 @@ PlotsWindow::~PlotsWindow()
 
 void PlotsWindow::on_actionWybierz_port_szeregowy_triggered()
 {
-
+    emit change_serial_port();
 }
 
 
 void PlotsWindow::on_actionOkno_g_wne_triggered()
 {
-    this->close();
+    emit switch_window();
+    hide();
 }
 
