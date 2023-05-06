@@ -20,6 +20,9 @@ MainWindow::MainWindow(QWidget *parent)
 MainWindow::~MainWindow()
 {
     delete ui;
+    serial->close();
+    delete serial;
+    qDebug() << "Destructed";
 }
 
 void MainWindow::on_pushButton_measure_clicked()
@@ -64,6 +67,17 @@ void MainWindow::on_actionWybierz_port_szeregowy_triggered()
 
 void MainWindow::on_actionWykresy_triggered()
 {
+    second_window = new PlotsWindow(this);
+    connect(second_window, SIGNAL(destroyed()), this, SLOT(onSecondWindowClosed()));
+    second_window->show();
+    hide();
+    qDebug() << "halo";
+}
 
+void MainWindow::onSecondWindowClosed(){
+    this->activateWindow();
+    this->raise();
+    this->show();
+    qDebug() << "Dziala";
 }
 

@@ -1,7 +1,7 @@
 QT       += core gui
 QT += serialport
 
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+greaterThan(QT_MAJOR_VERSION, 4): QT += widgets printsupport
 
 CONFIG += c++11
 
@@ -19,14 +19,19 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
     main.cpp \
     mainwindow.cpp \
-    portselection.cpp
+    plotswindow.cpp \
+    portselection.cpp \
+    qcustomplot.cpp
 
 HEADERS += \
     mainwindow.h \
-    portselection.h
+    plotswindow.h \
+    portselection.h \
+    qcustomplot.h
 
 FORMS += \
     mainwindow.ui \
+    plotswindow.ui \
     portselection.ui
 
 # Default rules for deployment.

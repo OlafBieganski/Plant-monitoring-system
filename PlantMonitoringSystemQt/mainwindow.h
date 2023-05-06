@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include <QSerialPort>
 #include <portselection.h>
+#include <plotswindow.h>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -23,8 +24,8 @@ private slots:
      */
     void on_pushButton_measure_clicked();
     void on_actionWybierz_port_szeregowy_triggered();
-
     void on_actionWykresy_triggered();
+    void onSecondWindowClosed();
 
 private:
     Ui::MainWindow *ui;
@@ -32,5 +33,6 @@ private:
     char* serial_buffer;
     int buffer_size;
     PortSelection* com_window;
+    PlotsWindow* second_window;
 };
 #endif // MAINWINDOW_H
