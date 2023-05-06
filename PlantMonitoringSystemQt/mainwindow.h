@@ -23,8 +23,17 @@ private slots:
      * \brief creates connection with a serial port and receives data
      */
     void on_pushButton_measure_clicked();
+    /*!
+     * \brief on_actionWybierz_port_szeregowy_triggered
+     */
     void on_actionWybierz_port_szeregowy_triggered();
+    /*!
+     * \brief on_actionWykresy_triggered
+     */
     void on_actionWykresy_triggered();
+    /*!
+     * \brief onSecondWindowClosed
+     */
     void onSecondWindowClosed();
 
 private:

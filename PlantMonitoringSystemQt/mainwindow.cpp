@@ -67,8 +67,10 @@ void MainWindow::on_actionWybierz_port_szeregowy_triggered()
 
 void MainWindow::on_actionWykresy_triggered()
 {
-    if(second_window == nullptr) second_window = new PlotsWindow(this);
-    connect(second_window, &PlotsWindow::switch_window, this, &MainWindow::onSecondWindowClosed);
+    if(second_window == nullptr){
+        second_window = new PlotsWindow(this, serial);
+        connect(second_window, &PlotsWindow::switch_window, this, &MainWindow::onSecondWindowClosed);
+    }
     second_window->show();
     hide();
 }

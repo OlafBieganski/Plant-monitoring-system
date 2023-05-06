@@ -26,52 +26,62 @@
 \DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00022}00022\ \ \ \ \ \textcolor{keyword}{delete}\ ui;}
 \DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00023}00023\ \ \ \ \ serial-\/>close();}
 \DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00024}00024\ \ \ \ \ \textcolor{keyword}{delete}\ serial;}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00025}00025\ \}}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00026}00026\ }
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00027}00027\ \textcolor{keywordtype}{void}\ MainWindow::on\_pushButton\_measure\_clicked()}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00028}00028\ \{}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00029}00029\ \ \ \ \ \textcolor{keywordflow}{if}(!serial-\/>isOpen())\{}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00030}00030\ \ \ \ \ \ \ \ \ QMessageBox::information(\textcolor{keyword}{this},\ \textcolor{stringliteral}{"{}Port\ szeregowy"{}},\ \textcolor{stringliteral}{"{}Nie\ podłączono\ do\ żadnego\ portu\ szeregowego"{}});}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00031}00031\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00032}00032\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00033}00033\ \ \ \ \ \textcolor{comment}{//\ wait\ until\ enough\ data\ is\ available}}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00034}00034\ \ \ \ \ \textcolor{keywordflow}{while}(serial-\/>bytesAvailable()\ <\ 60)\{}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00035}00035\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(serial-\/>waitForReadyRead(5000)\ ==\ \textcolor{keyword}{false})\{}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ QMessageBox::information(\textcolor{keyword}{this},\ serial-\/>portName(),\ \textcolor{stringliteral}{"{}Przekroczono\ czas\ transmisji:\ dane\ nie\ zostały\ odebrane."{}});}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00038}00038\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00039}00039\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00040}00040\ }
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00041}00041\ \ \ \ \ \textcolor{comment}{//\ find\ the\ beginning\ of\ the\ frame\ in\ incoming\ data}}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00042}00042\ \ \ \ \ \textcolor{keywordtype}{char}\ \textcolor{keywordtype}{byte}\ =\ \textcolor{charliteral}{'0'};}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00043}00043\ \ \ \ \ \textcolor{keywordflow}{do}\{}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00044}00044\ \ \ \ \ \ \ \ \ serial-\/>read(\&\textcolor{keywordtype}{byte},\ 1);}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00045}00045\ \ \ \ \ \}\textcolor{keywordflow}{while}(\textcolor{keywordtype}{byte}\ !=\ \textcolor{charliteral}{'H'});}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00046}00046\ }
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00047}00047\ \ \ \ \ \textcolor{comment}{//\ parse\ the\ data\ frame}}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00048}00048\ \ \ \ \ \textcolor{keywordtype}{int}\ trash,\ temperature,\ humidity,\ ground,\ sunlight,\ crc8;}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00049}00049\ \ \ \ \ QTextStream\ arduinoData(serial);}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00050}00050\ \ \ \ \ arduinoData\ >>\ trash\ >>\ temperature\ >>\ humidity\ >>\ ground\ >>\ sunlight\ >>\ crc8;}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00051}00051\ \ \ \ \ qDebug()\ <<\ \textcolor{stringliteral}{"{}Dane:\ "{}}\ <<\ \ trash;}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00052}00052\ \ \ \ \ qDebug()\ <<\ temperature;}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00053}00053\ \ \ \ \ qDebug()\ <<\ humidity;}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00054}00054\ \ \ \ \ qDebug()\ <<\ ground;}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00055}00055\ \ \ \ \ qDebug()\ <<\ sunlight;}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00056}00056\ \ \ \ \ qDebug()\ <<\ crc8;}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00057}00057\ \}}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00058}00058\ }
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00059}00059\ \textcolor{keywordtype}{void}\ MainWindow::on\_actionWybierz\_port\_szeregowy\_triggered()}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00060}00060\ \{}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00061}00061\ \ \ \ \ com\_window\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_port_selection}{PortSelection}}(\textcolor{keyword}{this},\ serial);}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00062}00062\ \ \ \ \ com\_window-\/>setModal(\textcolor{keyword}{true});}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00063}00063\ \ \ \ \ com\_window-\/>show();}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00064}00064\ \}}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00025}00025\ \ \ \ \ qDebug()\ <<\ \textcolor{stringliteral}{"{}Destructed"{}};}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00026}00026\ \}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00028}00028\ \textcolor{keywordtype}{void}\ MainWindow::on\_pushButton\_measure\_clicked()}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00029}00029\ \{}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00030}00030\ \ \ \ \ \textcolor{keywordflow}{if}(!serial-\/>isOpen())\{}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00031}00031\ \ \ \ \ \ \ \ \ QMessageBox::information(\textcolor{keyword}{this},\ \textcolor{stringliteral}{"{}Port\ szeregowy"{}},\ \textcolor{stringliteral}{"{}Nie\ podłączono\ do\ żadnego\ portu\ szeregowego"{}});}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00032}00032\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00033}00033\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00034}00034\ \ \ \ \ \textcolor{comment}{//\ wait\ until\ enough\ data\ is\ available}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00035}00035\ \ \ \ \ \textcolor{keywordflow}{while}(serial-\/>bytesAvailable()\ <\ 60)\{}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00036}00036\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(serial-\/>waitForReadyRead(5000)\ ==\ \textcolor{keyword}{false})\{}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ QMessageBox::information(\textcolor{keyword}{this},\ serial-\/>portName(),\ \textcolor{stringliteral}{"{}Przekroczono\ czas\ transmisji:\ dane\ nie\ zostały\ odebrane."{}});}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00039}00039\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00040}00040\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00042}00042\ \ \ \ \ \textcolor{comment}{//\ find\ the\ beginning\ of\ the\ frame\ in\ incoming\ data}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00043}00043\ \ \ \ \ \textcolor{keywordtype}{char}\ \textcolor{keywordtype}{byte}\ =\ \textcolor{charliteral}{'0'};}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00044}00044\ \ \ \ \ \textcolor{keywordflow}{do}\{}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00045}00045\ \ \ \ \ \ \ \ \ serial-\/>read(\&\textcolor{keywordtype}{byte},\ 1);}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00046}00046\ \ \ \ \ \}\textcolor{keywordflow}{while}(\textcolor{keywordtype}{byte}\ !=\ \textcolor{charliteral}{'H'});}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00048}00048\ \ \ \ \ \textcolor{comment}{//\ parse\ the\ data\ frame}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00049}00049\ \ \ \ \ \textcolor{keywordtype}{int}\ trash,\ temperature,\ humidity,\ ground,\ sunlight,\ crc8;}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00050}00050\ \ \ \ \ QTextStream\ arduinoData(serial);}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00051}00051\ \ \ \ \ arduinoData\ >>\ trash\ >>\ temperature\ >>\ humidity\ >>\ ground\ >>\ sunlight\ >>\ crc8;}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00052}00052\ \ \ \ \ qDebug()\ <<\ \textcolor{stringliteral}{"{}Dane:\ "{}}\ <<\ \ trash;}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00053}00053\ \ \ \ \ qDebug()\ <<\ temperature;}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00054}00054\ \ \ \ \ qDebug()\ <<\ humidity;}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00055}00055\ \ \ \ \ qDebug()\ <<\ ground;}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00056}00056\ \ \ \ \ qDebug()\ <<\ sunlight;}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00057}00057\ \ \ \ \ qDebug()\ <<\ crc8;}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00058}00058\ \}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00060}00060\ \textcolor{keywordtype}{void}\ MainWindow::on\_actionWybierz\_port\_szeregowy\_triggered()}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00061}00061\ \{}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00062}00062\ \ \ \ \ com\_window\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_port_selection}{PortSelection}}(\textcolor{keyword}{this},\ serial);}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00063}00063\ \ \ \ \ com\_window-\/>setModal(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00064}00064\ \ \ \ \ com\_window-\/>show();}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00065}00065\ \}}
 \DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00066}00066\ }
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00067}00067\ \textcolor{keywordtype}{void}\ MainWindow::on\_actionWykresy\_triggered()}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00068}00068\ \{}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00069}00069\ }
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00070}00070\ \}}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00071}00071\ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00067}00067\ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00068}00068\ \textcolor{keywordtype}{void}\ MainWindow::on\_actionWykresy\_triggered()}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00069}00069\ \{}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00070}00070\ \ \ \ \ \textcolor{keywordflow}{if}(second\_window\ ==\ \textcolor{keyword}{nullptr})\{}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00071}00071\ \ \ \ \ \ \ \ \ second\_window\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_plots_window}{PlotsWindow}}(\textcolor{keyword}{this},\ serial);}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00072}00072\ \ \ \ \ \ \ \ \ connect(second\_window,\ \&\mbox{\hyperlink{class_plots_window_a4b8e20b56d116059ddd6ed570a2f5998}{PlotsWindow::switch\_window}},\ \textcolor{keyword}{this},\ \&MainWindow::onSecondWindowClosed);}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00073}00073\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00074}00074\ \ \ \ \ second\_window-\/>show();}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00075}00075\ \ \ \ \ hide();}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00076}00076\ \}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00077}00077\ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00078}00078\ \textcolor{keywordtype}{void}\ MainWindow::onSecondWindowClosed()\{}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00079}00079\ \ \ \ \ show();}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00080}00080\ \}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00081}00081\ }
 
 \end{DoxyCode}
