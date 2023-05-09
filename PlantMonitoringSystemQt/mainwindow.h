@@ -5,6 +5,7 @@
 #include <QSerialPort>
 #include <portselection.h>
 #include <plotswindow.h>
+#include <QFile>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -36,6 +37,12 @@ private slots:
      */
     void onSecondWindowClosed();
 
+    void on_actionNowa_seria_triggered();
+
+    void on_actionWybierz_serie_triggered();
+
+    void on_actionZapisz_pomiar_triggered();
+
 private:
     Ui::MainWindow *ui;
     QSerialPort* serial;
@@ -43,5 +50,8 @@ private:
     int buffer_size;
     PortSelection* com_window;
     PlotsWindow* second_window = nullptr;
+    QString curr_filename;
+    QFile* curr_file_handle =nullptr;
+    int temperature, humidity, ground, sunlight;
 };
 #endif // MAINWINDOW_H

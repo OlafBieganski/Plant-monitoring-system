@@ -136,6 +136,9 @@
     </property>
     <addaction name="actionWybierz_port_szeregowy"/>
     <addaction name="actionWykresy"/>
+    <addaction name="actionNowa_seria"/>
+    <addaction name="actionZapisz_pomiar"/>
+    <addaction name="actionWybierz_serie"/>
    </widget>
    <addaction name="menuPort_COM"/>
   </widget>
@@ -147,6 +150,21 @@
   <action name="actionWykresy">
    <property name="text">
     <string>Wykresy</string>
+   </property>
+  </action>
+  <action name="actionNowa_seria">
+   <property name="text">
+    <string>Nowa seria</string>
+   </property>
+  </action>
+  <action name="actionZapisz_pomiar">
+   <property name="text">
+    <string>Zapisz pomiar</string>
+   </property>
+  </action>
+  <action name="actionWybierz_serie">
+   <property name="text">
+    <string>Wybierz serie</string>
    </property>
   </action>
  </widget>

@@ -4,6 +4,7 @@
 #include <QPixmap>
 #include <QDebug>
 #include <QtSerialPort>
+#include <QFileDialog>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -46,15 +47,15 @@ void MainWindow::on_pushButton_measure_clicked()
     }while(byte != 'H');
 
     // parse the data frame
-    int trash, temperature, humidity, ground, sunlight, crc8;
+    int trash, crc8;
     QTextStream arduinoData(serial);
     arduinoData >> trash >> temperature >> humidity >> ground >> sunlight >> crc8;
-    qDebug() << "Dane: " <<  trash;
+    /*qDebug() << "Dane: " <<  trash;
     qDebug() << temperature;
     qDebug() << humidity;
     qDebug() << ground;
     qDebug() << sunlight;
-    qDebug() << crc8;
+    qDebug() << crc8;*/
 }
 
 void MainWindow::on_actionWybierz_port_szeregowy_triggered()
@@ -77,5 +78,70 @@ void MainWindow::on_actionWykresy_triggered()
 
 void MainWindow::onSecondWindowClosed(){
     show();
+}
+
+void MainWindow::on_actionNowa_seria_triggered()
+{
+    QString new_filename = QFileDialog::getSaveFileName(this, tr("Stwórz nową serię pomiarową"), QDir::currentPath(),
+        tr("Pliki serii pomiarowej (*.srs);;All Files (*)"));
+
+    if (!new_filename.isEmpty()) {
+        curr_filename = new_filename;
+        if(curr_file_handle != nullptr){
+            curr_file_handle->close();
+            delete curr_file_handle;
+        }
+        curr_file_handle = new QFile(curr_filename);
+        //QString new_name = curr_file_handle->fileName() + ".srs";
+        //curr_file_handle->rename(new_name);
+        if (curr_file_handle->open(QIODevice::ReadWrite | QIODevice::Append | QIODevice::Text)) {
+            QTextStream out(curr_file_handle);
+            out << "#2808\n"; //magic number of all files
+        }
+    }
+
+}
+
+
+void MainWindow::on_actionWybierz_serie_triggered()
+{
+    QString new_filename = QFileDialog::getOpenFileName(this, tr("Wybierz plik serii pomiarowej"), QDir::currentPath(),
+        tr("Pliki serii pomiarowej (*.srs);;All Files (*)"));
+    curr_filename = new_filename;
+    qDebug() << new_filename;
+    if(curr_file_handle != nullptr){
+        curr_file_handle->close();
+        delete curr_file_handle;
+    }
+    curr_file_handle = new QFile(curr_filename);
+    if(!curr_file_handle->open(QIODevice::ReadWrite | QIODevice::Text)){
+        QMessageBox::critical(this, "Wybierz plik serii pomiarowej", "Nie udało sie otworzyć pliku");
+        delete curr_file_handle;
+        return;
+    }
+    QTextStream file_stream(curr_file_handle);
+    QString magic_nr;
+    file_stream >> magic_nr;
+    qDebug() << magic_nr;
+    if(magic_nr != "#2808"){
+        QMessageBox::critical(this, "Wybierz plik serii pomiarowej", "Niepoprawny plik.");
+        curr_file_handle->close();
+        delete curr_file_handle;
+    }
+}
+
+
+void MainWindow::on_actionZapisz_pomiar_triggered()
+{
+    if(curr_file_handle == nullptr && curr_filename == ""){
+        QMessageBox::information(this, tr("Błąd zapisu do pliku"), tr("Nie wybrano żadnego pliku serii pomiarowej"));
+        return;
+    }
+    if(curr_file_handle == nullptr){
+        QMessageBox::information(this, tr("Błąd zapisu do pliku"), tr("Wybrano niepoprawny plik: %1").arg(curr_filename));
+        return;
+    }
+    QTextStream file_stream(curr_file_handle);
+    file_stream << temperature << " " << humidity << " " << ground << " " << sunlight << "\n";
 }
 
