@@ -87,16 +87,13 @@ void MainWindow::on_actionNowa_seria_triggered()
 
     if (!new_filename.isEmpty()) {
         curr_filename = new_filename;
-        if(curr_file_handle != nullptr){
-            curr_file_handle->close();
-            delete curr_file_handle;
-        }
-        curr_file_handle = new QFile(curr_filename);
+        QFile file_handler(curr_filename);
         //QString new_name = curr_file_handle->fileName() + ".srs";
         //curr_file_handle->rename(new_name);
-        if (curr_file_handle->open(QIODevice::ReadWrite | QIODevice::Append | QIODevice::Text)) {
-            QTextStream out(curr_file_handle);
+        if (file_handler.open(QIODevice::ReadWrite | QIODevice::Append | QIODevice::Text)) {
+            QTextStream out(&file_handler);
             out << "#2808\n"; //magic number of all files
+            file_handler.close();
         }
     }
 
@@ -107,41 +104,38 @@ void MainWindow::on_actionWybierz_serie_triggered()
 {
     QString new_filename = QFileDialog::getOpenFileName(this, tr("Wybierz plik serii pomiarowej"), QDir::currentPath(),
         tr("Pliki serii pomiarowej (*.srs);;All Files (*)"));
+    if(new_filename.isEmpty()) return;
     curr_filename = new_filename;
     qDebug() << new_filename;
-    if(curr_file_handle != nullptr){
-        curr_file_handle->close();
-        delete curr_file_handle;
-    }
-    curr_file_handle = new QFile(curr_filename);
-    if(!curr_file_handle->open(QIODevice::ReadWrite | QIODevice::Text)){
+    QFile file_handler(curr_filename);
+    if(!file_handler.open(QIODevice::ReadOnly | QIODevice::Text)){
         QMessageBox::critical(this, "Wybierz plik serii pomiarowej", "Nie udało sie otworzyć pliku");
-        delete curr_file_handle;
         return;
     }
-    QTextStream file_stream(curr_file_handle);
+    QTextStream file_stream(&file_handler);
     QString magic_nr;
     file_stream >> magic_nr;
     qDebug() << magic_nr;
     if(magic_nr != "#2808"){
         QMessageBox::critical(this, "Wybierz plik serii pomiarowej", "Niepoprawny plik.");
-        curr_file_handle->close();
-        delete curr_file_handle;
     }
+    file_handler.close();
 }
 
 
 void MainWindow::on_actionZapisz_pomiar_triggered()
 {
-    if(curr_file_handle == nullptr && curr_filename == ""){
+    if(curr_filename.isEmpty()){
         QMessageBox::information(this, tr("Błąd zapisu do pliku"), tr("Nie wybrano żadnego pliku serii pomiarowej"));
         return;
     }
-    if(curr_file_handle == nullptr){
+    QFile file_handler(curr_filename);
+    if(!file_handler.open(QIODevice::WriteOnly | QIODevice::Append | QIODevice::Text)){
         QMessageBox::information(this, tr("Błąd zapisu do pliku"), tr("Wybrano niepoprawny plik: %1").arg(curr_filename));
         return;
     }
-    QTextStream file_stream(curr_file_handle);
+    QTextStream file_stream(&file_handler);
     file_stream << temperature << " " << humidity << " " << ground << " " << sunlight << "\n";
+    file_handler.close();
 }
 

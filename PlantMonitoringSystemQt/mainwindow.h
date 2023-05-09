@@ -51,7 +51,6 @@ private:
     PortSelection* com_window;
     PlotsWindow* second_window = nullptr;
     QString curr_filename;
-    QFile* curr_file_handle =nullptr;
     int temperature, humidity, ground, sunlight;
 };
 #endif // MAINWINDOW_H
