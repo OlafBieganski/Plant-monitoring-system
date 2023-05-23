@@ -64,20 +64,20 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"class_q_c_p_axis.html#a57d9e961bae7d62f5b4e1f143e660c78",
-"class_q_c_p_axis_rect.html#af0fbc510147a2a54b9c8cd296e6df8ac",
-"class_q_c_p_color_gradient.html#a9f72f501de429829ec446333316decda",
-"class_q_c_p_data_container.html#acf66dfad83fe041380f5e0491e7676f2",
-"class_q_c_p_graph_data.html#a2fcebdf84af975761c0661237d7e28ec",
-"class_q_c_p_item_rect.html#a3ee2f580a3950dc11247f405ce8b6ecf",
-"class_q_c_p_layer.html#ab831a99c8d30b15ec4533ca341e8813b",
-"class_q_c_p_legend.html#ab3c7567c86d4784b1e48f76a84b3a1e2",
-"class_q_c_p_polar_axis_angular.html#aa66785e0f49f618f71ce206c56fd50c0",
-"class_q_c_p_polar_axis_radial.html#ae12085bd8c5f8e828939cc5dd8a7bbbb",
-"class_q_c_p_scatter_style.html#afd8044ece445300499ca0dc164821e0f",
-"class_q_custom_plot.html#a37f1ef93533c5b91054dc23998c669e1",
-"functions_vars_l.html",
-"struct_q_c_p_label_painter_private_1_1_label_data.html#af4843231109ed291e6d1801e355ea723"
+"class_q_c_p_axis.html#a3505ed8a93bd2e349d858d84996bf767",
+"class_q_c_p_axis_rect.html#aa0d8414ef040523f8b2d55f0c0bddbee",
+"class_q_c_p_bars_group.html#ac7073cdd7b1a40c6cb4b5f908145f8c4",
+"class_q_c_p_data_container.html#a233f866760a78950d2a393c1a4bc54b5",
+"class_q_c_p_graph.html#a8604fd98402035a63375849f7341ee25",
+"class_q_c_p_item_position.html#a8be9a4787635433edecc75164beb748d",
+"class_q_c_p_label_painter_private.html#ace8b88df19a023b6a9cfd5c5f3891e3e",
+"class_q_c_p_legend.html#a57ab86ab8b2a3762d4c1455eb5452c88",
+"class_q_c_p_polar_axis_angular.html#a7bfb586f372b253f54ad0b3b90e538c4",
+"class_q_c_p_polar_axis_radial.html#ac01604e4972e86c2868118d2a8461a55",
+"class_q_c_p_scatter_style.html#a95c297b114c77c22428ef40f54620ddf",
+"class_q_c_p_vector2_d.html#add3edf75de9b7bf1abc693b973b2e906",
+"functions_func_t.html",
+"qcustomplot_8h.html#afd50e7cf431af385614987d8553ff8a9"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

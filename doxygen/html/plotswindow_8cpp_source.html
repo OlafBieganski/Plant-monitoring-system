@@ -59,33 +59,48 @@ $(document).ready(function(){initNavTree('plotswindow_8cpp_source.html',''); ini
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>    QMainWindow(parent),</div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>    ui(new <a class="code hl_namespace" href="namespace_ui.html">Ui</a>::<a class="code hl_class" href="class_plots_window.html">PlotsWindow</a>)</div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>{</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    ui-&gt;setupUi(<span class="keyword">this</span>);</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    arduino = serial;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    <a class="code hl_variable" href="class_plots_window.html#ab00117a22d829d7887375a8010e0eeb6">ui</a>-&gt;setupUi(<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    <a class="code hl_variable" href="class_plots_window.html#a612bab1ef4bffdd50496c11ecaec0ad5">arduino</a> = serial;</div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>}</div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="class_plots_window.html#ae69e4bb5b46189725c91524692ca2eda">   12</a></span><a class="code hl_function" href="class_plots_window.html#ae69e4bb5b46189725c91524692ca2eda">PlotsWindow::~PlotsWindow</a>()</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>{</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keyword">delete</span> ui;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keyword">delete</span> <a class="code hl_variable" href="class_plots_window.html#ab00117a22d829d7887375a8010e0eeb6">ui</a>;</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>}</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keywordtype">void</span> PlotsWindow::on_actionWybierz_port_szeregowy_triggered()</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>{</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    com_window = <span class="keyword">new</span> <a class="code hl_class" href="class_port_selection.html">PortSelection</a>(<span class="keyword">this</span>, arduino);</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    com_window-&gt;setModal(<span class="keyword">true</span>);</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    com_window-&gt;show();</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>}</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keywordtype">void</span> PlotsWindow::on_actionOkno_g_wne_triggered()</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>{</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    emit <a class="code hl_signal" href="class_plots_window.html#a4b8e20b56d116059ddd6ed570a2f5998">switch_window</a>();</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    hide();</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>}</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="class_plots_window.html#a7a01fa202ecd70dfbc358b0f1d2da3c3">   17</a></span><span class="keywordtype">void</span> <a class="code hl_slot" href="class_plots_window.html#a7a01fa202ecd70dfbc358b0f1d2da3c3">PlotsWindow::on_actionWybierz_port_szeregowy_triggered</a>()</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>{</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keywordflow">return</span>; <span class="comment">// delete for a function to work</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="comment">// here is a code to debug</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <a class="code hl_variable" href="class_plots_window.html#a5ff554057edc9e1614ae99151f731b87">com_window</a> = <span class="keyword">new</span> <a class="code hl_class" href="class_port_selection.html">PortSelection</a>(<span class="keyword">this</span>, <a class="code hl_variable" href="class_plots_window.html#a612bab1ef4bffdd50496c11ecaec0ad5">arduino</a>);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <a class="code hl_variable" href="class_plots_window.html#a5ff554057edc9e1614ae99151f731b87">com_window</a>-&gt;setModal(<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <a class="code hl_variable" href="class_plots_window.html#a5ff554057edc9e1614ae99151f731b87">com_window</a>-&gt;show();</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>}</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="class_plots_window.html#af81a958138e98c58e690eb66078f4a8d">   26</a></span><span class="keywordtype">void</span> <a class="code hl_slot" href="class_plots_window.html#af81a958138e98c58e690eb66078f4a8d">PlotsWindow::on_actionOkno_g_wne_triggered</a>()</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>{</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    emit <a class="code hl_signal" href="class_plots_window.html#a4b8e20b56d116059ddd6ed570a2f5998">switch_window</a>();</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    hide();</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>}</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="class_plots_window.html#affc164df303f8310ad7b92f97100c9c6">   33</a></span><span class="keywordtype">void</span> <a class="code hl_slot" href="class_plots_window.html#affc164df303f8310ad7b92f97100c9c6">PlotsWindow::on_actionWybierz_serie_triggered</a>()</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>{</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>}</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
 <div class="ttc" id="aclass_plots_window_html"><div class="ttname"><a href="class_plots_window.html">PlotsWindow</a></div><div class="ttdef"><b>Definition:</b> <a href="plotswindow_8h_source.html#l00012">plotswindow.h:13</a></div></div>
-<div class="ttc" id="aclass_plots_window_html_a4b8e20b56d116059ddd6ed570a2f5998"><div class="ttname"><a href="class_plots_window.html#a4b8e20b56d116059ddd6ed570a2f5998">PlotsWindow::switch_window</a></div><div class="ttdeci">void switch_window()</div></div>
+<div class="ttc" id="aclass_plots_window_html_a4b8e20b56d116059ddd6ed570a2f5998"><div class="ttname"><a href="class_plots_window.html#a4b8e20b56d116059ddd6ed570a2f5998">PlotsWindow::switch_window</a></div><div class="ttdeci">void switch_window()</div><div class="ttdoc">signal that is emitted when a window is supposed to be changed</div></div>
+<div class="ttc" id="aclass_plots_window_html_a5ff554057edc9e1614ae99151f731b87"><div class="ttname"><a href="class_plots_window.html#a5ff554057edc9e1614ae99151f731b87">PlotsWindow::com_window</a></div><div class="ttdeci">PortSelection * com_window</div><div class="ttdef"><b>Definition:</b> <a href="plotswindow_8h_source.html#l00050">plotswindow.h:50</a></div></div>
+<div class="ttc" id="aclass_plots_window_html_a612bab1ef4bffdd50496c11ecaec0ad5"><div class="ttname"><a href="class_plots_window.html#a612bab1ef4bffdd50496c11ecaec0ad5">PlotsWindow::arduino</a></div><div class="ttdeci">QSerialPort * arduino</div><div class="ttdef"><b>Definition:</b> <a href="plotswindow_8h_source.html#l00049">plotswindow.h:49</a></div></div>
+<div class="ttc" id="aclass_plots_window_html_a7a01fa202ecd70dfbc358b0f1d2da3c3"><div class="ttname"><a href="class_plots_window.html#a7a01fa202ecd70dfbc358b0f1d2da3c3">PlotsWindow::on_actionWybierz_port_szeregowy_triggered</a></div><div class="ttdeci">void on_actionWybierz_port_szeregowy_triggered()</div><div class="ttdoc">Currently the function does not work properly and cause udefined behaviour The reason behind this may...</div><div class="ttdef"><b>Definition:</b> <a href="plotswindow_8cpp_source.html#l00017">plotswindow.cpp:17</a></div></div>
+<div class="ttc" id="aclass_plots_window_html_ab00117a22d829d7887375a8010e0eeb6"><div class="ttname"><a href="class_plots_window.html#ab00117a22d829d7887375a8010e0eeb6">PlotsWindow::ui</a></div><div class="ttdeci">Ui::PlotsWindow * ui</div><div class="ttdef"><b>Definition:</b> <a href="plotswindow_8h_source.html#l00048">plotswindow.h:48</a></div></div>
 <div class="ttc" id="aclass_plots_window_html_ae69e4bb5b46189725c91524692ca2eda"><div class="ttname"><a href="class_plots_window.html#ae69e4bb5b46189725c91524692ca2eda">PlotsWindow::~PlotsWindow</a></div><div class="ttdeci">~PlotsWindow()</div><div class="ttdef"><b>Definition:</b> <a href="plotswindow_8cpp_source.html#l00012">plotswindow.cpp:12</a></div></div>
-<div class="ttc" id="aclass_plots_window_html_afee9900e8db399492eb995bf9cb7d3a4"><div class="ttname"><a href="class_plots_window.html#afee9900e8db399492eb995bf9cb7d3a4">PlotsWindow::PlotsWindow</a></div><div class="ttdeci">PlotsWindow(QWidget *parent=nullptr, QSerialPort *serial=nullptr)</div><div class="ttdef"><b>Definition:</b> <a href="plotswindow_8cpp_source.html#l00004">plotswindow.cpp:4</a></div></div>
+<div class="ttc" id="aclass_plots_window_html_af81a958138e98c58e690eb66078f4a8d"><div class="ttname"><a href="class_plots_window.html#af81a958138e98c58e690eb66078f4a8d">PlotsWindow::on_actionOkno_g_wne_triggered</a></div><div class="ttdeci">void on_actionOkno_g_wne_triggered()</div><div class="ttdoc">Emits signal with information to switch windows and hide PlotsWindow window.</div><div class="ttdef"><b>Definition:</b> <a href="plotswindow_8cpp_source.html#l00026">plotswindow.cpp:26</a></div></div>
+<div class="ttc" id="aclass_plots_window_html_afee9900e8db399492eb995bf9cb7d3a4"><div class="ttname"><a href="class_plots_window.html#afee9900e8db399492eb995bf9cb7d3a4">PlotsWindow::PlotsWindow</a></div><div class="ttdeci">PlotsWindow(QWidget *parent=nullptr, QSerialPort *serial=nullptr)</div><div class="ttdoc">Creates a PlotsWindow object.</div><div class="ttdef"><b>Definition:</b> <a href="plotswindow_8cpp_source.html#l00004">plotswindow.cpp:4</a></div></div>
+<div class="ttc" id="aclass_plots_window_html_affc164df303f8310ad7b92f97100c9c6"><div class="ttname"><a href="class_plots_window.html#affc164df303f8310ad7b92f97100c9c6">PlotsWindow::on_actionWybierz_serie_triggered</a></div><div class="ttdeci">void on_actionWybierz_serie_triggered()</div><div class="ttdoc">Open file with a measurement data and displays it on plots.</div><div class="ttdef"><b>Definition:</b> <a href="plotswindow_8cpp_source.html#l00033">plotswindow.cpp:33</a></div></div>
 <div class="ttc" id="aclass_port_selection_html"><div class="ttname"><a href="class_port_selection.html">PortSelection</a></div><div class="ttdef"><b>Definition:</b> <a href="portselection_8h_source.html#l00012">portselection.h:13</a></div></div>
-<div class="ttc" id="anamespace_ui_html"><div class="ttname"><a href="namespace_ui.html">Ui</a></div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8h_source.html#l00010">mainwindow.h:10</a></div></div>
+<div class="ttc" id="anamespace_ui_html"><div class="ttname"><a href="namespace_ui.html">Ui</a></div><div class="ttdef"><b>Definition:</b> <a href="mainwindow_8h_source.html#l00011">mainwindow.h:11</a></div></div>
 <div class="ttc" id="aplotswindow_8h_html"><div class="ttname"><a href="plotswindow_8h.html">plotswindow.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

@@ -11,37 +11,37 @@
 \DoxyCodeLine{\Hypertarget{portselection_8cpp_source_l00007}00007\ \ \ \ \ QDialog(parent),}
 \DoxyCodeLine{\Hypertarget{portselection_8cpp_source_l00008}00008\ \ \ \ \ ui(new\ \mbox{\hyperlink{namespace_ui}{Ui}}::\mbox{\hyperlink{class_port_selection}{PortSelection}})}
 \DoxyCodeLine{\Hypertarget{portselection_8cpp_source_l00009}00009\ \{}
-\DoxyCodeLine{\Hypertarget{portselection_8cpp_source_l00010}00010\ \ \ \ \ arduino\ =\ serial\_port;}
-\DoxyCodeLine{\Hypertarget{portselection_8cpp_source_l00011}00011\ \ \ \ \ ui-\/>setupUi(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{portselection_8cpp_source_l00010}00010\ \ \ \ \ \mbox{\hyperlink{class_port_selection_a1a803946b1cee989051a85d1bfb23ea9}{arduino}}\ =\ serial\_port;}
+\DoxyCodeLine{\Hypertarget{portselection_8cpp_source_l00011}00011\ \ \ \ \ \mbox{\hyperlink{class_port_selection_a2a9104af06023da98d89e74c3ecbf049}{ui}}-\/>setupUi(\textcolor{keyword}{this});}
 \DoxyCodeLine{\Hypertarget{portselection_8cpp_source_l00012}00012\ \ \ \ \ QList<QSerialPortInfo>\ ports\ =\ QSerialPortInfo::availablePorts();}
 \DoxyCodeLine{\Hypertarget{portselection_8cpp_source_l00013}00013\ \ \ \ \ \textcolor{keywordflow}{foreach}\ (\textcolor{keyword}{const}\ QSerialPortInfo\ \&port,\ ports)\ \{}
-\DoxyCodeLine{\Hypertarget{portselection_8cpp_source_l00014}00014\ \ \ \ \ \ \ \ \ ui-\/>comboBox-\/>addItem(port.portName());}
+\DoxyCodeLine{\Hypertarget{portselection_8cpp_source_l00014}00014\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_port_selection_a2a9104af06023da98d89e74c3ecbf049}{ui}}-\/>comboBox-\/>addItem(port.portName());}
 \DoxyCodeLine{\Hypertarget{portselection_8cpp_source_l00015}00015\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{portselection_8cpp_source_l00016}00016\ \}}
 \DoxyCodeLine{\Hypertarget{portselection_8cpp_source_l00017}00017\ }
 \DoxyCodeLine{\Hypertarget{portselection_8cpp_source_l00018}\mbox{\hyperlink{class_port_selection_a8397840a6f6c236b0188ba7252f4ef04}{00018}}\ \mbox{\hyperlink{class_port_selection_a8397840a6f6c236b0188ba7252f4ef04}{PortSelection::\string~PortSelection}}()}
 \DoxyCodeLine{\Hypertarget{portselection_8cpp_source_l00019}00019\ \{}
-\DoxyCodeLine{\Hypertarget{portselection_8cpp_source_l00020}00020\ \ \ \ \ \textcolor{keyword}{delete}\ ui;}
+\DoxyCodeLine{\Hypertarget{portselection_8cpp_source_l00020}00020\ \ \ \ \ \textcolor{keyword}{delete}\ \mbox{\hyperlink{class_port_selection_a2a9104af06023da98d89e74c3ecbf049}{ui}};}
 \DoxyCodeLine{\Hypertarget{portselection_8cpp_source_l00021}00021\ \}}
 \DoxyCodeLine{\Hypertarget{portselection_8cpp_source_l00022}00022\ }
-\DoxyCodeLine{\Hypertarget{portselection_8cpp_source_l00023}00023\ \textcolor{keywordtype}{void}\ PortSelection::on\_buttonBox\_accepted()}
+\DoxyCodeLine{\Hypertarget{portselection_8cpp_source_l00023}\mbox{\hyperlink{class_port_selection_a53a2235e24922cb17267bd444bb9a245}{00023}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_port_selection_a53a2235e24922cb17267bd444bb9a245}{PortSelection::on\_buttonBox\_accepted}}()}
 \DoxyCodeLine{\Hypertarget{portselection_8cpp_source_l00024}00024\ \{}
-\DoxyCodeLine{\Hypertarget{portselection_8cpp_source_l00025}00025\ \ \ \ \ \textcolor{keywordflow}{if}(arduino-\/>isOpen())\{}
-\DoxyCodeLine{\Hypertarget{portselection_8cpp_source_l00026}00026\ \ \ \ \ \ \ \ \ arduino-\/>close();}
+\DoxyCodeLine{\Hypertarget{portselection_8cpp_source_l00025}00025\ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_port_selection_a1a803946b1cee989051a85d1bfb23ea9}{arduino}}-\/>isOpen())\{}
+\DoxyCodeLine{\Hypertarget{portselection_8cpp_source_l00026}00026\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_port_selection_a1a803946b1cee989051a85d1bfb23ea9}{arduino}}-\/>close();}
 \DoxyCodeLine{\Hypertarget{portselection_8cpp_source_l00027}00027\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{portselection_8cpp_source_l00028}00028\ \ \ \ \ arduino-\/>setPortName(ui-\/>comboBox-\/>currentText());}
-\DoxyCodeLine{\Hypertarget{portselection_8cpp_source_l00029}00029\ \ \ \ \ arduino-\/>setBaudRate(QSerialPort::Baud9600);}
-\DoxyCodeLine{\Hypertarget{portselection_8cpp_source_l00030}00030\ \ \ \ \ arduino-\/>setDataBits(QSerialPort::Data8);}
-\DoxyCodeLine{\Hypertarget{portselection_8cpp_source_l00031}00031\ \ \ \ \ arduino-\/>setParity(QSerialPort::NoParity);}
-\DoxyCodeLine{\Hypertarget{portselection_8cpp_source_l00032}00032\ \ \ \ \ arduino-\/>setStopBits(QSerialPort::OneStop);}
-\DoxyCodeLine{\Hypertarget{portselection_8cpp_source_l00033}00033\ \ \ \ \ arduino-\/>setFlowControl(QSerialPort::NoFlowControl);}
+\DoxyCodeLine{\Hypertarget{portselection_8cpp_source_l00028}00028\ \ \ \ \ \mbox{\hyperlink{class_port_selection_a1a803946b1cee989051a85d1bfb23ea9}{arduino}}-\/>setPortName(\mbox{\hyperlink{class_port_selection_a2a9104af06023da98d89e74c3ecbf049}{ui}}-\/>comboBox-\/>currentText());}
+\DoxyCodeLine{\Hypertarget{portselection_8cpp_source_l00029}00029\ \ \ \ \ \mbox{\hyperlink{class_port_selection_a1a803946b1cee989051a85d1bfb23ea9}{arduino}}-\/>setBaudRate(QSerialPort::Baud9600);}
+\DoxyCodeLine{\Hypertarget{portselection_8cpp_source_l00030}00030\ \ \ \ \ \mbox{\hyperlink{class_port_selection_a1a803946b1cee989051a85d1bfb23ea9}{arduino}}-\/>setDataBits(QSerialPort::Data8);}
+\DoxyCodeLine{\Hypertarget{portselection_8cpp_source_l00031}00031\ \ \ \ \ \mbox{\hyperlink{class_port_selection_a1a803946b1cee989051a85d1bfb23ea9}{arduino}}-\/>setParity(QSerialPort::NoParity);}
+\DoxyCodeLine{\Hypertarget{portselection_8cpp_source_l00032}00032\ \ \ \ \ \mbox{\hyperlink{class_port_selection_a1a803946b1cee989051a85d1bfb23ea9}{arduino}}-\/>setStopBits(QSerialPort::OneStop);}
+\DoxyCodeLine{\Hypertarget{portselection_8cpp_source_l00033}00033\ \ \ \ \ \mbox{\hyperlink{class_port_selection_a1a803946b1cee989051a85d1bfb23ea9}{arduino}}-\/>setFlowControl(QSerialPort::NoFlowControl);}
 \DoxyCodeLine{\Hypertarget{portselection_8cpp_source_l00034}00034\ }
 \DoxyCodeLine{\Hypertarget{portselection_8cpp_source_l00035}00035\ \ \ \ \ \textcolor{comment}{//\ Open\ the\ serial\ port}}
-\DoxyCodeLine{\Hypertarget{portselection_8cpp_source_l00036}00036\ \ \ \ \ \textcolor{keywordflow}{if}\ (!arduino-\/>open(QSerialPort::ReadOnly))\ \{}
-\DoxyCodeLine{\Hypertarget{portselection_8cpp_source_l00037}00037\ \ \ \ \ \ \ \ \ QMessageBox::information(\textcolor{keyword}{this},\ ui-\/>comboBox-\/>currentText(),\ \textcolor{stringliteral}{"{}Błąd\ podczas\ łączenia\ z\ portem"{}});}
+\DoxyCodeLine{\Hypertarget{portselection_8cpp_source_l00036}00036\ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{class_port_selection_a1a803946b1cee989051a85d1bfb23ea9}{arduino}}-\/>open(QSerialPort::ReadOnly))\ \{}
+\DoxyCodeLine{\Hypertarget{portselection_8cpp_source_l00037}00037\ \ \ \ \ \ \ \ \ QMessageBox::information(\textcolor{keyword}{this},\ \mbox{\hyperlink{class_port_selection_a2a9104af06023da98d89e74c3ecbf049}{ui}}-\/>comboBox-\/>currentText(),\ \textcolor{stringliteral}{"{}Błąd\ podczas\ łączenia\ z\ portem"{}});}
 \DoxyCodeLine{\Hypertarget{portselection_8cpp_source_l00038}00038\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{portselection_8cpp_source_l00039}00039\ \ \ \ \ \textcolor{keywordflow}{else}\{}
-\DoxyCodeLine{\Hypertarget{portselection_8cpp_source_l00040}00040\ \ \ \ \ \ \ \ \ QMessageBox::information(\textcolor{keyword}{this},\ ui-\/>comboBox-\/>currentText(),\ \textcolor{stringliteral}{"{}Nawiązano\ połączenie\ z\ portem"{}});}
+\DoxyCodeLine{\Hypertarget{portselection_8cpp_source_l00040}00040\ \ \ \ \ \ \ \ \ QMessageBox::information(\textcolor{keyword}{this},\ \mbox{\hyperlink{class_port_selection_a2a9104af06023da98d89e74c3ecbf049}{ui}}-\/>comboBox-\/>currentText(),\ \textcolor{stringliteral}{"{}Nawiązano\ połączenie\ z\ portem"{}});}
 \DoxyCodeLine{\Hypertarget{portselection_8cpp_source_l00041}00041\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{portselection_8cpp_source_l00042}00042\ \}}
 \DoxyCodeLine{\Hypertarget{portselection_8cpp_source_l00043}00043\ }

@@ -9,26 +9,35 @@
 \DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00005}00005\ \ \ \ \ QMainWindow(parent),}
 \DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00006}00006\ \ \ \ \ ui(new\ \mbox{\hyperlink{namespace_ui}{Ui}}::\mbox{\hyperlink{class_plots_window}{PlotsWindow}})}
 \DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00007}00007\ \{}
-\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00008}00008\ \ \ \ \ ui-\/>setupUi(\textcolor{keyword}{this});}
-\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00009}00009\ \ \ \ \ arduino\ =\ serial;}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00008}00008\ \ \ \ \ \mbox{\hyperlink{class_plots_window_ab00117a22d829d7887375a8010e0eeb6}{ui}}-\/>setupUi(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00009}00009\ \ \ \ \ \mbox{\hyperlink{class_plots_window_a612bab1ef4bffdd50496c11ecaec0ad5}{arduino}}\ =\ serial;}
 \DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00010}00010\ \}}
 \DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00011}00011\ }
 \DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00012}\mbox{\hyperlink{class_plots_window_ae69e4bb5b46189725c91524692ca2eda}{00012}}\ \mbox{\hyperlink{class_plots_window_ae69e4bb5b46189725c91524692ca2eda}{PlotsWindow::\string~PlotsWindow}}()}
 \DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00013}00013\ \{}
-\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00014}00014\ \ \ \ \ \textcolor{keyword}{delete}\ ui;}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00014}00014\ \ \ \ \ \textcolor{keyword}{delete}\ \mbox{\hyperlink{class_plots_window_ab00117a22d829d7887375a8010e0eeb6}{ui}};}
 \DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00015}00015\ \}}
-\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00020}00020\ \textcolor{keywordtype}{void}\ PlotsWindow::on\_actionWybierz\_port\_szeregowy\_triggered()}
-\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00021}00021\ \{}
-\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00022}00022\ \ \ \ \ com\_window\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_port_selection}{PortSelection}}(\textcolor{keyword}{this},\ arduino);}
-\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00023}00023\ \ \ \ \ com\_window-\/>setModal(\textcolor{keyword}{true});}
-\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00024}00024\ \ \ \ \ com\_window-\/>show();}
-\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00025}00025\ \}}
-\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00026}00026\ }
-\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00030}00030\ \textcolor{keywordtype}{void}\ PlotsWindow::on\_actionOkno\_g\_wne\_triggered()}
-\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00031}00031\ \{}
-\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00032}00032\ \ \ \ \ emit\ \mbox{\hyperlink{class_plots_window_a4b8e20b56d116059ddd6ed570a2f5998}{switch\_window}}();}
-\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00033}00033\ \ \ \ \ hide();}
-\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00034}00034\ \}}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00017}\mbox{\hyperlink{class_plots_window_a7a01fa202ecd70dfbc358b0f1d2da3c3}{00017}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_plots_window_a7a01fa202ecd70dfbc358b0f1d2da3c3}{PlotsWindow::on\_actionWybierz\_port\_szeregowy\_triggered}}()}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00018}00018\ \{}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00019}00019\ \ \ \ \ \textcolor{keywordflow}{return};\ \textcolor{comment}{//\ delete\ for\ a\ function\ to\ work}}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00020}00020\ \ \ \ \ \textcolor{comment}{//\ here\ is\ a\ code\ to\ debug}}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00021}00021\ \ \ \ \ \mbox{\hyperlink{class_plots_window_a5ff554057edc9e1614ae99151f731b87}{com\_window}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_port_selection}{PortSelection}}(\textcolor{keyword}{this},\ \mbox{\hyperlink{class_plots_window_a612bab1ef4bffdd50496c11ecaec0ad5}{arduino}});}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00022}00022\ \ \ \ \ \mbox{\hyperlink{class_plots_window_a5ff554057edc9e1614ae99151f731b87}{com\_window}}-\/>setModal(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00023}00023\ \ \ \ \ \mbox{\hyperlink{class_plots_window_a5ff554057edc9e1614ae99151f731b87}{com\_window}}-\/>show();}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00024}00024\ \}}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00026}\mbox{\hyperlink{class_plots_window_af81a958138e98c58e690eb66078f4a8d}{00026}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_plots_window_af81a958138e98c58e690eb66078f4a8d}{PlotsWindow::on\_actionOkno\_g\_wne\_triggered}}()}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00027}00027\ \{}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00028}00028\ \ \ \ \ emit\ \mbox{\hyperlink{class_plots_window_a4b8e20b56d116059ddd6ed570a2f5998}{switch\_window}}();}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00029}00029\ \ \ \ \ hide();}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00030}00030\ \}}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00033}\mbox{\hyperlink{class_plots_window_affc164df303f8310ad7b92f97100c9c6}{00033}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_plots_window_affc164df303f8310ad7b92f97100c9c6}{PlotsWindow::on\_actionWybierz\_serie\_triggered}}()}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00034}00034\ \{}
 \DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00036}00036\ \}}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00037}00037\ }
 
 \end{DoxyCode}

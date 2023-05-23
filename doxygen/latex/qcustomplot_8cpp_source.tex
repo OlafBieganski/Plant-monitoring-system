@@ -64,17 +64,17 @@
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l00153}00153\ }
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l00161}\mbox{\hyperlink{class_q_c_p_vector2_d_ad83268be370685c2a0630acc0fb1a425}{00161}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_q_c_p_vector2_d_ad83268be370685c2a0630acc0fb1a425}{QCPVector2D::normalize}}()}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l00162}00162\ \{}
-\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l00163}00163\ \ \ \textcolor{keywordflow}{if}\ (mX\ ==\ 0.0\ \&\&\ mY\ ==\ 0.0)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l00163}00163\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_q_c_p_vector2_d_ab6f67c521be2e7eea7d31175d086ac2c}{mX}}\ ==\ 0.0\ \&\&\ \mbox{\hyperlink{class_q_c_p_vector2_d_a1b6dbdfb973c4cb478116cd610265e13}{mY}}\ ==\ 0.0)\ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l00164}00164\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ lenInv\ =\ 1.0/\mbox{\hyperlink{class_q_c_p_vector2_d_a10adb5ab031fe94f0b64a3c5aefb552e}{length}}();}
-\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l00165}00165\ \ \ mX\ *=\ lenInv;}
-\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l00166}00166\ \ \ mY\ *=\ lenInv;}
+\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l00165}00165\ \ \ \mbox{\hyperlink{class_q_c_p_vector2_d_ab6f67c521be2e7eea7d31175d086ac2c}{mX}}\ *=\ lenInv;}
+\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l00166}00166\ \ \ \mbox{\hyperlink{class_q_c_p_vector2_d_a1b6dbdfb973c4cb478116cd610265e13}{mY}}\ *=\ lenInv;}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l00167}00167\ \}}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l00168}00168\ }
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l00176}\mbox{\hyperlink{class_q_c_p_vector2_d_a707bb3af3b1f9331a2450ec75eaf7eb0}{00176}}\ \mbox{\hyperlink{class_q_c_p_vector2_d}{QCPVector2D}}\ \mbox{\hyperlink{class_q_c_p_vector2_d_a707bb3af3b1f9331a2450ec75eaf7eb0}{QCPVector2D::normalized}}()\textcolor{keyword}{\ const}}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l00177}00177\ \textcolor{keyword}{}\{}
-\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l00178}00178\ \ \ \textcolor{keywordflow}{if}\ (mX\ ==\ 0.0\ \&\&\ mY\ ==\ 0.0)\ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l00178}00178\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_q_c_p_vector2_d_ab6f67c521be2e7eea7d31175d086ac2c}{mX}}\ ==\ 0.0\ \&\&\ \mbox{\hyperlink{class_q_c_p_vector2_d_a1b6dbdfb973c4cb478116cd610265e13}{mY}}\ ==\ 0.0)\ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l00179}00179\ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ lenInv\ =\ 1.0/\mbox{\hyperlink{class_q_c_p_vector2_d_a10adb5ab031fe94f0b64a3c5aefb552e}{length}}();}
-\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l00180}00180\ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_q_c_p_vector2_d_a04c90748c3623044c79fa20788ffbcc6}{QCPVector2D}}(mX*lenInv,\ mY*lenInv);}
+\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l00180}00180\ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_q_c_p_vector2_d_a04c90748c3623044c79fa20788ffbcc6}{QCPVector2D}}(\mbox{\hyperlink{class_q_c_p_vector2_d_ab6f67c521be2e7eea7d31175d086ac2c}{mX}}*lenInv,\ \mbox{\hyperlink{class_q_c_p_vector2_d_a1b6dbdfb973c4cb478116cd610265e13}{mY}}*lenInv);}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l00181}00181\ \}}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l00182}00182\ }
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l00190}\mbox{\hyperlink{class_q_c_p_vector2_d_a14840cd3da80cfee4eb3f8977cab89ab}{00190}}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_q_c_p_vector2_d_a14840cd3da80cfee4eb3f8977cab89ab}{QCPVector2D::distanceSquaredToLine}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_q_c_p_vector2_d}{QCPVector2D}}\ \&start,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_q_c_p_vector2_d}{QCPVector2D}}\ \&end)\textcolor{keyword}{\ const}}
@@ -106,29 +106,29 @@
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l00229}00229\ }
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l00234}\mbox{\hyperlink{class_q_c_p_vector2_d_aa52a246d168f475a4231c7bdfdac7df1}{00234}}\ \mbox{\hyperlink{class_q_c_p_vector2_d}{QCPVector2D}}\ \&\mbox{\hyperlink{class_q_c_p_vector2_d_aa52a246d168f475a4231c7bdfdac7df1}{QCPVector2D::operator*=}}(\textcolor{keywordtype}{double}\ factor)}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l00235}00235\ \{}
-\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l00236}00236\ \ \ mX\ *=\ factor;}
-\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l00237}00237\ \ \ mY\ *=\ factor;}
+\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l00236}00236\ \ \ \mbox{\hyperlink{class_q_c_p_vector2_d_ab6f67c521be2e7eea7d31175d086ac2c}{mX}}\ *=\ factor;}
+\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l00237}00237\ \ \ \mbox{\hyperlink{class_q_c_p_vector2_d_a1b6dbdfb973c4cb478116cd610265e13}{mY}}\ *=\ factor;}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l00238}00238\ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l00239}00239\ \}}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l00240}00240\ }
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l00245}\mbox{\hyperlink{class_q_c_p_vector2_d_aefa55eb9282c066a330ca281881e0ec0}{00245}}\ \mbox{\hyperlink{class_q_c_p_vector2_d}{QCPVector2D}}\ \&\mbox{\hyperlink{class_q_c_p_vector2_d_aefa55eb9282c066a330ca281881e0ec0}{QCPVector2D::operator/=}}(\textcolor{keywordtype}{double}\ divisor)}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l00246}00246\ \{}
-\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l00247}00247\ \ \ mX\ /=\ divisor;}
-\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l00248}00248\ \ \ mY\ /=\ divisor;}
+\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l00247}00247\ \ \ \mbox{\hyperlink{class_q_c_p_vector2_d_ab6f67c521be2e7eea7d31175d086ac2c}{mX}}\ /=\ divisor;}
+\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l00248}00248\ \ \ \mbox{\hyperlink{class_q_c_p_vector2_d_a1b6dbdfb973c4cb478116cd610265e13}{mY}}\ /=\ divisor;}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l00249}00249\ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l00250}00250\ \}}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l00251}00251\ }
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l00255}\mbox{\hyperlink{class_q_c_p_vector2_d_aa2c34754ce8839b2d074dec741783c5e}{00255}}\ \mbox{\hyperlink{class_q_c_p_vector2_d}{QCPVector2D}}\ \&\mbox{\hyperlink{class_q_c_p_vector2_d_aa2c34754ce8839b2d074dec741783c5e}{QCPVector2D::operator+=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_q_c_p_vector2_d}{QCPVector2D}}\ \&vector)}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l00256}00256\ \{}
-\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l00257}00257\ \ \ mX\ +=\ vector.mX;}
-\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l00258}00258\ \ \ mY\ +=\ vector.mY;}
+\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l00257}00257\ \ \ \mbox{\hyperlink{class_q_c_p_vector2_d_ab6f67c521be2e7eea7d31175d086ac2c}{mX}}\ +=\ vector.\mbox{\hyperlink{class_q_c_p_vector2_d_ab6f67c521be2e7eea7d31175d086ac2c}{mX}};}
+\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l00258}00258\ \ \ \mbox{\hyperlink{class_q_c_p_vector2_d_a1b6dbdfb973c4cb478116cd610265e13}{mY}}\ +=\ vector.\mbox{\hyperlink{class_q_c_p_vector2_d_a1b6dbdfb973c4cb478116cd610265e13}{mY}};}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l00259}00259\ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l00260}00260\ \}}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l00261}00261\ }
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l00265}\mbox{\hyperlink{class_q_c_p_vector2_d_a3a2e906bb924983bb801e89f28a3d566}{00265}}\ \mbox{\hyperlink{class_q_c_p_vector2_d}{QCPVector2D}}\ \&\mbox{\hyperlink{class_q_c_p_vector2_d_a3a2e906bb924983bb801e89f28a3d566}{QCPVector2D::operator-\/=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_q_c_p_vector2_d}{QCPVector2D}}\ \&vector)}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l00266}00266\ \{}
-\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l00267}00267\ \ \ mX\ -\/=\ vector.mX;}
-\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l00268}00268\ \ \ mY\ -\/=\ vector.mY;}
+\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l00267}00267\ \ \ \mbox{\hyperlink{class_q_c_p_vector2_d_ab6f67c521be2e7eea7d31175d086ac2c}{mX}}\ -\/=\ vector.\mbox{\hyperlink{class_q_c_p_vector2_d_ab6f67c521be2e7eea7d31175d086ac2c}{mX}};}
+\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l00268}00268\ \ \ \mbox{\hyperlink{class_q_c_p_vector2_d_a1b6dbdfb973c4cb478116cd610265e13}{mY}}\ -\/=\ vector.\mbox{\hyperlink{class_q_c_p_vector2_d_a1b6dbdfb973c4cb478116cd610265e13}{mY}};}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l00269}00269\ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l00270}00270\ \}}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l00271}00271\ \textcolor{comment}{/*\ end\ of\ 'src/vector2d.cpp'\ */}}
@@ -1068,22 +1068,22 @@
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02285}02285\ \ \ \mbox{\hyperlink{class_q_c_p_data_range}{QCPDataRange}}\ result(\mbox{\hyperlink{class_q_c_p_data_range_a84e1e03129dd52528efb4bac18d30183}{intersection}}(other));}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02286}02286\ \ \ \textcolor{keywordflow}{if}\ (result.\mbox{\hyperlink{class_q_c_p_data_range_ac32e53fc05d6cd2eac96b96a7265d3b8}{isEmpty}}())\ \textcolor{comment}{//\ no\ intersection,\ preserve\ respective\ bounding\ side\ of\ otherRange\ as\ both\ begin\ and\ end\ of\ return\ value}}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02287}02287\ \ \ \{}
-\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02288}02288\ \ \ \ \ \textcolor{keywordflow}{if}\ (mEnd\ <=\ other.mBegin)}
-\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02289}02289\ \ \ \ \ \ \ result\ =\ \mbox{\hyperlink{class_q_c_p_data_range_a49e72fd9bace1da9d875136dcc04c986}{QCPDataRange}}(other.mBegin,\ other.mBegin);}
+\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02288}02288\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_q_c_p_data_range_ac22cfcf2795d5e9f617d788be9fb14a0}{mEnd}}\ <=\ other.\mbox{\hyperlink{class_q_c_p_data_range_a849baf613e8ad866a66aaf45682dde53}{mBegin}})}
+\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02289}02289\ \ \ \ \ \ \ result\ =\ \mbox{\hyperlink{class_q_c_p_data_range_a49e72fd9bace1da9d875136dcc04c986}{QCPDataRange}}(other.\mbox{\hyperlink{class_q_c_p_data_range_a849baf613e8ad866a66aaf45682dde53}{mBegin}},\ other.\mbox{\hyperlink{class_q_c_p_data_range_a849baf613e8ad866a66aaf45682dde53}{mBegin}});}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02290}02290\ \ \ \ \ \textcolor{keywordflow}{else}}
-\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02291}02291\ \ \ \ \ \ \ result\ =\ \mbox{\hyperlink{class_q_c_p_data_range_a49e72fd9bace1da9d875136dcc04c986}{QCPDataRange}}(other.mEnd,\ other.mEnd);}
+\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02291}02291\ \ \ \ \ \ \ result\ =\ \mbox{\hyperlink{class_q_c_p_data_range_a49e72fd9bace1da9d875136dcc04c986}{QCPDataRange}}(other.\mbox{\hyperlink{class_q_c_p_data_range_ac22cfcf2795d5e9f617d788be9fb14a0}{mEnd}},\ other.\mbox{\hyperlink{class_q_c_p_data_range_ac22cfcf2795d5e9f617d788be9fb14a0}{mEnd}});}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02292}02292\ \ \ \}}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02293}02293\ \ \ \textcolor{keywordflow}{return}\ result;}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02294}02294\ \}}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02295}02295\ }
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02299}\mbox{\hyperlink{class_q_c_p_data_range_a36c8ad8acf177ffeb0a72c8d73030844}{02299}}\ \mbox{\hyperlink{class_q_c_p_data_range}{QCPDataRange}}\ \mbox{\hyperlink{class_q_c_p_data_range_a36c8ad8acf177ffeb0a72c8d73030844}{QCPDataRange::expanded}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_q_c_p_data_range}{QCPDataRange}}\ \&other)\textcolor{keyword}{\ const}}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02300}02300\ \textcolor{keyword}{}\{}
-\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02301}02301\ \ \ \textcolor{keywordflow}{return}\ \{qMin(mBegin,\ other.mBegin),\ qMax(mEnd,\ other.mEnd)\};}
+\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02301}02301\ \ \ \textcolor{keywordflow}{return}\ \{qMin(\mbox{\hyperlink{class_q_c_p_data_range_a849baf613e8ad866a66aaf45682dde53}{mBegin}},\ other.\mbox{\hyperlink{class_q_c_p_data_range_a849baf613e8ad866a66aaf45682dde53}{mBegin}}),\ qMax(\mbox{\hyperlink{class_q_c_p_data_range_ac22cfcf2795d5e9f617d788be9fb14a0}{mEnd}},\ other.\mbox{\hyperlink{class_q_c_p_data_range_ac22cfcf2795d5e9f617d788be9fb14a0}{mEnd}})\};}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02302}02302\ \}}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02303}02303\ }
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02314}\mbox{\hyperlink{class_q_c_p_data_range_a84e1e03129dd52528efb4bac18d30183}{02314}}\ \mbox{\hyperlink{class_q_c_p_data_range}{QCPDataRange}}\ \mbox{\hyperlink{class_q_c_p_data_range_a84e1e03129dd52528efb4bac18d30183}{QCPDataRange::intersection}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_q_c_p_data_range}{QCPDataRange}}\ \&other)\textcolor{keyword}{\ const}}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02315}02315\ \textcolor{keyword}{}\{}
-\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02316}02316\ \ \ \mbox{\hyperlink{class_q_c_p_data_range}{QCPDataRange}}\ result(qMax(mBegin,\ other.mBegin),\ qMin(mEnd,\ other.mEnd));}
+\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02316}02316\ \ \ \mbox{\hyperlink{class_q_c_p_data_range}{QCPDataRange}}\ result(qMax(\mbox{\hyperlink{class_q_c_p_data_range_a849baf613e8ad866a66aaf45682dde53}{mBegin}},\ other.\mbox{\hyperlink{class_q_c_p_data_range_a849baf613e8ad866a66aaf45682dde53}{mBegin}}),\ qMin(\mbox{\hyperlink{class_q_c_p_data_range_ac22cfcf2795d5e9f617d788be9fb14a0}{mEnd}},\ other.\mbox{\hyperlink{class_q_c_p_data_range_ac22cfcf2795d5e9f617d788be9fb14a0}{mEnd}}));}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02317}02317\ \ \ \textcolor{keywordflow}{if}\ (result.\mbox{\hyperlink{class_q_c_p_data_range_aae53a37472212dca0a7939963e20dba0}{isValid}}())}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02318}02318\ \ \ \ \ \textcolor{keywordflow}{return}\ result;}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02319}02319\ \ \ \textcolor{keywordflow}{else}}
@@ -1092,13 +1092,13 @@
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02322}02322\ }
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02328}\mbox{\hyperlink{class_q_c_p_data_range_a8a1c437f9beffd55621f48f961d7f679}{02328}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_q_c_p_data_range_a8a1c437f9beffd55621f48f961d7f679}{QCPDataRange::intersects}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_q_c_p_data_range}{QCPDataRange}}\ \&other)\textcolor{keyword}{\ const}}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02329}02329\ \textcolor{keyword}{}\{}
-\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02330}02330\ \ \ \ \textcolor{keywordflow}{return}\ !(\ (mBegin\ >\ other.mBegin\ \&\&\ mBegin\ >=\ other.mEnd)\ ||}
-\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02331}02331\ \ \ \ \ \ \ \ \ \ \ \ \ \ (mEnd\ <=\ other.mBegin\ \&\&\ mEnd\ <\ other.mEnd)\ );}
+\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02330}02330\ \ \ \ \textcolor{keywordflow}{return}\ !(\ (\mbox{\hyperlink{class_q_c_p_data_range_a849baf613e8ad866a66aaf45682dde53}{mBegin}}\ >\ other.\mbox{\hyperlink{class_q_c_p_data_range_a849baf613e8ad866a66aaf45682dde53}{mBegin}}\ \&\&\ \mbox{\hyperlink{class_q_c_p_data_range_a849baf613e8ad866a66aaf45682dde53}{mBegin}}\ >=\ other.\mbox{\hyperlink{class_q_c_p_data_range_ac22cfcf2795d5e9f617d788be9fb14a0}{mEnd}})\ ||}
+\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02331}02331\ \ \ \ \ \ \ \ \ \ \ \ \ \ (\mbox{\hyperlink{class_q_c_p_data_range_ac22cfcf2795d5e9f617d788be9fb14a0}{mEnd}}\ <=\ other.\mbox{\hyperlink{class_q_c_p_data_range_a849baf613e8ad866a66aaf45682dde53}{mBegin}}\ \&\&\ \mbox{\hyperlink{class_q_c_p_data_range_ac22cfcf2795d5e9f617d788be9fb14a0}{mEnd}}\ <\ other.\mbox{\hyperlink{class_q_c_p_data_range_ac22cfcf2795d5e9f617d788be9fb14a0}{mEnd}})\ );}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02332}02332\ \}}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02333}02333\ }
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02339}\mbox{\hyperlink{class_q_c_p_data_range_a13ca398776374a3160aa85433718b812}{02339}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_q_c_p_data_range_a13ca398776374a3160aa85433718b812}{QCPDataRange::contains}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_q_c_p_data_range}{QCPDataRange}}\ \&other)\textcolor{keyword}{\ const}}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02340}02340\ \textcolor{keyword}{}\{}
-\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02341}02341\ \ \ \textcolor{keywordflow}{return}\ mBegin\ <=\ other.mBegin\ \&\&\ mEnd\ >=\ other.mEnd;}
+\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02341}02341\ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_q_c_p_data_range_a849baf613e8ad866a66aaf45682dde53}{mBegin}}\ <=\ other.\mbox{\hyperlink{class_q_c_p_data_range_a849baf613e8ad866a66aaf45682dde53}{mBegin}}\ \&\&\ \mbox{\hyperlink{class_q_c_p_data_range_ac22cfcf2795d5e9f617d788be9fb14a0}{mEnd}}\ >=\ other.\mbox{\hyperlink{class_q_c_p_data_range_ac22cfcf2795d5e9f617d788be9fb14a0}{mEnd}};}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02342}02342\ \}}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02343}02343\ }
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02344}02344\ }
@@ -1114,16 +1114,16 @@
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02418}02418\ }
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02422}\mbox{\hyperlink{class_q_c_p_data_selection_a738dfb4f5718c5df5ed35ea33ac37818}{02422}}\ \mbox{\hyperlink{class_q_c_p_data_selection_a0e0b7faaec7df1a7c77dd6f4883cdf0d}{QCPDataSelection::QCPDataSelection}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_q_c_p_data_range}{QCPDataRange}}\ \&range)}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02423}02423\ \{}
-\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02424}02424\ \ \ mDataRanges.append(range);}
+\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02424}02424\ \ \ \mbox{\hyperlink{class_q_c_p_data_selection_aa1070e7c700f15d9018fad78b4732004}{mDataRanges}}.append(range);}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02425}02425\ \}}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02426}02426\ }
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02434}\mbox{\hyperlink{class_q_c_p_data_selection_a664fa566569b17148abafd6b1dbbf347}{02434}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_q_c_p_data_selection_a664fa566569b17148abafd6b1dbbf347}{QCPDataSelection::operator==}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_q_c_p_data_selection}{QCPDataSelection}}\ \&other)\textcolor{keyword}{\ const}}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02435}02435\ \textcolor{keyword}{}\{}
-\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02436}02436\ \ \ \textcolor{keywordflow}{if}\ (mDataRanges.size()\ !=\ other.mDataRanges.size())}
+\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02436}02436\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_q_c_p_data_selection_aa1070e7c700f15d9018fad78b4732004}{mDataRanges}}.size()\ !=\ other.\mbox{\hyperlink{class_q_c_p_data_selection_aa1070e7c700f15d9018fad78b4732004}{mDataRanges}}.size())}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02437}02437\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
-\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02438}02438\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=0;\ i<mDataRanges.size();\ ++i)}
+\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02438}02438\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=0;\ i<\mbox{\hyperlink{class_q_c_p_data_selection_aa1070e7c700f15d9018fad78b4732004}{mDataRanges}}.size();\ ++i)}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02439}02439\ \ \ \{}
-\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02440}02440\ \ \ \ \ \textcolor{keywordflow}{if}\ (mDataRanges.at(i)\ !=\ other.mDataRanges.at(i))}
+\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02440}02440\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_q_c_p_data_selection_aa1070e7c700f15d9018fad78b4732004}{mDataRanges}}.at(i)\ !=\ other.\mbox{\hyperlink{class_q_c_p_data_selection_aa1070e7c700f15d9018fad78b4732004}{mDataRanges}}.at(i))}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02441}02441\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02442}02442\ \ \ \}}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02443}02443\ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
@@ -1131,7 +1131,7 @@
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02445}02445\ }
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02450}\mbox{\hyperlink{class_q_c_p_data_selection_a4584d4b0ea5c4f095bd7b70f88eb5d9d}{02450}}\ \mbox{\hyperlink{class_q_c_p_data_selection}{QCPDataSelection}}\ \&\mbox{\hyperlink{class_q_c_p_data_selection_a4584d4b0ea5c4f095bd7b70f88eb5d9d}{QCPDataSelection::operator+=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_q_c_p_data_selection}{QCPDataSelection}}\ \&other)}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02451}02451\ \{}
-\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02452}02452\ \ \ mDataRanges\ <<\ other.mDataRanges;}
+\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02452}02452\ \ \ \mbox{\hyperlink{class_q_c_p_data_selection_aa1070e7c700f15d9018fad78b4732004}{mDataRanges}}\ <<\ other.\mbox{\hyperlink{class_q_c_p_data_selection_aa1070e7c700f15d9018fad78b4732004}{mDataRanges}};}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02453}02453\ \ \ \mbox{\hyperlink{class_q_c_p_data_selection_a4a2fbad1a6e4d1dd26fdfdf88956f2a4}{simplify}}();}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02454}02454\ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02455}02455\ \}}
@@ -1157,10 +1157,10 @@
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02485}02485\ \ \ }
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02486}02486\ \ \ \mbox{\hyperlink{class_q_c_p_data_selection_a4a2fbad1a6e4d1dd26fdfdf88956f2a4}{simplify}}();}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02487}02487\ \ \ \textcolor{keywordtype}{int}\ i=0;}
-\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02488}02488\ \ \ \textcolor{keywordflow}{while}\ (i\ <\ mDataRanges.size())}
+\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02488}02488\ \ \ \textcolor{keywordflow}{while}\ (i\ <\ \mbox{\hyperlink{class_q_c_p_data_selection_aa1070e7c700f15d9018fad78b4732004}{mDataRanges}}.size())}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02489}02489\ \ \ \{}
-\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02490}02490\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ thisBegin\ =\ mDataRanges.at(i).begin();}
-\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02491}02491\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ thisEnd\ =\ mDataRanges.at(i).end();}
+\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02490}02490\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ thisBegin\ =\ \mbox{\hyperlink{class_q_c_p_data_selection_aa1070e7c700f15d9018fad78b4732004}{mDataRanges}}.at(i).begin();}
+\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02491}02491\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ thisEnd\ =\ \mbox{\hyperlink{class_q_c_p_data_selection_aa1070e7c700f15d9018fad78b4732004}{mDataRanges}}.at(i).end();}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02492}02492\ \ \ \ \ \textcolor{keywordflow}{if}\ (thisBegin\ >=\ other.\mbox{\hyperlink{class_q_c_p_data_range_aee1b20fb045929c3753ee2ce14af7630}{end}}())}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02493}02493\ \ \ \ \ \ \ \textcolor{keywordflow}{break};\ \textcolor{comment}{//\ since\ data\ ranges\ are\ sorted\ after\ the\ simplify()\ call,\ no\ ranges\ which\ contain\ other\ will\ come\ after\ this}}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02494}02494\ \ \ \ \ }
@@ -1170,19 +1170,19 @@
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02498}02498\ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02499}02499\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (thisEnd\ <=\ other.\mbox{\hyperlink{class_q_c_p_data_range_aee1b20fb045929c3753ee2ce14af7630}{end}}())\ \textcolor{comment}{//\ range\ fully\ encompassed,\ remove\ completely}}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02500}02500\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02501}02501\ \ \ \ \ \ \ \ \ \ \ mDataRanges.removeAt(i);}
+\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02501}02501\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_q_c_p_data_selection_aa1070e7c700f15d9018fad78b4732004}{mDataRanges}}.removeAt(i);}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02502}02502\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02503}02503\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{comment}{//\ only\ leading\ segment\ is\ encompassed,\ trim\ accordingly}}
-\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02504}02504\ \ \ \ \ \ \ \ \ \ \ mDataRanges[i].setBegin(other.\mbox{\hyperlink{class_q_c_p_data_range_aee1b20fb045929c3753ee2ce14af7630}{end}}());}
+\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02504}02504\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_q_c_p_data_selection_aa1070e7c700f15d9018fad78b4732004}{mDataRanges}}[i].setBegin(other.\mbox{\hyperlink{class_q_c_p_data_range_aee1b20fb045929c3753ee2ce14af7630}{end}}());}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02505}02505\ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{comment}{//\ leading\ segment\ is\ not\ encompassed}}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02506}02506\ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02507}02507\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (thisEnd\ <=\ other.\mbox{\hyperlink{class_q_c_p_data_range_aee1b20fb045929c3753ee2ce14af7630}{end}}())\ \textcolor{comment}{//\ only\ trailing\ segment\ is\ encompassed,\ trim\ accordingly}}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02508}02508\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02509}02509\ \ \ \ \ \ \ \ \ \ \ mDataRanges[i].setEnd(other.\mbox{\hyperlink{class_q_c_p_data_range_ae76d7eba9defdfafcd0fc41096793129}{begin}}());}
+\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02509}02509\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_q_c_p_data_selection_aa1070e7c700f15d9018fad78b4732004}{mDataRanges}}[i].setEnd(other.\mbox{\hyperlink{class_q_c_p_data_range_ae76d7eba9defdfafcd0fc41096793129}{begin}}());}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02510}02510\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{comment}{//\ other\ lies\ inside\ this\ range,\ so\ split\ range}}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02511}02511\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02512}02512\ \ \ \ \ \ \ \ \ \ \ mDataRanges[i].setEnd(other.\mbox{\hyperlink{class_q_c_p_data_range_ae76d7eba9defdfafcd0fc41096793129}{begin}}());}
-\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02513}02513\ \ \ \ \ \ \ \ \ \ \ mDataRanges.insert(i+1,\ \mbox{\hyperlink{class_q_c_p_data_range}{QCPDataRange}}(other.\mbox{\hyperlink{class_q_c_p_data_range_aee1b20fb045929c3753ee2ce14af7630}{end}}(),\ thisEnd));}
+\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02512}02512\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_q_c_p_data_selection_aa1070e7c700f15d9018fad78b4732004}{mDataRanges}}[i].setEnd(other.\mbox{\hyperlink{class_q_c_p_data_range_ae76d7eba9defdfafcd0fc41096793129}{begin}}());}
+\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02513}02513\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_q_c_p_data_selection_aa1070e7c700f15d9018fad78b4732004}{mDataRanges}}.insert(i+1,\ \mbox{\hyperlink{class_q_c_p_data_range}{QCPDataRange}}(other.\mbox{\hyperlink{class_q_c_p_data_range_aee1b20fb045929c3753ee2ce14af7630}{end}}(),\ thisEnd));}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02514}02514\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};\ \textcolor{comment}{//\ since\ data\ ranges\ are\ sorted\ (and\ don't\ overlap)\ after\ simplify()\ call,\ we're\ done\ here}}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02515}02515\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02516}02516\ \ \ \ \ \ \ \}}
@@ -1196,16 +1196,16 @@
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02528}\mbox{\hyperlink{class_q_c_p_data_selection_ac9e74dd294778aa799216c3435c9c4f0}{02528}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_q_c_p_data_selection_ac9e74dd294778aa799216c3435c9c4f0}{QCPDataSelection::dataPointCount}}()\textcolor{keyword}{\ const}}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02529}02529\ \textcolor{keyword}{}\{}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02530}02530\ \ \ \textcolor{keywordtype}{int}\ result\ =\ 0;}
-\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02531}02531\ \ \ \textcolor{keywordflow}{foreach}\ (\mbox{\hyperlink{class_q_c_p_data_range}{QCPDataRange}}\ \mbox{\hyperlink{class_q_c_p_data_selection_a6956acf6a9a49a353b4f9b58608978ad}{dataRange}},\ mDataRanges)}
+\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02531}02531\ \ \ \textcolor{keywordflow}{foreach}\ (\mbox{\hyperlink{class_q_c_p_data_range}{QCPDataRange}}\ \mbox{\hyperlink{class_q_c_p_data_selection_a6956acf6a9a49a353b4f9b58608978ad}{dataRange}},\ \mbox{\hyperlink{class_q_c_p_data_selection_aa1070e7c700f15d9018fad78b4732004}{mDataRanges}})}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02532}02532\ \ \ \ \ result\ +=\ \mbox{\hyperlink{class_q_c_p_data_selection_a6956acf6a9a49a353b4f9b58608978ad}{dataRange}}.\mbox{\hyperlink{class_q_c_p_data_range_a1e7836058f755c6ab9f11996477b7150}{length}}();}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02533}02533\ \ \ \textcolor{keywordflow}{return}\ result;}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02534}02534\ \}}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02535}02535\ }
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02544}\mbox{\hyperlink{class_q_c_p_data_selection_a6956acf6a9a49a353b4f9b58608978ad}{02544}}\ \mbox{\hyperlink{class_q_c_p_data_range}{QCPDataRange}}\ \mbox{\hyperlink{class_q_c_p_data_selection_a6956acf6a9a49a353b4f9b58608978ad}{QCPDataSelection::dataRange}}(\textcolor{keywordtype}{int}\ index)\textcolor{keyword}{\ const}}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02545}02545\ \textcolor{keyword}{}\{}
-\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02546}02546\ \ \ \textcolor{keywordflow}{if}\ (index\ >=\ 0\ \&\&\ index\ <\ mDataRanges.size())}
+\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02546}02546\ \ \ \textcolor{keywordflow}{if}\ (index\ >=\ 0\ \&\&\ index\ <\ \mbox{\hyperlink{class_q_c_p_data_selection_aa1070e7c700f15d9018fad78b4732004}{mDataRanges}}.size())}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02547}02547\ \ \ \{}
-\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02548}02548\ \ \ \ \ \textcolor{keywordflow}{return}\ mDataRanges.at(index);}
+\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02548}02548\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_q_c_p_data_selection_aa1070e7c700f15d9018fad78b4732004}{mDataRanges}}.at(index);}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02549}02549\ \ \ \}\ \textcolor{keywordflow}{else}}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02550}02550\ \ \ \{}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02551}02551\ \ \ \ \ qDebug()\ <<\ Q\_FUNC\_INFO\ <<\ \textcolor{stringliteral}{"{}index\ out\ of\ range:"{}}\ <<\ index;}
@@ -1218,43 +1218,43 @@
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02562}02562\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_q_c_p_data_selection_a7f7526b475998dc0c3d6c376b24736c9}{isEmpty}}())}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02563}02563\ \ \ \ \ \textcolor{keywordflow}{return}\ \{\};}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02564}02564\ \ \ \textcolor{keywordflow}{else}}
-\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02565}02565\ \ \ \ \ \textcolor{keywordflow}{return}\ \{mDataRanges.first().begin(),\ mDataRanges.last().end()\};}
+\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02565}02565\ \ \ \ \ \textcolor{keywordflow}{return}\ \{\mbox{\hyperlink{class_q_c_p_data_selection_aa1070e7c700f15d9018fad78b4732004}{mDataRanges}}.first().begin(),\ \mbox{\hyperlink{class_q_c_p_data_selection_aa1070e7c700f15d9018fad78b4732004}{mDataRanges}}.last().end()\};}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02566}02566\ \}}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02567}02567\ }
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02574}\mbox{\hyperlink{class_q_c_p_data_selection_a46740c5aa7b80ae9b2abf6985d61b74f}{02574}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_q_c_p_data_selection_a46740c5aa7b80ae9b2abf6985d61b74f}{QCPDataSelection::addDataRange}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_q_c_p_data_range}{QCPDataRange}}\ \&dataRange,\ \textcolor{keywordtype}{bool}\ simplify)}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02575}02575\ \{}
-\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02576}02576\ \ \ mDataRanges.append(\mbox{\hyperlink{class_q_c_p_data_selection_a6956acf6a9a49a353b4f9b58608978ad}{dataRange}});}
+\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02576}02576\ \ \ \mbox{\hyperlink{class_q_c_p_data_selection_aa1070e7c700f15d9018fad78b4732004}{mDataRanges}}.append(\mbox{\hyperlink{class_q_c_p_data_selection_a6956acf6a9a49a353b4f9b58608978ad}{dataRange}});}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02577}02577\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_q_c_p_data_selection_a4a2fbad1a6e4d1dd26fdfdf88956f2a4}{simplify}})}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02578}02578\ \ \ \ \ this-\/>\mbox{\hyperlink{class_q_c_p_data_selection_a4a2fbad1a6e4d1dd26fdfdf88956f2a4}{simplify}}();}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02579}02579\ \}}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02580}02580\ }
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02586}\mbox{\hyperlink{class_q_c_p_data_selection_a385dd665e6690d39afb8bbd727b1e00b}{02586}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_q_c_p_data_selection_a385dd665e6690d39afb8bbd727b1e00b}{QCPDataSelection::clear}}()}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02587}02587\ \{}
-\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02588}02588\ \ \ mDataRanges.clear();}
+\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02588}02588\ \ \ \mbox{\hyperlink{class_q_c_p_data_selection_aa1070e7c700f15d9018fad78b4732004}{mDataRanges}}.clear();}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02589}02589\ \}}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02590}02590\ }
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02600}\mbox{\hyperlink{class_q_c_p_data_selection_a4a2fbad1a6e4d1dd26fdfdf88956f2a4}{02600}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_q_c_p_data_selection_a4a2fbad1a6e4d1dd26fdfdf88956f2a4}{QCPDataSelection::simplify}}()}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02601}02601\ \{}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02602}02602\ \ \ \textcolor{comment}{//\ remove\ any\ empty\ ranges:}}
-\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02603}02603\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=mDataRanges.size()-\/1;\ i>=0;\ -\/-\/i)}
+\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02603}02603\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=\mbox{\hyperlink{class_q_c_p_data_selection_aa1070e7c700f15d9018fad78b4732004}{mDataRanges}}.size()-\/1;\ i>=0;\ -\/-\/i)}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02604}02604\ \ \ \{}
-\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02605}02605\ \ \ \ \ \textcolor{keywordflow}{if}\ (mDataRanges.at(i).isEmpty())}
-\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02606}02606\ \ \ \ \ \ \ mDataRanges.removeAt(i);}
+\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02605}02605\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_q_c_p_data_selection_aa1070e7c700f15d9018fad78b4732004}{mDataRanges}}.at(i).isEmpty())}
+\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02606}02606\ \ \ \ \ \ \ \mbox{\hyperlink{class_q_c_p_data_selection_aa1070e7c700f15d9018fad78b4732004}{mDataRanges}}.removeAt(i);}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02607}02607\ \ \ \}}
-\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02608}02608\ \ \ \textcolor{keywordflow}{if}\ (mDataRanges.isEmpty())}
+\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02608}02608\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_q_c_p_data_selection_aa1070e7c700f15d9018fad78b4732004}{mDataRanges}}.isEmpty())}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02609}02609\ \ \ \ \ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02610}02610\ \ \ }
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02611}02611\ \ \ \textcolor{comment}{//\ sort\ ranges\ by\ starting\ value,\ ascending:}}
-\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02612}02612\ \ \ std::sort(mDataRanges.begin(),\ mDataRanges.end(),\ lessThanDataRangeBegin);}
+\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02612}02612\ \ \ std::sort(\mbox{\hyperlink{class_q_c_p_data_selection_aa1070e7c700f15d9018fad78b4732004}{mDataRanges}}.begin(),\ \mbox{\hyperlink{class_q_c_p_data_selection_aa1070e7c700f15d9018fad78b4732004}{mDataRanges}}.end(),\ \mbox{\hyperlink{class_q_c_p_data_selection_a6f171526f5441482568ff5e22e6af2c6}{lessThanDataRangeBegin}});}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02613}02613\ \ \ }
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02614}02614\ \ \ \textcolor{comment}{//\ join\ overlapping/contiguous\ ranges:}}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02615}02615\ \ \ \textcolor{keywordtype}{int}\ i\ =\ 1;}
-\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02616}02616\ \ \ \textcolor{keywordflow}{while}\ (i\ <\ mDataRanges.size())}
+\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02616}02616\ \ \ \textcolor{keywordflow}{while}\ (i\ <\ \mbox{\hyperlink{class_q_c_p_data_selection_aa1070e7c700f15d9018fad78b4732004}{mDataRanges}}.size())}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02617}02617\ \ \ \{}
-\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02618}02618\ \ \ \ \ \textcolor{keywordflow}{if}\ (mDataRanges.at(i-\/1).end()\ >=\ mDataRanges.at(i).begin())\ \textcolor{comment}{//\ range\ i\ overlaps/joins\ with\ i-\/1,\ so\ expand\ range\ i-\/1\ appropriately\ and\ remove\ range\ i\ from\ list}}
+\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02618}02618\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_q_c_p_data_selection_aa1070e7c700f15d9018fad78b4732004}{mDataRanges}}.at(i-\/1).end()\ >=\ \mbox{\hyperlink{class_q_c_p_data_selection_aa1070e7c700f15d9018fad78b4732004}{mDataRanges}}.at(i).begin())\ \textcolor{comment}{//\ range\ i\ overlaps/joins\ with\ i-\/1,\ so\ expand\ range\ i-\/1\ appropriately\ and\ remove\ range\ i\ from\ list}}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02619}02619\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02620}02620\ \ \ \ \ \ \ mDataRanges[i-\/1].setEnd(qMax(mDataRanges.at(i-\/1).end(),\ mDataRanges.at(i).end()));}
-\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02621}02621\ \ \ \ \ \ \ mDataRanges.removeAt(i);}
+\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02620}02620\ \ \ \ \ \ \ \mbox{\hyperlink{class_q_c_p_data_selection_aa1070e7c700f15d9018fad78b4732004}{mDataRanges}}[i-\/1].setEnd(qMax(\mbox{\hyperlink{class_q_c_p_data_selection_aa1070e7c700f15d9018fad78b4732004}{mDataRanges}}.at(i-\/1).end(),\ \mbox{\hyperlink{class_q_c_p_data_selection_aa1070e7c700f15d9018fad78b4732004}{mDataRanges}}.at(i).end()));}
+\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02621}02621\ \ \ \ \ \ \ \mbox{\hyperlink{class_q_c_p_data_selection_aa1070e7c700f15d9018fad78b4732004}{mDataRanges}}.removeAt(i);}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02622}02622\ \ \ \ \ \}\ \textcolor{keywordflow}{else}}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02623}02623\ \ \ \ \ \ \ ++i;}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02624}02624\ \ \ \}}
@@ -1267,7 +1267,7 @@
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02641}02641\ \ \ \{}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02642}02642\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespace_q_c_p_ac6cb9db26a564b27feda362a438db038aa64628e338a2dd1e6f0dc84dec0b63fe}{QCP::stNone}}:}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02643}02643\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02644}02644\ \ \ \ \ \ \ mDataRanges.clear();}
+\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02644}02644\ \ \ \ \ \ \ \mbox{\hyperlink{class_q_c_p_data_selection_aa1070e7c700f15d9018fad78b4732004}{mDataRanges}}.clear();}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02645}02645\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02646}02646\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02647}02647\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespace_q_c_p_ac6cb9db26a564b27feda362a438db038aff7a688d4d520e8e7f01be098a034a2d}{QCP::stWhole}}:}
@@ -1278,19 +1278,19 @@
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02652}02652\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespace_q_c_p_ac6cb9db26a564b27feda362a438db038ae5b11259c42962db355e7448f4a8633a}{QCP::stSingleData}}:}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02653}02653\ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02654}02654\ \ \ \ \ \ \ \textcolor{comment}{//\ reduce\ all\ data\ ranges\ to\ the\ single\ first\ data\ point:}}
-\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02655}02655\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!mDataRanges.isEmpty())}
+\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02655}02655\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{class_q_c_p_data_selection_aa1070e7c700f15d9018fad78b4732004}{mDataRanges}}.isEmpty())}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02656}02656\ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02657}02657\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (mDataRanges.size()\ >\ 1)}
-\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02658}02658\ \ \ \ \ \ \ \ \ \ \ mDataRanges\ =\ QList<QCPDataRange>()\ <<\ mDataRanges.first();}
-\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02659}02659\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (mDataRanges.first().length()\ >\ 1)}
-\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02660}02660\ \ \ \ \ \ \ \ \ \ \ mDataRanges.first().setEnd(mDataRanges.first().begin()+1);}
+\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02657}02657\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_q_c_p_data_selection_aa1070e7c700f15d9018fad78b4732004}{mDataRanges}}.size()\ >\ 1)}
+\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02658}02658\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_q_c_p_data_selection_aa1070e7c700f15d9018fad78b4732004}{mDataRanges}}\ =\ QList<QCPDataRange>()\ <<\ \mbox{\hyperlink{class_q_c_p_data_selection_aa1070e7c700f15d9018fad78b4732004}{mDataRanges}}.first();}
+\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02659}02659\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_q_c_p_data_selection_aa1070e7c700f15d9018fad78b4732004}{mDataRanges}}.first().length()\ >\ 1)}
+\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02660}02660\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_q_c_p_data_selection_aa1070e7c700f15d9018fad78b4732004}{mDataRanges}}.first().setEnd(\mbox{\hyperlink{class_q_c_p_data_selection_aa1070e7c700f15d9018fad78b4732004}{mDataRanges}}.first().begin()+1);}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02661}02661\ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02662}02662\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02663}02663\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02664}02664\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespace_q_c_p_ac6cb9db26a564b27feda362a438db038aa05d2cba99c724df004d9c48971e4371}{QCP::stDataRange}}:}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02665}02665\ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02666}02666\ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{class_q_c_p_data_selection_a7f7526b475998dc0c3d6c376b24736c9}{isEmpty}}())}
-\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02667}02667\ \ \ \ \ \ \ \ \ mDataRanges\ =\ QList<QCPDataRange>()\ <<\ \mbox{\hyperlink{class_q_c_p_data_selection_a890f9291e0b7f065747040de5d68ff7d}{span}}();}
+\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02667}02667\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_q_c_p_data_selection_aa1070e7c700f15d9018fad78b4732004}{mDataRanges}}\ =\ QList<QCPDataRange>()\ <<\ \mbox{\hyperlink{class_q_c_p_data_selection_a890f9291e0b7f065747040de5d68ff7d}{span}}();}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02668}02668\ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02669}02669\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02670}02670\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespace_q_c_p_ac6cb9db26a564b27feda362a438db038a7cf82676966ebf79cc371f65278e0e16}{QCP::stMultipleDataRanges}}:}
@@ -1307,20 +1307,20 @@
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02687}02687\ \ \ }
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02688}02688\ \ \ \textcolor{keywordtype}{int}\ otherIndex\ =\ 0;}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02689}02689\ \ \ \textcolor{keywordtype}{int}\ thisIndex\ =\ 0;}
-\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02690}02690\ \ \ \textcolor{keywordflow}{while}\ (thisIndex\ <\ mDataRanges.size()\ \&\&\ otherIndex\ <\ other.mDataRanges.size())}
+\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02690}02690\ \ \ \textcolor{keywordflow}{while}\ (thisIndex\ <\ \mbox{\hyperlink{class_q_c_p_data_selection_aa1070e7c700f15d9018fad78b4732004}{mDataRanges}}.size()\ \&\&\ otherIndex\ <\ other.\mbox{\hyperlink{class_q_c_p_data_selection_aa1070e7c700f15d9018fad78b4732004}{mDataRanges}}.size())}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02691}02691\ \ \ \{}
-\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02692}02692\ \ \ \ \ \textcolor{keywordflow}{if}\ (mDataRanges.at(thisIndex).contains(other.mDataRanges.at(otherIndex)))}
+\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02692}02692\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_q_c_p_data_selection_aa1070e7c700f15d9018fad78b4732004}{mDataRanges}}.at(thisIndex).contains(other.\mbox{\hyperlink{class_q_c_p_data_selection_aa1070e7c700f15d9018fad78b4732004}{mDataRanges}}.at(otherIndex)))}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02693}02693\ \ \ \ \ \ \ ++otherIndex;}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02694}02694\ \ \ \ \ \textcolor{keywordflow}{else}}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02695}02695\ \ \ \ \ \ \ ++thisIndex;}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02696}02696\ \ \ \}}
-\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02697}02697\ \ \ \textcolor{keywordflow}{return}\ thisIndex\ <\ mDataRanges.size();\ \textcolor{comment}{//\ if\ thisIndex\ ran\ all\ the\ way\ to\ the\ end\ to\ find\ a\ containing\ range\ for\ the\ current\ otherIndex,\ other\ is\ not\ contained\ in\ this}}
+\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02697}02697\ \ \ \textcolor{keywordflow}{return}\ thisIndex\ <\ \mbox{\hyperlink{class_q_c_p_data_selection_aa1070e7c700f15d9018fad78b4732004}{mDataRanges}}.size();\ \textcolor{comment}{//\ if\ thisIndex\ ran\ all\ the\ way\ to\ the\ end\ to\ find\ a\ containing\ range\ for\ the\ current\ otherIndex,\ other\ is\ not\ contained\ in\ this}}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02698}02698\ \}}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02699}02699\ }
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02708}\mbox{\hyperlink{class_q_c_p_data_selection_af5267ced53687561367105ee77b874ab}{02708}}\ \mbox{\hyperlink{class_q_c_p_data_selection}{QCPDataSelection}}\ \mbox{\hyperlink{class_q_c_p_data_selection_af5267ced53687561367105ee77b874ab}{QCPDataSelection::intersection}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_q_c_p_data_range}{QCPDataRange}}\ \&other)\textcolor{keyword}{\ const}}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02709}02709\ \textcolor{keyword}{}\{}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02710}02710\ \ \ \mbox{\hyperlink{class_q_c_p_data_selection}{QCPDataSelection}}\ result;}
-\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02711}02711\ \ \ \textcolor{keywordflow}{foreach}\ (\mbox{\hyperlink{class_q_c_p_data_range}{QCPDataRange}}\ \mbox{\hyperlink{class_q_c_p_data_selection_a6956acf6a9a49a353b4f9b58608978ad}{dataRange}},\ mDataRanges)}
+\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02711}02711\ \ \ \textcolor{keywordflow}{foreach}\ (\mbox{\hyperlink{class_q_c_p_data_range}{QCPDataRange}}\ \mbox{\hyperlink{class_q_c_p_data_selection_a6956acf6a9a49a353b4f9b58608978ad}{dataRange}},\ \mbox{\hyperlink{class_q_c_p_data_selection_aa1070e7c700f15d9018fad78b4732004}{mDataRanges}})}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02712}02712\ \ \ \ \ result.\mbox{\hyperlink{class_q_c_p_data_selection_a46740c5aa7b80ae9b2abf6985d61b74f}{addDataRange}}(\mbox{\hyperlink{class_q_c_p_data_selection_a6956acf6a9a49a353b4f9b58608978ad}{dataRange}}.\mbox{\hyperlink{class_q_c_p_data_range_a84e1e03129dd52528efb4bac18d30183}{intersection}}(other),\ \textcolor{keyword}{false});}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02713}02713\ \ \ result.\mbox{\hyperlink{class_q_c_p_data_selection_a4a2fbad1a6e4d1dd26fdfdf88956f2a4}{simplify}}();}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02714}02714\ \ \ \textcolor{keywordflow}{return}\ result;}
@@ -1343,14 +1343,14 @@
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02744}02744\ \ \ }
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02745}02745\ \ \ \mbox{\hyperlink{class_q_c_p_data_selection}{QCPDataSelection}}\ result;}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02746}02746\ \ \ \textcolor{comment}{//\ first\ unselected\ segment:}}
-\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02747}02747\ \ \ \textcolor{keywordflow}{if}\ (mDataRanges.first().begin()\ !=\ fullRange.\mbox{\hyperlink{class_q_c_p_data_range_ae76d7eba9defdfafcd0fc41096793129}{begin}}())}
-\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02748}02748\ \ \ \ \ result.\mbox{\hyperlink{class_q_c_p_data_selection_a46740c5aa7b80ae9b2abf6985d61b74f}{addDataRange}}(\mbox{\hyperlink{class_q_c_p_data_range}{QCPDataRange}}(fullRange.\mbox{\hyperlink{class_q_c_p_data_range_ae76d7eba9defdfafcd0fc41096793129}{begin}}(),\ mDataRanges.first().begin()),\ \textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02747}02747\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_q_c_p_data_selection_aa1070e7c700f15d9018fad78b4732004}{mDataRanges}}.first().begin()\ !=\ fullRange.\mbox{\hyperlink{class_q_c_p_data_range_ae76d7eba9defdfafcd0fc41096793129}{begin}}())}
+\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02748}02748\ \ \ \ \ result.\mbox{\hyperlink{class_q_c_p_data_selection_a46740c5aa7b80ae9b2abf6985d61b74f}{addDataRange}}(\mbox{\hyperlink{class_q_c_p_data_range}{QCPDataRange}}(fullRange.\mbox{\hyperlink{class_q_c_p_data_range_ae76d7eba9defdfafcd0fc41096793129}{begin}}(),\ \mbox{\hyperlink{class_q_c_p_data_selection_aa1070e7c700f15d9018fad78b4732004}{mDataRanges}}.first().begin()),\ \textcolor{keyword}{false});}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02749}02749\ \ \ \textcolor{comment}{//\ intermediate\ unselected\ segments:}}
-\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02750}02750\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=1;\ i<mDataRanges.size();\ ++i)}
-\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02751}02751\ \ \ \ \ result.\mbox{\hyperlink{class_q_c_p_data_selection_a46740c5aa7b80ae9b2abf6985d61b74f}{addDataRange}}(\mbox{\hyperlink{class_q_c_p_data_range}{QCPDataRange}}(mDataRanges.at(i-\/1).end(),\ mDataRanges.at(i).begin()),\ \textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02750}02750\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=1;\ i<\mbox{\hyperlink{class_q_c_p_data_selection_aa1070e7c700f15d9018fad78b4732004}{mDataRanges}}.size();\ ++i)}
+\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02751}02751\ \ \ \ \ result.\mbox{\hyperlink{class_q_c_p_data_selection_a46740c5aa7b80ae9b2abf6985d61b74f}{addDataRange}}(\mbox{\hyperlink{class_q_c_p_data_range}{QCPDataRange}}(\mbox{\hyperlink{class_q_c_p_data_selection_aa1070e7c700f15d9018fad78b4732004}{mDataRanges}}.at(i-\/1).end(),\ \mbox{\hyperlink{class_q_c_p_data_selection_aa1070e7c700f15d9018fad78b4732004}{mDataRanges}}.at(i).begin()),\ \textcolor{keyword}{false});}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02752}02752\ \ \ \textcolor{comment}{//\ last\ unselected\ segment:}}
-\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02753}02753\ \ \ \textcolor{keywordflow}{if}\ (mDataRanges.last().end()\ !=\ fullRange.\mbox{\hyperlink{class_q_c_p_data_range_aee1b20fb045929c3753ee2ce14af7630}{end}}())}
-\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02754}02754\ \ \ \ \ result.\mbox{\hyperlink{class_q_c_p_data_selection_a46740c5aa7b80ae9b2abf6985d61b74f}{addDataRange}}(\mbox{\hyperlink{class_q_c_p_data_range}{QCPDataRange}}(mDataRanges.last().end(),\ fullRange.\mbox{\hyperlink{class_q_c_p_data_range_aee1b20fb045929c3753ee2ce14af7630}{end}}()),\ \textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02753}02753\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_q_c_p_data_selection_aa1070e7c700f15d9018fad78b4732004}{mDataRanges}}.last().end()\ !=\ fullRange.\mbox{\hyperlink{class_q_c_p_data_range_aee1b20fb045929c3753ee2ce14af7630}{end}}())}
+\DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02754}02754\ \ \ \ \ result.\mbox{\hyperlink{class_q_c_p_data_selection_a46740c5aa7b80ae9b2abf6985d61b74f}{addDataRange}}(\mbox{\hyperlink{class_q_c_p_data_range}{QCPDataRange}}(\mbox{\hyperlink{class_q_c_p_data_selection_aa1070e7c700f15d9018fad78b4732004}{mDataRanges}}.last().end(),\ fullRange.\mbox{\hyperlink{class_q_c_p_data_range_aee1b20fb045929c3753ee2ce14af7630}{end}}()),\ \textcolor{keyword}{false});}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02755}02755\ \ \ result.\mbox{\hyperlink{class_q_c_p_data_selection_a4a2fbad1a6e4d1dd26fdfdf88956f2a4}{simplify}}();}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02756}02756\ \ \ \textcolor{keywordflow}{return}\ result;}
 \DoxyCodeLine{\Hypertarget{qcustomplot_8cpp_source_l02757}02757\ \}}

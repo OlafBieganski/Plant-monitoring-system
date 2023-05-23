@@ -14,8 +14,20 @@ Inheritance diagram for Port\+Selection\+:\begin{figure}[H]
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_port_selection_a5e83b97466fb8ae74ced4608c4e95df1}{Port\+Selection}} (QWidget $\ast$parent=nullptr, QSerial\+Port $\ast$serial\+\_\+port=nullptr)
-\item 
+\begin{DoxyCompactList}\small\item\em Creates a widget and lists available serial ports. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_port_selection_a8397840a6f6c236b0188ba7252f4ef04}{$\sim$\+Port\+Selection}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_port_selection_a53a2235e24922cb17267bd444bb9a245}{on\+\_\+button\+Box\+\_\+accepted}} ()
+\begin{DoxyCompactList}\small\item\em is possible connects with choosen serial port \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Ui\+::\+Port\+Selection $\ast$ \mbox{\hyperlink{class_port_selection_a2a9104af06023da98d89e74c3ecbf049}{ui}}
+\item 
+QSerial\+Port $\ast$ \mbox{\hyperlink{class_port_selection_a1a803946b1cee989051a85d1bfb23ea9}{arduino}}
 \end{DoxyCompactItemize}
 
 
@@ -35,6 +47,17 @@ Definition at line \mbox{\hyperlink{portselection_8h_source_l00012}{12}} of file
 
 
 
+Creates a widget and lists available serial ports. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & \\
+\hline
+{\em serial\+\_\+port} & -\/ pointer to QSerial\+Port object that stores information about connection (is a member of \mbox{\hyperlink{class_main_window}{Main\+Window}}) \\
+\hline
+\end{DoxyParams}
+
+
 Definition at line \mbox{\hyperlink{portselection_8cpp_source_l00006}{6}} of file \mbox{\hyperlink{portselection_8cpp_source}{portselection.\+cpp}}.
 
 \mbox{\Hypertarget{class_port_selection_a8397840a6f6c236b0188ba7252f4ef04}\label{class_port_selection_a8397840a6f6c236b0188ba7252f4ef04}} 
@@ -46,4 +69,44 @@ Definition at line \mbox{\hyperlink{portselection_8cpp_source_l00006}{6}} of fil
 
 
 Definition at line \mbox{\hyperlink{portselection_8cpp_source_l00018}{18}} of file \mbox{\hyperlink{portselection_8cpp_source}{portselection.\+cpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_port_selection_a53a2235e24922cb17267bd444bb9a245}\label{class_port_selection_a53a2235e24922cb17267bd444bb9a245}} 
+\index{PortSelection@{PortSelection}!on\_buttonBox\_accepted@{on\_buttonBox\_accepted}}
+\index{on\_buttonBox\_accepted@{on\_buttonBox\_accepted}!PortSelection@{PortSelection}}
+\doxysubsubsection{\texorpdfstring{on\_buttonBox\_accepted}{on\_buttonBox\_accepted}}
+{\footnotesize\ttfamily void Port\+Selection\+::on\+\_\+button\+Box\+\_\+accepted (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+is possible connects with choosen serial port 
+
+
+
+Definition at line \mbox{\hyperlink{portselection_8cpp_source_l00023}{23}} of file \mbox{\hyperlink{portselection_8cpp_source}{portselection.\+cpp}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_port_selection_a1a803946b1cee989051a85d1bfb23ea9}\label{class_port_selection_a1a803946b1cee989051a85d1bfb23ea9}} 
+\index{PortSelection@{PortSelection}!arduino@{arduino}}
+\index{arduino@{arduino}!PortSelection@{PortSelection}}
+\doxysubsubsection{\texorpdfstring{arduino}{arduino}}
+{\footnotesize\ttfamily QSerial\+Port$\ast$ Port\+Selection\+::arduino\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{portselection_8h_source_l00033}{33}} of file \mbox{\hyperlink{portselection_8h_source}{portselection.\+h}}.
+
+\mbox{\Hypertarget{class_port_selection_a2a9104af06023da98d89e74c3ecbf049}\label{class_port_selection_a2a9104af06023da98d89e74c3ecbf049}} 
+\index{PortSelection@{PortSelection}!ui@{ui}}
+\index{ui@{ui}!PortSelection@{PortSelection}}
+\doxysubsubsection{\texorpdfstring{ui}{ui}}
+{\footnotesize\ttfamily Ui\+::\+Port\+Selection$\ast$ Port\+Selection\+::ui\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{portselection_8h_source_l00032}{32}} of file \mbox{\hyperlink{portselection_8h_source}{portselection.\+h}}.
 

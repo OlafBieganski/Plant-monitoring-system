@@ -56,6 +56,16 @@ bool \mbox{\hyperlink{class_q_c_p_data_selection_ab1ad3d5bbb55749c3f7ab1e45429c9
 \item 
 \mbox{\hyperlink{class_q_c_p_data_selection}{QCPData\+Selection}} \mbox{\hyperlink{class_q_c_p_data_selection_ae8097f4e4ffee7b1b5df27c93eb365db}{inverse}} (const \mbox{\hyperlink{class_q_c_p_data_range}{QCPData\+Range}} \&outer\+Range) const
 \end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{class_q_c_p_data_selection_a6f171526f5441482568ff5e22e6af2c6}{less\+Than\+Data\+Range\+Begin}} (const \mbox{\hyperlink{class_q_c_p_data_range}{QCPData\+Range}} \&a, const \mbox{\hyperlink{class_q_c_p_data_range}{QCPData\+Range}} \&b)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+QList$<$ \mbox{\hyperlink{class_q_c_p_data_range}{QCPData\+Range}} $>$ \mbox{\hyperlink{class_q_c_p_data_selection_aa1070e7c700f15d9018fad78b4732004}{m\+Data\+Ranges}}
+\end{DoxyCompactItemize}
 \doxysubsection*{Friends}
 \begin{DoxyCompactItemize}
 \item 
@@ -290,6 +300,16 @@ Returns true if there are no data ranges, and thus no data points, in this \mbox
 
 Definition at line \mbox{\hyperlink{qcustomplot_8h_source_l00982}{982}} of file \mbox{\hyperlink{qcustomplot_8h_source}{qcustomplot.\+h}}.
 
+\mbox{\Hypertarget{class_q_c_p_data_selection_a6f171526f5441482568ff5e22e6af2c6}\label{class_q_c_p_data_selection_a6f171526f5441482568ff5e22e6af2c6}} 
+\index{QCPDataSelection@{QCPDataSelection}!lessThanDataRangeBegin@{lessThanDataRangeBegin}}
+\index{lessThanDataRangeBegin@{lessThanDataRangeBegin}!QCPDataSelection@{QCPDataSelection}}
+\doxysubsubsection{\texorpdfstring{lessThanDataRangeBegin()}{lessThanDataRangeBegin()}}
+{\footnotesize\ttfamily static bool QCPData\+Selection\+::less\+Than\+Data\+Range\+Begin (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_q_c_p_data_range}{QCPData\+Range}} \&}]{a,  }\item[{const \mbox{\hyperlink{class_q_c_p_data_range}{QCPData\+Range}} \&}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{qcustomplot_8h_source_l00994}{994}} of file \mbox{\hyperlink{qcustomplot_8h_source}{qcustomplot.\+h}}.
+
 \mbox{\Hypertarget{class_q_c_p_data_selection_a8324733cc88660ee4792ee60d6a4520c}\label{class_q_c_p_data_selection_a8324733cc88660ee4792ee60d6a4520c}} 
 \index{QCPDataSelection@{QCPDataSelection}!operator"!=@{operator"!=}}
 \index{operator"!=@{operator"!=}!QCPDataSelection@{QCPDataSelection}}
@@ -466,4 +486,17 @@ Definition at line \mbox{\hyperlink{qcustomplot_8h_source_l01046}{1046}} of file
 Prints {\itshape selection} in a human readable format to the q\+Debug output. 
 
 Definition at line \mbox{\hyperlink{qcustomplot_8h_source_l01097}{1097}} of file \mbox{\hyperlink{qcustomplot_8h_source}{qcustomplot.\+h}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_q_c_p_data_selection_aa1070e7c700f15d9018fad78b4732004}\label{class_q_c_p_data_selection_aa1070e7c700f15d9018fad78b4732004}} 
+\index{QCPDataSelection@{QCPDataSelection}!mDataRanges@{mDataRanges}}
+\index{mDataRanges@{mDataRanges}!QCPDataSelection@{QCPDataSelection}}
+\doxysubsubsection{\texorpdfstring{mDataRanges}{mDataRanges}}
+{\footnotesize\ttfamily QList$<$\mbox{\hyperlink{class_q_c_p_data_range}{QCPData\+Range}}$>$ QCPData\+Selection\+::m\+Data\+Ranges\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{qcustomplot_8h_source_l00992}{992}} of file \mbox{\hyperlink{qcustomplot_8h_source}{qcustomplot.\+h}}.
 

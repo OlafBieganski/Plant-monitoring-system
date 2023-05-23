@@ -14,7 +14,14 @@ class PlotsWindow : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit PlotsWindow(QWidget *parent = nullptr, QSerialPort* serial = nullptr);
+    /*!
+     * \brief Creates a PlotsWindow object
+     * \param parent
+     * \param serial - pointer to a serial port handler that our external device is connected to
+     * \param file_name - name of the file with data to be visualized on the plots
+     * \see PortSelection
+     */
+    explicit PlotsWindow(QWidget *parent = nullptr, QSerialPort* serial = nullptr, QString file_name = "");
     ~PlotsWindow();
 
 signals:
@@ -33,11 +40,16 @@ private slots:
     * \brief Emits signal with information to switch windows and hide PlotsWindow window
     */
     void on_actionOkno_g_wne_triggered();
+    /*!
+     * \brief Open file with a measurement data and displays it on plots
+     */
+    void on_actionWybierz_serie_triggered();
 
 private:
     Ui::PlotsWindow *ui;
     QSerialPort* arduino;
     PortSelection* com_window;
+    QString curr_file_name;
 };
 
 #endif // PLOTSWINDOW_H

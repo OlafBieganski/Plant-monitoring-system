@@ -17,12 +17,54 @@ Inheritance diagram for Main\+Window\+:\begin{figure}[H]
 \item 
 \mbox{\hyperlink{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7}{$\sim$\+Main\+Window}} ()
 \end{DoxyCompactItemize}
+\doxysubsection*{Private Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_main_window_ac41b86ebb4c5b8ddcefb43630d83145a}{on\+\_\+push\+Button\+\_\+measure\+\_\+clicked}} ()
+\begin{DoxyCompactList}\small\item\em creates connection with a serial port and receives data \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_a65cf5cbd0025ef76431ca4b7dc059ec8}{on\+\_\+action\+Wybierz\+\_\+port\+\_\+szeregowy\+\_\+triggered}} ()
+\begin{DoxyCompactList}\small\item\em on\+\_\+action\+Wybierz\+\_\+port\+\_\+szeregowy\+\_\+triggered \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_a4c2cb53d579f2ad515e3bba42dd284b9}{on\+\_\+action\+Wykresy\+\_\+triggered}} ()
+\begin{DoxyCompactList}\small\item\em on\+\_\+action\+Wykresy\+\_\+triggered \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_ad6dee8ac0966d586ea0200d7bb88cdf5}{on\+Second\+Window\+Closed}} ()
+\begin{DoxyCompactList}\small\item\em on\+Second\+Window\+Closed \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_af6fcebbe498d831cb18cfb4206044762}{on\+\_\+action\+Nowa\+\_\+seria\+\_\+triggered}} ()
+\item 
+void \mbox{\hyperlink{class_main_window_a3f85796ac70d169911968bd0d4910469}{on\+\_\+action\+Wybierz\+\_\+serie\+\_\+triggered}} ()
+\item 
+void \mbox{\hyperlink{class_main_window_a72c41a777ee634839246b4f7a068f579}{on\+\_\+action\+Zapisz\+\_\+pomiar\+\_\+triggered}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Ui\+::\+Main\+Window $\ast$ \mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}}
+\item 
+QSerial\+Port $\ast$ \mbox{\hyperlink{class_main_window_a9029411f21223671e111ff617fcece6a}{serial}}
+\item 
+char $\ast$ \mbox{\hyperlink{class_main_window_a4f0eb78d379d552457465565093dbb34}{serial\+\_\+buffer}}
+\item 
+int \mbox{\hyperlink{class_main_window_a1b5bbff56fa0f4af6f4fe56c366d9a8c}{buffer\+\_\+size}}
+\item 
+\mbox{\hyperlink{class_port_selection}{Port\+Selection}} $\ast$ \mbox{\hyperlink{class_main_window_a43e6e361567e132c5c70f84e5dbdc849}{com\+\_\+window}}
+\item 
+\mbox{\hyperlink{class_plots_window}{Plots\+Window}} $\ast$ \mbox{\hyperlink{class_main_window_a4b85be5568203fb37a5fb4b243cb8041}{second\+\_\+window}} = nullptr
+\item 
+QString \mbox{\hyperlink{class_main_window_a01bb76b4959d0eb4564bd3f8e73bb654}{curr\+\_\+filename}}
+\item 
+int \mbox{\hyperlink{class_main_window_a050dcc0f15ed5d9b17a5ab4fb9945db4}{temperature}}
+\item 
+int \mbox{\hyperlink{class_main_window_a8bd0a2d0c52b84028f1acff3a8888cda}{humidity}}
+\item 
+int \mbox{\hyperlink{class_main_window_a26e55ff5290b0f8501cc1b54f46ce81b}{ground}}
+\item 
+int \mbox{\hyperlink{class_main_window_afba630aa201c443db23a32a8208eaeb5}{sunlight}}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 
 
-Definition at line \mbox{\hyperlink{mainwindow_8h_source_l00013}{13}} of file \mbox{\hyperlink{mainwindow_8h_source}{mainwindow.\+h}}.
+Definition at line \mbox{\hyperlink{mainwindow_8h_source_l00014}{14}} of file \mbox{\hyperlink{mainwindow_8h_source}{mainwindow.\+h}}.
 
 
 
@@ -35,7 +77,7 @@ Definition at line \mbox{\hyperlink{mainwindow_8h_source_l00013}{13}} of file \m
 
 
 
-Definition at line \mbox{\hyperlink{mainwindow_8cpp_source_l00008}{8}} of file \mbox{\hyperlink{mainwindow_8cpp_source}{mainwindow.\+cpp}}.
+Definition at line \mbox{\hyperlink{mainwindow_8cpp_source_l00009}{9}} of file \mbox{\hyperlink{mainwindow_8cpp_source}{mainwindow.\+cpp}}.
 
 \mbox{\Hypertarget{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7}\label{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7}} 
 \index{MainWindow@{MainWindow}!````~MainWindow@{$\sim$MainWindow}}
@@ -45,5 +87,207 @@ Definition at line \mbox{\hyperlink{mainwindow_8cpp_source_l00008}{8}} of file \
 
 
 
-Definition at line \mbox{\hyperlink{mainwindow_8cpp_source_l00020}{20}} of file \mbox{\hyperlink{mainwindow_8cpp_source}{mainwindow.\+cpp}}.
+Definition at line \mbox{\hyperlink{mainwindow_8cpp_source_l00021}{21}} of file \mbox{\hyperlink{mainwindow_8cpp_source}{mainwindow.\+cpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_main_window_af6fcebbe498d831cb18cfb4206044762}\label{class_main_window_af6fcebbe498d831cb18cfb4206044762}} 
+\index{MainWindow@{MainWindow}!on\_actionNowa\_seria\_triggered@{on\_actionNowa\_seria\_triggered}}
+\index{on\_actionNowa\_seria\_triggered@{on\_actionNowa\_seria\_triggered}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{on\_actionNowa\_seria\_triggered}{on\_actionNowa\_seria\_triggered}}
+{\footnotesize\ttfamily void Main\+Window\+::on\+\_\+action\+Nowa\+\_\+seria\+\_\+triggered (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Definition at line \mbox{\hyperlink{mainwindow_8cpp_source_l00083}{83}} of file \mbox{\hyperlink{mainwindow_8cpp_source}{mainwindow.\+cpp}}.
+
+\mbox{\Hypertarget{class_main_window_a65cf5cbd0025ef76431ca4b7dc059ec8}\label{class_main_window_a65cf5cbd0025ef76431ca4b7dc059ec8}} 
+\index{MainWindow@{MainWindow}!on\_actionWybierz\_port\_szeregowy\_triggered@{on\_actionWybierz\_port\_szeregowy\_triggered}}
+\index{on\_actionWybierz\_port\_szeregowy\_triggered@{on\_actionWybierz\_port\_szeregowy\_triggered}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{on\_actionWybierz\_port\_szeregowy\_triggered}{on\_actionWybierz\_port\_szeregowy\_triggered}}
+{\footnotesize\ttfamily void Main\+Window\+::on\+\_\+action\+Wybierz\+\_\+port\+\_\+szeregowy\+\_\+triggered (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+on\+\_\+action\+Wybierz\+\_\+port\+\_\+szeregowy\+\_\+triggered 
+
+
+
+Definition at line \mbox{\hyperlink{mainwindow_8cpp_source_l00061}{61}} of file \mbox{\hyperlink{mainwindow_8cpp_source}{mainwindow.\+cpp}}.
+
+\mbox{\Hypertarget{class_main_window_a3f85796ac70d169911968bd0d4910469}\label{class_main_window_a3f85796ac70d169911968bd0d4910469}} 
+\index{MainWindow@{MainWindow}!on\_actionWybierz\_serie\_triggered@{on\_actionWybierz\_serie\_triggered}}
+\index{on\_actionWybierz\_serie\_triggered@{on\_actionWybierz\_serie\_triggered}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{on\_actionWybierz\_serie\_triggered}{on\_actionWybierz\_serie\_triggered}}
+{\footnotesize\ttfamily void Main\+Window\+::on\+\_\+action\+Wybierz\+\_\+serie\+\_\+triggered (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Definition at line \mbox{\hyperlink{mainwindow_8cpp_source_l00103}{103}} of file \mbox{\hyperlink{mainwindow_8cpp_source}{mainwindow.\+cpp}}.
+
+\mbox{\Hypertarget{class_main_window_a4c2cb53d579f2ad515e3bba42dd284b9}\label{class_main_window_a4c2cb53d579f2ad515e3bba42dd284b9}} 
+\index{MainWindow@{MainWindow}!on\_actionWykresy\_triggered@{on\_actionWykresy\_triggered}}
+\index{on\_actionWykresy\_triggered@{on\_actionWykresy\_triggered}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{on\_actionWykresy\_triggered}{on\_actionWykresy\_triggered}}
+{\footnotesize\ttfamily void Main\+Window\+::on\+\_\+action\+Wykresy\+\_\+triggered (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+on\+\_\+action\+Wykresy\+\_\+triggered 
+
+
+
+Definition at line \mbox{\hyperlink{mainwindow_8cpp_source_l00069}{69}} of file \mbox{\hyperlink{mainwindow_8cpp_source}{mainwindow.\+cpp}}.
+
+\mbox{\Hypertarget{class_main_window_a72c41a777ee634839246b4f7a068f579}\label{class_main_window_a72c41a777ee634839246b4f7a068f579}} 
+\index{MainWindow@{MainWindow}!on\_actionZapisz\_pomiar\_triggered@{on\_actionZapisz\_pomiar\_triggered}}
+\index{on\_actionZapisz\_pomiar\_triggered@{on\_actionZapisz\_pomiar\_triggered}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{on\_actionZapisz\_pomiar\_triggered}{on\_actionZapisz\_pomiar\_triggered}}
+{\footnotesize\ttfamily void Main\+Window\+::on\+\_\+action\+Zapisz\+\_\+pomiar\+\_\+triggered (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Definition at line \mbox{\hyperlink{mainwindow_8cpp_source_l00126}{126}} of file \mbox{\hyperlink{mainwindow_8cpp_source}{mainwindow.\+cpp}}.
+
+\mbox{\Hypertarget{class_main_window_ac41b86ebb4c5b8ddcefb43630d83145a}\label{class_main_window_ac41b86ebb4c5b8ddcefb43630d83145a}} 
+\index{MainWindow@{MainWindow}!on\_pushButton\_measure\_clicked@{on\_pushButton\_measure\_clicked}}
+\index{on\_pushButton\_measure\_clicked@{on\_pushButton\_measure\_clicked}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{on\_pushButton\_measure\_clicked}{on\_pushButton\_measure\_clicked}}
+{\footnotesize\ttfamily void Main\+Window\+::on\+\_\+push\+Button\+\_\+measure\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+creates connection with a serial port and receives data 
+
+
+
+Definition at line \mbox{\hyperlink{mainwindow_8cpp_source_l00029}{29}} of file \mbox{\hyperlink{mainwindow_8cpp_source}{mainwindow.\+cpp}}.
+
+\mbox{\Hypertarget{class_main_window_ad6dee8ac0966d586ea0200d7bb88cdf5}\label{class_main_window_ad6dee8ac0966d586ea0200d7bb88cdf5}} 
+\index{MainWindow@{MainWindow}!onSecondWindowClosed@{onSecondWindowClosed}}
+\index{onSecondWindowClosed@{onSecondWindowClosed}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{onSecondWindowClosed}{onSecondWindowClosed}}
+{\footnotesize\ttfamily void Main\+Window\+::on\+Second\+Window\+Closed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+on\+Second\+Window\+Closed 
+
+
+
+Definition at line \mbox{\hyperlink{mainwindow_8cpp_source_l00079}{79}} of file \mbox{\hyperlink{mainwindow_8cpp_source}{mainwindow.\+cpp}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_main_window_a1b5bbff56fa0f4af6f4fe56c366d9a8c}\label{class_main_window_a1b5bbff56fa0f4af6f4fe56c366d9a8c}} 
+\index{MainWindow@{MainWindow}!buffer\_size@{buffer\_size}}
+\index{buffer\_size@{buffer\_size}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{buffer\_size}{buffer\_size}}
+{\footnotesize\ttfamily int Main\+Window\+::buffer\+\_\+size\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{mainwindow_8h_source_l00050}{50}} of file \mbox{\hyperlink{mainwindow_8h_source}{mainwindow.\+h}}.
+
+\mbox{\Hypertarget{class_main_window_a43e6e361567e132c5c70f84e5dbdc849}\label{class_main_window_a43e6e361567e132c5c70f84e5dbdc849}} 
+\index{MainWindow@{MainWindow}!com\_window@{com\_window}}
+\index{com\_window@{com\_window}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{com\_window}{com\_window}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_port_selection}{Port\+Selection}}$\ast$ Main\+Window\+::com\+\_\+window\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{mainwindow_8h_source_l00051}{51}} of file \mbox{\hyperlink{mainwindow_8h_source}{mainwindow.\+h}}.
+
+\mbox{\Hypertarget{class_main_window_a01bb76b4959d0eb4564bd3f8e73bb654}\label{class_main_window_a01bb76b4959d0eb4564bd3f8e73bb654}} 
+\index{MainWindow@{MainWindow}!curr\_filename@{curr\_filename}}
+\index{curr\_filename@{curr\_filename}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{curr\_filename}{curr\_filename}}
+{\footnotesize\ttfamily QString Main\+Window\+::curr\+\_\+filename\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{mainwindow_8h_source_l00053}{53}} of file \mbox{\hyperlink{mainwindow_8h_source}{mainwindow.\+h}}.
+
+\mbox{\Hypertarget{class_main_window_a26e55ff5290b0f8501cc1b54f46ce81b}\label{class_main_window_a26e55ff5290b0f8501cc1b54f46ce81b}} 
+\index{MainWindow@{MainWindow}!ground@{ground}}
+\index{ground@{ground}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{ground}{ground}}
+{\footnotesize\ttfamily int Main\+Window\+::ground\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{mainwindow_8h_source_l00054}{54}} of file \mbox{\hyperlink{mainwindow_8h_source}{mainwindow.\+h}}.
+
+\mbox{\Hypertarget{class_main_window_a8bd0a2d0c52b84028f1acff3a8888cda}\label{class_main_window_a8bd0a2d0c52b84028f1acff3a8888cda}} 
+\index{MainWindow@{MainWindow}!humidity@{humidity}}
+\index{humidity@{humidity}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{humidity}{humidity}}
+{\footnotesize\ttfamily int Main\+Window\+::humidity\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{mainwindow_8h_source_l00054}{54}} of file \mbox{\hyperlink{mainwindow_8h_source}{mainwindow.\+h}}.
+
+\mbox{\Hypertarget{class_main_window_a4b85be5568203fb37a5fb4b243cb8041}\label{class_main_window_a4b85be5568203fb37a5fb4b243cb8041}} 
+\index{MainWindow@{MainWindow}!second\_window@{second\_window}}
+\index{second\_window@{second\_window}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{second\_window}{second\_window}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_plots_window}{Plots\+Window}}$\ast$ Main\+Window\+::second\+\_\+window = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{mainwindow_8h_source_l00052}{52}} of file \mbox{\hyperlink{mainwindow_8h_source}{mainwindow.\+h}}.
+
+\mbox{\Hypertarget{class_main_window_a9029411f21223671e111ff617fcece6a}\label{class_main_window_a9029411f21223671e111ff617fcece6a}} 
+\index{MainWindow@{MainWindow}!serial@{serial}}
+\index{serial@{serial}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{serial}{serial}}
+{\footnotesize\ttfamily QSerial\+Port$\ast$ Main\+Window\+::serial\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{mainwindow_8h_source_l00048}{48}} of file \mbox{\hyperlink{mainwindow_8h_source}{mainwindow.\+h}}.
+
+\mbox{\Hypertarget{class_main_window_a4f0eb78d379d552457465565093dbb34}\label{class_main_window_a4f0eb78d379d552457465565093dbb34}} 
+\index{MainWindow@{MainWindow}!serial\_buffer@{serial\_buffer}}
+\index{serial\_buffer@{serial\_buffer}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{serial\_buffer}{serial\_buffer}}
+{\footnotesize\ttfamily char$\ast$ Main\+Window\+::serial\+\_\+buffer\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{mainwindow_8h_source_l00049}{49}} of file \mbox{\hyperlink{mainwindow_8h_source}{mainwindow.\+h}}.
+
+\mbox{\Hypertarget{class_main_window_afba630aa201c443db23a32a8208eaeb5}\label{class_main_window_afba630aa201c443db23a32a8208eaeb5}} 
+\index{MainWindow@{MainWindow}!sunlight@{sunlight}}
+\index{sunlight@{sunlight}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{sunlight}{sunlight}}
+{\footnotesize\ttfamily int Main\+Window\+::sunlight\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{mainwindow_8h_source_l00054}{54}} of file \mbox{\hyperlink{mainwindow_8h_source}{mainwindow.\+h}}.
+
+\mbox{\Hypertarget{class_main_window_a050dcc0f15ed5d9b17a5ab4fb9945db4}\label{class_main_window_a050dcc0f15ed5d9b17a5ab4fb9945db4}} 
+\index{MainWindow@{MainWindow}!temperature@{temperature}}
+\index{temperature@{temperature}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{temperature}{temperature}}
+{\footnotesize\ttfamily int Main\+Window\+::temperature\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{mainwindow_8h_source_l00054}{54}} of file \mbox{\hyperlink{mainwindow_8h_source}{mainwindow.\+h}}.
+
+\mbox{\Hypertarget{class_main_window_a35466a70ed47252a0191168126a352a5}\label{class_main_window_a35466a70ed47252a0191168126a352a5}} 
+\index{MainWindow@{MainWindow}!ui@{ui}}
+\index{ui@{ui}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{ui}{ui}}
+{\footnotesize\ttfamily Ui\+::\+Main\+Window$\ast$ Main\+Window\+::ui\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{mainwindow_8h_source_l00047}{47}} of file \mbox{\hyperlink{mainwindow_8h_source}{mainwindow.\+h}}.
 

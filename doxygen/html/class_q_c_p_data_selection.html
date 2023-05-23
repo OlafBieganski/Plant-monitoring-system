@@ -51,6 +51,8 @@ $(document).ready(function(){initNavTree('class_q_c_p_data_selection.html',''); 
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-static-methods">Static Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="#friends">Friends</a> &#124;
 <a href="#related">Related Functions</a> &#124;
 <a href="class_q_c_p_data_selection-members.html">List of all members</a>  </div>
@@ -109,6 +111,16 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:af296ec5a948656c1d1ecb7b2970d2a24"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae8097f4e4ffee7b1b5df27c93eb365db"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_q_c_p_data_selection.html">QCPDataSelection</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_q_c_p_data_selection.html#ae8097f4e4ffee7b1b5df27c93eb365db">inverse</a> (const <a class="el" href="class_q_c_p_data_range.html">QCPDataRange</a> &amp;outerRange) const</td></tr>
 <tr class="separator:ae8097f4e4ffee7b1b5df27c93eb365db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-methods" name="pri-static-methods"></a>
+Static Private Member Functions</h2></td></tr>
+<tr class="memitem:a6f171526f5441482568ff5e22e6af2c6"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_q_c_p_data_selection.html#a6f171526f5441482568ff5e22e6af2c6">lessThanDataRangeBegin</a> (const <a class="el" href="class_q_c_p_data_range.html">QCPDataRange</a> &amp;a, const <a class="el" href="class_q_c_p_data_range.html">QCPDataRange</a> &amp;b)</td></tr>
+<tr class="separator:a6f171526f5441482568ff5e22e6af2c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:aa1070e7c700f15d9018fad78b4732004"><td class="memItemLeft" align="right" valign="top">QList&lt; <a class="el" href="class_q_c_p_data_range.html">QCPDataRange</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_q_c_p_data_selection.html#aa1070e7c700f15d9018fad78b4732004">mDataRanges</a></td></tr>
+<tr class="separator:aa1070e7c700f15d9018fad78b4732004"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
 Friends</h2></td></tr>
@@ -496,6 +508,44 @@ Iterating over a data selection</h1>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="class_q_c_p_data_selection.html#abd8869ccb231ab991e8576de931f647d">dataRangeCount</a> </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l00982">982</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
+</div>
+</div>
+<a id="a6f171526f5441482568ff5e22e6af2c6" name="a6f171526f5441482568ff5e22e6af2c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f171526f5441482568ff5e22e6af2c6">&#9670;&#160;</a></span>lessThanDataRangeBegin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool QCPDataSelection::lessThanDataRangeBegin </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_q_c_p_data_range.html">QCPDataRange</a> &amp;&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_q_c_p_data_range.html">QCPDataRange</a> &amp;&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l00994">994</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 
 </div>
 </div>
@@ -1023,6 +1073,31 @@ Iterating over a data selection</h1>
 <p>Prints <em>selection</em> in a human readable format to the qDebug output. </p>
 
 <p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l01097">1097</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="aa1070e7c700f15d9018fad78b4732004" name="aa1070e7c700f15d9018fad78b4732004"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1070e7c700f15d9018fad78b4732004">&#9670;&#160;</a></span>mDataRanges</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QList&lt;<a class="el" href="class_q_c_p_data_range.html">QCPDataRange</a>&gt; QCPDataSelection::mDataRanges</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="qcustomplot_8h_source.html#l00992">992</a> of file <a class="el" href="qcustomplot_8h_source.html">qcustomplot.h</a>.</p>
 
 </div>
 </div>

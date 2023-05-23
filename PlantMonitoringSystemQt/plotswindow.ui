@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>846</width>
+    <width>884</width>
     <height>593</height>
    </rect>
   </property>
@@ -66,7 +66,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>846</width>
+     <width>884</width>
      <height>21</height>
     </rect>
    </property>
@@ -76,6 +76,7 @@
     </property>
     <addaction name="actionWybierz_port_szeregowy"/>
     <addaction name="actionOkno_g_wne"/>
+    <addaction name="actionWybierz_serie"/>
    </widget>
    <addaction name="menuOpcje"/>
   </widget>
@@ -88,6 +89,11 @@
   <action name="actionOkno_g_wne">
    <property name="text">
     <string>Okno główne</string>
+   </property>
+  </action>
+  <action name="actionWybierz_serie">
+   <property name="text">
+    <string>Wybierz serie</string>
    </property>
   </action>
  </widget>
