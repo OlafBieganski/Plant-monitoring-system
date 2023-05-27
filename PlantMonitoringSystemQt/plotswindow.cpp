@@ -8,6 +8,8 @@ PlotsWindow::PlotsWindow(QWidget *parent, QString file_name, int _idx) :
     ui->setupUi(this);
     curr_file_name = file_name;
     idx = _idx;
+    QFileInfo info(file_name);
+    setWindowTitle(tr("Wykresy: %1").arg(info.fileName()));
 
     //initial plots setup
     ui->plot_ground_humidity->addGraph();

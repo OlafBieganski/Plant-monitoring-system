@@ -6,6 +6,8 @@
 #include <portselection.h>
 #include <QFile>
 #include <plotswindow.h>
+#include <QLabel>
+#include <QPixmap>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -47,6 +49,8 @@ public slots:
 
 private:
     Ui::MainWindow *ui;
+    QLabel* file_info;
+    QPixmap* plantPicture;
     QSerialPort* serial;
     char* serial_buffer;
     int buffer_size;
@@ -54,5 +58,7 @@ private:
     QMap<int ,PlotsWindow*> plot_windows;
     QString curr_filename;
     int temperature, humidity, ground, sunlight;
+
+    QString getFilename(const QString& path);
 };
 #endif // MAINWINDOW_H

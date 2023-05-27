@@ -1,7 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <QMessageBox>
-#include <QPixmap>
 #include <QDebug>
 #include <QtSerialPort>
 #include <QFileDialog>
@@ -11,10 +10,16 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    QPixmap plantPicture("C:/Users/olafb/OneDrive/Obrazy/roslina_zdrowa.png");
-    ui->label_plant_pic->setPixmap(plantPicture);
+    plantPicture = new QPixmap("C:/Users/olafb/OneDrive/Obrazy/roslina_zdrowa.png");
+    ui->label_plant_pic->setPixmap(*plantPicture);
     ui->label_plant_pic->setAlignment(Qt::AlignCenter);
     ui->label_plant_state->setAlignment(Qt::AlignCenter);
+    setWindowTitle(tr("Plant Monitoring System"));
+    file_info = new QLabel(this);
+    file_info->setFont(QFont("Arial", 9));
+    ui->statusbar->setFont(QFont("Arial", 9));
+    ui->statusbar->addWidget(file_info);
+    file_info->setText(tr("Aktywny plik: "));
     serial = new QSerialPort(this);
 }
 
@@ -49,6 +54,7 @@ void MainWindow::on_pushButton_measure_clicked()
     int trash, crc8;
     QTextStream arduinoData(serial);
     arduinoData >> trash >> temperature >> humidity >> ground >> sunlight >> crc8;
+    ui->statusbar->showMessage(tr("Pobrano pomiar."), 5000);
     /*qDebug() << "Dane: " <<  trash;
     qDebug() << temperature;
     qDebug() << humidity;
@@ -98,6 +104,7 @@ void MainWindow::on_actionNowa_seria_triggered()
             QTextStream out(&file_handler);
             out << "#2808\n"; //magic number of all files
             file_handler.close();
+            file_info->setText(tr("Aktywny plik: %1").arg(getFilename(curr_filename)));
         }
     }
 
@@ -122,7 +129,9 @@ void MainWindow::on_actionWybierz_serie_triggered()
     qDebug() << magic_nr;
     if(magic_nr != "#2808"){
         QMessageBox::critical(this, "Wybierz plik serii pomiarowej", "Niepoprawny plik.");
+        curr_filename = "";
     }
+    file_info->setText(tr("Aktywny plik: %1").arg(getFilename(curr_filename)));
     file_handler.close();
 }
 
@@ -140,6 +149,11 @@ void MainWindow::on_actionZapisz_pomiar_triggered()
     }
     QTextStream file_stream(&file_handler);
     file_stream << temperature << " " << humidity << " " << ground << " " << sunlight << "\n";
+    ui->statusbar->showMessage(tr("Zapisano do pliku: %1").arg(getFilename(curr_filename)), 5000);
     file_handler.close();
 }
 
+QString MainWindow::getFilename(const QString& path){
+    QFileInfo fileInfo(path);
+    return fileInfo.fileName();
+}
