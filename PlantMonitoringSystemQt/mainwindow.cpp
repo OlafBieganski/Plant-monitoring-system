@@ -23,7 +23,6 @@ MainWindow::~MainWindow()
     delete ui;
     serial->close();
     delete serial;
-    qDebug() << "Destructed";
 }
 
 void MainWindow::on_pushButton_measure_clicked()
@@ -68,16 +67,21 @@ void MainWindow::on_actionWybierz_port_szeregowy_triggered()
 
 void MainWindow::on_actionWykresy_triggered()
 {
-    if(second_window == nullptr){
-        second_window = new PlotsWindow(this, serial, curr_filename);
-        connect(second_window, &PlotsWindow::switch_window, this, &MainWindow::onSecondWindowClosed);
-    }
-    second_window->show();
-    hide();
+    static int curr_id = 0;
+    qDebug() << curr_id;
+    plot_windows.insert(curr_id, new PlotsWindow(this, curr_filename, curr_id));
+    connect(plot_windows[curr_id], &PlotsWindow::window_closed, this, &MainWindow::when_PlotsWindow_closed);
+    plot_windows[curr_id]->show();
+    curr_id++;
 }
 
-void MainWindow::onSecondWindowClosed(){
-    show();
+void MainWindow::when_PlotsWindow_closed(int _idx){
+    PlotsWindow* temp = plot_windows[_idx];
+    QMap<int, PlotsWindow*>::Iterator it = plot_windows.find(_idx);
+    if(it != plot_windows.end()){
+        plot_windows.erase(it);
+    }
+    delete temp;
 }
 
 void MainWindow::on_actionNowa_seria_triggered()

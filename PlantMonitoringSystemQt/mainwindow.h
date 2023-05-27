@@ -4,8 +4,8 @@
 #include <QMainWindow>
 #include <QSerialPort>
 #include <portselection.h>
-#include <plotswindow.h>
 #include <QFile>
+#include <plotswindow.h>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -32,10 +32,6 @@ private slots:
      * \brief on_actionWykresy_triggered
      */
     void on_actionWykresy_triggered();
-    /*!
-     * \brief onSecondWindowClosed
-     */
-    void onSecondWindowClosed();
 
     void on_actionNowa_seria_triggered();
 
@@ -43,13 +39,19 @@ private slots:
 
     void on_actionZapisz_pomiar_triggered();
 
+public slots:
+    /**
+     * @brief Deletes PlotsWidget object in plots_window vector when it gets destructed
+     */
+    void when_PlotsWindow_closed(int _idx);
+
 private:
     Ui::MainWindow *ui;
     QSerialPort* serial;
     char* serial_buffer;
     int buffer_size;
     PortSelection* com_window;
-    PlotsWindow* second_window = nullptr;
+    QMap<int ,PlotsWindow*> plot_windows;
     QString curr_filename;
     int temperature, humidity, ground, sunlight;
 };
