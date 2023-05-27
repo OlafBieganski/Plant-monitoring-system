@@ -1,5 +1,12 @@
 #include "plotswindow.h"
 #include "ui_plotswindow.h"
+#include<QDateTime>
+
+struct PlantData
+{
+    QVector<int> y_points;
+    QDateTime x_point;
+};
 
 PlotsWindow::PlotsWindow(QWidget *parent, QString file_name, int _idx) :
     QMainWindow(parent),
@@ -17,28 +24,24 @@ PlotsWindow::PlotsWindow(QWidget *parent, QString file_name, int _idx) :
     ui->plot_ground_humidity->graph(0)->setLineStyle(QCPGraph::lsLine);
     ui->plot_ground_humidity->xAxis->setLabel("Time");
     ui->plot_ground_humidity->yAxis->setLabel("%");
-    ui->plot_ground_humidity->yAxis->setRange(0,1100);
 
     ui->plot_humidity_ambient->addGraph();
     ui->plot_humidity_ambient->graph(0)->setScatterStyle(QCPScatterStyle::ssCircle);
     ui->plot_humidity_ambient->graph(0)->setLineStyle(QCPGraph::lsLine);
     ui->plot_humidity_ambient->xAxis->setLabel("Time");
     ui->plot_humidity_ambient->yAxis->setLabel("%");
-    ui->plot_humidity_ambient->yAxis->setRange(0,100);
 
     ui->plot_temperature->addGraph();
     ui->plot_temperature->graph(0)->setScatterStyle(QCPScatterStyle::ssCircle);
     ui->plot_temperature->graph(0)->setLineStyle(QCPGraph::lsLine);
     ui->plot_temperature->xAxis->setLabel("Time");
     ui->plot_temperature->yAxis->setLabel((QString)248 + 'C');
-    ui->plot_temperature->yAxis->setRange(0,100);
 
     ui->plot_sunlight->addGraph();
     ui->plot_sunlight->graph(0)->setScatterStyle(QCPScatterStyle::ssCircle);
     ui->plot_sunlight->graph(0)->setLineStyle(QCPGraph::lsLine);
     ui->plot_sunlight->xAxis->setLabel("Time");
     ui->plot_sunlight->yAxis->setLabel("%");
-    ui->plot_sunlight->yAxis->setRange(0,1100);
 
     // draw plots with data from file
     if(curr_file_name.isEmpty()){
@@ -54,8 +57,10 @@ PlotsWindow::PlotsWindow(QWidget *parent, QString file_name, int _idx) :
             return;
         }
         QCustomPlot* plots[4] = {ui->plot_temperature, ui->plot_humidity_ambient, ui->plot_ground_humidity, ui->plot_sunlight};
+        QFileInfo info(curr_file_name);
+        QChar file_type = info.fileName().back();
         for(QCustomPlot* graph : plots){
-            graph->xAxis->setRange(0,10);
+            //if(file_type == 'd') graph->xAxis->setRange();
         }
         uint time = 0;
         while (!file_out.atEnd()) {

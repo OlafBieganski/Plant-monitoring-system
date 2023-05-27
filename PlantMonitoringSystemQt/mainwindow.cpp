@@ -54,6 +54,8 @@ void MainWindow::on_pushButton_measure_clicked()
     int trash, crc8;
     QTextStream arduinoData(serial);
     arduinoData >> trash >> temperature >> humidity >> ground >> sunlight >> crc8;
+    measureDateTime = QDateTime::currentDateTime();
+    qDebug() << measureDateTime.toString();
     ui->statusbar->showMessage(tr("Pobrano pomiar."), 5000);
     /*qDebug() << "Dane: " <<  trash;
     qDebug() << temperature;
@@ -93,7 +95,7 @@ void MainWindow::when_PlotsWindow_closed(int _idx){
 void MainWindow::on_actionNowa_seria_triggered()
 {
     QString new_filename = QFileDialog::getSaveFileName(this, tr("Stwórz nową serię pomiarową"), QDir::currentPath(),
-        tr("Pliki serii pomiarowej (*.srs);;All Files (*)"));
+        tr("Pliki serii pomiarowej - dni (*.srd);;Pliki serii pomiarowej - godziny (*.srh);;Wszystkie pliki (*)"));
 
     if (!new_filename.isEmpty()) {
         curr_filename = new_filename;
@@ -102,7 +104,7 @@ void MainWindow::on_actionNowa_seria_triggered()
         //curr_file_handle->rename(new_name);
         if (file_handler.open(QIODevice::ReadWrite | QIODevice::Append | QIODevice::Text)) {
             QTextStream out(&file_handler);
-            out << "#2808\n"; //magic number of all files
+            out << "#2808"; //magic number of all files
             file_handler.close();
             file_info->setText(tr("Aktywny plik: %1").arg(getFilename(curr_filename)));
         }
@@ -114,7 +116,7 @@ void MainWindow::on_actionNowa_seria_triggered()
 void MainWindow::on_actionWybierz_serie_triggered()
 {
     QString new_filename = QFileDialog::getOpenFileName(this, tr("Wybierz plik serii pomiarowej"), QDir::currentPath(),
-        tr("Pliki serii pomiarowej (*.srs);;All Files (*)"));
+        tr("Pliki serii pomiarowej - dni (*.srd);;Pliki serii pomiarowej - godziny (*.srh);;Wszystkie pliki (*)"));
     if(new_filename.isEmpty()) return;
     curr_filename = new_filename;
     qDebug() << new_filename;
@@ -148,7 +150,10 @@ void MainWindow::on_actionZapisz_pomiar_triggered()
         return;
     }
     QTextStream file_stream(&file_handler);
-    file_stream << temperature << " " << humidity << " " << ground << " " << sunlight << "\n";
+    file_stream << "\n" << temperature << " " << humidity << " " << ground << " " << sunlight << " ";
+    qDebug() << getFilename(curr_filename).back();
+    if(getFilename(curr_filename).back() == 'd') file_stream << measureDateTime.date().toString("dd-MM-yyyy");
+    if(getFilename(curr_filename).back() == 'h') file_stream << measureDateTime.time().toString();
     ui->statusbar->showMessage(tr("Zapisano do pliku: %1").arg(getFilename(curr_filename)), 5000);
     file_handler.close();
 }

@@ -8,6 +8,7 @@
 #include <plotswindow.h>
 #include <QLabel>
 #include <QPixmap>
+#include<QDateTime>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -58,6 +59,7 @@ private:
     QMap<int ,PlotsWindow*> plot_windows;
     QString curr_filename;
     int temperature, humidity, ground, sunlight;
+    QDateTime measureDateTime;
 
     QString getFilename(const QString& path);
 };
