@@ -21,6 +21,9 @@ MainWindow::MainWindow(QWidget *parent)
     ui->statusbar->addWidget(file_info);
     file_info->setText(tr("Aktywny plik: "));
     serial = new QSerialPort(this);
+    thermo = new QPixmap("C:/Users/olafb/Downloads/termometr");
+    ui->thermo_label->setPixmap(*thermo);
+    ui->thermo_label->setAlignment(Qt::AlignCenter);
 }
 
 MainWindow::~MainWindow()
@@ -54,15 +57,11 @@ void MainWindow::on_pushButton_measure_clicked()
     int trash, crc8;
     QTextStream arduinoData(serial);
     arduinoData >> trash >> temperature >> humidity >> ground >> sunlight >> crc8;
+    ground = ((1020 - ground)*100) / 1020;
+    sunlight = (sunlight * 100) / 7000;
     measureDateTime = QDateTime::currentDateTime();
     qDebug() << measureDateTime.toString();
     ui->statusbar->showMessage(tr("Pobrano pomiar."), 5000);
-    /*qDebug() << "Dane: " <<  trash;
-    qDebug() << temperature;
-    qDebug() << humidity;
-    qDebug() << ground;
-    qDebug() << sunlight;
-    qDebug() << crc8;*/
 }
 
 void MainWindow::on_actionWybierz_port_szeregowy_triggered()

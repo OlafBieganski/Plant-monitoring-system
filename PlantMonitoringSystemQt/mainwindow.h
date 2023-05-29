@@ -60,6 +60,7 @@ private:
     QString curr_filename;
     int temperature, humidity, ground, sunlight;
     QDateTime measureDateTime;
+    QPixmap* thermo;
 
     QString getFilename(const QString& path);
 };
