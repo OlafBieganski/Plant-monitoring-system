@@ -21,13 +21,15 @@ SOURCES += \
     mainwindow.cpp \
     plotswindow.cpp \
     portselection.cpp \
-    qcustomplot.cpp
+    qcustomplot.cpp \
+    rectanglew.cpp
 
 HEADERS += \
     mainwindow.h \
     plotswindow.h \
     portselection.h \
-    qcustomplot.h
+    qcustomplot.h \
+    rectanglew.h
 
 FORMS += \
     mainwindow.ui \

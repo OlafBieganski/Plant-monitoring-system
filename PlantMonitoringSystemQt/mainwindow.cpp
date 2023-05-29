@@ -21,9 +21,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->statusbar->addWidget(file_info);
     file_info->setText(tr("Aktywny plik: "));
     serial = new QSerialPort(this);
-    thermo = new QPixmap("C:/Users/olafb/Downloads/termometr");
-    ui->thermo_label->setPixmap(*thermo);
-    ui->thermo_label->setAlignment(Qt::AlignCenter);
+    connect(this, &MainWindow::new_values, ui->thermo_widget, &RectangleW::changeHeight);
 }
 
 MainWindow::~MainWindow()
@@ -62,6 +60,7 @@ void MainWindow::on_pushButton_measure_clicked()
     measureDateTime = QDateTime::currentDateTime();
     qDebug() << measureDateTime.toString();
     ui->statusbar->showMessage(tr("Pobrano pomiar."), 5000);
+    emit new_values(temperature); // needed for all mesurements
 }
 
 void MainWindow::on_actionWybierz_port_szeregowy_triggered()

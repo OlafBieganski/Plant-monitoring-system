@@ -6,6 +6,7 @@
 #include <portselection.h>
 #include <QFile>
 #include <plotswindow.h>
+#include <rectanglew.h>
 #include <QLabel>
 #include <QPixmap>
 #include<QDateTime>
@@ -21,6 +22,12 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+
+signals:
+    /**
+     * @brief emitted when new measurements are received from an external device
+     */
+    void new_values(int therm);
 
 private slots:
     /*!
