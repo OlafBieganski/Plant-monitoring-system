@@ -16,8 +16,8 @@ class PortSelection : public QDialog
 public:
     /*!
      * \brief Creates a widget and lists available serial ports
-     * \param parent
-     * \param serial_port - pointer to QSerialPort object that stores information about connection (is a member of MainWindow)
+     * \param[in,out] parent
+     * \param[in,out] serial_port - pointer to QSerialPort object that stores information about connection (is a member of MainWindow)
      */
     explicit PortSelection(QWidget *parent = nullptr, QSerialPort *serial_port = nullptr);
     ~PortSelection();

@@ -4,40 +4,124 @@
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{plotswindow_8h}{plotswindow.h}}"{}}}
 \DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ "{}ui\_plotswindow.h"{}}}
-\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00003}00003\ }
-\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00004}\mbox{\hyperlink{class_plots_window_afee9900e8db399492eb995bf9cb7d3a4}{00004}}\ \mbox{\hyperlink{class_plots_window_afee9900e8db399492eb995bf9cb7d3a4}{PlotsWindow::PlotsWindow}}(QWidget\ *parent,\ QSerialPort*\ serial)\ :}
-\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00005}00005\ \ \ \ \ QMainWindow(parent),}
-\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00006}00006\ \ \ \ \ ui(new\ \mbox{\hyperlink{namespace_ui}{Ui}}::\mbox{\hyperlink{class_plots_window}{PlotsWindow}})}
-\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00007}00007\ \{}
-\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00008}00008\ \ \ \ \ \mbox{\hyperlink{class_plots_window_ab00117a22d829d7887375a8010e0eeb6}{ui}}-\/>setupUi(\textcolor{keyword}{this});}
-\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00009}00009\ \ \ \ \ \mbox{\hyperlink{class_plots_window_a612bab1ef4bffdd50496c11ecaec0ad5}{arduino}}\ =\ serial;}
-\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00010}00010\ \}}
-\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00011}00011\ }
-\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00012}\mbox{\hyperlink{class_plots_window_ae69e4bb5b46189725c91524692ca2eda}{00012}}\ \mbox{\hyperlink{class_plots_window_ae69e4bb5b46189725c91524692ca2eda}{PlotsWindow::\string~PlotsWindow}}()}
-\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00013}00013\ \{}
-\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00014}00014\ \ \ \ \ \textcolor{keyword}{delete}\ \mbox{\hyperlink{class_plots_window_ab00117a22d829d7887375a8010e0eeb6}{ui}};}
-\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00015}00015\ \}}
-\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00016}00016\ }
-\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00017}\mbox{\hyperlink{class_plots_window_a7a01fa202ecd70dfbc358b0f1d2da3c3}{00017}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_plots_window_a7a01fa202ecd70dfbc358b0f1d2da3c3}{PlotsWindow::on\_actionWybierz\_port\_szeregowy\_triggered}}()}
-\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00018}00018\ \{}
-\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00019}00019\ \ \ \ \ \textcolor{keywordflow}{return};\ \textcolor{comment}{//\ delete\ for\ a\ function\ to\ work}}
-\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00020}00020\ \ \ \ \ \textcolor{comment}{//\ here\ is\ a\ code\ to\ debug}}
-\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00021}00021\ \ \ \ \ \mbox{\hyperlink{class_plots_window_a5ff554057edc9e1614ae99151f731b87}{com\_window}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_port_selection}{PortSelection}}(\textcolor{keyword}{this},\ \mbox{\hyperlink{class_plots_window_a612bab1ef4bffdd50496c11ecaec0ad5}{arduino}});}
-\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00022}00022\ \ \ \ \ \mbox{\hyperlink{class_plots_window_a5ff554057edc9e1614ae99151f731b87}{com\_window}}-\/>setModal(\textcolor{keyword}{true});}
-\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00023}00023\ \ \ \ \ \mbox{\hyperlink{class_plots_window_a5ff554057edc9e1614ae99151f731b87}{com\_window}}-\/>show();}
-\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00024}00024\ \}}
-\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00025}00025\ }
-\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00026}\mbox{\hyperlink{class_plots_window_af81a958138e98c58e690eb66078f4a8d}{00026}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_plots_window_af81a958138e98c58e690eb66078f4a8d}{PlotsWindow::on\_actionOkno\_g\_wne\_triggered}}()}
-\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00027}00027\ \{}
-\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00028}00028\ \ \ \ \ emit\ \mbox{\hyperlink{class_plots_window_a4b8e20b56d116059ddd6ed570a2f5998}{switch\_window}}();}
-\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00029}00029\ \ \ \ \ hide();}
-\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00030}00030\ \}}
-\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00031}00031\ }
-\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00032}00032\ }
-\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00033}\mbox{\hyperlink{class_plots_window_affc164df303f8310ad7b92f97100c9c6}{00033}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_plots_window_affc164df303f8310ad7b92f97100c9c6}{PlotsWindow::on\_actionWybierz\_serie\_triggered}}()}
-\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00034}00034\ \{}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00003}00003\ \textcolor{preprocessor}{\#include<QDateTime>}}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00005}\mbox{\hyperlink{struct_plant_data}{00005}}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_plant_data}{PlantData}}}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00006}00006\ \{}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00007}\mbox{\hyperlink{struct_plant_data_a717b3397872b2e11435fcb218fa6f2de}{00007}}\ \ \ \ \ QVector<int>\ \mbox{\hyperlink{struct_plant_data_a717b3397872b2e11435fcb218fa6f2de}{values}};}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00008}\mbox{\hyperlink{struct_plant_data_a191787b7355951d0b4d310c662418a28}{00008}}\ \ \ \ \ QDateTime\ \mbox{\hyperlink{struct_plant_data_a191787b7355951d0b4d310c662418a28}{time}};}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00009}00009\ \};}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00011}\mbox{\hyperlink{class_plots_window_afffc2efac81c97a32f1822ef0bad3b75}{00011}}\ \mbox{\hyperlink{class_plots_window_afffc2efac81c97a32f1822ef0bad3b75}{PlotsWindow::PlotsWindow}}(QWidget\ *parent,\ QString\ file\_name,\ \textcolor{keywordtype}{int}\ \_idx)\ :}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00012}00012\ \ \ \ \ QMainWindow(parent),}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00013}00013\ \ \ \ \ ui(new\ \mbox{\hyperlink{namespace_ui}{Ui}}::\mbox{\hyperlink{class_plots_window}{PlotsWindow}})}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00014}00014\ \{}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00015}00015\ \ \ \ \ \mbox{\hyperlink{class_plots_window_ab00117a22d829d7887375a8010e0eeb6}{ui}}-\/>setupUi(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00016}00016\ \ \ \ \ \mbox{\hyperlink{class_plots_window_a241842c4152b8d62414a67ba8f5629b7}{curr\_file\_name}}\ =\ file\_name;}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00017}00017\ \ \ \ \ \mbox{\hyperlink{class_plots_window_aab216a8a72d0b75aa4d9497be67fcb75}{idx}}\ =\ \_idx;}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00018}00018\ \ \ \ \ QFileInfo\ info(file\_name);}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00019}00019\ \ \ \ \ setWindowTitle(tr(\textcolor{stringliteral}{"{}Wykresy:\ \%1"{}}).arg(info.fileName()));}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00021}00021\ \ \ \ \ \textcolor{comment}{//initial\ plots\ setup}}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00022}00022\ \ \ \ \ \mbox{\hyperlink{class_plots_window_ab00117a22d829d7887375a8010e0eeb6}{ui}}-\/>plot\_ground\_humidity-\/>addGraph();}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00023}00023\ \ \ \ \ \mbox{\hyperlink{class_plots_window_ab00117a22d829d7887375a8010e0eeb6}{ui}}-\/>plot\_ground\_humidity-\/>graph(0)-\/>setScatterStyle(\mbox{\hyperlink{class_q_c_p_scatter_style_adb31525af6b680e6f1b7472e43859349a7c92a110880d0ef2170dff3a5b4f7779}{QCPScatterStyle::ssCircle}});}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00024}00024\ \ \ \ \ \mbox{\hyperlink{class_plots_window_ab00117a22d829d7887375a8010e0eeb6}{ui}}-\/>plot\_ground\_humidity-\/>graph(0)-\/>setLineStyle(\mbox{\hyperlink{class_q_c_p_graph_ad60175cd9b5cac937c5ee685c32c0859a3c42a27b15aa3c92d399082fad8b7515}{QCPGraph::lsLine}});}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00025}00025\ \ \ \ \ \mbox{\hyperlink{class_plots_window_ab00117a22d829d7887375a8010e0eeb6}{ui}}-\/>plot\_ground\_humidity-\/>xAxis-\/>setLabel(\textcolor{stringliteral}{"{}Time"{}});}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00026}00026\ \ \ \ \ \mbox{\hyperlink{class_plots_window_ab00117a22d829d7887375a8010e0eeb6}{ui}}-\/>plot\_ground\_humidity-\/>yAxis-\/>setLabel(\textcolor{stringliteral}{"{}\%"{}});}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00027}00027\ \ \ \ \ \mbox{\hyperlink{class_plots_window_ab00117a22d829d7887375a8010e0eeb6}{ui}}-\/>plot\_ground\_humidity-\/>yAxis-\/>setRange(0,\ 100);}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00029}00029\ \ \ \ \ \mbox{\hyperlink{class_plots_window_ab00117a22d829d7887375a8010e0eeb6}{ui}}-\/>plot\_humidity\_ambient-\/>addGraph();}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00030}00030\ \ \ \ \ \mbox{\hyperlink{class_plots_window_ab00117a22d829d7887375a8010e0eeb6}{ui}}-\/>plot\_humidity\_ambient-\/>graph(0)-\/>setScatterStyle(\mbox{\hyperlink{class_q_c_p_scatter_style_adb31525af6b680e6f1b7472e43859349a7c92a110880d0ef2170dff3a5b4f7779}{QCPScatterStyle::ssCircle}});}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00031}00031\ \ \ \ \ \mbox{\hyperlink{class_plots_window_ab00117a22d829d7887375a8010e0eeb6}{ui}}-\/>plot\_humidity\_ambient-\/>graph(0)-\/>setLineStyle(\mbox{\hyperlink{class_q_c_p_graph_ad60175cd9b5cac937c5ee685c32c0859a3c42a27b15aa3c92d399082fad8b7515}{QCPGraph::lsLine}});}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00032}00032\ \ \ \ \ \mbox{\hyperlink{class_plots_window_ab00117a22d829d7887375a8010e0eeb6}{ui}}-\/>plot\_humidity\_ambient-\/>xAxis-\/>setLabel(\textcolor{stringliteral}{"{}Time"{}});}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00033}00033\ \ \ \ \ \mbox{\hyperlink{class_plots_window_ab00117a22d829d7887375a8010e0eeb6}{ui}}-\/>plot\_humidity\_ambient-\/>yAxis-\/>setLabel(\textcolor{stringliteral}{"{}\%"{}});}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00034}00034\ \ \ \ \ \mbox{\hyperlink{class_plots_window_ab00117a22d829d7887375a8010e0eeb6}{ui}}-\/>plot\_humidity\_ambient-\/>yAxis-\/>setRange(0,\ 100);}
 \DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00035}00035\ }
-\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00036}00036\ \}}
-\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00036}00036\ \ \ \ \ \mbox{\hyperlink{class_plots_window_ab00117a22d829d7887375a8010e0eeb6}{ui}}-\/>plot\_temperature-\/>addGraph();}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00037}00037\ \ \ \ \ \mbox{\hyperlink{class_plots_window_ab00117a22d829d7887375a8010e0eeb6}{ui}}-\/>plot\_temperature-\/>graph(0)-\/>setScatterStyle(\mbox{\hyperlink{class_q_c_p_scatter_style_adb31525af6b680e6f1b7472e43859349a7c92a110880d0ef2170dff3a5b4f7779}{QCPScatterStyle::ssCircle}});}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00038}00038\ \ \ \ \ \mbox{\hyperlink{class_plots_window_ab00117a22d829d7887375a8010e0eeb6}{ui}}-\/>plot\_temperature-\/>graph(0)-\/>setLineStyle(\mbox{\hyperlink{class_q_c_p_graph_ad60175cd9b5cac937c5ee685c32c0859a3c42a27b15aa3c92d399082fad8b7515}{QCPGraph::lsLine}});}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00039}00039\ \ \ \ \ \mbox{\hyperlink{class_plots_window_ab00117a22d829d7887375a8010e0eeb6}{ui}}-\/>plot\_temperature-\/>xAxis-\/>setLabel(\textcolor{stringliteral}{"{}Time"{}});}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00040}00040\ \ \ \ \ \mbox{\hyperlink{class_plots_window_ab00117a22d829d7887375a8010e0eeb6}{ui}}-\/>plot\_temperature-\/>yAxis-\/>setLabel(QChar(0x00B0)\ +\ \textcolor{charliteral}{'C'});}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00041}00041\ \ \ \ \ \mbox{\hyperlink{class_plots_window_ab00117a22d829d7887375a8010e0eeb6}{ui}}-\/>plot\_temperature-\/>yAxis-\/>setRange(0,\ 100);}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00043}00043\ \ \ \ \ \mbox{\hyperlink{class_plots_window_ab00117a22d829d7887375a8010e0eeb6}{ui}}-\/>plot\_sunlight-\/>addGraph();}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00044}00044\ \ \ \ \ \mbox{\hyperlink{class_plots_window_ab00117a22d829d7887375a8010e0eeb6}{ui}}-\/>plot\_sunlight-\/>graph(0)-\/>setScatterStyle(\mbox{\hyperlink{class_q_c_p_scatter_style_adb31525af6b680e6f1b7472e43859349a7c92a110880d0ef2170dff3a5b4f7779}{QCPScatterStyle::ssCircle}});}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00045}00045\ \ \ \ \ \mbox{\hyperlink{class_plots_window_ab00117a22d829d7887375a8010e0eeb6}{ui}}-\/>plot\_sunlight-\/>graph(0)-\/>setLineStyle(\mbox{\hyperlink{class_q_c_p_graph_ad60175cd9b5cac937c5ee685c32c0859a3c42a27b15aa3c92d399082fad8b7515}{QCPGraph::lsLine}});}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00046}00046\ \ \ \ \ \mbox{\hyperlink{class_plots_window_ab00117a22d829d7887375a8010e0eeb6}{ui}}-\/>plot\_sunlight-\/>xAxis-\/>setLabel(\textcolor{stringliteral}{"{}Time"{}});}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00047}00047\ \ \ \ \ \mbox{\hyperlink{class_plots_window_ab00117a22d829d7887375a8010e0eeb6}{ui}}-\/>plot\_sunlight-\/>yAxis-\/>setLabel(\textcolor{stringliteral}{"{}\%"{}});}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00048}00048\ \ \ \ \ \mbox{\hyperlink{class_plots_window_ab00117a22d829d7887375a8010e0eeb6}{ui}}-\/>plot\_sunlight-\/>yAxis-\/>setRange(0,\ 100);}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00050}00050\ \ \ \ \ \textcolor{comment}{//\ draw\ plots\ with\ data\ from\ file}}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00051}00051\ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_plots_window_a241842c4152b8d62414a67ba8f5629b7}{curr\_file\_name}}.isEmpty())\{}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00052}00052\ \ \ \ \ \ \ \ \ qDebug()\ <<\ \textcolor{stringliteral}{"{}Filename\ parameter\ not\ given\ or\ is\ a\ wrong\ one"{}};}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00053}00053\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00054}00054\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00055}00055\ \ \ \ \ QFile\ file\_handler(\mbox{\hyperlink{class_plots_window_a241842c4152b8d62414a67ba8f5629b7}{curr\_file\_name}});}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00056}00056\ \ \ \ \ \textcolor{keywordflow}{if}(file\_handler.open(QIODevice::ReadOnly\ |\ QIODevice::Text))\{}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00057}00057\ }
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00058}00058\ \ \ \ \ \ \ \ \ QTextStream\ file\_out(\&file\_handler);}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00059}00059\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(file\_out.readLine()\ !=\ \textcolor{stringliteral}{"{}\#2808"{}})\{}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ qDebug()\ <<\ \textcolor{stringliteral}{"{}Wrong\ file\ magic\ number"{}};}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ file\_handler.close();}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00063}00063\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00065}00065\ \ \ \ \ \ \ \ \ QVector<PlantData>\ points;}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00066}00066\ \ \ \ \ \ \ \ \ QFileInfo\ info(\mbox{\hyperlink{class_plots_window_a241842c4152b8d62414a67ba8f5629b7}{curr\_file\_name}});}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00067}00067\ \ \ \ \ \ \ \ \ QChar\ file\_type\ =\ info.fileName().back();}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00069}00069\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (!file\_out.atEnd())\ \{}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_plant_data}{PlantData}}\ temp\_p;}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 4;\ i++)\{}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ QString\ data;}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ file\_out\ >>\ data;}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ temp\_p.\mbox{\hyperlink{struct_plant_data_a717b3397872b2e11435fcb218fa6f2de}{values}}.push\_back(data.toInt());}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ QString\ time\_string;}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ file\_out\ >>\ time\_string;}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(file\_type\ ==\ \textcolor{charliteral}{'d'})\ temp\_p.\mbox{\hyperlink{struct_plant_data_a191787b7355951d0b4d310c662418a28}{time}}\ =\ QDateTime::fromString(time\_string,\ \textcolor{stringliteral}{"{}dd-\/MM-\/yyyy"{}});}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(file\_type\ ==\ \textcolor{charliteral}{'h'})\{}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ temp\_p.\mbox{\hyperlink{struct_plant_data_a191787b7355951d0b4d310c662418a28}{time}}\ =\ QDateTime::fromString(time\_string,\ \textcolor{stringliteral}{"{}HH:mm:ss"{}});}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ temp\_p.\mbox{\hyperlink{struct_plant_data_a191787b7355951d0b4d310c662418a28}{time}}\ =\ temp\_p.\mbox{\hyperlink{struct_plant_data_a191787b7355951d0b4d310c662418a28}{time}}.addYears(100);}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ points.push\_back(temp\_p);}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ qDebug()\ <<\ temp\_p.\mbox{\hyperlink{struct_plant_data_a191787b7355951d0b4d310c662418a28}{time}};}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00085}00085\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00086}00086\ \ \ \ \ \ \ \ \ file\_handler.close();}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00087}00087\ }
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00088}00088\ \ \ \ \ \ \ \ \ QVector<QCPGraphData>\ data\_set[4];}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00089}00089\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_plant_data}{PlantData}}\ \&curr\ :\ points)\{}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 4;\ i++)\{}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_q_c_p_graph_data}{QCPGraphData}}\ temp;}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ temp.\mbox{\hyperlink{class_q_c_p_graph_data_a2fcebdf84af975761c0661237d7e28ec}{key}}\ =\ curr.time.toSecsSinceEpoch();}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ temp.\mbox{\hyperlink{class_q_c_p_graph_data_ac97e3ddbdcbe0b58d0b4d6f95250d59c}{value}}\ =\ curr.values[i];}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ data\_set[i].push\_back(temp);}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ qDebug()\ <<\ temp.\mbox{\hyperlink{class_q_c_p_graph_data_a2fcebdf84af975761c0661237d7e28ec}{key}};}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00097}00097\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00098}00098\ }
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00099}00099\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_q_custom_plot}{QCustomPlot}}*\ plots[4]\ =\ \{\mbox{\hyperlink{class_plots_window_ab00117a22d829d7887375a8010e0eeb6}{ui}}-\/>plot\_temperature,\ \mbox{\hyperlink{class_plots_window_ab00117a22d829d7887375a8010e0eeb6}{ui}}-\/>plot\_humidity\_ambient,\ \mbox{\hyperlink{class_plots_window_ab00117a22d829d7887375a8010e0eeb6}{ui}}-\/>plot\_ground\_humidity,\ \mbox{\hyperlink{class_plots_window_ab00117a22d829d7887375a8010e0eeb6}{ui}}-\/>plot\_sunlight\};}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00100}00100\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 4;\ i++)\{}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00101}00101\ \ \ \ \ \ \ \ \ \ \ \ \ plots[i]-\/>\mbox{\hyperlink{class_q_custom_plot_a6ecae130f684b25276fb47bd3a5875c6}{graph}}()-\/>\mbox{\hyperlink{class_q_c_p_graph_a141aa31a1f19bbd0ce60f55eaeb9ea60}{data}}()-\/>set(data\_set[i]);}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ QSharedPointer<QCPAxisTickerDateTime>\ dateTicker(\textcolor{keyword}{new}\ \mbox{\hyperlink{class_q_c_p_axis_ticker_date_time}{QCPAxisTickerDateTime}});}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(file\_type\ ==\ \textcolor{charliteral}{'d'})\ dateTicker-\/>setDateTimeFormat(\textcolor{stringliteral}{"{}dd-\/MM-\/yyyy"{}});}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(file\_type\ ==\ \textcolor{charliteral}{'h'})\ dateTicker-\/>setDateTimeFormat(\textcolor{stringliteral}{"{}HH:mm:ss"{}});}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ plots[i]-\/>\mbox{\hyperlink{class_q_custom_plot_a9a79cd0158a4c7f30cbc702f0fd800e4}{xAxis}}-\/>\mbox{\hyperlink{class_q_c_p_axis_a4ee03fcd2c74d05cd1a419b9af5cfbdc}{setTicker}}(dateTicker);}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ plots[i]-\/>\mbox{\hyperlink{class_q_custom_plot_a9a79cd0158a4c7f30cbc702f0fd800e4}{xAxis}}-\/>\mbox{\hyperlink{class_q_c_p_axis_aebdfea5d44c3a0ad2b4700cd4d25b641}{setRange}}(points.front().time.toTime\_t(),\ points.back().time.toTime\_t());}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00107}00107\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00108}00108\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00109}00109\ \}}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00110}00110\ }
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00111}\mbox{\hyperlink{class_plots_window_ae69e4bb5b46189725c91524692ca2eda}{00111}}\ \mbox{\hyperlink{class_plots_window_ae69e4bb5b46189725c91524692ca2eda}{PlotsWindow::\string~PlotsWindow}}()}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00112}00112\ \{}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00113}00113\ \ \ \ \ qDebug()\ <<\ \textcolor{stringliteral}{"{}PlotsWindow\ destructed.\ ID:\ "{}}\ <<\ \mbox{\hyperlink{class_plots_window_aab216a8a72d0b75aa4d9497be67fcb75}{idx}};}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00114}00114\ \ \ \ \ \textcolor{keyword}{delete}\ \mbox{\hyperlink{class_plots_window_ab00117a22d829d7887375a8010e0eeb6}{ui}};}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00115}00115\ \}}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00116}00116\ }
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00117}\mbox{\hyperlink{class_plots_window_a5592a194e1a9dbe44856a0f5469b0ba1}{00117}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_plots_window_a5592a194e1a9dbe44856a0f5469b0ba1}{PlotsWindow::closeEvent}}(QCloseEvent*\ event)}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00118}00118\ \{}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00119}00119\ \ \ \ \ emit\ \mbox{\hyperlink{class_plots_window_af563bafca9eeca70a3ba510fda5724de}{window\_closed}}(\mbox{\hyperlink{class_plots_window_aab216a8a72d0b75aa4d9497be67fcb75}{idx}});\ \ \textcolor{comment}{//\ Emit\ the\ custom\ signal\ when\ the\ window\ is\ closed}}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00120}00120\ \ \ \ \ QMainWindow::closeEvent(event);\ \ \textcolor{comment}{//\ Call\ the\ base\ class\ implementation}}
+\DoxyCodeLine{\Hypertarget{plotswindow_8cpp_source_l00121}00121\ \}}
 
 \end{DoxyCode}

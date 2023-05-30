@@ -73,53 +73,50 @@
        </layout>
       </item>
       <item>
-       <layout class="QGridLayout" name="gridLayout_2">
-        <item row="2" column="1">
-         <widget class="QLabel" name="ground_label">
-          <property name="styleSheet">
-           <string notr="true">background:rgb(111, 78, 26)</string>
-          </property>
-          <property name="text">
-           <string>TextLabel</string>
-          </property>
-         </widget>
-        </item>
+       <layout class="QGridLayout" name="gridLayout_2" rowstretch="1,4,1,4">
         <item row="2" column="0">
-         <widget class="QLabel" name="thermo_label">
-          <property name="styleSheet">
-           <string notr="true">background:rgb(64, 202, 217)</string>
-          </property>
+         <widget class="QLabel" name="label">
           <property name="text">
-           <string>TextLabel</string>
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:700;&quot;&gt;Temperatura&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
          </widget>
         </item>
-        <item row="0" column="1">
-         <widget class="QLabel" name="label_4">
-          <property name="styleSheet">
-           <string notr="true">background:rgb(64, 202, 217)</string>
-          </property>
+        <item row="2" column="1">
+         <widget class="QLabel" name="label_2">
           <property name="text">
-           <string>TextLabel</string>
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:700;&quot;&gt;Wilgotnośc gleby&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
          </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QWidget" name="widget_3" native="true"/>
         </item>
         <item row="1" column="0">
+         <widget class="QLCDNumber" name="lcd_humidity"/>
+        </item>
+        <item row="3" column="0">
          <widget class="RectangleW" name="thermo_widget" native="true">
           <property name="styleSheet">
-           <string notr="true">background:rgb(64, 202, 217)</string>
+           <string notr="true"/>
           </property>
          </widget>
         </item>
         <item row="0" column="0">
          <widget class="QLabel" name="label_3">
-          <property name="styleSheet">
-           <string notr="true">background:rgb(64, 202, 217)</string>
-          </property>
           <property name="text">
-           <string>TextLabel</string>
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:700;&quot;&gt;Wilgotność powietrza&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
          </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLabel" name="label_4">
+          <property name="text">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:700;&quot;&gt;Nasłonecznienie&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QLCDNumber" name="lcdGround"/>
         </item>
        </layout>
       </item>

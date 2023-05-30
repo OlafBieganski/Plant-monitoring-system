@@ -18,23 +18,21 @@
 \DoxyCodeLine{\Hypertarget{plotswindow_8h_source_l00014}00014\ \ \ \ \ Q\_OBJECT}
 \DoxyCodeLine{\Hypertarget{plotswindow_8h_source_l00015}00015\ }
 \DoxyCodeLine{\Hypertarget{plotswindow_8h_source_l00016}00016\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{\Hypertarget{plotswindow_8h_source_l00023}00023\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_plots_window}{PlotsWindow}}(QWidget\ *parent\ =\ \textcolor{keyword}{nullptr},\ QSerialPort*\ serial\ =\ \textcolor{keyword}{nullptr});}
-\DoxyCodeLine{\Hypertarget{plotswindow_8h_source_l00024}00024\ \ \ \ \ \mbox{\hyperlink{class_plots_window_ae69e4bb5b46189725c91524692ca2eda}{\string~PlotsWindow}}();}
-\DoxyCodeLine{\Hypertarget{plotswindow_8h_source_l00025}00025\ }
-\DoxyCodeLine{\Hypertarget{plotswindow_8h_source_l00026}00026\ signals:}
-\DoxyCodeLine{\Hypertarget{plotswindow_8h_source_l00030}\mbox{\hyperlink{class_plots_window_a4b8e20b56d116059ddd6ed570a2f5998}{00030}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_plots_window_a4b8e20b56d116059ddd6ed570a2f5998}{switch\_window}}();}
-\DoxyCodeLine{\Hypertarget{plotswindow_8h_source_l00031}00031\ }
-\DoxyCodeLine{\Hypertarget{plotswindow_8h_source_l00032}00032\ \textcolor{keyword}{private}\ slots:}
-\DoxyCodeLine{\Hypertarget{plotswindow_8h_source_l00037}00037\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_plots_window_a7a01fa202ecd70dfbc358b0f1d2da3c3}{on\_actionWybierz\_port\_szeregowy\_triggered}}();}
-\DoxyCodeLine{\Hypertarget{plotswindow_8h_source_l00041}00041\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_plots_window_af81a958138e98c58e690eb66078f4a8d}{on\_actionOkno\_g\_wne\_triggered}}();}
-\DoxyCodeLine{\Hypertarget{plotswindow_8h_source_l00045}00045\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_plots_window_affc164df303f8310ad7b92f97100c9c6}{on\_actionWybierz\_serie\_triggered}}();}
+\DoxyCodeLine{\Hypertarget{plotswindow_8h_source_l00024}00024\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_plots_window}{PlotsWindow}}(QWidget\ *parent\ =\ \textcolor{keyword}{nullptr},\ QString\ file\_name\ =\ \textcolor{stringliteral}{"{}"{}},\ \textcolor{keywordtype}{int}\ \_idx\ =\ 0);}
+\DoxyCodeLine{\Hypertarget{plotswindow_8h_source_l00025}00025\ \ \ \ \ \mbox{\hyperlink{class_plots_window_ae69e4bb5b46189725c91524692ca2eda}{\string~PlotsWindow}}();}
+\DoxyCodeLine{\Hypertarget{plotswindow_8h_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{plotswindow_8h_source_l00027}00027\ signals:}
+\DoxyCodeLine{\Hypertarget{plotswindow_8h_source_l00032}\mbox{\hyperlink{class_plots_window_af563bafca9eeca70a3ba510fda5724de}{00032}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_plots_window_af563bafca9eeca70a3ba510fda5724de}{window\_closed}}(\textcolor{keywordtype}{int}\ \_idx);}
+\DoxyCodeLine{\Hypertarget{plotswindow_8h_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{plotswindow_8h_source_l00034}00034\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{\Hypertarget{plotswindow_8h_source_l00039}00039\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_plots_window_a5592a194e1a9dbe44856a0f5469b0ba1}{closeEvent}}(QCloseEvent*\ event)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{plotswindow_8h_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{plotswindow_8h_source_l00041}00041\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{plotswindow_8h_source_l00042}\mbox{\hyperlink{class_plots_window_ab00117a22d829d7887375a8010e0eeb6}{00042}}\ \ \ \ \ Ui::PlotsWindow\ *\mbox{\hyperlink{class_plots_window_ab00117a22d829d7887375a8010e0eeb6}{ui}};}
+\DoxyCodeLine{\Hypertarget{plotswindow_8h_source_l00043}\mbox{\hyperlink{class_plots_window_a241842c4152b8d62414a67ba8f5629b7}{00043}}\ \ \ \ \ QString\ \mbox{\hyperlink{class_plots_window_a241842c4152b8d62414a67ba8f5629b7}{curr\_file\_name}};}
+\DoxyCodeLine{\Hypertarget{plotswindow_8h_source_l00044}\mbox{\hyperlink{class_plots_window_aab216a8a72d0b75aa4d9497be67fcb75}{00044}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_plots_window_aab216a8a72d0b75aa4d9497be67fcb75}{idx}};}
+\DoxyCodeLine{\Hypertarget{plotswindow_8h_source_l00045}00045\ \};}
 \DoxyCodeLine{\Hypertarget{plotswindow_8h_source_l00046}00046\ }
-\DoxyCodeLine{\Hypertarget{plotswindow_8h_source_l00047}00047\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{\Hypertarget{plotswindow_8h_source_l00048}\mbox{\hyperlink{class_plots_window_ab00117a22d829d7887375a8010e0eeb6}{00048}}\ \ \ \ \ Ui::PlotsWindow\ *\mbox{\hyperlink{class_plots_window_ab00117a22d829d7887375a8010e0eeb6}{ui}};}
-\DoxyCodeLine{\Hypertarget{plotswindow_8h_source_l00049}\mbox{\hyperlink{class_plots_window_a612bab1ef4bffdd50496c11ecaec0ad5}{00049}}\ \ \ \ \ QSerialPort*\ \mbox{\hyperlink{class_plots_window_a612bab1ef4bffdd50496c11ecaec0ad5}{arduino}};}
-\DoxyCodeLine{\Hypertarget{plotswindow_8h_source_l00050}\mbox{\hyperlink{class_plots_window_a5ff554057edc9e1614ae99151f731b87}{00050}}\ \ \ \ \ \mbox{\hyperlink{class_port_selection}{PortSelection}}*\ \mbox{\hyperlink{class_plots_window_a5ff554057edc9e1614ae99151f731b87}{com\_window}};}
-\DoxyCodeLine{\Hypertarget{plotswindow_8h_source_l00051}00051\ \};}
-\DoxyCodeLine{\Hypertarget{plotswindow_8h_source_l00052}00052\ }
-\DoxyCodeLine{\Hypertarget{plotswindow_8h_source_l00053}00053\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ PLOTSWINDOW\_H}}
+\DoxyCodeLine{\Hypertarget{plotswindow_8h_source_l00047}00047\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ PLOTSWINDOW\_H}}
 
 \end{DoxyCode}

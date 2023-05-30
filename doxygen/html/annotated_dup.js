@@ -1,6 +1,8 @@
 var annotated_dup =
 [
     [ "MainWindow", "class_main_window.html", "class_main_window" ],
+    [ "PlantData", "struct_plant_data.html", "struct_plant_data" ],
+    [ "PlotsWidget", "class_plots_widget.html", "class_plots_widget" ],
     [ "PlotsWindow", "class_plots_window.html", "class_plots_window" ],
     [ "PortSelection", "class_port_selection.html", "class_port_selection" ],
     [ "QCPAbstractItem", "class_q_c_p_abstract_item.html", "class_q_c_p_abstract_item" ],
@@ -77,5 +79,6 @@ var annotated_dup =
     [ "QCPStatisticalBoxData", "class_q_c_p_statistical_box_data.html", "class_q_c_p_statistical_box_data" ],
     [ "QCPTextElement", "class_q_c_p_text_element.html", "class_q_c_p_text_element" ],
     [ "QCPVector2D", "class_q_c_p_vector2_d.html", "class_q_c_p_vector2_d" ],
-    [ "QCustomPlot", "class_q_custom_plot.html", "class_q_custom_plot" ]
+    [ "QCustomPlot", "class_q_custom_plot.html", "class_q_custom_plot" ],
+    [ "RectangleW", "class_rectangle_w.html", "class_rectangle_w" ]
 ];

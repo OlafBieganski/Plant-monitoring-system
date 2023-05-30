@@ -61,6 +61,8 @@ void MainWindow::on_pushButton_measure_clicked()
     qDebug() << measureDateTime.toString();
     ui->statusbar->showMessage(tr("Pobrano pomiar."), 5000);
     emit new_values(temperature); // needed for all mesurements
+    ui->lcdGround->display(ground);
+    ui->lcd_humidity->display(humidity);
 }
 
 void MainWindow::on_actionWybierz_port_szeregowy_triggered()

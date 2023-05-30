@@ -3,6 +3,7 @@ var hierarchy =
     [ "QCPAxisPainterPrivate::CachedLabel", "struct_q_c_p_axis_painter_private_1_1_cached_label.html", null ],
     [ "QCPLabelPainterPrivate::CachedLabel", "struct_q_c_p_label_painter_private_1_1_cached_label.html", null ],
     [ "QCPLabelPainterPrivate::LabelData", "struct_q_c_p_label_painter_private_1_1_label_data.html", null ],
+    [ "PlantData", "struct_plant_data.html", null ],
     [ "QCPAbstractPaintBuffer", "class_q_c_p_abstract_paint_buffer.html", [
       [ "QCPPaintBufferPixmap", "class_q_c_p_paint_buffer_pixmap.html", null ]
     ] ],
@@ -119,7 +120,9 @@ var hierarchy =
       [ "QCPPainter", "class_q_c_p_painter.html", null ]
     ] ],
     [ "QWidget", null, [
-      [ "QCustomPlot", "class_q_custom_plot.html", null ]
+      [ "PlotsWidget", "class_plots_widget.html", null ],
+      [ "QCustomPlot", "class_q_custom_plot.html", null ],
+      [ "RectangleW", "class_rectangle_w.html", null ]
     ] ],
     [ "QCPAxisPainterPrivate::TickLabelData", "struct_q_c_p_axis_painter_private_1_1_tick_label_data.html", null ]
 ];

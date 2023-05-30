@@ -16,9 +16,9 @@ class PlotsWindow : public QMainWindow
 public:
     /*!
      * \brief Creates a PlotsWindow object
-     * \param parent
-     * \param file_name - name of the file with data to be visualized on the plots
-     * \param _idx - index of this object in QMainWindow::plot_windows vector
+     * \param[in,out] parent
+     * \param[in] file_name - name of the file with data to be visualized on the plots
+     * \param[in] _idx - index of this object in QMainWindow::plot_windows vector
      * \see PortSelection
      */
     explicit PlotsWindow(QWidget *parent = nullptr, QString file_name = "", int _idx = 0);
@@ -27,10 +27,15 @@ public:
 signals:
     /*!
      * \brief signal that is emitted when a window is supposed to be changed
+     * \param[in] _idx
      */
     void window_closed(int _idx);
 
 protected:
+    /**
+     * @brief closeEvent
+     * @param[in,out] event
+     */
     void closeEvent(QCloseEvent* event) override;
 
 private:

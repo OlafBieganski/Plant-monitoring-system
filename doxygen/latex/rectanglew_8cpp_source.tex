@@ -1,0 +1,61 @@
+\hypertarget{rectanglew_8cpp_source}{}\doxysection{rectanglew.\+cpp}
+\label{rectanglew_8cpp_source}\index{C:/Users/olafb/OneDrive/Pulpit/Plant monitoring system (WDS)/PlantMonitoringSystemQt/rectanglew.cpp@{C:/Users/olafb/OneDrive/Pulpit/Plant monitoring system (WDS)/PlantMonitoringSystemQt/rectanglew.cpp}}
+\mbox{\hyperlink{rectanglew_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{rectanglew_8cpp_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{rectanglew_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{rectanglew_8h}{rectanglew.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{rectanglew_8cpp_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{rectanglew_8cpp_source_l00004}\mbox{\hyperlink{class_rectangle_w_a937b261991d04ce71d3d4843c1d3961c}{00004}}\ \mbox{\hyperlink{class_rectangle_w_a937b261991d04ce71d3d4843c1d3961c}{RectangleW::RectangleW}}(QWidget\ *parent,\ \textcolor{keywordtype}{int}\ \_height)}
+\DoxyCodeLine{\Hypertarget{rectanglew_8cpp_source_l00005}00005\ \ \ \ \ :\ QWidget\{parent\},}
+\DoxyCodeLine{\Hypertarget{rectanglew_8cpp_source_l00006}00006\ \ \ \ \ height(\_height)}
+\DoxyCodeLine{\Hypertarget{rectanglew_8cpp_source_l00007}00007\ \{}
+\DoxyCodeLine{\Hypertarget{rectanglew_8cpp_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{rectanglew_8cpp_source_l00009}00009\ \}}
+\DoxyCodeLine{\Hypertarget{rectanglew_8cpp_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{rectanglew_8cpp_source_l00011}\mbox{\hyperlink{class_rectangle_w_a9a461a4b21ca4e472e275ae3a4bcabb3}{00011}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_rectangle_w_a9a461a4b21ca4e472e275ae3a4bcabb3}{RectangleW::paintEvent}}(QPaintEvent*)\{}
+\DoxyCodeLine{\Hypertarget{rectanglew_8cpp_source_l00012}00012\ \ \ \ \ QPainter\ painter(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{rectanglew_8cpp_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{rectanglew_8cpp_source_l00014}00014\ \ \ \ \ \textcolor{comment}{//\ Set\ the\ initial\ rectangle\ properties}}
+\DoxyCodeLine{\Hypertarget{rectanglew_8cpp_source_l00015}00015\ \ \ \ \ QRect\ rectangle(17,\ 203,\ 34,\ \mbox{\hyperlink{class_rectangle_w_abc99603d5f9f1eab4f08b15dd0d4aee8}{height}});}
+\DoxyCodeLine{\Hypertarget{rectanglew_8cpp_source_l00016}00016\ \ \ \ \ QColor\ fillColor(Qt::red);}
+\DoxyCodeLine{\Hypertarget{rectanglew_8cpp_source_l00017}00017\ \ \ \ \ QPen\ pen(Qt::red);}
+\DoxyCodeLine{\Hypertarget{rectanglew_8cpp_source_l00018}00018\ \ \ \ \ QImage\ thermo(\textcolor{stringliteral}{"{}C:/Users/olafb/Downloads/termometr"{}});}
+\DoxyCodeLine{\Hypertarget{rectanglew_8cpp_source_l00019}00019\ \ \ \ \ \textcolor{comment}{//\ setStyleSheet("{}background:\ rgb(64,\ 202,\ 217);"{});\ ???}}
+\DoxyCodeLine{\Hypertarget{rectanglew_8cpp_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{rectanglew_8cpp_source_l00021}00021\ \ \ \ \ \textcolor{comment}{//translete\ the\ base\ of\ the\ coordinate\ system}}
+\DoxyCodeLine{\Hypertarget{rectanglew_8cpp_source_l00022}00022\ \ \ \ \ \textcolor{keywordtype}{int}\ x\_offset\ =\ width()/2\ -\/\ thermo.width()/2;}
+\DoxyCodeLine{\Hypertarget{rectanglew_8cpp_source_l00023}00023\ \ \ \ \ \textcolor{keywordtype}{int}\ y\_offset\ =\ QWidget::height()/2\ -\/\ thermo.height()/2;}
+\DoxyCodeLine{\Hypertarget{rectanglew_8cpp_source_l00024}00024\ \ \ \ \ painter.translate(x\_offset,\ y\_offset);}
+\DoxyCodeLine{\Hypertarget{rectanglew_8cpp_source_l00025}00025\ \ \ \ \ \textcolor{comment}{//\ Draw\ the\ rectangle}}
+\DoxyCodeLine{\Hypertarget{rectanglew_8cpp_source_l00026}00026\ \ \ \ \ painter.setPen(pen);}
+\DoxyCodeLine{\Hypertarget{rectanglew_8cpp_source_l00027}00027\ \ \ \ \ painter.setBrush(fillColor);}
+\DoxyCodeLine{\Hypertarget{rectanglew_8cpp_source_l00028}00028\ \ \ \ \ painter.drawRect(rectangle);}
+\DoxyCodeLine{\Hypertarget{rectanglew_8cpp_source_l00029}00029\ \ \ \ \ painter.drawImage(0,\ 0,\ thermo);}
+\DoxyCodeLine{\Hypertarget{rectanglew_8cpp_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{rectanglew_8cpp_source_l00031}00031\ \ \ \ \ \textcolor{comment}{//drawing\ numeric\ value\ of\ temperatureQFont\ font\ =\ painter.font();}}
+\DoxyCodeLine{\Hypertarget{rectanglew_8cpp_source_l00032}00032\ \ \ \ \ painter.translate(0,\ thermo.height()/2);}
+\DoxyCodeLine{\Hypertarget{rectanglew_8cpp_source_l00033}00033\ \ \ \ \ QFont\ font\ =\ painter.font();}
+\DoxyCodeLine{\Hypertarget{rectanglew_8cpp_source_l00034}00034\ \ \ \ \ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{int}\ pix\_size\ =\ 30;}
+\DoxyCodeLine{\Hypertarget{rectanglew_8cpp_source_l00035}00035\ \ \ \ \ font.setPixelSize(pix\_size);}
+\DoxyCodeLine{\Hypertarget{rectanglew_8cpp_source_l00036}00036\ \ \ \ \ painter.setFont(font);}
+\DoxyCodeLine{\Hypertarget{rectanglew_8cpp_source_l00037}00037\ \ \ \ \ QString\ \_temp\ =\ QString::number(\mbox{\hyperlink{class_rectangle_w_a91792fe25e0ae599a81d777936b1a214}{temperature}})\ +\ QChar(0x00B0)\ +\ \textcolor{charliteral}{'C'};}
+\DoxyCodeLine{\Hypertarget{rectanglew_8cpp_source_l00038}00038\ \ \ \ \ QFontMetrics\ fontMetrics(font);}
+\DoxyCodeLine{\Hypertarget{rectanglew_8cpp_source_l00039}00039\ \ \ \ \ QRect\ textRect\ =\ fontMetrics.boundingRect(\_temp);}
+\DoxyCodeLine{\Hypertarget{rectanglew_8cpp_source_l00040}00040\ \ \ \ \ painter.drawText(-\/textRect.size().width(),\ 0,\ \_temp);}
+\DoxyCodeLine{\Hypertarget{rectanglew_8cpp_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{rectanglew_8cpp_source_l00042}00042\ \ \ \ \ QMargins\ left\_margin(textRect.size().width()*2,0,0,0);}
+\DoxyCodeLine{\Hypertarget{rectanglew_8cpp_source_l00043}00043\ \ \ \ \ setMinimumSize(thermo.size().grownBy(left\_margin));}
+\DoxyCodeLine{\Hypertarget{rectanglew_8cpp_source_l00044}00044\ \}}
+\DoxyCodeLine{\Hypertarget{rectanglew_8cpp_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{rectanglew_8cpp_source_l00046}\mbox{\hyperlink{class_rectangle_w_aea769fbfdfca1a29f1009fd53a56e847}{00046}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_rectangle_w_aea769fbfdfca1a29f1009fd53a56e847}{RectangleW::setHeight}}(\textcolor{keywordtype}{int}\ \_height)\ \{}
+\DoxyCodeLine{\Hypertarget{rectanglew_8cpp_source_l00047}00047\ \ \ \ \ \mbox{\hyperlink{class_rectangle_w_abc99603d5f9f1eab4f08b15dd0d4aee8}{height}}\ =\ \_height;}
+\DoxyCodeLine{\Hypertarget{rectanglew_8cpp_source_l00048}00048\ \ \ \ \ update();}
+\DoxyCodeLine{\Hypertarget{rectanglew_8cpp_source_l00049}00049\ \}}
+\DoxyCodeLine{\Hypertarget{rectanglew_8cpp_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{rectanglew_8cpp_source_l00051}\mbox{\hyperlink{class_rectangle_w_a5fc791812e3fa2d6e9244d933d162ebe}{00051}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_rectangle_w_a5fc791812e3fa2d6e9244d933d162ebe}{RectangleW::changeHeight}}(\textcolor{keywordtype}{int}\ \_temperature)\{}
+\DoxyCodeLine{\Hypertarget{rectanglew_8cpp_source_l00052}00052\ \ \ \ \ \textcolor{comment}{//\ normalization\ needed}}
+\DoxyCodeLine{\Hypertarget{rectanglew_8cpp_source_l00053}00053\ \ \ \ \ \mbox{\hyperlink{class_rectangle_w_aea769fbfdfca1a29f1009fd53a56e847}{setHeight}}(-\/195\ *\ \_temperature\ /\ 100);}
+\DoxyCodeLine{\Hypertarget{rectanglew_8cpp_source_l00054}00054\ \ \ \ \ \mbox{\hyperlink{class_rectangle_w_a91792fe25e0ae599a81d777936b1a214}{temperature}}\ =\ \_temperature;}
+\DoxyCodeLine{\Hypertarget{rectanglew_8cpp_source_l00055}00055\ \}}
+
+\end{DoxyCode}

@@ -52,7 +52,7 @@ $(document).ready(function(){initNavTree('class_plots_window.html',''); initResi
   <div class="summary">
 <a href="#signals">Signals</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pri-slots">Private Slots</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_plots_window-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">PlotsWindow Class Reference</div></div>
@@ -69,45 +69,39 @@ Inheritance diagram for PlotsWindow:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="signals" name="signals"></a>
 Signals</h2></td></tr>
-<tr class="memitem:a4b8e20b56d116059ddd6ed570a2f5998"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_plots_window.html#a4b8e20b56d116059ddd6ed570a2f5998">switch_window</a> ()</td></tr>
-<tr class="memdesc:a4b8e20b56d116059ddd6ed570a2f5998"><td class="mdescLeft">&#160;</td><td class="mdescRight">signal that is emitted when a window is supposed to be changed  <br /></td></tr>
-<tr class="separator:a4b8e20b56d116059ddd6ed570a2f5998"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af563bafca9eeca70a3ba510fda5724de"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_plots_window.html#af563bafca9eeca70a3ba510fda5724de">window_closed</a> (int _idx)</td></tr>
+<tr class="memdesc:af563bafca9eeca70a3ba510fda5724de"><td class="mdescLeft">&#160;</td><td class="mdescRight">signal that is emitted when a window is supposed to be changed  <br /></td></tr>
+<tr class="separator:af563bafca9eeca70a3ba510fda5724de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:afee9900e8db399492eb995bf9cb7d3a4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_plots_window.html#afee9900e8db399492eb995bf9cb7d3a4">PlotsWindow</a> (QWidget *parent=nullptr, QSerialPort *serial=nullptr)</td></tr>
-<tr class="memdesc:afee9900e8db399492eb995bf9cb7d3a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="class_plots_window.html">PlotsWindow</a> object.  <br /></td></tr>
-<tr class="separator:afee9900e8db399492eb995bf9cb7d3a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afffc2efac81c97a32f1822ef0bad3b75"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_plots_window.html#afffc2efac81c97a32f1822ef0bad3b75">PlotsWindow</a> (QWidget *parent=nullptr, QString file_name=&quot;&quot;, int _idx=0)</td></tr>
+<tr class="memdesc:afffc2efac81c97a32f1822ef0bad3b75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a <a class="el" href="class_plots_window.html">PlotsWindow</a> object.  <br /></td></tr>
+<tr class="separator:afffc2efac81c97a32f1822ef0bad3b75"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae69e4bb5b46189725c91524692ca2eda"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_plots_window.html#ae69e4bb5b46189725c91524692ca2eda">~PlotsWindow</a> ()</td></tr>
 <tr class="separator:ae69e4bb5b46189725c91524692ca2eda"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-slots" name="pri-slots"></a>
-Private Slots</h2></td></tr>
-<tr class="memitem:a7a01fa202ecd70dfbc358b0f1d2da3c3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_plots_window.html#a7a01fa202ecd70dfbc358b0f1d2da3c3">on_actionWybierz_port_szeregowy_triggered</a> ()</td></tr>
-<tr class="memdesc:a7a01fa202ecd70dfbc358b0f1d2da3c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Currently the function does not work properly and cause udefined behaviour The reason behind this may be that the pointer QSerialPort* serial is passed between classes.  <br /></td></tr>
-<tr class="separator:a7a01fa202ecd70dfbc358b0f1d2da3c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af81a958138e98c58e690eb66078f4a8d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_plots_window.html#af81a958138e98c58e690eb66078f4a8d">on_actionOkno_g_wne_triggered</a> ()</td></tr>
-<tr class="memdesc:af81a958138e98c58e690eb66078f4a8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Emits signal with information to switch windows and hide <a class="el" href="class_plots_window.html">PlotsWindow</a> window.  <br /></td></tr>
-<tr class="separator:af81a958138e98c58e690eb66078f4a8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:affc164df303f8310ad7b92f97100c9c6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_plots_window.html#affc164df303f8310ad7b92f97100c9c6">on_actionWybierz_serie_triggered</a> ()</td></tr>
-<tr class="memdesc:affc164df303f8310ad7b92f97100c9c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open file with a measurement data and displays it on plots.  <br /></td></tr>
-<tr class="separator:affc164df303f8310ad7b92f97100c9c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a5592a194e1a9dbe44856a0f5469b0ba1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_plots_window.html#a5592a194e1a9dbe44856a0f5469b0ba1">closeEvent</a> (QCloseEvent *event) override</td></tr>
+<tr class="memdesc:a5592a194e1a9dbe44856a0f5469b0ba1"><td class="mdescLeft">&#160;</td><td class="mdescRight">closeEvent  <br /></td></tr>
+<tr class="separator:a5592a194e1a9dbe44856a0f5469b0ba1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:ab00117a22d829d7887375a8010e0eeb6"><td class="memItemLeft" align="right" valign="top">Ui::PlotsWindow *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_plots_window.html#ab00117a22d829d7887375a8010e0eeb6">ui</a></td></tr>
 <tr class="separator:ab00117a22d829d7887375a8010e0eeb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a612bab1ef4bffdd50496c11ecaec0ad5"><td class="memItemLeft" align="right" valign="top">QSerialPort *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_plots_window.html#a612bab1ef4bffdd50496c11ecaec0ad5">arduino</a></td></tr>
-<tr class="separator:a612bab1ef4bffdd50496c11ecaec0ad5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ff554057edc9e1614ae99151f731b87"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_port_selection.html">PortSelection</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_plots_window.html#a5ff554057edc9e1614ae99151f731b87">com_window</a></td></tr>
-<tr class="separator:a5ff554057edc9e1614ae99151f731b87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a241842c4152b8d62414a67ba8f5629b7"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_plots_window.html#a241842c4152b8d62414a67ba8f5629b7">curr_file_name</a></td></tr>
+<tr class="separator:a241842c4152b8d62414a67ba8f5629b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab216a8a72d0b75aa4d9497be67fcb75"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_plots_window.html#aab216a8a72d0b75aa4d9497be67fcb75">idx</a></td></tr>
+<tr class="separator:aab216a8a72d0b75aa4d9497be67fcb75"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
 <p class="definition">Definition at line <a class="el" href="plotswindow_8h_source.html#l00012">12</a> of file <a class="el" href="plotswindow_8h_source.html">plotswindow.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="afee9900e8db399492eb995bf9cb7d3a4" name="afee9900e8db399492eb995bf9cb7d3a4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afee9900e8db399492eb995bf9cb7d3a4">&#9670;&#160;</a></span>PlotsWindow()</h2>
+<a id="afffc2efac81c97a32f1822ef0bad3b75" name="afffc2efac81c97a32f1822ef0bad3b75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afffc2efac81c97a32f1822ef0bad3b75">&#9670;&#160;</a></span>PlotsWindow()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -124,8 +118,14 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">QSerialPort *&#160;</td>
-          <td class="paramname"><em>serial</em> = <code>nullptr</code>&#160;</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>file_name</em> = <code>&quot;&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>_idx</em> = <code>0</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -143,14 +143,15 @@ Private Attributes</h2></td></tr>
 <p>Creates a <a class="el" href="class_plots_window.html">PlotsWindow</a> object. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">parent</td><td></td></tr>
-    <tr><td class="paramname">serial</td><td>- pointer to a serial port handler that our external device is connected to </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">parent</td><td></td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">file_name</td><td>- name of the file with data to be visualized on the plots </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">_idx</td><td>- index of this object in QMainWindow::plot_windows vector </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="class_port_selection.html">PortSelection</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="plotswindow_8cpp_source.html#l00004">4</a> of file <a class="el" href="plotswindow_8cpp_source.html">plotswindow.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plotswindow_8cpp_source.html#l00011">11</a> of file <a class="el" href="plotswindow_8cpp_source.html">plotswindow.cpp</a>.</p>
 
 </div>
 </div>
@@ -169,13 +170,13 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="plotswindow_8cpp_source.html#l00012">12</a> of file <a class="el" href="plotswindow_8cpp_source.html">plotswindow.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plotswindow_8cpp_source.html#l00111">111</a> of file <a class="el" href="plotswindow_8cpp_source.html">plotswindow.cpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="af81a958138e98c58e690eb66078f4a8d" name="af81a958138e98c58e690eb66078f4a8d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af81a958138e98c58e690eb66078f4a8d">&#9670;&#160;</a></span>on_actionOkno_g_wne_triggered</h2>
+<a id="a5592a194e1a9dbe44856a0f5469b0ba1" name="a5592a194e1a9dbe44856a0f5469b0ba1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5592a194e1a9dbe44856a0f5469b0ba1">&#9670;&#160;</a></span>closeEvent()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -184,27 +185,34 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void PlotsWindow::on_actionOkno_g_wne_triggered </td>
+          <td class="memname">void PlotsWindow::closeEvent </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">QCloseEvent *&#160;</td>
+          <td class="paramname"><em>event</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Emits signal with information to switch windows and hide <a class="el" href="class_plots_window.html">PlotsWindow</a> window. </p>
+<p>closeEvent </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">event</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="plotswindow_8cpp_source.html#l00026">26</a> of file <a class="el" href="plotswindow_8cpp_source.html">plotswindow.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plotswindow_8cpp_source.html#l00117">117</a> of file <a class="el" href="plotswindow_8cpp_source.html">plotswindow.cpp</a>.</p>
 
 </div>
 </div>
-<a id="a7a01fa202ecd70dfbc358b0f1d2da3c3" name="a7a01fa202ecd70dfbc358b0f1d2da3c3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7a01fa202ecd70dfbc358b0f1d2da3c3">&#9670;&#160;</a></span>on_actionWybierz_port_szeregowy_triggered</h2>
+<a id="af563bafca9eeca70a3ba510fda5724de" name="af563bafca9eeca70a3ba510fda5724de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af563bafca9eeca70a3ba510fda5724de">&#9670;&#160;</a></span>window_closed</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -213,67 +221,10 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void PlotsWindow::on_actionWybierz_port_szeregowy_triggered </td>
+          <td class="memname">void PlotsWindow::window_closed </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Currently the function does not work properly and cause udefined behaviour The reason behind this may be that the pointer QSerialPort* serial is passed between classes. </p>
-
-<p class="definition">Definition at line <a class="el" href="plotswindow_8cpp_source.html#l00017">17</a> of file <a class="el" href="plotswindow_8cpp_source.html">plotswindow.cpp</a>.</p>
-
-</div>
-</div>
-<a id="affc164df303f8310ad7b92f97100c9c6" name="affc164df303f8310ad7b92f97100c9c6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#affc164df303f8310ad7b92f97100c9c6">&#9670;&#160;</a></span>on_actionWybierz_serie_triggered</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void PlotsWindow::on_actionWybierz_serie_triggered </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Open file with a measurement data and displays it on plots. </p>
-
-<p class="definition">Definition at line <a class="el" href="plotswindow_8cpp_source.html#l00033">33</a> of file <a class="el" href="plotswindow_8cpp_source.html">plotswindow.cpp</a>.</p>
-
-</div>
-</div>
-<a id="a4b8e20b56d116059ddd6ed570a2f5998" name="a4b8e20b56d116059ddd6ed570a2f5998"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4b8e20b56d116059ddd6ed570a2f5998">&#9670;&#160;</a></span>switch_window</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void PlotsWindow::switch_window </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>_idx</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -285,12 +236,18 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>signal that is emitted when a window is supposed to be changed </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">_idx</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a612bab1ef4bffdd50496c11ecaec0ad5" name="a612bab1ef4bffdd50496c11ecaec0ad5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a612bab1ef4bffdd50496c11ecaec0ad5">&#9670;&#160;</a></span>arduino</h2>
+<a id="a241842c4152b8d62414a67ba8f5629b7" name="a241842c4152b8d62414a67ba8f5629b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a241842c4152b8d62414a67ba8f5629b7">&#9670;&#160;</a></span>curr_file_name</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -299,7 +256,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">QSerialPort* PlotsWindow::arduino</td>
+          <td class="memname">QString PlotsWindow::curr_file_name</td>
         </tr>
       </table>
   </td>
@@ -309,12 +266,12 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="plotswindow_8h_source.html#l00049">49</a> of file <a class="el" href="plotswindow_8h_source.html">plotswindow.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plotswindow_8h_source.html#l00043">43</a> of file <a class="el" href="plotswindow_8h_source.html">plotswindow.h</a>.</p>
 
 </div>
 </div>
-<a id="a5ff554057edc9e1614ae99151f731b87" name="a5ff554057edc9e1614ae99151f731b87"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5ff554057edc9e1614ae99151f731b87">&#9670;&#160;</a></span>com_window</h2>
+<a id="aab216a8a72d0b75aa4d9497be67fcb75" name="aab216a8a72d0b75aa4d9497be67fcb75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab216a8a72d0b75aa4d9497be67fcb75">&#9670;&#160;</a></span>idx</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -323,7 +280,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_port_selection.html">PortSelection</a>* PlotsWindow::com_window</td>
+          <td class="memname">int PlotsWindow::idx</td>
         </tr>
       </table>
   </td>
@@ -333,7 +290,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="plotswindow_8h_source.html#l00050">50</a> of file <a class="el" href="plotswindow_8h_source.html">plotswindow.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plotswindow_8h_source.html#l00044">44</a> of file <a class="el" href="plotswindow_8h_source.html">plotswindow.h</a>.</p>
 
 </div>
 </div>
@@ -357,7 +314,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="plotswindow_8h_source.html#l00048">48</a> of file <a class="el" href="plotswindow_8h_source.html">plotswindow.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plotswindow_8h_source.html#l00042">42</a> of file <a class="el" href="plotswindow_8h_source.html">plotswindow.h</a>.</p>
 
 </div>
 </div>

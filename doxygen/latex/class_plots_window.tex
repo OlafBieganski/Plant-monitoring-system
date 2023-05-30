@@ -13,32 +13,28 @@ Inheritance diagram for Plots\+Window\+:\begin{figure}[H]
 \doxysubsection*{Signals}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{class_plots_window_a4b8e20b56d116059ddd6ed570a2f5998}{switch\+\_\+window}} ()
+void \mbox{\hyperlink{class_plots_window_af563bafca9eeca70a3ba510fda5724de}{window\+\_\+closed}} (int \+\_\+idx)
 \begin{DoxyCompactList}\small\item\em signal that is emitted when a window is supposed to be changed \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_plots_window_afee9900e8db399492eb995bf9cb7d3a4}{Plots\+Window}} (QWidget $\ast$parent=nullptr, QSerial\+Port $\ast$serial=nullptr)
+\mbox{\hyperlink{class_plots_window_afffc2efac81c97a32f1822ef0bad3b75}{Plots\+Window}} (QWidget $\ast$parent=nullptr, QString file\+\_\+name=\char`\"{}\char`\"{}, int \+\_\+idx=0)
 \begin{DoxyCompactList}\small\item\em Creates a \mbox{\hyperlink{class_plots_window}{Plots\+Window}} object. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_plots_window_ae69e4bb5b46189725c91524692ca2eda}{$\sim$\+Plots\+Window}} ()
 \end{DoxyCompactItemize}
-\doxysubsection*{Private Slots}
+\doxysubsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{class_plots_window_a7a01fa202ecd70dfbc358b0f1d2da3c3}{on\+\_\+action\+Wybierz\+\_\+port\+\_\+szeregowy\+\_\+triggered}} ()
-\begin{DoxyCompactList}\small\item\em Currently the function does not work properly and cause udefined behaviour The reason behind this may be that the pointer QSerial\+Port$\ast$ serial is passed between classes. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_plots_window_af81a958138e98c58e690eb66078f4a8d}{on\+\_\+action\+Okno\+\_\+g\+\_\+wne\+\_\+triggered}} ()
-\begin{DoxyCompactList}\small\item\em Emits signal with information to switch windows and hide \mbox{\hyperlink{class_plots_window}{Plots\+Window}} window. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_plots_window_affc164df303f8310ad7b92f97100c9c6}{on\+\_\+action\+Wybierz\+\_\+serie\+\_\+triggered}} ()
-\begin{DoxyCompactList}\small\item\em Open file with a measurement data and displays it on plots. \end{DoxyCompactList}\end{DoxyCompactItemize}
+void \mbox{\hyperlink{class_plots_window_a5592a194e1a9dbe44856a0f5469b0ba1}{close\+Event}} (QClose\+Event $\ast$event) override
+\begin{DoxyCompactList}\small\item\em close\+Event \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 Ui\+::\+Plots\+Window $\ast$ \mbox{\hyperlink{class_plots_window_ab00117a22d829d7887375a8010e0eeb6}{ui}}
 \item 
-QSerial\+Port $\ast$ \mbox{\hyperlink{class_plots_window_a612bab1ef4bffdd50496c11ecaec0ad5}{arduino}}
+QString \mbox{\hyperlink{class_plots_window_a241842c4152b8d62414a67ba8f5629b7}{curr\+\_\+file\+\_\+name}}
 \item 
-\mbox{\hyperlink{class_port_selection}{Port\+Selection}} $\ast$ \mbox{\hyperlink{class_plots_window_a5ff554057edc9e1614ae99151f731b87}{com\+\_\+window}}
+int \mbox{\hyperlink{class_plots_window_aab216a8a72d0b75aa4d9497be67fcb75}{idx}}
 \end{DoxyCompactItemize}
 
 
@@ -50,21 +46,23 @@ Definition at line \mbox{\hyperlink{plotswindow_8h_source_l00012}{12}} of file \
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{class_plots_window_afee9900e8db399492eb995bf9cb7d3a4}\label{class_plots_window_afee9900e8db399492eb995bf9cb7d3a4}} 
+\mbox{\Hypertarget{class_plots_window_afffc2efac81c97a32f1822ef0bad3b75}\label{class_plots_window_afffc2efac81c97a32f1822ef0bad3b75}} 
 \index{PlotsWindow@{PlotsWindow}!PlotsWindow@{PlotsWindow}}
 \index{PlotsWindow@{PlotsWindow}!PlotsWindow@{PlotsWindow}}
 \doxysubsubsection{\texorpdfstring{PlotsWindow()}{PlotsWindow()}}
-{\footnotesize\ttfamily Plots\+Window\+::\+Plots\+Window (\begin{DoxyParamCaption}\item[{QWidget $\ast$}]{parent = {\ttfamily nullptr},  }\item[{QSerial\+Port $\ast$}]{serial = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+{\footnotesize\ttfamily Plots\+Window\+::\+Plots\+Window (\begin{DoxyParamCaption}\item[{QWidget $\ast$}]{parent = {\ttfamily nullptr},  }\item[{QString}]{file\+\_\+name = {\ttfamily \char`\"{}\char`\"{}},  }\item[{int}]{\+\_\+idx = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
 
 
 
 Creates a \mbox{\hyperlink{class_plots_window}{Plots\+Window}} object. 
 
 
-\begin{DoxyParams}{Parameters}
-{\em parent} & \\
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em parent} & \\
 \hline
-{\em serial} & -\/ pointer to a serial port handler that our external device is connected to \\
+\mbox{\texttt{ in}}  & {\em file\+\_\+name} & -\/ name of the file with data to be visualized on the plots \\
+\hline
+\mbox{\texttt{ in}}  & {\em \+\_\+idx} & -\/ index of this object in QMain\+Window\+::plot\+\_\+windows vector \\
 \hline
 \end{DoxyParams}
 \begin{DoxySeeAlso}{See also}
@@ -72,7 +70,7 @@ Creates a \mbox{\hyperlink{class_plots_window}{Plots\+Window}} object.
 \end{DoxySeeAlso}
 
 
-Definition at line \mbox{\hyperlink{plotswindow_8cpp_source_l00004}{4}} of file \mbox{\hyperlink{plotswindow_8cpp_source}{plotswindow.\+cpp}}.
+Definition at line \mbox{\hyperlink{plotswindow_8cpp_source_l00011}{11}} of file \mbox{\hyperlink{plotswindow_8cpp_source}{plotswindow.\+cpp}}.
 
 \mbox{\Hypertarget{class_plots_window_ae69e4bb5b46189725c91524692ca2eda}\label{class_plots_window_ae69e4bb5b46189725c91524692ca2eda}} 
 \index{PlotsWindow@{PlotsWindow}!````~PlotsWindow@{$\sim$PlotsWindow}}
@@ -82,85 +80,67 @@ Definition at line \mbox{\hyperlink{plotswindow_8cpp_source_l00004}{4}} of file 
 
 
 
-Definition at line \mbox{\hyperlink{plotswindow_8cpp_source_l00012}{12}} of file \mbox{\hyperlink{plotswindow_8cpp_source}{plotswindow.\+cpp}}.
+Definition at line \mbox{\hyperlink{plotswindow_8cpp_source_l00111}{111}} of file \mbox{\hyperlink{plotswindow_8cpp_source}{plotswindow.\+cpp}}.
 
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_plots_window_af81a958138e98c58e690eb66078f4a8d}\label{class_plots_window_af81a958138e98c58e690eb66078f4a8d}} 
-\index{PlotsWindow@{PlotsWindow}!on\_actionOkno\_g\_wne\_triggered@{on\_actionOkno\_g\_wne\_triggered}}
-\index{on\_actionOkno\_g\_wne\_triggered@{on\_actionOkno\_g\_wne\_triggered}!PlotsWindow@{PlotsWindow}}
-\doxysubsubsection{\texorpdfstring{on\_actionOkno\_g\_wne\_triggered}{on\_actionOkno\_g\_wne\_triggered}}
-{\footnotesize\ttfamily void Plots\+Window\+::on\+\_\+action\+Okno\+\_\+g\+\_\+wne\+\_\+triggered (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+\mbox{\Hypertarget{class_plots_window_a5592a194e1a9dbe44856a0f5469b0ba1}\label{class_plots_window_a5592a194e1a9dbe44856a0f5469b0ba1}} 
+\index{PlotsWindow@{PlotsWindow}!closeEvent@{closeEvent}}
+\index{closeEvent@{closeEvent}!PlotsWindow@{PlotsWindow}}
+\doxysubsubsection{\texorpdfstring{closeEvent()}{closeEvent()}}
+{\footnotesize\ttfamily void Plots\+Window\+::close\+Event (\begin{DoxyParamCaption}\item[{QClose\+Event $\ast$}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}}
 
 
 
-Emits signal with information to switch windows and hide \mbox{\hyperlink{class_plots_window}{Plots\+Window}} window. 
+close\+Event 
 
 
-
-Definition at line \mbox{\hyperlink{plotswindow_8cpp_source_l00026}{26}} of file \mbox{\hyperlink{plotswindow_8cpp_source}{plotswindow.\+cpp}}.
-
-\mbox{\Hypertarget{class_plots_window_a7a01fa202ecd70dfbc358b0f1d2da3c3}\label{class_plots_window_a7a01fa202ecd70dfbc358b0f1d2da3c3}} 
-\index{PlotsWindow@{PlotsWindow}!on\_actionWybierz\_port\_szeregowy\_triggered@{on\_actionWybierz\_port\_szeregowy\_triggered}}
-\index{on\_actionWybierz\_port\_szeregowy\_triggered@{on\_actionWybierz\_port\_szeregowy\_triggered}!PlotsWindow@{PlotsWindow}}
-\doxysubsubsection{\texorpdfstring{on\_actionWybierz\_port\_szeregowy\_triggered}{on\_actionWybierz\_port\_szeregowy\_triggered}}
-{\footnotesize\ttfamily void Plots\+Window\+::on\+\_\+action\+Wybierz\+\_\+port\+\_\+szeregowy\+\_\+triggered (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em event} & \\
+\hline
+\end{DoxyParams}
 
 
+Definition at line \mbox{\hyperlink{plotswindow_8cpp_source_l00117}{117}} of file \mbox{\hyperlink{plotswindow_8cpp_source}{plotswindow.\+cpp}}.
 
-Currently the function does not work properly and cause udefined behaviour The reason behind this may be that the pointer QSerial\+Port$\ast$ serial is passed between classes. 
-
-
-
-Definition at line \mbox{\hyperlink{plotswindow_8cpp_source_l00017}{17}} of file \mbox{\hyperlink{plotswindow_8cpp_source}{plotswindow.\+cpp}}.
-
-\mbox{\Hypertarget{class_plots_window_affc164df303f8310ad7b92f97100c9c6}\label{class_plots_window_affc164df303f8310ad7b92f97100c9c6}} 
-\index{PlotsWindow@{PlotsWindow}!on\_actionWybierz\_serie\_triggered@{on\_actionWybierz\_serie\_triggered}}
-\index{on\_actionWybierz\_serie\_triggered@{on\_actionWybierz\_serie\_triggered}!PlotsWindow@{PlotsWindow}}
-\doxysubsubsection{\texorpdfstring{on\_actionWybierz\_serie\_triggered}{on\_actionWybierz\_serie\_triggered}}
-{\footnotesize\ttfamily void Plots\+Window\+::on\+\_\+action\+Wybierz\+\_\+serie\+\_\+triggered (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
-
-
-
-Open file with a measurement data and displays it on plots. 
-
-
-
-Definition at line \mbox{\hyperlink{plotswindow_8cpp_source_l00033}{33}} of file \mbox{\hyperlink{plotswindow_8cpp_source}{plotswindow.\+cpp}}.
-
-\mbox{\Hypertarget{class_plots_window_a4b8e20b56d116059ddd6ed570a2f5998}\label{class_plots_window_a4b8e20b56d116059ddd6ed570a2f5998}} 
-\index{PlotsWindow@{PlotsWindow}!switch\_window@{switch\_window}}
-\index{switch\_window@{switch\_window}!PlotsWindow@{PlotsWindow}}
-\doxysubsubsection{\texorpdfstring{switch\_window}{switch\_window}}
-{\footnotesize\ttfamily void Plots\+Window\+::switch\+\_\+window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+\mbox{\Hypertarget{class_plots_window_af563bafca9eeca70a3ba510fda5724de}\label{class_plots_window_af563bafca9eeca70a3ba510fda5724de}} 
+\index{PlotsWindow@{PlotsWindow}!window\_closed@{window\_closed}}
+\index{window\_closed@{window\_closed}!PlotsWindow@{PlotsWindow}}
+\doxysubsubsection{\texorpdfstring{window\_closed}{window\_closed}}
+{\footnotesize\ttfamily void Plots\+Window\+::window\+\_\+closed (\begin{DoxyParamCaption}\item[{int}]{\+\_\+idx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
 
 
 
 signal that is emitted when a window is supposed to be changed 
 
 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em \+\_\+idx} & \\
+\hline
+\end{DoxyParams}
+
 
 \doxysubsection{Member Data Documentation}
-\mbox{\Hypertarget{class_plots_window_a612bab1ef4bffdd50496c11ecaec0ad5}\label{class_plots_window_a612bab1ef4bffdd50496c11ecaec0ad5}} 
-\index{PlotsWindow@{PlotsWindow}!arduino@{arduino}}
-\index{arduino@{arduino}!PlotsWindow@{PlotsWindow}}
-\doxysubsubsection{\texorpdfstring{arduino}{arduino}}
-{\footnotesize\ttfamily QSerial\+Port$\ast$ Plots\+Window\+::arduino\hspace{0.3cm}{\ttfamily [private]}}
+\mbox{\Hypertarget{class_plots_window_a241842c4152b8d62414a67ba8f5629b7}\label{class_plots_window_a241842c4152b8d62414a67ba8f5629b7}} 
+\index{PlotsWindow@{PlotsWindow}!curr\_file\_name@{curr\_file\_name}}
+\index{curr\_file\_name@{curr\_file\_name}!PlotsWindow@{PlotsWindow}}
+\doxysubsubsection{\texorpdfstring{curr\_file\_name}{curr\_file\_name}}
+{\footnotesize\ttfamily QString Plots\+Window\+::curr\+\_\+file\+\_\+name\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
-Definition at line \mbox{\hyperlink{plotswindow_8h_source_l00049}{49}} of file \mbox{\hyperlink{plotswindow_8h_source}{plotswindow.\+h}}.
+Definition at line \mbox{\hyperlink{plotswindow_8h_source_l00043}{43}} of file \mbox{\hyperlink{plotswindow_8h_source}{plotswindow.\+h}}.
 
-\mbox{\Hypertarget{class_plots_window_a5ff554057edc9e1614ae99151f731b87}\label{class_plots_window_a5ff554057edc9e1614ae99151f731b87}} 
-\index{PlotsWindow@{PlotsWindow}!com\_window@{com\_window}}
-\index{com\_window@{com\_window}!PlotsWindow@{PlotsWindow}}
-\doxysubsubsection{\texorpdfstring{com\_window}{com\_window}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_port_selection}{Port\+Selection}}$\ast$ Plots\+Window\+::com\+\_\+window\hspace{0.3cm}{\ttfamily [private]}}
+\mbox{\Hypertarget{class_plots_window_aab216a8a72d0b75aa4d9497be67fcb75}\label{class_plots_window_aab216a8a72d0b75aa4d9497be67fcb75}} 
+\index{PlotsWindow@{PlotsWindow}!idx@{idx}}
+\index{idx@{idx}!PlotsWindow@{PlotsWindow}}
+\doxysubsubsection{\texorpdfstring{idx}{idx}}
+{\footnotesize\ttfamily int Plots\+Window\+::idx\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
-Definition at line \mbox{\hyperlink{plotswindow_8h_source_l00050}{50}} of file \mbox{\hyperlink{plotswindow_8h_source}{plotswindow.\+h}}.
+Definition at line \mbox{\hyperlink{plotswindow_8h_source_l00044}{44}} of file \mbox{\hyperlink{plotswindow_8h_source}{plotswindow.\+h}}.
 
 \mbox{\Hypertarget{class_plots_window_ab00117a22d829d7887375a8010e0eeb6}\label{class_plots_window_ab00117a22d829d7887375a8010e0eeb6}} 
 \index{PlotsWindow@{PlotsWindow}!ui@{ui}}
@@ -170,5 +150,5 @@ Definition at line \mbox{\hyperlink{plotswindow_8h_source_l00050}{50}} of file \
 
 
 
-Definition at line \mbox{\hyperlink{plotswindow_8h_source_l00048}{48}} of file \mbox{\hyperlink{plotswindow_8h_source}{plotswindow.\+h}}.
+Definition at line \mbox{\hyperlink{plotswindow_8h_source_l00042}{42}} of file \mbox{\hyperlink{plotswindow_8h_source}{plotswindow.\+h}}.
 

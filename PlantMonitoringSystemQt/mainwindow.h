@@ -26,6 +26,7 @@ public:
 signals:
     /**
      * @brief emitted when new measurements are received from an external device
+     * @param[in] therm Current value of temperature
      */
     void new_values(int therm);
 
@@ -42,16 +43,23 @@ private slots:
      * \brief on_actionWykresy_triggered
      */
     void on_actionWykresy_triggered();
-
+    /**
+     * @brief on_actionNowa_seria_triggered
+     */
     void on_actionNowa_seria_triggered();
-
+    /**
+     * @brief on_actionWybierz_serie_triggered
+     */
     void on_actionWybierz_serie_triggered();
-
+    /**
+     * @brief on_actionZapisz_pomiar_triggered
+     */
     void on_actionZapisz_pomiar_triggered();
 
 public slots:
     /**
      * @brief Deletes PlotsWidget object in plots_window vector when it gets destructed
+     * @param[in] _idx Index of the window that is supposed to be close.
      */
     void when_PlotsWindow_closed(int _idx);
 
