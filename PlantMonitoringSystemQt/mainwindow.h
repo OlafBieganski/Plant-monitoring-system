@@ -75,7 +75,7 @@ public slots:
 private:
     Ui::MainWindow *ui;
     QLabel* file_info;
-    QPixmap* plantPicture;
+    QPixmap plantPicture;
     QSerialPort* serial;
     char* serial_buffer;
     int buffer_size;

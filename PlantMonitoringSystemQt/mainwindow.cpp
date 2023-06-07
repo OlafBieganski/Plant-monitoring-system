@@ -10,9 +10,9 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    plantPicture = new QPixmap(":/img/images/roslina zdrowa.jpg");
+    plantPicture = QPixmap(":/images/roslina zdrowa.jpg");
     ui->label_plant_pic->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
-    ui->label_plant_pic->setPixmap(plantPicture->scaled(ui->label_plant_pic->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
+    ui->label_plant_pic->setPixmap(plantPicture.scaled(ui->label_plant_pic->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
     ui->label_plant_pic->setAlignment(Qt::AlignCenter);
     ui->label_plant_state->setAlignment(Qt::AlignCenter);
     setWindowTitle(tr("Plant Monitoring System"));
@@ -31,7 +31,7 @@ void MainWindow::resizeEvent(QResizeEvent *event)
     QMainWindow::resizeEvent(event);
 
     // Update the pixmap size based on the new size of the QLabel
-    ui->label_plant_pic->setPixmap(plantPicture->scaled(ui->label_plant_pic->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
+    ui->label_plant_pic->setPixmap(plantPicture.scaled(ui->label_plant_pic->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
 }
 
 MainWindow::~MainWindow()
@@ -67,13 +67,29 @@ void MainWindow::on_pushButton_measure_clicked()
     arduinoData >> trash >> temperature >> humidity >> ground >> sunlight >> crc8;
     ground = ((1020 - ground)*100) / 1020;
     sunlight = (sunlight * 100) / 7000;
+    if(sunlight > 100) sunlight = 100;
     measureDateTime = QDateTime::currentDateTime();
-    qDebug() << measureDateTime.toString();
     ui->statusbar->showMessage(tr("Pobrano pomiar."), 5000);
     emit new_temp(temperature);
     emit new_sun(sunlight);
     ui->lcdGround->display(ground);
     ui->lcd_humidity->display(humidity);
+    if(ground < 10){
+        plantPicture = QPixmap(":/images/roslina4.jpg");
+        ui->label_plant_pic->setPixmap(plantPicture.scaled(ui->label_plant_pic->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
+    }
+    else if(ground < 25){
+        plantPicture = QPixmap(":/images/roslina3.jpg");
+        ui->label_plant_pic->setPixmap(plantPicture.scaled(ui->label_plant_pic->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
+    }
+    else if(ground < 70){
+        plantPicture = QPixmap(":/images/roslina zdrowa.jpg");
+        ui->label_plant_pic->setPixmap(plantPicture.scaled(ui->label_plant_pic->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
+    }
+    else{
+        plantPicture = QPixmap(":/images/roslina2.jpg");
+        ui->label_plant_pic->setPixmap(plantPicture.scaled(ui->label_plant_pic->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
+    }
 }
 
 void MainWindow::on_actionWybierz_port_szeregowy_triggered()
@@ -87,7 +103,6 @@ void MainWindow::on_actionWybierz_port_szeregowy_triggered()
 void MainWindow::on_actionWykresy_triggered()
 {
     static int curr_id = 0;
-    qDebug() << curr_id;
     plot_windows.insert(curr_id, new PlotsWindow(this, curr_filename, curr_id));
     connect(plot_windows[curr_id], &PlotsWindow::window_closed, this, &MainWindow::when_PlotsWindow_closed);
     plot_windows[curr_id]->show();
@@ -130,7 +145,6 @@ void MainWindow::on_actionWybierz_serie_triggered()
         tr("Pliki serii pomiarowej - dni (*.srd);;Pliki serii pomiarowej - godziny (*.srh);;Wszystkie pliki (*)"));
     if(new_filename.isEmpty()) return;
     curr_filename = new_filename;
-    qDebug() << new_filename;
     QFile file_handler(curr_filename);
     if(!file_handler.open(QIODevice::ReadOnly | QIODevice::Text)){
         QMessageBox::critical(this, "Wybierz plik serii pomiarowej", "Nie udało sie otworzyć pliku");
@@ -139,7 +153,6 @@ void MainWindow::on_actionWybierz_serie_triggered()
     QTextStream file_stream(&file_handler);
     QString magic_nr;
     file_stream >> magic_nr;
-    qDebug() << magic_nr;
     if(magic_nr != "#2808"){
         QMessageBox::critical(this, "Wybierz plik serii pomiarowej", "Niepoprawny plik.");
         curr_filename = "";
@@ -162,7 +175,6 @@ void MainWindow::on_actionZapisz_pomiar_triggered()
     }
     QTextStream file_stream(&file_handler);
     file_stream << "\n" << temperature << " " << humidity << " " << ground << " " << sunlight << " ";
-    qDebug() << getFilename(curr_filename).back();
     if(getFilename(curr_filename).back() == 'd') file_stream << measureDateTime.date().toString("dd-MM-yyyy");
     if(getFilename(curr_filename).back() == 'h') file_stream << measureDateTime.time().toString();
     ui->statusbar->showMessage(tr("Zapisano do pliku: %1").arg(getFilename(curr_filename)), 5000);

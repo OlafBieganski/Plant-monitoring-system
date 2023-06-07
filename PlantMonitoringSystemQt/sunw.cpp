@@ -1,5 +1,6 @@
 
 #include "sunw.h"
+#include <QDebug>
 
 SunW::SunW(QWidget *parent, int sunlightLevel)
     : QWidget{parent},
@@ -27,7 +28,7 @@ void SunW::paintEvent(QPaintEvent *event)
 
     // Calculate the color of the sun based on the sunlight level
     int hue = 60;  // Yellow hue value in HSV color space
-    int saturation = 50 + (205 * sunlightLevel / 100);
+    int saturation = 50 + (200 * sunlightLevel / 100);
     int value = 255;  // Maximum brightness
 
     QColor sunColor = QColor::fromHsv(hue, saturation, value);
@@ -43,7 +44,8 @@ void SunW::paintEvent(QPaintEvent *event)
     painter.drawEllipse(center, radius, radius);
 
     // Calculate the number of sun rays to draw
-    int rayCount = 25 * (sunlightLevel/100) + 8; // depens on sunlight
+    int rayCount = (25 * sunlightLevel)/100 + 8; // depens on sunlight
+    qDebug() << rayCount;
     float angleStep = 360 / rayCount;
     painter.setPen(sunColor);
 
