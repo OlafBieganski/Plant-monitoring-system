@@ -22,14 +22,16 @@ SOURCES += \
     plotswindow.cpp \
     portselection.cpp \
     qcustomplot.cpp \
-    rectanglew.cpp
+    rectanglew.cpp \
+    sunw.cpp
 
 HEADERS += \
     mainwindow.h \
     plotswindow.h \
     portselection.h \
     qcustomplot.h \
-    rectanglew.h
+    rectanglew.h \
+    sunw.h
 
 FORMS += \
     mainwindow.ui \

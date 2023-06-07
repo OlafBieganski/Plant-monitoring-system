@@ -15,7 +15,7 @@ void RectangleW::paintEvent(QPaintEvent*){
     QRect rectangle(17, 203, 34, height);
     QColor fillColor(Qt::red);
     QPen pen(Qt::red);
-    QImage thermo("C:/Users/olafb/Downloads/termometr");
+    QImage thermo(":/images/termometr.png");
     // setStyleSheet("background: rgb(64, 202, 217);"); ???
 
     //translete the base of the coordinate system

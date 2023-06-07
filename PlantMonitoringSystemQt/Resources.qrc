@@ -1,5 +1,9 @@
 <RCC>
-    <qresource prefix="/img">
+    <qresource prefix="/">
+        <file>images/termometr.png</file>
+        <file>images/roslina2.jpg</file>
+        <file>images/roslina3.jpg</file>
+        <file>images/roslina4.jpg</file>
         <file>images/roslina zdrowa.jpg</file>
     </qresource>
 </RCC>

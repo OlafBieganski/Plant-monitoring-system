@@ -10,8 +10,9 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    plantPicture = new QPixmap("C:/Users/olafb/OneDrive/Obrazy/roslina_zdrowa.png");
-    ui->label_plant_pic->setPixmap(*plantPicture);
+    plantPicture = new QPixmap(":/img/images/roslina zdrowa.jpg");
+    ui->label_plant_pic->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+    ui->label_plant_pic->setPixmap(plantPicture->scaled(ui->label_plant_pic->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
     ui->label_plant_pic->setAlignment(Qt::AlignCenter);
     ui->label_plant_state->setAlignment(Qt::AlignCenter);
     setWindowTitle(tr("Plant Monitoring System"));
@@ -21,7 +22,16 @@ MainWindow::MainWindow(QWidget *parent)
     ui->statusbar->addWidget(file_info);
     file_info->setText(tr("Aktywny plik: "));
     serial = new QSerialPort(this);
-    connect(this, &MainWindow::new_values, ui->thermo_widget, &RectangleW::changeHeight);
+    connect(this, &MainWindow::new_temp, ui->thermo_widget, &RectangleW::changeHeight);
+    connect(this, &MainWindow::new_sun, ui->sun_widget, &SunW::setSunlightLevel);
+}
+
+void MainWindow::resizeEvent(QResizeEvent *event)
+{
+    QMainWindow::resizeEvent(event);
+
+    // Update the pixmap size based on the new size of the QLabel
+    ui->label_plant_pic->setPixmap(plantPicture->scaled(ui->label_plant_pic->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
 }
 
 MainWindow::~MainWindow()
@@ -60,7 +70,8 @@ void MainWindow::on_pushButton_measure_clicked()
     measureDateTime = QDateTime::currentDateTime();
     qDebug() << measureDateTime.toString();
     ui->statusbar->showMessage(tr("Pobrano pomiar."), 5000);
-    emit new_values(temperature); // needed for all mesurements
+    emit new_temp(temperature);
+    emit new_sun(sunlight);
     ui->lcdGround->display(ground);
     ui->lcd_humidity->display(humidity);
 }
