@@ -79,6 +79,11 @@
         <translation>Active file: </translation>
     </message>
     <message>
+        <location filename="mainwindow.cpp" line="28"/>
+        <source>System monitorowania roślin</source>
+        <translation>Plant monitoring system</translation>
+    </message>
+    <message>
         <location filename="mainwindow.cpp" line="49"/>
         <source>Port szeregowy</source>
         <translation>Serial port</translation>
@@ -155,23 +160,25 @@
     </message>
     <message>
         <location filename="mainwindow.cpp" line="194"/>
+        <location filename="mainwindow.cpp" line="205"/>
         <source>Polski</source>
         <translation>Polish</translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="194"/>
+        <location filename="mainwindow.cpp" line="200"/>
         <source>Angielski</source>
         <translation>English</translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="197"/>
-        <source>QInputDialog::getItem()</source>
-        <translation></translation>
+        <source>Zmień język</source>
+        <translation>Change language</translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="198"/>
-        <source>Season:</source>
-        <translation></translation>
+        <source>Języki:</source>
+        <translation>Languages:</translation>
     </message>
 </context>
 <context>

@@ -45,7 +45,6 @@ void SunW::paintEvent(QPaintEvent *event)
 
     // Calculate the number of sun rays to draw
     int rayCount = (25 * sunlightLevel)/100 + 8; // depens on sunlight
-    qDebug() << rayCount;
     float angleStep = 360 / rayCount;
     painter.setPen(sunColor);
 

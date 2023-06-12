@@ -25,13 +25,16 @@ MainWindow::MainWindow(QWidget *parent)
     connect(this, &MainWindow::new_sun, ui->sun_widget, &SunW::setSunlightLevel);
     ui->frame_temp->setFrameShadow(QFrame::Raised);
     ui->frame_hum->setFrameShadow(QFrame::Sunken);
-    setWindowTitle("System monitorowania roślin");
+}
+
+void MainWindow::paintEvent(QPaintEvent*){
+    setWindowTitle(tr("System monitorowania roślin"));
+    file_info->setText(tr("Aktywny plik: "));
 }
 
 void MainWindow::resizeEvent(QResizeEvent *event)
 {
     QMainWindow::resizeEvent(event);
-
     // Update the pixmap size based on the new size of the QLabel
     ui->label_plant_pic->setPixmap(plantPicture.scaled(ui->label_plant_pic->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
 }
@@ -105,7 +108,9 @@ void MainWindow::on_actionWybierz_port_szeregowy_triggered()
 void MainWindow::on_actionWykresy_triggered()
 {
     static int curr_id = 0;
-    plot_windows.insert(curr_id, new PlotsWindow(this, curr_filename, curr_id));
+    PlotsWindow* current_plot = new PlotsWindow(this, curr_filename, curr_id);
+    connect(this, &MainWindow::lang_update, current_plot, &PlotsWindow::when_lang_update);
+    plot_windows.insert(curr_id, current_plot);
     connect(plot_windows[curr_id], &PlotsWindow::window_closed, this, &MainWindow::when_PlotsWindow_closed);
     plot_windows[curr_id]->show();
     curr_id++;
@@ -194,10 +199,29 @@ void MainWindow::on_actionJ_zyk_Language_triggered()
     items << tr("Polski") << tr("Angielski");
 
     bool ok;
-    QString item = QInputDialog::getItem(this, tr("QInputDialog::getItem()"),
-                                         tr("Season:"), items, 0, false, &ok);
-    if (ok && !item.isEmpty()){
-
+    QString item = QInputDialog::getItem(this, tr("Zmień język"),
+        tr("Języki:"), items, 0, false, &ok);
+    if (ok && !item.isEmpty()) {
+        if (item == tr("Angielski")) {
+            lang = new QTranslator();
+            if (lang->load(":/lang_en.qm")) {
+                qDebug() << qApp->installTranslator(lang);
+                qDebug() << "Translation installed.";
+                ui->retranslateUi(this);
+            } else {
+                qDebug() << "Failed to load translation.";
+            }
+        }
+        else if (item == tr("Polski")) {
+            if (lang != nullptr) {
+                qDebug() << qApp->removeTranslator(lang);
+                delete lang;
+                lang = nullptr;
+                qDebug() << "Translation removed.";
+                ui->retranslateUi(this);  // Reset UI elements to default language
+            }
+        }
+        emit lang_update();
     }
 }
 

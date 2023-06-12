@@ -119,3 +119,17 @@ void PlotsWindow::closeEvent(QCloseEvent* event)
     emit window_closed(idx);  // Emit the custom signal when the window is closed
     QMainWindow::closeEvent(event);  // Call the base class implementation
 }
+
+void PlotsWindow::paintEvent(QPaintEvent*){
+    ui->retranslateUi(this);
+    QFileInfo info(curr_file_name);
+    ui->plot_ground_humidity->xAxis->setLabel(tr("Czas"));
+    ui->plot_humidity_ambient->xAxis->setLabel(tr("Czas"));
+    ui->plot_temperature->xAxis->setLabel(tr("Czas"));
+    ui->plot_sunlight->xAxis->setLabel(tr("Czas"));
+    setWindowTitle(tr("Wykresy: %1").arg(info.fileName()));
+}
+
+void PlotsWindow::when_lang_update(){
+    update();
+}

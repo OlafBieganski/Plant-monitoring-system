@@ -23,6 +23,10 @@ public:
      */
     explicit PlotsWindow(QWidget *parent = nullptr, QString file_name = "", int _idx = 0);
     ~PlotsWindow();
+    /**
+     * @brief Overriden drawing function.
+     */
+    virtual void paintEvent(QPaintEvent*) override;
 
 signals:
     /*!
@@ -30,6 +34,12 @@ signals:
      * \param[in] _idx - the index of a closed window. Needed for a deletion in QMap<int ,PlotsWindow*> plot_windows.
      */
     void window_closed(int _idx);
+
+public slots:
+    /**
+     * @brief repaint a widget when a translation is updated
+     */
+    void when_lang_update();
 
 protected:
     /**

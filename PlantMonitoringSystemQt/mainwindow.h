@@ -12,6 +12,7 @@
 #include<QDateTime>
 #include <sunw.h>
 #include <QInputDialog>
+#include <QTranslator>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -24,6 +25,10 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+    /**
+     * @brief Overriden drawing function.
+     */
+    void paintEvent(QPaintEvent*) override;
 
 protected:
     void resizeEvent(QResizeEvent *event) override;
@@ -31,7 +36,7 @@ protected:
 signals:
     /**
      * @brief emitted when new measurements are received from an external device
-     * @param[in] therm Current value of temperature
+     * @param[in] therm - Current value of temperature
      */
     void new_temp(int therm);
     /**
@@ -39,6 +44,10 @@ signals:
      * @param[in] _sunlight - new value of the sunlight level
      */
     void new_sun(int _sunlight);
+    /**
+     * @brief lang_update
+     */
+    void lang_update();
 
 private slots:
     /*!
@@ -88,6 +97,7 @@ private:
     int temperature, humidity, ground, sunlight;
     QDateTime measureDateTime;
     QPixmap* thermo;
+    QTranslator* lang;
 
     QString getFilename(const QString& path);
 };
