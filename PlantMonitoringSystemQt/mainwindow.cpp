@@ -15,7 +15,6 @@ MainWindow::MainWindow(QWidget *parent)
     ui->label_plant_pic->setPixmap(plantPicture.scaled(ui->label_plant_pic->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
     ui->label_plant_pic->setAlignment(Qt::AlignCenter);
     ui->label_plant_state->setAlignment(Qt::AlignCenter);
-    setWindowTitle(tr("Plant Monitoring System"));
     file_info = new QLabel(this);
     file_info->setFont(QFont("Arial", 9));
     ui->statusbar->setFont(QFont("Arial", 9));
@@ -24,6 +23,9 @@ MainWindow::MainWindow(QWidget *parent)
     serial = new QSerialPort(this);
     connect(this, &MainWindow::new_temp, ui->thermo_widget, &RectangleW::changeHeight);
     connect(this, &MainWindow::new_sun, ui->sun_widget, &SunW::setSunlightLevel);
+    ui->frame_temp->setFrameShadow(QFrame::Raised);
+    ui->frame_hum->setFrameShadow(QFrame::Sunken);
+    setWindowTitle("System monitorowania roślin");
 }
 
 void MainWindow::resizeEvent(QResizeEvent *event)
@@ -44,13 +46,13 @@ MainWindow::~MainWindow()
 void MainWindow::on_pushButton_measure_clicked()
 {
     if(!serial->isOpen()){
-        QMessageBox::information(this, "Port szeregowy", "Nie podłączono do żadnego portu szeregowego");
+        QMessageBox::information(this, tr("Port szeregowy"), tr("Nie podłączono do żadnego portu szeregowego"));
         return;
     }
     // wait until enough data is available
     while(serial->bytesAvailable() < 60){
         if(serial->waitForReadyRead(5000) == false){
-            QMessageBox::information(this, serial->portName(), "Przekroczono czas transmisji: dane nie zostały odebrane.");
+            QMessageBox::information(this, serial->portName(), tr("Przekroczono czas transmisji: dane nie zostały odebrane."));
             return;
         }
     }
@@ -147,14 +149,14 @@ void MainWindow::on_actionWybierz_serie_triggered()
     curr_filename = new_filename;
     QFile file_handler(curr_filename);
     if(!file_handler.open(QIODevice::ReadOnly | QIODevice::Text)){
-        QMessageBox::critical(this, "Wybierz plik serii pomiarowej", "Nie udało sie otworzyć pliku");
+        QMessageBox::critical(this, tr("Wybierz plik serii pomiarowej"), tr("Nie udało sie otworzyć pliku"));
         return;
     }
     QTextStream file_stream(&file_handler);
     QString magic_nr;
     file_stream >> magic_nr;
     if(magic_nr != "#2808"){
-        QMessageBox::critical(this, "Wybierz plik serii pomiarowej", "Niepoprawny plik.");
+        QMessageBox::critical(this, tr("Wybierz plik serii pomiarowej"), tr("Niepoprawny plik."));
         curr_filename = "";
     }
     file_info->setText(tr("Aktywny plik: %1").arg(getFilename(curr_filename)));
@@ -185,3 +187,17 @@ QString MainWindow::getFilename(const QString& path){
     QFileInfo fileInfo(path);
     return fileInfo.fileName();
 }
+
+void MainWindow::on_actionJ_zyk_Language_triggered()
+{
+    QStringList items;
+    items << tr("Polski") << tr("Angielski");
+
+    bool ok;
+    QString item = QInputDialog::getItem(this, tr("QInputDialog::getItem()"),
+                                         tr("Season:"), items, 0, false, &ok);
+    if (ok && !item.isEmpty()){
+
+    }
+}
+

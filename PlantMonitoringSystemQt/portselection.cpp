@@ -34,10 +34,10 @@ void PortSelection::on_buttonBox_accepted()
 
     // Open the serial port
     if (!arduino->open(QSerialPort::ReadOnly)) {
-        QMessageBox::information(this, ui->comboBox->currentText(), "Błąd podczas łączenia z portem");
+        QMessageBox::information(this, ui->comboBox->currentText(), tr("Błąd podczas łączenia z portem"));
     }
     else{
-        QMessageBox::information(this, ui->comboBox->currentText(), "Nawiązano połączenie z portem");
+        QMessageBox::information(this, ui->comboBox->currentText(), tr("Nawiązano połączenie z portem"));
     }
 }
 

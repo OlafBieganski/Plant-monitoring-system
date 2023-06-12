@@ -15,10 +15,10 @@ class PlotsWindow : public QMainWindow
 
 public:
     /*!
-     * \brief Creates a PlotsWindow object
+     * \brief Creates a PlotsWindow object.
      * \param[in,out] parent
-     * \param[in] file_name - name of the file with data to be visualized on the plots
-     * \param[in] _idx - index of this object in QMainWindow::plot_windows vector
+     * \param[in] file_name - name of the file with data to be visualized on the plots.
+     * \param[in] _idx - index of this object in QMainWindow::plot_windows vector.
      * \see PortSelection
      */
     explicit PlotsWindow(QWidget *parent = nullptr, QString file_name = "", int _idx = 0);
@@ -26,14 +26,14 @@ public:
 
 signals:
     /*!
-     * \brief signal that is emitted when a window is supposed to be changed
-     * \param[in] _idx
+     * \brief Signal that is emitted when a window is supposed to be changed.
+     * \param[in] _idx - the index of a closed window. Needed for a deletion in QMap<int ,PlotsWindow*> plot_windows.
      */
     void window_closed(int _idx);
 
 protected:
     /**
-     * @brief closeEvent
+     * @brief Overriden funtion that defines a drawing procedure.
      * @param[in,out] event
      */
     void closeEvent(QCloseEvent* event) override;

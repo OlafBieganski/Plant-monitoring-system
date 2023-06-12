@@ -38,6 +38,12 @@ background-color: rgb(255, 246, 212);</string>
           <string notr="true">background-color: rgb(255, 246, 212);
 border: none;</string>
          </property>
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Plain</enum>
+         </property>
          <property name="text">
           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:16pt; font-weight:700;&quot;&gt;STAN ROŚLINY&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
@@ -114,19 +120,31 @@ border-style: ridge;
         <property name="frameShadow">
          <enum>QFrame::Raised</enum>
         </property>
-        <layout class="QVBoxLayout" name="verticalLayout_3" stretch="1,4">
+        <layout class="QVBoxLayout" name="verticalLayout_3" stretch="0,4">
          <item>
-          <widget class="QLabel" name="label">
+          <widget class="QFrame" name="frame_temp">
            <property name="styleSheet">
-            <string notr="true">border-top: none;
-border-right: none;
-border-left: none;
-border-bottom-color: black;
-</string>
+            <string notr="true">border: none;
+background-color: rgb(255, 246, 212);</string>
            </property>
-           <property name="text">
-            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:700;&quot;&gt;Temperatura&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
            </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_9">
+            <item>
+             <widget class="QLabel" name="label">
+              <property name="styleSheet">
+               <string notr="true">border: none;</string>
+              </property>
+              <property name="text">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:700;&quot;&gt;Temperatura&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
           </widget>
          </item>
          <item>
@@ -151,18 +169,31 @@ border-style: ridge;</string>
         <property name="frameShadow">
          <enum>QFrame::Raised</enum>
         </property>
-        <layout class="QVBoxLayout" name="verticalLayout_4" stretch="1,4">
+        <layout class="QVBoxLayout" name="verticalLayout_4" stretch="0,4">
          <item>
-          <widget class="QLabel" name="label_4">
+          <widget class="QFrame" name="frame_sun">
            <property name="styleSheet">
-            <string notr="true">border-top: none;
-border-right: none;
-border-left: none;
-border-bottom-color: black;</string>
+            <string notr="true">border: none;
+background-color: rgb(255, 246, 212);</string>
            </property>
-           <property name="text">
-            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:700;&quot;&gt;Nasłonecznienie&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
            </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_8">
+            <item>
+             <widget class="QLabel" name="label_4">
+              <property name="styleSheet">
+               <string notr="true">border: none;</string>
+              </property>
+              <property name="text">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:700;&quot;&gt;Nasłonecznienie&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
           </widget>
          </item>
          <item>
@@ -179,7 +210,8 @@ border-bottom-color: black;</string>
        <widget class="QFrame" name="frame_5">
         <property name="styleSheet">
          <string notr="true">border-width: 2px;
-border-style: ridge;</string>
+border-style: ridge;
+</string>
         </property>
         <property name="frameShape">
          <enum>QFrame::StyledPanel</enum>
@@ -187,15 +219,31 @@ border-style: ridge;</string>
         <property name="frameShadow">
          <enum>QFrame::Raised</enum>
         </property>
-        <layout class="QVBoxLayout" name="verticalLayout_5" stretch="1,4">
+        <layout class="QVBoxLayout" name="verticalLayout_5" stretch="0,4">
          <item>
-          <widget class="QLabel" name="label_2">
+          <widget class="QFrame" name="frame_ground">
            <property name="styleSheet">
-            <string notr="true">border: none;</string>
+            <string notr="true">border: none;
+background-color: rgb(255, 246, 212);</string>
            </property>
-           <property name="text">
-            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:700;&quot;&gt;Wilgotnośc gleby (%)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           <property name="frameShape">
+            <enum>QFrame::Panel</enum>
            </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_7">
+            <item>
+             <widget class="QLabel" name="label_2">
+              <property name="styleSheet">
+               <string notr="true">border: none;</string>
+              </property>
+              <property name="text">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:700;&quot;&gt;Wilgotność gleby (%)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
           </widget>
          </item>
          <item>
@@ -220,15 +268,34 @@ border-style: ridge;</string>
         <property name="frameShadow">
          <enum>QFrame::Raised</enum>
         </property>
-        <layout class="QVBoxLayout" name="verticalLayout_2" stretch="1,4">
+        <layout class="QVBoxLayout" name="verticalLayout_6" stretch="0,4">
          <item>
-          <widget class="QLabel" name="label_3">
+          <widget class="QFrame" name="frame_hum">
+           <property name="autoFillBackground">
+            <bool>false</bool>
+           </property>
            <property name="styleSheet">
-            <string notr="true">border: none;</string>
+            <string notr="true">border: none;
+background-color: rgb(255, 246, 212);</string>
            </property>
-           <property name="text">
-            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:700;&quot;&gt;Wilgotność powietrza (%)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
            </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_2">
+            <item>
+             <widget class="QLabel" name="label_3">
+              <property name="styleSheet">
+               <string notr="true">border: none;</string>
+              </property>
+              <property name="text">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:700;&quot;&gt;Wilgotność powietrza (%)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
           </widget>
          </item>
          <item>
@@ -264,6 +331,7 @@ border-style: ridge;</string>
     <addaction name="actionNowa_seria"/>
     <addaction name="actionZapisz_pomiar"/>
     <addaction name="actionWybierz_serie"/>
+    <addaction name="actionJ_zyk_Language"/>
    </widget>
    <addaction name="menuPort_COM"/>
   </widget>
@@ -290,6 +358,11 @@ border-style: ridge;</string>
   <action name="actionWybierz_serie">
    <property name="text">
     <string>Wybierz serie</string>
+   </property>
+  </action>
+  <action name="actionJ_zyk_Language">
+   <property name="text">
+    <string>Język / Language</string>
    </property>
   </action>
  </widget>

@@ -11,6 +11,7 @@
 #include <QPixmap>
 #include<QDateTime>
 #include <sunw.h>
+#include <QInputDialog>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -41,29 +42,31 @@ signals:
 
 private slots:
     /*!
-     * \brief creates connection with a serial port and receives data
+     * \brief creates a connection with a serial port and receives data
      */
     void on_pushButton_measure_clicked();
     /*!
-     * \brief on_actionWybierz_port_szeregowy_triggered
+     * \brief show a window with a serial port connection configuration
      */
     void on_actionWybierz_port_szeregowy_triggered();
     /*!
-     * \brief on_actionWykresy_triggered
+     * \brief show a new window with plots and the data from a current file
      */
     void on_actionWykresy_triggered();
     /**
-     * @brief on_actionNowa_seria_triggered
+     * @brief creates a new file for a measurement data
      */
     void on_actionNowa_seria_triggered();
     /**
-     * @brief on_actionWybierz_serie_triggered
+     * @brief Set a series file choosen by the user as an active one
      */
     void on_actionWybierz_serie_triggered();
     /**
-     * @brief on_actionZapisz_pomiar_triggered
+     * @brief Insert the data from serial port to an active series file
      */
     void on_actionZapisz_pomiar_triggered();
+
+    void on_actionJ_zyk_Language_triggered();
 
 public slots:
     /**

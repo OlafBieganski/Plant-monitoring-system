@@ -11,25 +11,25 @@ class RectangleW : public QWidget
     Q_OBJECT
 public:
     /**
-     * @brief RectangleW
+     * @brief Creates a thermometer widget with given heith of a mercury bar.
      * @param[in,out] parent
-     * @param[in] _height
+     * @param[in] _height - height of a mercury bar.
      */
     explicit RectangleW(QWidget *parent = nullptr, int _height = 0);
     /**
-     * @brief setHeight
+     * @brief Set height of mercury bar.
      * @param[in] height
      */
     void setHeight(int height);
     /**
-     * @brief paintEvent
+     * @brief Overriden drawing function.
      */
     virtual void paintEvent(QPaintEvent*) override;
 
 public slots:
     /**
-     * @brief changeHeight
-     * @param[in] _temperature
+     * @brief Slot for resizing a mercury bar.
+     * @param[in] _temperature - The temperature value that will determine a mercury bar height.
      */
     void changeHeight(int _temperature);
 

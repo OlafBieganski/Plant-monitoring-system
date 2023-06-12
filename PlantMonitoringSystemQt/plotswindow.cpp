@@ -22,28 +22,28 @@ PlotsWindow::PlotsWindow(QWidget *parent, QString file_name, int _idx) :
     ui->plot_ground_humidity->addGraph();
     ui->plot_ground_humidity->graph(0)->setScatterStyle(QCPScatterStyle::ssCircle);
     ui->plot_ground_humidity->graph(0)->setLineStyle(QCPGraph::lsLine);
-    ui->plot_ground_humidity->xAxis->setLabel("Time");
+    ui->plot_ground_humidity->xAxis->setLabel(tr("Czas"));
     ui->plot_ground_humidity->yAxis->setLabel("%");
     ui->plot_ground_humidity->yAxis->setRange(0, 100);
 
     ui->plot_humidity_ambient->addGraph();
     ui->plot_humidity_ambient->graph(0)->setScatterStyle(QCPScatterStyle::ssCircle);
     ui->plot_humidity_ambient->graph(0)->setLineStyle(QCPGraph::lsLine);
-    ui->plot_humidity_ambient->xAxis->setLabel("Time");
+    ui->plot_humidity_ambient->xAxis->setLabel(tr("Czas"));
     ui->plot_humidity_ambient->yAxis->setLabel("%");
     ui->plot_humidity_ambient->yAxis->setRange(0, 100);
 
     ui->plot_temperature->addGraph();
     ui->plot_temperature->graph(0)->setScatterStyle(QCPScatterStyle::ssCircle);
     ui->plot_temperature->graph(0)->setLineStyle(QCPGraph::lsLine);
-    ui->plot_temperature->xAxis->setLabel("Time");
+    ui->plot_temperature->xAxis->setLabel(tr("Czas"));
     ui->plot_temperature->yAxis->setLabel(QChar(0x00B0) + 'C');
     ui->plot_temperature->yAxis->setRange(0, 100);
 
     ui->plot_sunlight->addGraph();
     ui->plot_sunlight->graph(0)->setScatterStyle(QCPScatterStyle::ssCircle);
     ui->plot_sunlight->graph(0)->setLineStyle(QCPGraph::lsLine);
-    ui->plot_sunlight->xAxis->setLabel("Time");
+    ui->plot_sunlight->xAxis->setLabel(tr("Czas"));
     ui->plot_sunlight->yAxis->setLabel("%");
     ui->plot_sunlight->yAxis->setRange(0, 100);
 
