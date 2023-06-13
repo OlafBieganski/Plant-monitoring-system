@@ -122,7 +122,8 @@ var hierarchy =
     [ "QWidget", null, [
       [ "PlotsWidget", "class_plots_widget.html", null ],
       [ "QCustomPlot", "class_q_custom_plot.html", null ],
-      [ "RectangleW", "class_rectangle_w.html", null ]
+      [ "RectangleW", "class_rectangle_w.html", null ],
+      [ "SunW", "class_sun_w.html", null ]
     ] ],
     [ "QCPAxisPainterPrivate::TickLabelData", "struct_q_c_p_axis_painter_private_1_1_tick_label_data.html", null ]
 ];

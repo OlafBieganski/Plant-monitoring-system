@@ -1,5 +1,13 @@
 var NAVTREEINDEX6 =
 {
+"class_q_c_p_item_pixmap.html#af7a156590b1d59ab21b453c430c56a7c":[1,0,45,32],
+"class_q_c_p_item_pixmap.html#afc5e479e88e53740176ce77cb70dd67a":[1,0,45,16],
+"class_q_c_p_item_position.html":[1,0,46],
+"class_q_c_p_item_position.html#a0a87f9dce1af6cc9b510785991bcf1c6":[1,0,46,7],
+"class_q_c_p_item_position.html#a0cd9b326fb324710169e92e8ca0041c2":[1,0,46,12],
+"class_q_c_p_item_position.html#a0d2c5b823c99207eda710a37a4bb1dbf":[1,0,46,22],
+"class_q_c_p_item_position.html#a1415911868835701c04250566bfc681d":[1,0,46,24],
+"class_q_c_p_item_position.html#a2113b2351d6d00457fb3559a4e20c3ea":[1,0,46,20],
 "class_q_c_p_item_position.html#a2185f45c75ac8cb9be89daeaaad50e37":[1,0,46,11],
 "class_q_c_p_item_position.html#a21f585ffa8d8e3a6ba0cc450701bca5a":[1,0,46,2],
 "class_q_c_p_item_position.html#a41b4641d18c90997b9c01bf304181bf0":[1,0,46,31],
@@ -241,13 +249,5 @@ var NAVTREEINDEX6 =
 "class_q_c_p_label_painter_private.html#a88c58f8a333dbbf48ae51148dcee9875a38fbe6c28425c7479809aa45dd728181":[1,0,51,4,5],
 "class_q_c_p_label_painter_private.html#a88c58f8a333dbbf48ae51148dcee9875a4c0106ceeea3b2948de2609e4bd0da3e":[1,0,51,4,0],
 "class_q_c_p_label_painter_private.html#a88c58f8a333dbbf48ae51148dcee9875a723c2c7eb2fdcffa9141db1d0dff6ecc":[1,0,51,4,3],
-"class_q_c_p_label_painter_private.html#a88c58f8a333dbbf48ae51148dcee9875a9c72da634b8124e69a3547c00488b1db":[1,0,51,4,1],
-"class_q_c_p_label_painter_private.html#a88c58f8a333dbbf48ae51148dcee9875a9e438d28542452106dbbd690f3853eb1":[1,0,51,4,6],
-"class_q_c_p_label_painter_private.html#a8dca51bada4aafc93d4d07a04fb878ed":[1,0,51,42],
-"class_q_c_p_label_painter_private.html#a91afda85b491aef82c4a6f87da7d640e":[1,0,51,32],
-"class_q_c_p_label_painter_private.html#a935113c39f0754e82a3e1da657b75a39":[1,0,51,37],
-"class_q_c_p_label_painter_private.html#a9a24c039273177ffbdfbe891b35f0b43":[1,0,51,33],
-"class_q_c_p_label_painter_private.html#a9e27774565f186f0c4abbbd3f2e6c766":[1,0,51,18],
-"class_q_c_p_label_painter_private.html#aa22c578f274da70fe39b5484545c2306":[1,0,51,29],
-"class_q_c_p_label_painter_private.html#aa5ac71dd88ff9781ab0d1cbc431e9cd8":[1,0,51,52]
+"class_q_c_p_label_painter_private.html#a88c58f8a333dbbf48ae51148dcee9875a9c72da634b8124e69a3547c00488b1db":[1,0,51,4,1]
 };

@@ -50,6 +50,7 @@ $(document).ready(function(){initNavTree('class_plots_window.html',''); initResi
 <div id="doc-content">
 <div class="header">
   <div class="summary">
+<a href="#pub-slots">Public Slots</a> &#124;
 <a href="#signals">Signals</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
@@ -67,10 +68,16 @@ Inheritance diagram for PlotsWindow:</div>
   <img src="class_plots_window.png" alt=""/>
  </div></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-slots" name="pub-slots"></a>
+Public Slots</h2></td></tr>
+<tr class="memitem:a7aae3057a8e93c63e849700770ed22b5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_plots_window.html#a7aae3057a8e93c63e849700770ed22b5">when_lang_update</a> ()</td></tr>
+<tr class="memdesc:a7aae3057a8e93c63e849700770ed22b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Repaint a widget when a translation is updated.  <br /></td></tr>
+<tr class="separator:a7aae3057a8e93c63e849700770ed22b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="signals" name="signals"></a>
 Signals</h2></td></tr>
 <tr class="memitem:af563bafca9eeca70a3ba510fda5724de"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_plots_window.html#af563bafca9eeca70a3ba510fda5724de">window_closed</a> (int _idx)</td></tr>
-<tr class="memdesc:af563bafca9eeca70a3ba510fda5724de"><td class="mdescLeft">&#160;</td><td class="mdescRight">signal that is emitted when a window is supposed to be changed  <br /></td></tr>
+<tr class="memdesc:af563bafca9eeca70a3ba510fda5724de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signal that is emitted when a window is supposed to be changed.  <br /></td></tr>
 <tr class="separator:af563bafca9eeca70a3ba510fda5724de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -80,11 +87,14 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:afffc2efac81c97a32f1822ef0bad3b75"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae69e4bb5b46189725c91524692ca2eda"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_plots_window.html#ae69e4bb5b46189725c91524692ca2eda">~PlotsWindow</a> ()</td></tr>
 <tr class="separator:ae69e4bb5b46189725c91524692ca2eda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac72947b30a40033918a7b5fdd2577e9a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_plots_window.html#ac72947b30a40033918a7b5fdd2577e9a">paintEvent</a> (QPaintEvent *) override</td></tr>
+<tr class="memdesc:ac72947b30a40033918a7b5fdd2577e9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overriden drawing function.  <br /></td></tr>
+<tr class="separator:ac72947b30a40033918a7b5fdd2577e9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a5592a194e1a9dbe44856a0f5469b0ba1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_plots_window.html#a5592a194e1a9dbe44856a0f5469b0ba1">closeEvent</a> (QCloseEvent *event) override</td></tr>
-<tr class="memdesc:a5592a194e1a9dbe44856a0f5469b0ba1"><td class="mdescLeft">&#160;</td><td class="mdescRight">closeEvent  <br /></td></tr>
+<tr class="memdesc:a5592a194e1a9dbe44856a0f5469b0ba1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overriden funtion that defines a drawing procedure. Used for a language change.  <br /></td></tr>
 <tr class="separator:a5592a194e1a9dbe44856a0f5469b0ba1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
@@ -144,8 +154,8 @@ Private Attributes</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in,out]</td><td class="paramname">parent</td><td></td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">file_name</td><td>- name of the file with data to be visualized on the plots </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">_idx</td><td>- index of this object in QMainWindow::plot_windows vector </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">file_name</td><td>- name of the file with data to be visualized on the plots. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">_idx</td><td>- index of this object in QMainWindow::plot_windows vector. </td></tr>
   </table>
   </dd>
 </dl>
@@ -199,7 +209,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>closeEvent </p>
+<p>Overriden funtion that defines a drawing procedure. Used for a language change. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in,out]</td><td class="paramname">event</td><td></td></tr>
@@ -208,6 +218,65 @@ Private Attributes</h2></td></tr>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="plotswindow_8cpp_source.html#l00117">117</a> of file <a class="el" href="plotswindow_8cpp_source.html">plotswindow.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ac72947b30a40033918a7b5fdd2577e9a" name="ac72947b30a40033918a7b5fdd2577e9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac72947b30a40033918a7b5fdd2577e9a">&#9670;&#160;</a></span>paintEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PlotsWindow::paintEvent </td>
+          <td>(</td>
+          <td class="paramtype">QPaintEvent *&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Overriden drawing function. </p>
+
+<p class="definition">Definition at line <a class="el" href="plotswindow_8cpp_source.html#l00123">123</a> of file <a class="el" href="plotswindow_8cpp_source.html">plotswindow.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a7aae3057a8e93c63e849700770ed22b5" name="a7aae3057a8e93c63e849700770ed22b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7aae3057a8e93c63e849700770ed22b5">&#9670;&#160;</a></span>when_lang_update</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PlotsWindow::when_lang_update </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Repaint a widget when a translation is updated. </p>
+
+<p class="definition">Definition at line <a class="el" href="plotswindow_8cpp_source.html#l00133">133</a> of file <a class="el" href="plotswindow_8cpp_source.html">plotswindow.cpp</a>.</p>
 
 </div>
 </div>
@@ -235,10 +304,10 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>signal that is emitted when a window is supposed to be changed </p>
+<p>Signal that is emitted when a window is supposed to be changed. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">_idx</td><td></td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">_idx</td><td>- the index of a closed window. Needed for a deletion in QMap&lt;int ,PlotsWindow*&gt; plot_windows. </td></tr>
   </table>
   </dd>
 </dl>
@@ -266,7 +335,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="plotswindow_8h_source.html#l00043">43</a> of file <a class="el" href="plotswindow_8h_source.html">plotswindow.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plotswindow_8h_source.html#l00053">53</a> of file <a class="el" href="plotswindow_8h_source.html">plotswindow.h</a>.</p>
 
 </div>
 </div>
@@ -290,7 +359,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="plotswindow_8h_source.html#l00044">44</a> of file <a class="el" href="plotswindow_8h_source.html">plotswindow.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plotswindow_8h_source.html#l00054">54</a> of file <a class="el" href="plotswindow_8h_source.html">plotswindow.h</a>.</p>
 
 </div>
 </div>
@@ -314,7 +383,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="plotswindow_8h_source.html#l00042">42</a> of file <a class="el" href="plotswindow_8h_source.html">plotswindow.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="plotswindow_8h_source.html#l00052">52</a> of file <a class="el" href="plotswindow_8h_source.html">plotswindow.h</a>.</p>
 
 </div>
 </div>

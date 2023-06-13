@@ -53,6 +53,7 @@ $(document).ready(function(){initNavTree('class_main_window.html',''); initResiz
 <a href="#pub-slots">Public Slots</a> &#124;
 <a href="#signals">Signals</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pri-slots">Private Slots</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
@@ -77,9 +78,15 @@ Public Slots</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="signals" name="signals"></a>
 Signals</h2></td></tr>
-<tr class="memitem:adb16f5a0237c9693e436af6b47529cc6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#adb16f5a0237c9693e436af6b47529cc6">new_values</a> (int therm)</td></tr>
-<tr class="memdesc:adb16f5a0237c9693e436af6b47529cc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">emitted when new measurements are received from an external device  <br /></td></tr>
-<tr class="separator:adb16f5a0237c9693e436af6b47529cc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a211081e202d725608ca07c42207fdd8b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a211081e202d725608ca07c42207fdd8b">new_temp</a> (int therm)</td></tr>
+<tr class="memdesc:a211081e202d725608ca07c42207fdd8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">emitted when new measurements are received from an external device  <br /></td></tr>
+<tr class="separator:a211081e202d725608ca07c42207fdd8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a8b76d5a4b85c238612e1493590c445"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a4a8b76d5a4b85c238612e1493590c445">new_sun</a> (int _sunlight)</td></tr>
+<tr class="memdesc:a4a8b76d5a4b85c238612e1493590c445"><td class="mdescLeft">&#160;</td><td class="mdescRight">emitted when new measurements are received from an external device  <br /></td></tr>
+<tr class="separator:a4a8b76d5a4b85c238612e1493590c445"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae48cade726916b2542778685c80e614c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#ae48cade726916b2542778685c80e614c">lang_update</a> ()</td></tr>
+<tr class="memdesc:ae48cade726916b2542778685c80e614c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Message for plot windows to change their language.  <br /></td></tr>
+<tr class="separator:ae48cade726916b2542778685c80e614c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -87,27 +94,39 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a996c5a2b6f77944776856f08ec30858d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae98d00a93bc118200eeef9f9bba1dba7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#ae98d00a93bc118200eeef9f9bba1dba7">~MainWindow</a> ()</td></tr>
 <tr class="separator:ae98d00a93bc118200eeef9f9bba1dba7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a227c9fbd4c9757d4a98c333f8a905e17"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a227c9fbd4c9757d4a98c333f8a905e17">paintEvent</a> (QPaintEvent *) override</td></tr>
+<tr class="memdesc:a227c9fbd4c9757d4a98c333f8a905e17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overriden drawing function.  <br /></td></tr>
+<tr class="separator:a227c9fbd4c9757d4a98c333f8a905e17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:aad75236c74a5c340c3e18749a9b5eb4f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#aad75236c74a5c340c3e18749a9b5eb4f">resizeEvent</a> (QResizeEvent *event) override</td></tr>
+<tr class="memdesc:aad75236c74a5c340c3e18749a9b5eb4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overridden function to provide the plant picture scaling.  <br /></td></tr>
+<tr class="separator:aad75236c74a5c340c3e18749a9b5eb4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-slots" name="pri-slots"></a>
 Private Slots</h2></td></tr>
 <tr class="memitem:ac41b86ebb4c5b8ddcefb43630d83145a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#ac41b86ebb4c5b8ddcefb43630d83145a">on_pushButton_measure_clicked</a> ()</td></tr>
-<tr class="memdesc:ac41b86ebb4c5b8ddcefb43630d83145a"><td class="mdescLeft">&#160;</td><td class="mdescRight">creates connection with a serial port and receives data  <br /></td></tr>
+<tr class="memdesc:ac41b86ebb4c5b8ddcefb43630d83145a"><td class="mdescLeft">&#160;</td><td class="mdescRight">creates a connection with a serial port and receives data  <br /></td></tr>
 <tr class="separator:ac41b86ebb4c5b8ddcefb43630d83145a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a65cf5cbd0025ef76431ca4b7dc059ec8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a65cf5cbd0025ef76431ca4b7dc059ec8">on_actionWybierz_port_szeregowy_triggered</a> ()</td></tr>
-<tr class="memdesc:a65cf5cbd0025ef76431ca4b7dc059ec8"><td class="mdescLeft">&#160;</td><td class="mdescRight">on_actionWybierz_port_szeregowy_triggered  <br /></td></tr>
+<tr class="memdesc:a65cf5cbd0025ef76431ca4b7dc059ec8"><td class="mdescLeft">&#160;</td><td class="mdescRight">show a window with a serial port connection configuration  <br /></td></tr>
 <tr class="separator:a65cf5cbd0025ef76431ca4b7dc059ec8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c2cb53d579f2ad515e3bba42dd284b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a4c2cb53d579f2ad515e3bba42dd284b9">on_actionWykresy_triggered</a> ()</td></tr>
-<tr class="memdesc:a4c2cb53d579f2ad515e3bba42dd284b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">on_actionWykresy_triggered  <br /></td></tr>
+<tr class="memdesc:a4c2cb53d579f2ad515e3bba42dd284b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">show a new window with plots and the data from a current file  <br /></td></tr>
 <tr class="separator:a4c2cb53d579f2ad515e3bba42dd284b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af6fcebbe498d831cb18cfb4206044762"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#af6fcebbe498d831cb18cfb4206044762">on_actionNowa_seria_triggered</a> ()</td></tr>
-<tr class="memdesc:af6fcebbe498d831cb18cfb4206044762"><td class="mdescLeft">&#160;</td><td class="mdescRight">on_actionNowa_seria_triggered  <br /></td></tr>
+<tr class="memdesc:af6fcebbe498d831cb18cfb4206044762"><td class="mdescLeft">&#160;</td><td class="mdescRight">creates a new file for a measurement data  <br /></td></tr>
 <tr class="separator:af6fcebbe498d831cb18cfb4206044762"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3f85796ac70d169911968bd0d4910469"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a3f85796ac70d169911968bd0d4910469">on_actionWybierz_serie_triggered</a> ()</td></tr>
-<tr class="memdesc:a3f85796ac70d169911968bd0d4910469"><td class="mdescLeft">&#160;</td><td class="mdescRight">on_actionWybierz_serie_triggered  <br /></td></tr>
+<tr class="memdesc:a3f85796ac70d169911968bd0d4910469"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a series file choosen by the user as an active one.  <br /></td></tr>
 <tr class="separator:a3f85796ac70d169911968bd0d4910469"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a72c41a777ee634839246b4f7a068f579"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a72c41a777ee634839246b4f7a068f579">on_actionZapisz_pomiar_triggered</a> ()</td></tr>
-<tr class="memdesc:a72c41a777ee634839246b4f7a068f579"><td class="mdescLeft">&#160;</td><td class="mdescRight">on_actionZapisz_pomiar_triggered  <br /></td></tr>
+<tr class="memdesc:a72c41a777ee634839246b4f7a068f579"><td class="mdescLeft">&#160;</td><td class="mdescRight">Insert the data from serial port to an active series file.  <br /></td></tr>
 <tr class="separator:a72c41a777ee634839246b4f7a068f579"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1957ad75cbb742933806b1e524241807"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a1957ad75cbb742933806b1e524241807">on_actionJ_zyk_Language_triggered</a> ()</td></tr>
+<tr class="memdesc:a1957ad75cbb742933806b1e524241807"><td class="mdescLeft">&#160;</td><td class="mdescRight">Show a dialog for a langauge selection.  <br /></td></tr>
+<tr class="separator:a1957ad75cbb742933806b1e524241807"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
@@ -120,8 +139,8 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a35466a70ed47252a0191168126a352a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3f67911d84b8c60691917b583282bd6e"><td class="memItemLeft" align="right" valign="top">QLabel *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a3f67911d84b8c60691917b583282bd6e">file_info</a></td></tr>
 <tr class="separator:a3f67911d84b8c60691917b583282bd6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8a2e71cd34ee6ca879833d84c0ea225e"><td class="memItemLeft" align="right" valign="top">QPixmap *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a8a2e71cd34ee6ca879833d84c0ea225e">plantPicture</a></td></tr>
-<tr class="separator:a8a2e71cd34ee6ca879833d84c0ea225e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0388509cc7fb379dcb3e1c4164b575b"><td class="memItemLeft" align="right" valign="top">QPixmap&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#ac0388509cc7fb379dcb3e1c4164b575b">plantPicture</a></td></tr>
+<tr class="separator:ac0388509cc7fb379dcb3e1c4164b575b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9029411f21223671e111ff617fcece6a"><td class="memItemLeft" align="right" valign="top">QSerialPort *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a9029411f21223671e111ff617fcece6a">serial</a></td></tr>
 <tr class="separator:a9029411f21223671e111ff617fcece6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4f0eb78d379d552457465565093dbb34"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a4f0eb78d379d552457465565093dbb34">serial_buffer</a></td></tr>
@@ -146,10 +165,12 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a4edf1a14f965a1fab83a88cb6ef65b92"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa4eb624f0b2438afb097d352963a7e05"><td class="memItemLeft" align="right" valign="top">QPixmap *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#aa4eb624f0b2438afb097d352963a7e05">thermo</a></td></tr>
 <tr class="separator:aa4eb624f0b2438afb097d352963a7e05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab490c87a05a6b375d3aa172ba0fa0a94"><td class="memItemLeft" align="right" valign="top">QTranslator *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#ab490c87a05a6b375d3aa172ba0fa0a94">lang</a></td></tr>
+<tr class="separator:ab490c87a05a6b375d3aa172ba0fa0a94"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="mainwindow_8h_source.html#l00018">18</a> of file <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mainwindow_8h_source.html#l00021">21</a> of file <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a996c5a2b6f77944776856f08ec30858d" name="a996c5a2b6f77944776856f08ec30858d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a996c5a2b6f77944776856f08ec30858d">&#9670;&#160;</a></span>MainWindow()</h2>
@@ -186,7 +207,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mainwindow_8cpp_source.html#l00027">27</a> of file <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mainwindow_8cpp_source.html#l00042">42</a> of file <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
 
 </div>
 </div>
@@ -215,12 +236,12 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mainwindow_8cpp_source.html#l00161">161</a> of file <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mainwindow_8cpp_source.html#l00191">191</a> of file <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
 
 </div>
 </div>
-<a id="adb16f5a0237c9693e436af6b47529cc6" name="adb16f5a0237c9693e436af6b47529cc6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adb16f5a0237c9693e436af6b47529cc6">&#9670;&#160;</a></span>new_values</h2>
+<a id="ae48cade726916b2542778685c80e614c" name="ae48cade726916b2542778685c80e614c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae48cade726916b2542778685c80e614c">&#9670;&#160;</a></span>lang_update</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -229,7 +250,68 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void MainWindow::new_values </td>
+          <td class="memname">void MainWindow::lang_update </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Message for plot windows to change their language. </p>
+
+</div>
+</div>
+<a id="a4a8b76d5a4b85c238612e1493590c445" name="a4a8b76d5a4b85c238612e1493590c445"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a8b76d5a4b85c238612e1493590c445">&#9670;&#160;</a></span>new_sun</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainWindow::new_sun </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>_sunlight</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>emitted when new measurements are received from an external device </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">_sunlight</td><td>- new value of the sunlight level </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a211081e202d725608ca07c42207fdd8b" name="a211081e202d725608ca07c42207fdd8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a211081e202d725608ca07c42207fdd8b">&#9670;&#160;</a></span>new_temp</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainWindow::new_temp </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>therm</em></td><td>)</td>
@@ -246,10 +328,39 @@ Private Attributes</h2></td></tr>
 <p>emitted when new measurements are received from an external device </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">therm</td><td>Current value of temperature </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">therm</td><td>- Current value of temperature </td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a1957ad75cbb742933806b1e524241807" name="a1957ad75cbb742933806b1e524241807"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1957ad75cbb742933806b1e524241807">&#9670;&#160;</a></span>on_actionJ_zyk_Language_triggered</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainWindow::on_actionJ_zyk_Language_triggered </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Show a dialog for a langauge selection. </p>
+
+<p class="definition">Definition at line <a class="el" href="mainwindow_8cpp_source.html#l00196">196</a> of file <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
 
 </div>
 </div>
@@ -276,9 +387,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>on_actionNowa_seria_triggered </p>
+<p>creates a new file for a measurement data </p>
 
-<p class="definition">Definition at line <a class="el" href="mainwindow_8cpp_source.html#l00095">95</a> of file <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mainwindow_8cpp_source.html#l00128">128</a> of file <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
 
 </div>
 </div>
@@ -305,9 +416,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>on_actionWybierz_port_szeregowy_triggered </p>
+<p>show a window with a serial port connection configuration </p>
 
-<p class="definition">Definition at line <a class="el" href="mainwindow_8cpp_source.html#l00068">68</a> of file <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mainwindow_8cpp_source.html#l00100">100</a> of file <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
 
 </div>
 </div>
@@ -334,9 +445,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>on_actionWybierz_serie_triggered </p>
+<p>Set a series file choosen by the user as an active one. </p>
 
-<p class="definition">Definition at line <a class="el" href="mainwindow_8cpp_source.html#l00116">116</a> of file <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mainwindow_8cpp_source.html#l00149">149</a> of file <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
 
 </div>
 </div>
@@ -363,9 +474,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>on_actionWykresy_triggered </p>
+<p>show a new window with plots and the data from a current file </p>
 
-<p class="definition">Definition at line <a class="el" href="mainwindow_8cpp_source.html#l00076">76</a> of file <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mainwindow_8cpp_source.html#l00108">108</a> of file <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
 
 </div>
 </div>
@@ -392,9 +503,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>on_actionZapisz_pomiar_triggered </p>
+<p>Insert the data from serial port to an active series file. </p>
 
-<p class="definition">Definition at line <a class="el" href="mainwindow_8cpp_source.html#l00141">141</a> of file <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mainwindow_8cpp_source.html#l00172">172</a> of file <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
 
 </div>
 </div>
@@ -421,9 +532,75 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>creates connection with a serial port and receives data </p>
+<p>creates a connection with a serial port and receives data </p>
 
-<p class="definition">Definition at line <a class="el" href="mainwindow_8cpp_source.html#l00034">34</a> of file <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mainwindow_8cpp_source.html#l00049">49</a> of file <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a227c9fbd4c9757d4a98c333f8a905e17" name="a227c9fbd4c9757d4a98c333f8a905e17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a227c9fbd4c9757d4a98c333f8a905e17">&#9670;&#160;</a></span>paintEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainWindow::paintEvent </td>
+          <td>(</td>
+          <td class="paramtype">QPaintEvent *&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Overriden drawing function. </p>
+
+<p class="definition">Definition at line <a class="el" href="mainwindow_8cpp_source.html#l00030">30</a> of file <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aad75236c74a5c340c3e18749a9b5eb4f" name="aad75236c74a5c340c3e18749a9b5eb4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad75236c74a5c340c3e18749a9b5eb4f">&#9670;&#160;</a></span>resizeEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainWindow::resizeEvent </td>
+          <td>(</td>
+          <td class="paramtype">QResizeEvent *&#160;</td>
+          <td class="paramname"><em>event</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Overridden function to provide the plant picture scaling. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">event</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="mainwindow_8cpp_source.html#l00035">35</a> of file <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
 
 </div>
 </div>
@@ -459,7 +636,7 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="mainwindow_8cpp_source.html#l00086">86</a> of file <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mainwindow_8cpp_source.html#l00119">119</a> of file <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
 
 </div>
 </div>
@@ -484,7 +661,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mainwindow_8h_source.html#l00072">72</a> of file <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mainwindow_8h_source.html#l00099">99</a> of file <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
 
 </div>
 </div>
@@ -508,7 +685,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mainwindow_8h_source.html#l00073">73</a> of file <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mainwindow_8h_source.html#l00100">100</a> of file <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
 
 </div>
 </div>
@@ -532,7 +709,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mainwindow_8h_source.html#l00075">75</a> of file <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mainwindow_8h_source.html#l00102">102</a> of file <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
 
 </div>
 </div>
@@ -556,7 +733,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mainwindow_8h_source.html#l00068">68</a> of file <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mainwindow_8h_source.html#l00095">95</a> of file <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
 
 </div>
 </div>
@@ -580,7 +757,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mainwindow_8h_source.html#l00076">76</a> of file <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mainwindow_8h_source.html#l00103">103</a> of file <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
 
 </div>
 </div>
@@ -604,7 +781,31 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mainwindow_8h_source.html#l00076">76</a> of file <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mainwindow_8h_source.html#l00103">103</a> of file <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
+
+</div>
+</div>
+<a id="ab490c87a05a6b375d3aa172ba0fa0a94" name="ab490c87a05a6b375d3aa172ba0fa0a94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab490c87a05a6b375d3aa172ba0fa0a94">&#9670;&#160;</a></span>lang</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QTranslator* MainWindow::lang</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="mainwindow_8h_source.html#l00106">106</a> of file <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
 
 </div>
 </div>
@@ -628,12 +829,12 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mainwindow_8h_source.html#l00077">77</a> of file <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mainwindow_8h_source.html#l00104">104</a> of file <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
 
 </div>
 </div>
-<a id="a8a2e71cd34ee6ca879833d84c0ea225e" name="a8a2e71cd34ee6ca879833d84c0ea225e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8a2e71cd34ee6ca879833d84c0ea225e">&#9670;&#160;</a></span>plantPicture</h2>
+<a id="ac0388509cc7fb379dcb3e1c4164b575b" name="ac0388509cc7fb379dcb3e1c4164b575b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0388509cc7fb379dcb3e1c4164b575b">&#9670;&#160;</a></span>plantPicture</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -642,7 +843,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">QPixmap* MainWindow::plantPicture</td>
+          <td class="memname">QPixmap MainWindow::plantPicture</td>
         </tr>
       </table>
   </td>
@@ -652,7 +853,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mainwindow_8h_source.html#l00069">69</a> of file <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mainwindow_8h_source.html#l00096">96</a> of file <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
 
 </div>
 </div>
@@ -676,7 +877,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mainwindow_8h_source.html#l00074">74</a> of file <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mainwindow_8h_source.html#l00101">101</a> of file <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
 
 </div>
 </div>
@@ -700,7 +901,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mainwindow_8h_source.html#l00070">70</a> of file <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mainwindow_8h_source.html#l00097">97</a> of file <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
 
 </div>
 </div>
@@ -724,7 +925,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mainwindow_8h_source.html#l00071">71</a> of file <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mainwindow_8h_source.html#l00098">98</a> of file <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
 
 </div>
 </div>
@@ -748,7 +949,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mainwindow_8h_source.html#l00076">76</a> of file <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mainwindow_8h_source.html#l00103">103</a> of file <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
 
 </div>
 </div>
@@ -772,7 +973,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mainwindow_8h_source.html#l00076">76</a> of file <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mainwindow_8h_source.html#l00103">103</a> of file <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
 
 </div>
 </div>
@@ -796,7 +997,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mainwindow_8h_source.html#l00078">78</a> of file <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mainwindow_8h_source.html#l00105">105</a> of file <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
 
 </div>
 </div>
@@ -820,7 +1021,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mainwindow_8h_source.html#l00067">67</a> of file <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mainwindow_8h_source.html#l00094">94</a> of file <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
 
 </div>
 </div>

@@ -64,20 +64,20 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"class_q_c_p_axis.html#a24b13374b9b8f75f47eed2ea78c37db9a2eadb509fc0c9a8b35b85c86ec9f3c7a",
-"class_q_c_p_axis_rect.html#a8366903edcb3bb703a8b0be783a85746",
-"class_q_c_p_bars_group.html#a6794ee1a9c81864d627bff6a4b2d64ec",
-"class_q_c_p_curve_data.html#a3586be0cc6f8db15bcdd0c0d03b0c173",
-"class_q_c_p_graph.html#a4c3edacb2a11064bf2e16b322156aeda",
-"class_q_c_p_item_position.html#a2185f45c75ac8cb9be89daeaaad50e37",
-"class_q_c_p_label_painter_private.html#aa5cb5741a8794bb2879229b42c9436cb",
-"class_q_c_p_legend.html#a3efbf879f6936ec337690985e567dc6f",
-"class_q_c_p_polar_axis_angular.html#a70cf79cc9e48b69d5d3ffed2a5e9e331",
-"class_q_c_p_polar_axis_radial.html#aabb97490db2fe069601efbd115948c78",
-"class_q_c_p_scatter_style.html#a85acc4941d7e5c9bca5fa51377a77f49",
-"class_q_c_p_vector2_d.html#aa52a246d168f475a4231c7bdfdac7df1",
-"functions_func.html",
-"qcustomplot_8h.html#accbe1a1a6b69d3db3f495f66375f7301"
+"class_q_c_p_axis.html#a1dc21783965a7c7d9c29c2a75d0a54e1",
+"class_q_c_p_axis_rect.html#a6c89b988d3a0b93c0878f0ebdb5037f4",
+"class_q_c_p_bars_group.html#a314d09aeb2ad209518b9183ca7ffe662",
+"class_q_c_p_curve.html#ac199d41d23865cd68bd7b598308a4433",
+"class_q_c_p_graph.html#a2a958a5c6a6e1e4a03556be88b6fe37e",
+"class_q_c_p_item_pixmap.html#af7a156590b1d59ab21b453c430c56a7c",
+"class_q_c_p_label_painter_private.html#a88c58f8a333dbbf48ae51148dcee9875a9e438d28542452106dbbd690f3853eb1",
+"class_q_c_p_legend.html#a24795c7250eb5214fcea16b7217b4dfb",
+"class_q_c_p_polar_axis_angular.html#a66f5d71105c134e19dc527b704b32461",
+"class_q_c_p_polar_axis_radial.html#a9df8e97dd9a57cc40f06bc2e6023171f",
+"class_q_c_p_scatter_style.html#a74d692aaeb8d4b36d6f7d510e44264b1",
+"class_q_c_p_vector2_d.html#a4a099e1f9788d52cb46deb8139aa6195",
+"functions_eval_f.html",
+"qcustomplot_8h.html#aace10d28a76e84e7380ede1a9cb58274"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

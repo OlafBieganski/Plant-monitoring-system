@@ -14,16 +14,16 @@ Inheritance diagram for RectangleW\+:\begin{figure}[H]
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_rectangle_w_a5fc791812e3fa2d6e9244d933d162ebe}{change\+Height}} (int \+\_\+temperature)
-\begin{DoxyCompactList}\small\item\em change\+Height \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Slot for resizing a mercury bar. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_rectangle_w_a937b261991d04ce71d3d4843c1d3961c}{RectangleW}} (QWidget $\ast$parent=nullptr, int \+\_\+height=0)
-\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_rectangle_w}{RectangleW}}. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Creates a thermometer widget with given heith of a mercury bar. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_rectangle_w_aea769fbfdfca1a29f1009fd53a56e847}{set\+Height}} (int \mbox{\hyperlink{class_rectangle_w_abc99603d5f9f1eab4f08b15dd0d4aee8}{height}})
-\begin{DoxyCompactList}\small\item\em set\+Height \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Set height of mercury bar. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_rectangle_w_a9a461a4b21ca4e472e275ae3a4bcabb3}{paint\+Event}} (QPaint\+Event $\ast$) override
-\begin{DoxyCompactList}\small\item\em paint\+Event \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Overriden drawing function. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -49,13 +49,13 @@ Definition at line \mbox{\hyperlink{rectanglew_8h_source_l00009}{9}} of file \mb
 
 
 
-\mbox{\hyperlink{class_rectangle_w}{RectangleW}}. 
+Creates a thermometer widget with given heith of a mercury bar. 
 
 
 \begin{DoxyParams}[1]{Parameters}
 \mbox{\texttt{ in,out}}  & {\em parent} & \\
 \hline
-\mbox{\texttt{ in}}  & {\em \+\_\+height} & \\
+\mbox{\texttt{ in}}  & {\em \+\_\+height} & -\/ height of a mercury bar. \\
 \hline
 \end{DoxyParams}
 
@@ -73,11 +73,11 @@ Definition at line \mbox{\hyperlink{rectanglew_8cpp_source_l00004}{4}} of file \
 
 
 
-change\+Height 
+Slot for resizing a mercury bar. 
 
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em \+\_\+temperature} & \\
+\mbox{\texttt{ in}}  & {\em \+\_\+temperature} & -\/ The temperature value that will determine a mercury bar height. \\
 \hline
 \end{DoxyParams}
 
@@ -92,7 +92,7 @@ Definition at line \mbox{\hyperlink{rectanglew_8cpp_source_l00051}{51}} of file 
 
 
 
-paint\+Event 
+Overriden drawing function. 
 
 
 
@@ -106,7 +106,7 @@ Definition at line \mbox{\hyperlink{rectanglew_8cpp_source_l00011}{11}} of file 
 
 
 
-set\+Height 
+Set height of mercury bar. 
 
 
 \begin{DoxyParams}[1]{Parameters}

@@ -10,23 +10,30 @@ Inheritance diagram for Plots\+Window\+:\begin{figure}[H]
 \includegraphics[height=2.000000cm]{class_plots_window}
 \end{center}
 \end{figure}
+\doxysubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_plots_window_a7aae3057a8e93c63e849700770ed22b5}{when\+\_\+lang\+\_\+update}} ()
+\begin{DoxyCompactList}\small\item\em Repaint a widget when a translation is updated. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Signals}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_plots_window_af563bafca9eeca70a3ba510fda5724de}{window\+\_\+closed}} (int \+\_\+idx)
-\begin{DoxyCompactList}\small\item\em signal that is emitted when a window is supposed to be changed \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Signal that is emitted when a window is supposed to be changed. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_plots_window_afffc2efac81c97a32f1822ef0bad3b75}{Plots\+Window}} (QWidget $\ast$parent=nullptr, QString file\+\_\+name=\char`\"{}\char`\"{}, int \+\_\+idx=0)
 \begin{DoxyCompactList}\small\item\em Creates a \mbox{\hyperlink{class_plots_window}{Plots\+Window}} object. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_plots_window_ae69e4bb5b46189725c91524692ca2eda}{$\sim$\+Plots\+Window}} ()
-\end{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_plots_window_ac72947b30a40033918a7b5fdd2577e9a}{paint\+Event}} (QPaint\+Event $\ast$) override
+\begin{DoxyCompactList}\small\item\em Overriden drawing function. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_plots_window_a5592a194e1a9dbe44856a0f5469b0ba1}{close\+Event}} (QClose\+Event $\ast$event) override
-\begin{DoxyCompactList}\small\item\em close\+Event \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Overriden funtion that defines a drawing procedure. Used for a language change. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -60,9 +67,9 @@ Creates a \mbox{\hyperlink{class_plots_window}{Plots\+Window}} object.
 \begin{DoxyParams}[1]{Parameters}
 \mbox{\texttt{ in,out}}  & {\em parent} & \\
 \hline
-\mbox{\texttt{ in}}  & {\em file\+\_\+name} & -\/ name of the file with data to be visualized on the plots \\
+\mbox{\texttt{ in}}  & {\em file\+\_\+name} & -\/ name of the file with data to be visualized on the plots. \\
 \hline
-\mbox{\texttt{ in}}  & {\em \+\_\+idx} & -\/ index of this object in QMain\+Window\+::plot\+\_\+windows vector \\
+\mbox{\texttt{ in}}  & {\em \+\_\+idx} & -\/ index of this object in QMain\+Window\+::plot\+\_\+windows vector. \\
 \hline
 \end{DoxyParams}
 \begin{DoxySeeAlso}{See also}
@@ -93,7 +100,7 @@ Definition at line \mbox{\hyperlink{plotswindow_8cpp_source_l00111}{111}} of fil
 
 
 
-close\+Event 
+Overriden funtion that defines a drawing procedure. Used for a language change. 
 
 
 \begin{DoxyParams}[1]{Parameters}
@@ -104,6 +111,34 @@ close\+Event
 
 Definition at line \mbox{\hyperlink{plotswindow_8cpp_source_l00117}{117}} of file \mbox{\hyperlink{plotswindow_8cpp_source}{plotswindow.\+cpp}}.
 
+\mbox{\Hypertarget{class_plots_window_ac72947b30a40033918a7b5fdd2577e9a}\label{class_plots_window_ac72947b30a40033918a7b5fdd2577e9a}} 
+\index{PlotsWindow@{PlotsWindow}!paintEvent@{paintEvent}}
+\index{paintEvent@{paintEvent}!PlotsWindow@{PlotsWindow}}
+\doxysubsubsection{\texorpdfstring{paintEvent()}{paintEvent()}}
+{\footnotesize\ttfamily void Plots\+Window\+::paint\+Event (\begin{DoxyParamCaption}\item[{QPaint\+Event $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Overriden drawing function. 
+
+
+
+Definition at line \mbox{\hyperlink{plotswindow_8cpp_source_l00123}{123}} of file \mbox{\hyperlink{plotswindow_8cpp_source}{plotswindow.\+cpp}}.
+
+\mbox{\Hypertarget{class_plots_window_a7aae3057a8e93c63e849700770ed22b5}\label{class_plots_window_a7aae3057a8e93c63e849700770ed22b5}} 
+\index{PlotsWindow@{PlotsWindow}!when\_lang\_update@{when\_lang\_update}}
+\index{when\_lang\_update@{when\_lang\_update}!PlotsWindow@{PlotsWindow}}
+\doxysubsubsection{\texorpdfstring{when\_lang\_update}{when\_lang\_update}}
+{\footnotesize\ttfamily void Plots\+Window\+::when\+\_\+lang\+\_\+update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Repaint a widget when a translation is updated. 
+
+
+
+Definition at line \mbox{\hyperlink{plotswindow_8cpp_source_l00133}{133}} of file \mbox{\hyperlink{plotswindow_8cpp_source}{plotswindow.\+cpp}}.
+
 \mbox{\Hypertarget{class_plots_window_af563bafca9eeca70a3ba510fda5724de}\label{class_plots_window_af563bafca9eeca70a3ba510fda5724de}} 
 \index{PlotsWindow@{PlotsWindow}!window\_closed@{window\_closed}}
 \index{window\_closed@{window\_closed}!PlotsWindow@{PlotsWindow}}
@@ -112,11 +147,11 @@ Definition at line \mbox{\hyperlink{plotswindow_8cpp_source_l00117}{117}} of fil
 
 
 
-signal that is emitted when a window is supposed to be changed 
+Signal that is emitted when a window is supposed to be changed. 
 
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em \+\_\+idx} & \\
+\mbox{\texttt{ in}}  & {\em \+\_\+idx} & -\/ the index of a closed window. Needed for a deletion in QMap$<$int ,\+Plots\+Window$\ast$$>$ plot\+\_\+windows. \\
 \hline
 \end{DoxyParams}
 
@@ -130,7 +165,7 @@ signal that is emitted when a window is supposed to be changed
 
 
 
-Definition at line \mbox{\hyperlink{plotswindow_8h_source_l00043}{43}} of file \mbox{\hyperlink{plotswindow_8h_source}{plotswindow.\+h}}.
+Definition at line \mbox{\hyperlink{plotswindow_8h_source_l00053}{53}} of file \mbox{\hyperlink{plotswindow_8h_source}{plotswindow.\+h}}.
 
 \mbox{\Hypertarget{class_plots_window_aab216a8a72d0b75aa4d9497be67fcb75}\label{class_plots_window_aab216a8a72d0b75aa4d9497be67fcb75}} 
 \index{PlotsWindow@{PlotsWindow}!idx@{idx}}
@@ -140,7 +175,7 @@ Definition at line \mbox{\hyperlink{plotswindow_8h_source_l00043}{43}} of file \
 
 
 
-Definition at line \mbox{\hyperlink{plotswindow_8h_source_l00044}{44}} of file \mbox{\hyperlink{plotswindow_8h_source}{plotswindow.\+h}}.
+Definition at line \mbox{\hyperlink{plotswindow_8h_source_l00054}{54}} of file \mbox{\hyperlink{plotswindow_8h_source}{plotswindow.\+h}}.
 
 \mbox{\Hypertarget{class_plots_window_ab00117a22d829d7887375a8010e0eeb6}\label{class_plots_window_ab00117a22d829d7887375a8010e0eeb6}} 
 \index{PlotsWindow@{PlotsWindow}!ui@{ui}}
@@ -150,5 +185,5 @@ Definition at line \mbox{\hyperlink{plotswindow_8h_source_l00044}{44}} of file \
 
 
 
-Definition at line \mbox{\hyperlink{plotswindow_8h_source_l00042}{42}} of file \mbox{\hyperlink{plotswindow_8h_source}{plotswindow.\+h}}.
+Definition at line \mbox{\hyperlink{plotswindow_8h_source_l00052}{52}} of file \mbox{\hyperlink{plotswindow_8h_source}{plotswindow.\+h}}.
 

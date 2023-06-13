@@ -37,13 +37,13 @@ signals:
 
 public slots:
     /**
-     * @brief repaint a widget when a translation is updated
+     * @brief Repaint a widget when a translation is updated
      */
     void when_lang_update();
 
 protected:
     /**
-     * @brief Overriden funtion that defines a drawing procedure.
+     * @brief Overriden funtion that defines a drawing procedure. Used for a language change.
      * @param[in,out] event
      */
     void closeEvent(QCloseEvent* event) override;

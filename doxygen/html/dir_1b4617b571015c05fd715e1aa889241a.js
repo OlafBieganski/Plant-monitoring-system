@@ -12,5 +12,7 @@ var dir_1b4617b571015c05fd715e1aa889241a =
     [ "qcustomplot.cpp", "qcustomplot_8cpp.html", null ],
     [ "qcustomplot.h", "qcustomplot_8h.html", "qcustomplot_8h" ],
     [ "rectanglew.cpp", "rectanglew_8cpp.html", null ],
-    [ "rectanglew.h", "rectanglew_8h.html", "rectanglew_8h" ]
+    [ "rectanglew.h", "rectanglew_8h.html", "rectanglew_8h" ],
+    [ "sunw.cpp", "sunw_8cpp.html", null ],
+    [ "sunw.h", "sunw_8h.html", "sunw_8h" ]
 ];

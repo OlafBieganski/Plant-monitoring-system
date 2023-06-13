@@ -18,30 +18,43 @@ void \mbox{\hyperlink{class_main_window_aba1a695008d008064578a94b9c6d6a91}{when\
 \doxysubsection*{Signals}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{class_main_window_adb16f5a0237c9693e436af6b47529cc6}{new\+\_\+values}} (int therm)
-\begin{DoxyCompactList}\small\item\em emitted when new measurements are received from an external device \end{DoxyCompactList}\end{DoxyCompactItemize}
+void \mbox{\hyperlink{class_main_window_a211081e202d725608ca07c42207fdd8b}{new\+\_\+temp}} (int therm)
+\begin{DoxyCompactList}\small\item\em emitted when new measurements are received from an external device \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_a4a8b76d5a4b85c238612e1493590c445}{new\+\_\+sun}} (int \+\_\+sunlight)
+\begin{DoxyCompactList}\small\item\em emitted when new measurements are received from an external device \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_ae48cade726916b2542778685c80e614c}{lang\+\_\+update}} ()
+\begin{DoxyCompactList}\small\item\em Message for plot windows to change their language. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_main_window_a996c5a2b6f77944776856f08ec30858d}{Main\+Window}} (QWidget $\ast$parent=nullptr)
 \item 
 \mbox{\hyperlink{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7}{$\sim$\+Main\+Window}} ()
-\end{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_main_window_a227c9fbd4c9757d4a98c333f8a905e17}{paint\+Event}} (QPaint\+Event $\ast$) override
+\begin{DoxyCompactList}\small\item\em Overriden drawing function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_main_window_aad75236c74a5c340c3e18749a9b5eb4f}{resize\+Event}} (QResize\+Event $\ast$event) override
+\begin{DoxyCompactList}\small\item\em Overridden function to provide the plant picture scaling. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Slots}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_main_window_ac41b86ebb4c5b8ddcefb43630d83145a}{on\+\_\+push\+Button\+\_\+measure\+\_\+clicked}} ()
-\begin{DoxyCompactList}\small\item\em creates connection with a serial port and receives data \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em creates a connection with a serial port and receives data \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_main_window_a65cf5cbd0025ef76431ca4b7dc059ec8}{on\+\_\+action\+Wybierz\+\_\+port\+\_\+szeregowy\+\_\+triggered}} ()
-\begin{DoxyCompactList}\small\item\em on\+\_\+action\+Wybierz\+\_\+port\+\_\+szeregowy\+\_\+triggered \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em show a window with a serial port connection configuration \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_main_window_a4c2cb53d579f2ad515e3bba42dd284b9}{on\+\_\+action\+Wykresy\+\_\+triggered}} ()
-\begin{DoxyCompactList}\small\item\em on\+\_\+action\+Wykresy\+\_\+triggered \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em show a new window with plots and the data from a current file \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_main_window_af6fcebbe498d831cb18cfb4206044762}{on\+\_\+action\+Nowa\+\_\+seria\+\_\+triggered}} ()
-\begin{DoxyCompactList}\small\item\em on\+\_\+action\+Nowa\+\_\+seria\+\_\+triggered \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em creates a new file for a measurement data \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_main_window_a3f85796ac70d169911968bd0d4910469}{on\+\_\+action\+Wybierz\+\_\+serie\+\_\+triggered}} ()
-\begin{DoxyCompactList}\small\item\em on\+\_\+action\+Wybierz\+\_\+serie\+\_\+triggered \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Set a series file choosen by the user as an active one. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_main_window_a72c41a777ee634839246b4f7a068f579}{on\+\_\+action\+Zapisz\+\_\+pomiar\+\_\+triggered}} ()
-\begin{DoxyCompactList}\small\item\em on\+\_\+action\+Zapisz\+\_\+pomiar\+\_\+triggered \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Insert the data from serial port to an active series file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_a1957ad75cbb742933806b1e524241807}{on\+\_\+action\+J\+\_\+zyk\+\_\+\+Language\+\_\+triggered}} ()
+\begin{DoxyCompactList}\small\item\em Show a dialog for a langauge selection. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -54,7 +67,7 @@ Ui\+::\+Main\+Window $\ast$ \mbox{\hyperlink{class_main_window_a35466a70ed47252a
 \item 
 QLabel $\ast$ \mbox{\hyperlink{class_main_window_a3f67911d84b8c60691917b583282bd6e}{file\+\_\+info}}
 \item 
-QPixmap $\ast$ \mbox{\hyperlink{class_main_window_a8a2e71cd34ee6ca879833d84c0ea225e}{plant\+Picture}}
+QPixmap \mbox{\hyperlink{class_main_window_ac0388509cc7fb379dcb3e1c4164b575b}{plant\+Picture}}
 \item 
 QSerial\+Port $\ast$ \mbox{\hyperlink{class_main_window_a9029411f21223671e111ff617fcece6a}{serial}}
 \item 
@@ -79,13 +92,15 @@ int \mbox{\hyperlink{class_main_window_afba630aa201c443db23a32a8208eaeb5}{sunlig
 QDate\+Time \mbox{\hyperlink{class_main_window_a4edf1a14f965a1fab83a88cb6ef65b92}{measure\+Date\+Time}}
 \item 
 QPixmap $\ast$ \mbox{\hyperlink{class_main_window_aa4eb624f0b2438afb097d352963a7e05}{thermo}}
+\item 
+QTranslator $\ast$ \mbox{\hyperlink{class_main_window_ab490c87a05a6b375d3aa172ba0fa0a94}{lang}}
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 
 
-Definition at line \mbox{\hyperlink{mainwindow_8h_source_l00018}{18}} of file \mbox{\hyperlink{mainwindow_8h_source}{mainwindow.\+h}}.
+Definition at line \mbox{\hyperlink{mainwindow_8h_source_l00021}{21}} of file \mbox{\hyperlink{mainwindow_8h_source}{mainwindow.\+h}}.
 
 
 
@@ -108,7 +123,7 @@ Definition at line \mbox{\hyperlink{mainwindow_8cpp_source_l00008}{8}} of file \
 
 
 
-Definition at line \mbox{\hyperlink{mainwindow_8cpp_source_l00027}{27}} of file \mbox{\hyperlink{mainwindow_8cpp_source}{mainwindow.\+cpp}}.
+Definition at line \mbox{\hyperlink{mainwindow_8cpp_source_l00042}{42}} of file \mbox{\hyperlink{mainwindow_8cpp_source}{mainwindow.\+cpp}}.
 
 
 
@@ -121,13 +136,23 @@ Definition at line \mbox{\hyperlink{mainwindow_8cpp_source_l00027}{27}} of file 
 
 
 
-Definition at line \mbox{\hyperlink{mainwindow_8cpp_source_l00161}{161}} of file \mbox{\hyperlink{mainwindow_8cpp_source}{mainwindow.\+cpp}}.
+Definition at line \mbox{\hyperlink{mainwindow_8cpp_source_l00191}{191}} of file \mbox{\hyperlink{mainwindow_8cpp_source}{mainwindow.\+cpp}}.
 
-\mbox{\Hypertarget{class_main_window_adb16f5a0237c9693e436af6b47529cc6}\label{class_main_window_adb16f5a0237c9693e436af6b47529cc6}} 
-\index{MainWindow@{MainWindow}!new\_values@{new\_values}}
-\index{new\_values@{new\_values}!MainWindow@{MainWindow}}
-\doxysubsubsection{\texorpdfstring{new\_values}{new\_values}}
-{\footnotesize\ttfamily void Main\+Window\+::new\+\_\+values (\begin{DoxyParamCaption}\item[{int}]{therm }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+\mbox{\Hypertarget{class_main_window_ae48cade726916b2542778685c80e614c}\label{class_main_window_ae48cade726916b2542778685c80e614c}} 
+\index{MainWindow@{MainWindow}!lang\_update@{lang\_update}}
+\index{lang\_update@{lang\_update}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{lang\_update}{lang\_update}}
+{\footnotesize\ttfamily void Main\+Window\+::lang\+\_\+update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Message for plot windows to change their language. 
+
+\mbox{\Hypertarget{class_main_window_a4a8b76d5a4b85c238612e1493590c445}\label{class_main_window_a4a8b76d5a4b85c238612e1493590c445}} 
+\index{MainWindow@{MainWindow}!new\_sun@{new\_sun}}
+\index{new\_sun@{new\_sun}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{new\_sun}{new\_sun}}
+{\footnotesize\ttfamily void Main\+Window\+::new\+\_\+sun (\begin{DoxyParamCaption}\item[{int}]{\+\_\+sunlight }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
 
 
 
@@ -135,9 +160,38 @@ emitted when new measurements are received from an external device
 
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em therm} & Current value of temperature \\
+\mbox{\texttt{ in}}  & {\em \+\_\+sunlight} & -\/ new value of the sunlight level \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{class_main_window_a211081e202d725608ca07c42207fdd8b}\label{class_main_window_a211081e202d725608ca07c42207fdd8b}} 
+\index{MainWindow@{MainWindow}!new\_temp@{new\_temp}}
+\index{new\_temp@{new\_temp}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{new\_temp}{new\_temp}}
+{\footnotesize\ttfamily void Main\+Window\+::new\+\_\+temp (\begin{DoxyParamCaption}\item[{int}]{therm }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+emitted when new measurements are received from an external device 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em therm} & -\/ Current value of temperature \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_main_window_a1957ad75cbb742933806b1e524241807}\label{class_main_window_a1957ad75cbb742933806b1e524241807}} 
+\index{MainWindow@{MainWindow}!on\_actionJ\_zyk\_Language\_triggered@{on\_actionJ\_zyk\_Language\_triggered}}
+\index{on\_actionJ\_zyk\_Language\_triggered@{on\_actionJ\_zyk\_Language\_triggered}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{on\_actionJ\_zyk\_Language\_triggered}{on\_actionJ\_zyk\_Language\_triggered}}
+{\footnotesize\ttfamily void Main\+Window\+::on\+\_\+action\+J\+\_\+zyk\+\_\+\+Language\+\_\+triggered (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Show a dialog for a langauge selection. 
+
+
+
+Definition at line \mbox{\hyperlink{mainwindow_8cpp_source_l00196}{196}} of file \mbox{\hyperlink{mainwindow_8cpp_source}{mainwindow.\+cpp}}.
+
 \mbox{\Hypertarget{class_main_window_af6fcebbe498d831cb18cfb4206044762}\label{class_main_window_af6fcebbe498d831cb18cfb4206044762}} 
 \index{MainWindow@{MainWindow}!on\_actionNowa\_seria\_triggered@{on\_actionNowa\_seria\_triggered}}
 \index{on\_actionNowa\_seria\_triggered@{on\_actionNowa\_seria\_triggered}!MainWindow@{MainWindow}}
@@ -146,11 +200,11 @@ emitted when new measurements are received from an external device
 
 
 
-on\+\_\+action\+Nowa\+\_\+seria\+\_\+triggered 
+creates a new file for a measurement data 
 
 
 
-Definition at line \mbox{\hyperlink{mainwindow_8cpp_source_l00095}{95}} of file \mbox{\hyperlink{mainwindow_8cpp_source}{mainwindow.\+cpp}}.
+Definition at line \mbox{\hyperlink{mainwindow_8cpp_source_l00128}{128}} of file \mbox{\hyperlink{mainwindow_8cpp_source}{mainwindow.\+cpp}}.
 
 \mbox{\Hypertarget{class_main_window_a65cf5cbd0025ef76431ca4b7dc059ec8}\label{class_main_window_a65cf5cbd0025ef76431ca4b7dc059ec8}} 
 \index{MainWindow@{MainWindow}!on\_actionWybierz\_port\_szeregowy\_triggered@{on\_actionWybierz\_port\_szeregowy\_triggered}}
@@ -160,11 +214,11 @@ Definition at line \mbox{\hyperlink{mainwindow_8cpp_source_l00095}{95}} of file 
 
 
 
-on\+\_\+action\+Wybierz\+\_\+port\+\_\+szeregowy\+\_\+triggered 
+show a window with a serial port connection configuration 
 
 
 
-Definition at line \mbox{\hyperlink{mainwindow_8cpp_source_l00068}{68}} of file \mbox{\hyperlink{mainwindow_8cpp_source}{mainwindow.\+cpp}}.
+Definition at line \mbox{\hyperlink{mainwindow_8cpp_source_l00100}{100}} of file \mbox{\hyperlink{mainwindow_8cpp_source}{mainwindow.\+cpp}}.
 
 \mbox{\Hypertarget{class_main_window_a3f85796ac70d169911968bd0d4910469}\label{class_main_window_a3f85796ac70d169911968bd0d4910469}} 
 \index{MainWindow@{MainWindow}!on\_actionWybierz\_serie\_triggered@{on\_actionWybierz\_serie\_triggered}}
@@ -174,11 +228,11 @@ Definition at line \mbox{\hyperlink{mainwindow_8cpp_source_l00068}{68}} of file 
 
 
 
-on\+\_\+action\+Wybierz\+\_\+serie\+\_\+triggered 
+Set a series file choosen by the user as an active one. 
 
 
 
-Definition at line \mbox{\hyperlink{mainwindow_8cpp_source_l00116}{116}} of file \mbox{\hyperlink{mainwindow_8cpp_source}{mainwindow.\+cpp}}.
+Definition at line \mbox{\hyperlink{mainwindow_8cpp_source_l00149}{149}} of file \mbox{\hyperlink{mainwindow_8cpp_source}{mainwindow.\+cpp}}.
 
 \mbox{\Hypertarget{class_main_window_a4c2cb53d579f2ad515e3bba42dd284b9}\label{class_main_window_a4c2cb53d579f2ad515e3bba42dd284b9}} 
 \index{MainWindow@{MainWindow}!on\_actionWykresy\_triggered@{on\_actionWykresy\_triggered}}
@@ -188,11 +242,11 @@ Definition at line \mbox{\hyperlink{mainwindow_8cpp_source_l00116}{116}} of file
 
 
 
-on\+\_\+action\+Wykresy\+\_\+triggered 
+show a new window with plots and the data from a current file 
 
 
 
-Definition at line \mbox{\hyperlink{mainwindow_8cpp_source_l00076}{76}} of file \mbox{\hyperlink{mainwindow_8cpp_source}{mainwindow.\+cpp}}.
+Definition at line \mbox{\hyperlink{mainwindow_8cpp_source_l00108}{108}} of file \mbox{\hyperlink{mainwindow_8cpp_source}{mainwindow.\+cpp}}.
 
 \mbox{\Hypertarget{class_main_window_a72c41a777ee634839246b4f7a068f579}\label{class_main_window_a72c41a777ee634839246b4f7a068f579}} 
 \index{MainWindow@{MainWindow}!on\_actionZapisz\_pomiar\_triggered@{on\_actionZapisz\_pomiar\_triggered}}
@@ -202,11 +256,11 @@ Definition at line \mbox{\hyperlink{mainwindow_8cpp_source_l00076}{76}} of file 
 
 
 
-on\+\_\+action\+Zapisz\+\_\+pomiar\+\_\+triggered 
+Insert the data from serial port to an active series file. 
 
 
 
-Definition at line \mbox{\hyperlink{mainwindow_8cpp_source_l00141}{141}} of file \mbox{\hyperlink{mainwindow_8cpp_source}{mainwindow.\+cpp}}.
+Definition at line \mbox{\hyperlink{mainwindow_8cpp_source_l00172}{172}} of file \mbox{\hyperlink{mainwindow_8cpp_source}{mainwindow.\+cpp}}.
 
 \mbox{\Hypertarget{class_main_window_ac41b86ebb4c5b8ddcefb43630d83145a}\label{class_main_window_ac41b86ebb4c5b8ddcefb43630d83145a}} 
 \index{MainWindow@{MainWindow}!on\_pushButton\_measure\_clicked@{on\_pushButton\_measure\_clicked}}
@@ -216,11 +270,44 @@ Definition at line \mbox{\hyperlink{mainwindow_8cpp_source_l00141}{141}} of file
 
 
 
-creates connection with a serial port and receives data 
+creates a connection with a serial port and receives data 
 
 
 
-Definition at line \mbox{\hyperlink{mainwindow_8cpp_source_l00034}{34}} of file \mbox{\hyperlink{mainwindow_8cpp_source}{mainwindow.\+cpp}}.
+Definition at line \mbox{\hyperlink{mainwindow_8cpp_source_l00049}{49}} of file \mbox{\hyperlink{mainwindow_8cpp_source}{mainwindow.\+cpp}}.
+
+\mbox{\Hypertarget{class_main_window_a227c9fbd4c9757d4a98c333f8a905e17}\label{class_main_window_a227c9fbd4c9757d4a98c333f8a905e17}} 
+\index{MainWindow@{MainWindow}!paintEvent@{paintEvent}}
+\index{paintEvent@{paintEvent}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{paintEvent()}{paintEvent()}}
+{\footnotesize\ttfamily void Main\+Window\+::paint\+Event (\begin{DoxyParamCaption}\item[{QPaint\+Event $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Overriden drawing function. 
+
+
+
+Definition at line \mbox{\hyperlink{mainwindow_8cpp_source_l00030}{30}} of file \mbox{\hyperlink{mainwindow_8cpp_source}{mainwindow.\+cpp}}.
+
+\mbox{\Hypertarget{class_main_window_aad75236c74a5c340c3e18749a9b5eb4f}\label{class_main_window_aad75236c74a5c340c3e18749a9b5eb4f}} 
+\index{MainWindow@{MainWindow}!resizeEvent@{resizeEvent}}
+\index{resizeEvent@{resizeEvent}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{resizeEvent()}{resizeEvent()}}
+{\footnotesize\ttfamily void Main\+Window\+::resize\+Event (\begin{DoxyParamCaption}\item[{QResize\+Event $\ast$}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}}
+
+
+
+Overridden function to provide the plant picture scaling. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{mainwindow_8cpp_source_l00035}{35}} of file \mbox{\hyperlink{mainwindow_8cpp_source}{mainwindow.\+cpp}}.
 
 \mbox{\Hypertarget{class_main_window_aba1a695008d008064578a94b9c6d6a91}\label{class_main_window_aba1a695008d008064578a94b9c6d6a91}} 
 \index{MainWindow@{MainWindow}!when\_PlotsWindow\_closed@{when\_PlotsWindow\_closed}}
@@ -239,7 +326,7 @@ Deletes \mbox{\hyperlink{class_plots_widget}{Plots\+Widget}} object in plots\+\_
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{mainwindow_8cpp_source_l00086}{86}} of file \mbox{\hyperlink{mainwindow_8cpp_source}{mainwindow.\+cpp}}.
+Definition at line \mbox{\hyperlink{mainwindow_8cpp_source_l00119}{119}} of file \mbox{\hyperlink{mainwindow_8cpp_source}{mainwindow.\+cpp}}.
 
 
 
@@ -252,7 +339,7 @@ Definition at line \mbox{\hyperlink{mainwindow_8cpp_source_l00086}{86}} of file 
 
 
 
-Definition at line \mbox{\hyperlink{mainwindow_8h_source_l00072}{72}} of file \mbox{\hyperlink{mainwindow_8h_source}{mainwindow.\+h}}.
+Definition at line \mbox{\hyperlink{mainwindow_8h_source_l00099}{99}} of file \mbox{\hyperlink{mainwindow_8h_source}{mainwindow.\+h}}.
 
 \mbox{\Hypertarget{class_main_window_a43e6e361567e132c5c70f84e5dbdc849}\label{class_main_window_a43e6e361567e132c5c70f84e5dbdc849}} 
 \index{MainWindow@{MainWindow}!com\_window@{com\_window}}
@@ -262,7 +349,7 @@ Definition at line \mbox{\hyperlink{mainwindow_8h_source_l00072}{72}} of file \m
 
 
 
-Definition at line \mbox{\hyperlink{mainwindow_8h_source_l00073}{73}} of file \mbox{\hyperlink{mainwindow_8h_source}{mainwindow.\+h}}.
+Definition at line \mbox{\hyperlink{mainwindow_8h_source_l00100}{100}} of file \mbox{\hyperlink{mainwindow_8h_source}{mainwindow.\+h}}.
 
 \mbox{\Hypertarget{class_main_window_a01bb76b4959d0eb4564bd3f8e73bb654}\label{class_main_window_a01bb76b4959d0eb4564bd3f8e73bb654}} 
 \index{MainWindow@{MainWindow}!curr\_filename@{curr\_filename}}
@@ -272,7 +359,7 @@ Definition at line \mbox{\hyperlink{mainwindow_8h_source_l00073}{73}} of file \m
 
 
 
-Definition at line \mbox{\hyperlink{mainwindow_8h_source_l00075}{75}} of file \mbox{\hyperlink{mainwindow_8h_source}{mainwindow.\+h}}.
+Definition at line \mbox{\hyperlink{mainwindow_8h_source_l00102}{102}} of file \mbox{\hyperlink{mainwindow_8h_source}{mainwindow.\+h}}.
 
 \mbox{\Hypertarget{class_main_window_a3f67911d84b8c60691917b583282bd6e}\label{class_main_window_a3f67911d84b8c60691917b583282bd6e}} 
 \index{MainWindow@{MainWindow}!file\_info@{file\_info}}
@@ -282,7 +369,7 @@ Definition at line \mbox{\hyperlink{mainwindow_8h_source_l00075}{75}} of file \m
 
 
 
-Definition at line \mbox{\hyperlink{mainwindow_8h_source_l00068}{68}} of file \mbox{\hyperlink{mainwindow_8h_source}{mainwindow.\+h}}.
+Definition at line \mbox{\hyperlink{mainwindow_8h_source_l00095}{95}} of file \mbox{\hyperlink{mainwindow_8h_source}{mainwindow.\+h}}.
 
 \mbox{\Hypertarget{class_main_window_a26e55ff5290b0f8501cc1b54f46ce81b}\label{class_main_window_a26e55ff5290b0f8501cc1b54f46ce81b}} 
 \index{MainWindow@{MainWindow}!ground@{ground}}
@@ -292,7 +379,7 @@ Definition at line \mbox{\hyperlink{mainwindow_8h_source_l00068}{68}} of file \m
 
 
 
-Definition at line \mbox{\hyperlink{mainwindow_8h_source_l00076}{76}} of file \mbox{\hyperlink{mainwindow_8h_source}{mainwindow.\+h}}.
+Definition at line \mbox{\hyperlink{mainwindow_8h_source_l00103}{103}} of file \mbox{\hyperlink{mainwindow_8h_source}{mainwindow.\+h}}.
 
 \mbox{\Hypertarget{class_main_window_a8bd0a2d0c52b84028f1acff3a8888cda}\label{class_main_window_a8bd0a2d0c52b84028f1acff3a8888cda}} 
 \index{MainWindow@{MainWindow}!humidity@{humidity}}
@@ -302,7 +389,17 @@ Definition at line \mbox{\hyperlink{mainwindow_8h_source_l00076}{76}} of file \m
 
 
 
-Definition at line \mbox{\hyperlink{mainwindow_8h_source_l00076}{76}} of file \mbox{\hyperlink{mainwindow_8h_source}{mainwindow.\+h}}.
+Definition at line \mbox{\hyperlink{mainwindow_8h_source_l00103}{103}} of file \mbox{\hyperlink{mainwindow_8h_source}{mainwindow.\+h}}.
+
+\mbox{\Hypertarget{class_main_window_ab490c87a05a6b375d3aa172ba0fa0a94}\label{class_main_window_ab490c87a05a6b375d3aa172ba0fa0a94}} 
+\index{MainWindow@{MainWindow}!lang@{lang}}
+\index{lang@{lang}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{lang}{lang}}
+{\footnotesize\ttfamily QTranslator$\ast$ Main\+Window\+::lang\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{mainwindow_8h_source_l00106}{106}} of file \mbox{\hyperlink{mainwindow_8h_source}{mainwindow.\+h}}.
 
 \mbox{\Hypertarget{class_main_window_a4edf1a14f965a1fab83a88cb6ef65b92}\label{class_main_window_a4edf1a14f965a1fab83a88cb6ef65b92}} 
 \index{MainWindow@{MainWindow}!measureDateTime@{measureDateTime}}
@@ -312,17 +409,17 @@ Definition at line \mbox{\hyperlink{mainwindow_8h_source_l00076}{76}} of file \m
 
 
 
-Definition at line \mbox{\hyperlink{mainwindow_8h_source_l00077}{77}} of file \mbox{\hyperlink{mainwindow_8h_source}{mainwindow.\+h}}.
+Definition at line \mbox{\hyperlink{mainwindow_8h_source_l00104}{104}} of file \mbox{\hyperlink{mainwindow_8h_source}{mainwindow.\+h}}.
 
-\mbox{\Hypertarget{class_main_window_a8a2e71cd34ee6ca879833d84c0ea225e}\label{class_main_window_a8a2e71cd34ee6ca879833d84c0ea225e}} 
+\mbox{\Hypertarget{class_main_window_ac0388509cc7fb379dcb3e1c4164b575b}\label{class_main_window_ac0388509cc7fb379dcb3e1c4164b575b}} 
 \index{MainWindow@{MainWindow}!plantPicture@{plantPicture}}
 \index{plantPicture@{plantPicture}!MainWindow@{MainWindow}}
 \doxysubsubsection{\texorpdfstring{plantPicture}{plantPicture}}
-{\footnotesize\ttfamily QPixmap$\ast$ Main\+Window\+::plant\+Picture\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily QPixmap Main\+Window\+::plant\+Picture\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
-Definition at line \mbox{\hyperlink{mainwindow_8h_source_l00069}{69}} of file \mbox{\hyperlink{mainwindow_8h_source}{mainwindow.\+h}}.
+Definition at line \mbox{\hyperlink{mainwindow_8h_source_l00096}{96}} of file \mbox{\hyperlink{mainwindow_8h_source}{mainwindow.\+h}}.
 
 \mbox{\Hypertarget{class_main_window_a151e93b60309af7dabf9df16e1beb07d}\label{class_main_window_a151e93b60309af7dabf9df16e1beb07d}} 
 \index{MainWindow@{MainWindow}!plot\_windows@{plot\_windows}}
@@ -332,7 +429,7 @@ Definition at line \mbox{\hyperlink{mainwindow_8h_source_l00069}{69}} of file \m
 
 
 
-Definition at line \mbox{\hyperlink{mainwindow_8h_source_l00074}{74}} of file \mbox{\hyperlink{mainwindow_8h_source}{mainwindow.\+h}}.
+Definition at line \mbox{\hyperlink{mainwindow_8h_source_l00101}{101}} of file \mbox{\hyperlink{mainwindow_8h_source}{mainwindow.\+h}}.
 
 \mbox{\Hypertarget{class_main_window_a9029411f21223671e111ff617fcece6a}\label{class_main_window_a9029411f21223671e111ff617fcece6a}} 
 \index{MainWindow@{MainWindow}!serial@{serial}}
@@ -342,7 +439,7 @@ Definition at line \mbox{\hyperlink{mainwindow_8h_source_l00074}{74}} of file \m
 
 
 
-Definition at line \mbox{\hyperlink{mainwindow_8h_source_l00070}{70}} of file \mbox{\hyperlink{mainwindow_8h_source}{mainwindow.\+h}}.
+Definition at line \mbox{\hyperlink{mainwindow_8h_source_l00097}{97}} of file \mbox{\hyperlink{mainwindow_8h_source}{mainwindow.\+h}}.
 
 \mbox{\Hypertarget{class_main_window_a4f0eb78d379d552457465565093dbb34}\label{class_main_window_a4f0eb78d379d552457465565093dbb34}} 
 \index{MainWindow@{MainWindow}!serial\_buffer@{serial\_buffer}}
@@ -352,7 +449,7 @@ Definition at line \mbox{\hyperlink{mainwindow_8h_source_l00070}{70}} of file \m
 
 
 
-Definition at line \mbox{\hyperlink{mainwindow_8h_source_l00071}{71}} of file \mbox{\hyperlink{mainwindow_8h_source}{mainwindow.\+h}}.
+Definition at line \mbox{\hyperlink{mainwindow_8h_source_l00098}{98}} of file \mbox{\hyperlink{mainwindow_8h_source}{mainwindow.\+h}}.
 
 \mbox{\Hypertarget{class_main_window_afba630aa201c443db23a32a8208eaeb5}\label{class_main_window_afba630aa201c443db23a32a8208eaeb5}} 
 \index{MainWindow@{MainWindow}!sunlight@{sunlight}}
@@ -362,7 +459,7 @@ Definition at line \mbox{\hyperlink{mainwindow_8h_source_l00071}{71}} of file \m
 
 
 
-Definition at line \mbox{\hyperlink{mainwindow_8h_source_l00076}{76}} of file \mbox{\hyperlink{mainwindow_8h_source}{mainwindow.\+h}}.
+Definition at line \mbox{\hyperlink{mainwindow_8h_source_l00103}{103}} of file \mbox{\hyperlink{mainwindow_8h_source}{mainwindow.\+h}}.
 
 \mbox{\Hypertarget{class_main_window_a050dcc0f15ed5d9b17a5ab4fb9945db4}\label{class_main_window_a050dcc0f15ed5d9b17a5ab4fb9945db4}} 
 \index{MainWindow@{MainWindow}!temperature@{temperature}}
@@ -372,7 +469,7 @@ Definition at line \mbox{\hyperlink{mainwindow_8h_source_l00076}{76}} of file \m
 
 
 
-Definition at line \mbox{\hyperlink{mainwindow_8h_source_l00076}{76}} of file \mbox{\hyperlink{mainwindow_8h_source}{mainwindow.\+h}}.
+Definition at line \mbox{\hyperlink{mainwindow_8h_source_l00103}{103}} of file \mbox{\hyperlink{mainwindow_8h_source}{mainwindow.\+h}}.
 
 \mbox{\Hypertarget{class_main_window_aa4eb624f0b2438afb097d352963a7e05}\label{class_main_window_aa4eb624f0b2438afb097d352963a7e05}} 
 \index{MainWindow@{MainWindow}!thermo@{thermo}}
@@ -382,7 +479,7 @@ Definition at line \mbox{\hyperlink{mainwindow_8h_source_l00076}{76}} of file \m
 
 
 
-Definition at line \mbox{\hyperlink{mainwindow_8h_source_l00078}{78}} of file \mbox{\hyperlink{mainwindow_8h_source}{mainwindow.\+h}}.
+Definition at line \mbox{\hyperlink{mainwindow_8h_source_l00105}{105}} of file \mbox{\hyperlink{mainwindow_8h_source}{mainwindow.\+h}}.
 
 \mbox{\Hypertarget{class_main_window_a35466a70ed47252a0191168126a352a5}\label{class_main_window_a35466a70ed47252a0191168126a352a5}} 
 \index{MainWindow@{MainWindow}!ui@{ui}}
@@ -392,5 +489,5 @@ Definition at line \mbox{\hyperlink{mainwindow_8h_source_l00078}{78}} of file \m
 
 
 
-Definition at line \mbox{\hyperlink{mainwindow_8h_source_l00067}{67}} of file \mbox{\hyperlink{mainwindow_8h_source}{mainwindow.\+h}}.
+Definition at line \mbox{\hyperlink{mainwindow_8h_source_l00094}{94}} of file \mbox{\hyperlink{mainwindow_8h_source}{mainwindow.\+h}}.
 

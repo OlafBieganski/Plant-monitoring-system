@@ -20,19 +20,23 @@
 \DoxyCodeLine{\Hypertarget{plotswindow_8h_source_l00016}00016\ \textcolor{keyword}{public}:}
 \DoxyCodeLine{\Hypertarget{plotswindow_8h_source_l00024}00024\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_plots_window}{PlotsWindow}}(QWidget\ *parent\ =\ \textcolor{keyword}{nullptr},\ QString\ file\_name\ =\ \textcolor{stringliteral}{"{}"{}},\ \textcolor{keywordtype}{int}\ \_idx\ =\ 0);}
 \DoxyCodeLine{\Hypertarget{plotswindow_8h_source_l00025}00025\ \ \ \ \ \mbox{\hyperlink{class_plots_window_ae69e4bb5b46189725c91524692ca2eda}{\string~PlotsWindow}}();}
-\DoxyCodeLine{\Hypertarget{plotswindow_8h_source_l00026}00026\ }
-\DoxyCodeLine{\Hypertarget{plotswindow_8h_source_l00027}00027\ signals:}
-\DoxyCodeLine{\Hypertarget{plotswindow_8h_source_l00032}\mbox{\hyperlink{class_plots_window_af563bafca9eeca70a3ba510fda5724de}{00032}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_plots_window_af563bafca9eeca70a3ba510fda5724de}{window\_closed}}(\textcolor{keywordtype}{int}\ \_idx);}
-\DoxyCodeLine{\Hypertarget{plotswindow_8h_source_l00033}00033\ }
-\DoxyCodeLine{\Hypertarget{plotswindow_8h_source_l00034}00034\ \textcolor{keyword}{protected}:}
-\DoxyCodeLine{\Hypertarget{plotswindow_8h_source_l00039}00039\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_plots_window_a5592a194e1a9dbe44856a0f5469b0ba1}{closeEvent}}(QCloseEvent*\ event)\ \textcolor{keyword}{override};}
-\DoxyCodeLine{\Hypertarget{plotswindow_8h_source_l00040}00040\ }
-\DoxyCodeLine{\Hypertarget{plotswindow_8h_source_l00041}00041\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{\Hypertarget{plotswindow_8h_source_l00042}\mbox{\hyperlink{class_plots_window_ab00117a22d829d7887375a8010e0eeb6}{00042}}\ \ \ \ \ Ui::PlotsWindow\ *\mbox{\hyperlink{class_plots_window_ab00117a22d829d7887375a8010e0eeb6}{ui}};}
-\DoxyCodeLine{\Hypertarget{plotswindow_8h_source_l00043}\mbox{\hyperlink{class_plots_window_a241842c4152b8d62414a67ba8f5629b7}{00043}}\ \ \ \ \ QString\ \mbox{\hyperlink{class_plots_window_a241842c4152b8d62414a67ba8f5629b7}{curr\_file\_name}};}
-\DoxyCodeLine{\Hypertarget{plotswindow_8h_source_l00044}\mbox{\hyperlink{class_plots_window_aab216a8a72d0b75aa4d9497be67fcb75}{00044}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_plots_window_aab216a8a72d0b75aa4d9497be67fcb75}{idx}};}
-\DoxyCodeLine{\Hypertarget{plotswindow_8h_source_l00045}00045\ \};}
-\DoxyCodeLine{\Hypertarget{plotswindow_8h_source_l00046}00046\ }
-\DoxyCodeLine{\Hypertarget{plotswindow_8h_source_l00047}00047\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ PLOTSWINDOW\_H}}
+\DoxyCodeLine{\Hypertarget{plotswindow_8h_source_l00029}00029\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_plots_window_ac72947b30a40033918a7b5fdd2577e9a}{paintEvent}}(QPaintEvent*)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{plotswindow_8h_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{plotswindow_8h_source_l00031}00031\ signals:}
+\DoxyCodeLine{\Hypertarget{plotswindow_8h_source_l00036}\mbox{\hyperlink{class_plots_window_af563bafca9eeca70a3ba510fda5724de}{00036}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_plots_window_af563bafca9eeca70a3ba510fda5724de}{window\_closed}}(\textcolor{keywordtype}{int}\ \_idx);}
+\DoxyCodeLine{\Hypertarget{plotswindow_8h_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{plotswindow_8h_source_l00038}00038\ \textcolor{keyword}{public}\ slots:}
+\DoxyCodeLine{\Hypertarget{plotswindow_8h_source_l00042}00042\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_plots_window_a7aae3057a8e93c63e849700770ed22b5}{when\_lang\_update}}();}
+\DoxyCodeLine{\Hypertarget{plotswindow_8h_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{plotswindow_8h_source_l00044}00044\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{\Hypertarget{plotswindow_8h_source_l00049}00049\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_plots_window_a5592a194e1a9dbe44856a0f5469b0ba1}{closeEvent}}(QCloseEvent*\ event)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{plotswindow_8h_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{plotswindow_8h_source_l00051}00051\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{plotswindow_8h_source_l00052}\mbox{\hyperlink{class_plots_window_ab00117a22d829d7887375a8010e0eeb6}{00052}}\ \ \ \ \ Ui::PlotsWindow\ *\mbox{\hyperlink{class_plots_window_ab00117a22d829d7887375a8010e0eeb6}{ui}};}
+\DoxyCodeLine{\Hypertarget{plotswindow_8h_source_l00053}\mbox{\hyperlink{class_plots_window_a241842c4152b8d62414a67ba8f5629b7}{00053}}\ \ \ \ \ QString\ \mbox{\hyperlink{class_plots_window_a241842c4152b8d62414a67ba8f5629b7}{curr\_file\_name}};}
+\DoxyCodeLine{\Hypertarget{plotswindow_8h_source_l00054}\mbox{\hyperlink{class_plots_window_aab216a8a72d0b75aa4d9497be67fcb75}{00054}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_plots_window_aab216a8a72d0b75aa4d9497be67fcb75}{idx}};}
+\DoxyCodeLine{\Hypertarget{plotswindow_8h_source_l00055}00055\ \};}
+\DoxyCodeLine{\Hypertarget{plotswindow_8h_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{plotswindow_8h_source_l00057}00057\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ PLOTSWINDOW\_H}}
 
 \end{DoxyCode}

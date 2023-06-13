@@ -1,0 +1,117 @@
+\hypertarget{class_sun_w}{}\doxysection{SunW Class Reference}
+\label{class_sun_w}\index{SunW@{SunW}}
+
+
+{\ttfamily \#include $<$sunw.\+h$>$}
+
+Inheritance diagram for SunW\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_sun_w}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_sun_w_a0fc9d04a5f6ad15f46c048f6fde768f7}{set\+Sunlight\+Level}} (int level)
+\begin{DoxyCompactList}\small\item\em Updates a value of sunlight\+Level. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sun_w_a423205541f8ffff2fa7d5618560ffa48}{SunW}} (QWidget $\ast$parent=nullptr, int \mbox{\hyperlink{class_sun_w_a2ae921eae75e970bc42a09d967c62792}{sunlight\+Level}}=0)
+\begin{DoxyCompactList}\small\item\em Creates a \mbox{\hyperlink{class_sun_w}{SunW}} object that visualizes a sunlight level. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_sun_w_a2f7eb71e3fbf872926d2f120582c493b}{paint\+Event}} (QPaint\+Event $\ast$event) override
+\begin{DoxyCompactList}\small\item\em Overriden drawing function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_sun_w_a2ae921eae75e970bc42a09d967c62792}{sunlight\+Level}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{sunw_8h_source_l00009}{9}} of file \mbox{\hyperlink{sunw_8h_source}{sunw.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_sun_w_a423205541f8ffff2fa7d5618560ffa48}\label{class_sun_w_a423205541f8ffff2fa7d5618560ffa48}} 
+\index{SunW@{SunW}!SunW@{SunW}}
+\index{SunW@{SunW}!SunW@{SunW}}
+\doxysubsubsection{\texorpdfstring{SunW()}{SunW()}}
+{\footnotesize\ttfamily Sun\+W\+::\+SunW (\begin{DoxyParamCaption}\item[{QWidget $\ast$}]{parent = {\ttfamily nullptr},  }\item[{int}]{sunlight\+Level = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Creates a \mbox{\hyperlink{class_sun_w}{SunW}} object that visualizes a sunlight level. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em parent} & \\
+\hline
+\mbox{\texttt{ in}}  & {\em sunlight\+Level} & -\/ determines a brithnes of a sun widget and a number of beams. Range\+: \texorpdfstring{$<$}{<}0; 100\texorpdfstring{$>$}{>}. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{sunw_8cpp_source_l00005}{5}} of file \mbox{\hyperlink{sunw_8cpp_source}{sunw.\+cpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sun_w_a2f7eb71e3fbf872926d2f120582c493b}\label{class_sun_w_a2f7eb71e3fbf872926d2f120582c493b}} 
+\index{SunW@{SunW}!paintEvent@{paintEvent}}
+\index{paintEvent@{paintEvent}!SunW@{SunW}}
+\doxysubsubsection{\texorpdfstring{paintEvent()}{paintEvent()}}
+{\footnotesize\ttfamily void Sun\+W\+::paint\+Event (\begin{DoxyParamCaption}\item[{QPaint\+Event $\ast$}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}}
+
+
+
+Overriden drawing function. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em event} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{sunw_8cpp_source_l00019}{19}} of file \mbox{\hyperlink{sunw_8cpp_source}{sunw.\+cpp}}.
+
+\mbox{\Hypertarget{class_sun_w_a0fc9d04a5f6ad15f46c048f6fde768f7}\label{class_sun_w_a0fc9d04a5f6ad15f46c048f6fde768f7}} 
+\index{SunW@{SunW}!setSunlightLevel@{setSunlightLevel}}
+\index{setSunlightLevel@{setSunlightLevel}!SunW@{SunW}}
+\doxysubsubsection{\texorpdfstring{setSunlightLevel}{setSunlightLevel}}
+{\footnotesize\ttfamily void Sun\+W\+::set\+Sunlight\+Level (\begin{DoxyParamCaption}\item[{int}]{level }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Updates a value of sunlight\+Level. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em level} & -\/ Range\+: \texorpdfstring{$<$}{<}0; 100\texorpdfstring{$>$}{>}. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{sunw_8cpp_source_l00012}{12}} of file \mbox{\hyperlink{sunw_8cpp_source}{sunw.\+cpp}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_sun_w_a2ae921eae75e970bc42a09d967c62792}\label{class_sun_w_a2ae921eae75e970bc42a09d967c62792}} 
+\index{SunW@{SunW}!sunlightLevel@{sunlightLevel}}
+\index{sunlightLevel@{sunlightLevel}!SunW@{SunW}}
+\doxysubsubsection{\texorpdfstring{sunlightLevel}{sunlightLevel}}
+{\footnotesize\ttfamily int Sun\+W\+::sunlight\+Level\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{sunw_8h_source_l00034}{34}} of file \mbox{\hyperlink{sunw_8h_source}{sunw.\+h}}.
+

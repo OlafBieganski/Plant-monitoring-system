@@ -14,157 +14,220 @@
 \DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00010}00010\ \ \ \ \ ,\ ui(new\ \mbox{\hyperlink{namespace_ui}{Ui}}::\mbox{\hyperlink{class_main_window}{MainWindow}})}
 \DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00011}00011\ \{}
 \DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00012}00012\ \ \ \ \ \mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}}-\/>setupUi(\textcolor{keyword}{this});}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00013}00013\ \ \ \ \ \mbox{\hyperlink{class_main_window_a8a2e71cd34ee6ca879833d84c0ea225e}{plantPicture}}\ =\ \textcolor{keyword}{new}\ QPixmap(\textcolor{stringliteral}{"{}C:/Users/olafb/OneDrive/Obrazy/roslina\_zdrowa.png"{}});}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00014}00014\ \ \ \ \ \mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}}-\/>label\_plant\_pic-\/>setPixmap(*\mbox{\hyperlink{class_main_window_a8a2e71cd34ee6ca879833d84c0ea225e}{plantPicture}});}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00015}00015\ \ \ \ \ \mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}}-\/>label\_plant\_pic-\/>setAlignment(Qt::AlignCenter);}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00016}00016\ \ \ \ \ \mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}}-\/>label\_plant\_state-\/>setAlignment(Qt::AlignCenter);}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00017}00017\ \ \ \ \ setWindowTitle(tr(\textcolor{stringliteral}{"{}Plant\ Monitoring\ System"{}}));}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00013}00013\ \ \ \ \ \mbox{\hyperlink{class_main_window_ac0388509cc7fb379dcb3e1c4164b575b}{plantPicture}}\ =\ QPixmap(\textcolor{stringliteral}{"{}:/images/roslina\ zdrowa.jpg"{}});}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00014}00014\ \ \ \ \ \mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}}-\/>label\_plant\_pic-\/>setSizePolicy(QSizePolicy::Expanding,\ QSizePolicy::Expanding);}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00015}00015\ \ \ \ \ \mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}}-\/>label\_plant\_pic-\/>setPixmap(\mbox{\hyperlink{class_main_window_ac0388509cc7fb379dcb3e1c4164b575b}{plantPicture}}.scaled(\mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}}-\/>label\_plant\_pic-\/>size(),\ Qt::KeepAspectRatio,\ Qt::SmoothTransformation));}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00016}00016\ \ \ \ \ \mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}}-\/>label\_plant\_pic-\/>setAlignment(Qt::AlignCenter);}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00017}00017\ \ \ \ \ \mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}}-\/>label\_plant\_state-\/>setAlignment(Qt::AlignCenter);}
 \DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00018}00018\ \ \ \ \ \mbox{\hyperlink{class_main_window_a3f67911d84b8c60691917b583282bd6e}{file\_info}}\ =\ \textcolor{keyword}{new}\ QLabel(\textcolor{keyword}{this});}
 \DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00019}00019\ \ \ \ \ \mbox{\hyperlink{class_main_window_a3f67911d84b8c60691917b583282bd6e}{file\_info}}-\/>setFont(QFont(\textcolor{stringliteral}{"{}Arial"{}},\ 9));}
 \DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00020}00020\ \ \ \ \ \mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}}-\/>statusbar-\/>setFont(QFont(\textcolor{stringliteral}{"{}Arial"{}},\ 9));}
 \DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00021}00021\ \ \ \ \ \mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}}-\/>statusbar-\/>addWidget(\mbox{\hyperlink{class_main_window_a3f67911d84b8c60691917b583282bd6e}{file\_info}});}
 \DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00022}00022\ \ \ \ \ \mbox{\hyperlink{class_main_window_a3f67911d84b8c60691917b583282bd6e}{file\_info}}-\/>setText(tr(\textcolor{stringliteral}{"{}Aktywny\ plik:\ "{}}));}
 \DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00023}00023\ \ \ \ \ \mbox{\hyperlink{class_main_window_a9029411f21223671e111ff617fcece6a}{serial}}\ =\ \textcolor{keyword}{new}\ QSerialPort(\textcolor{keyword}{this});}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00024}00024\ \ \ \ \ connect(\textcolor{keyword}{this},\ \&\mbox{\hyperlink{class_main_window_adb16f5a0237c9693e436af6b47529cc6}{MainWindow::new\_values}},\ \mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}}-\/>thermo\_widget,\ \&\mbox{\hyperlink{class_rectangle_w_a5fc791812e3fa2d6e9244d933d162ebe}{RectangleW::changeHeight}});}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00025}00025\ \}}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00026}00026\ }
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00027}\mbox{\hyperlink{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7}{00027}}\ \mbox{\hyperlink{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7}{MainWindow::\string~MainWindow}}()}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00028}00028\ \{}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00029}00029\ \ \ \ \ \textcolor{keyword}{delete}\ \mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}};}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00030}00030\ \ \ \ \ \mbox{\hyperlink{class_main_window_a9029411f21223671e111ff617fcece6a}{serial}}-\/>close();}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00031}00031\ \ \ \ \ \textcolor{keyword}{delete}\ \mbox{\hyperlink{class_main_window_a9029411f21223671e111ff617fcece6a}{serial}};}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00032}00032\ \}}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00033}00033\ }
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00034}\mbox{\hyperlink{class_main_window_ac41b86ebb4c5b8ddcefb43630d83145a}{00034}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_ac41b86ebb4c5b8ddcefb43630d83145a}{MainWindow::on\_pushButton\_measure\_clicked}}()}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00035}00035\ \{}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00036}00036\ \ \ \ \ \textcolor{keywordflow}{if}(!\mbox{\hyperlink{class_main_window_a9029411f21223671e111ff617fcece6a}{serial}}-\/>isOpen())\{}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00037}00037\ \ \ \ \ \ \ \ \ QMessageBox::information(\textcolor{keyword}{this},\ \textcolor{stringliteral}{"{}Port\ szeregowy"{}},\ \textcolor{stringliteral}{"{}Nie\ podłączono\ do\ żadnego\ portu\ szeregowego"{}});}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00038}00038\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00039}00039\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00040}00040\ \ \ \ \ \textcolor{comment}{//\ wait\ until\ enough\ data\ is\ available}}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00041}00041\ \ \ \ \ \textcolor{keywordflow}{while}(\mbox{\hyperlink{class_main_window_a9029411f21223671e111ff617fcece6a}{serial}}-\/>bytesAvailable()\ <\ 60)\{}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00042}00042\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_main_window_a9029411f21223671e111ff617fcece6a}{serial}}-\/>waitForReadyRead(5000)\ ==\ \textcolor{keyword}{false})\{}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ QMessageBox::information(\textcolor{keyword}{this},\ \mbox{\hyperlink{class_main_window_a9029411f21223671e111ff617fcece6a}{serial}}-\/>portName(),\ \textcolor{stringliteral}{"{}Przekroczono\ czas\ transmisji:\ dane\ nie\ zostały\ odebrane."{}});}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00045}00045\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00046}00046\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00047}00047\ }
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00048}00048\ \ \ \ \ \textcolor{comment}{//\ find\ the\ beginning\ of\ the\ frame\ in\ incoming\ data}}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00049}00049\ \ \ \ \ \textcolor{keywordtype}{char}\ \textcolor{keywordtype}{byte}\ =\ \textcolor{charliteral}{'0'};}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00050}00050\ \ \ \ \ \textcolor{keywordflow}{do}\{}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00051}00051\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_main_window_a9029411f21223671e111ff617fcece6a}{serial}}-\/>read(\&\textcolor{keywordtype}{byte},\ 1);}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00052}00052\ \ \ \ \ \}\textcolor{keywordflow}{while}(\textcolor{keywordtype}{byte}\ !=\ \textcolor{charliteral}{'H'});}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00053}00053\ }
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00054}00054\ \ \ \ \ \textcolor{comment}{//\ parse\ the\ data\ frame}}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00055}00055\ \ \ \ \ \textcolor{keywordtype}{int}\ trash,\ crc8;}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00056}00056\ \ \ \ \ QTextStream\ arduinoData(\mbox{\hyperlink{class_main_window_a9029411f21223671e111ff617fcece6a}{serial}});}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00057}00057\ \ \ \ \ arduinoData\ >>\ trash\ >>\ \mbox{\hyperlink{class_main_window_a050dcc0f15ed5d9b17a5ab4fb9945db4}{temperature}}\ >>\ \mbox{\hyperlink{class_main_window_a8bd0a2d0c52b84028f1acff3a8888cda}{humidity}}\ >>\ \mbox{\hyperlink{class_main_window_a26e55ff5290b0f8501cc1b54f46ce81b}{ground}}\ >>\ \mbox{\hyperlink{class_main_window_afba630aa201c443db23a32a8208eaeb5}{sunlight}}\ >>\ crc8;}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00058}00058\ \ \ \ \ \mbox{\hyperlink{class_main_window_a26e55ff5290b0f8501cc1b54f46ce81b}{ground}}\ =\ ((1020\ -\/\ \mbox{\hyperlink{class_main_window_a26e55ff5290b0f8501cc1b54f46ce81b}{ground}})*100)\ /\ 1020;}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00059}00059\ \ \ \ \ \mbox{\hyperlink{class_main_window_afba630aa201c443db23a32a8208eaeb5}{sunlight}}\ =\ (\mbox{\hyperlink{class_main_window_afba630aa201c443db23a32a8208eaeb5}{sunlight}}\ *\ 100)\ /\ 7000;}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00060}00060\ \ \ \ \ \mbox{\hyperlink{class_main_window_a4edf1a14f965a1fab83a88cb6ef65b92}{measureDateTime}}\ =\ QDateTime::currentDateTime();}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00061}00061\ \ \ \ \ qDebug()\ <<\ \mbox{\hyperlink{class_main_window_a4edf1a14f965a1fab83a88cb6ef65b92}{measureDateTime}}.toString();}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00062}00062\ \ \ \ \ \mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}}-\/>statusbar-\/>showMessage(tr(\textcolor{stringliteral}{"{}Pobrano\ pomiar."{}}),\ 5000);}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00063}00063\ \ \ \ \ emit\ \mbox{\hyperlink{class_main_window_adb16f5a0237c9693e436af6b47529cc6}{new\_values}}(\mbox{\hyperlink{class_main_window_a050dcc0f15ed5d9b17a5ab4fb9945db4}{temperature}});\ \textcolor{comment}{//\ needed\ for\ all\ mesurements}}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00064}00064\ \ \ \ \ \mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}}-\/>lcdGround-\/>display(\mbox{\hyperlink{class_main_window_a26e55ff5290b0f8501cc1b54f46ce81b}{ground}});}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00065}00065\ \ \ \ \ \mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}}-\/>lcd\_humidity-\/>display(\mbox{\hyperlink{class_main_window_a8bd0a2d0c52b84028f1acff3a8888cda}{humidity}});}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00066}00066\ \}}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00067}00067\ }
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00068}\mbox{\hyperlink{class_main_window_a65cf5cbd0025ef76431ca4b7dc059ec8}{00068}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a65cf5cbd0025ef76431ca4b7dc059ec8}{MainWindow::on\_actionWybierz\_port\_szeregowy\_triggered}}()}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00069}00069\ \{}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00070}00070\ \ \ \ \ \mbox{\hyperlink{class_main_window_a43e6e361567e132c5c70f84e5dbdc849}{com\_window}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_port_selection}{PortSelection}}(\textcolor{keyword}{this},\ \mbox{\hyperlink{class_main_window_a9029411f21223671e111ff617fcece6a}{serial}});}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00071}00071\ \ \ \ \ \mbox{\hyperlink{class_main_window_a43e6e361567e132c5c70f84e5dbdc849}{com\_window}}-\/>setModal(\textcolor{keyword}{true});}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00072}00072\ \ \ \ \ \mbox{\hyperlink{class_main_window_a43e6e361567e132c5c70f84e5dbdc849}{com\_window}}-\/>show();}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00073}00073\ \}}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00074}00074\ }
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00075}00075\ }
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00076}\mbox{\hyperlink{class_main_window_a4c2cb53d579f2ad515e3bba42dd284b9}{00076}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a4c2cb53d579f2ad515e3bba42dd284b9}{MainWindow::on\_actionWykresy\_triggered}}()}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00077}00077\ \{}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00078}00078\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ curr\_id\ =\ 0;}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00079}00079\ \ \ \ \ qDebug()\ <<\ curr\_id;}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00080}00080\ \ \ \ \ \mbox{\hyperlink{class_main_window_a151e93b60309af7dabf9df16e1beb07d}{plot\_windows}}.insert(curr\_id,\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_plots_window}{PlotsWindow}}(\textcolor{keyword}{this},\ \mbox{\hyperlink{class_main_window_a01bb76b4959d0eb4564bd3f8e73bb654}{curr\_filename}},\ curr\_id));}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00081}00081\ \ \ \ \ connect(\mbox{\hyperlink{class_main_window_a151e93b60309af7dabf9df16e1beb07d}{plot\_windows}}[curr\_id],\ \&\mbox{\hyperlink{class_plots_window_af563bafca9eeca70a3ba510fda5724de}{PlotsWindow::window\_closed}},\ \textcolor{keyword}{this},\ \&\mbox{\hyperlink{class_main_window_aba1a695008d008064578a94b9c6d6a91}{MainWindow::when\_PlotsWindow\_closed}});}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00082}00082\ \ \ \ \ \mbox{\hyperlink{class_main_window_a151e93b60309af7dabf9df16e1beb07d}{plot\_windows}}[curr\_id]-\/>show();}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00083}00083\ \ \ \ \ curr\_id++;}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00084}00084\ \}}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00085}00085\ }
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00086}\mbox{\hyperlink{class_main_window_aba1a695008d008064578a94b9c6d6a91}{00086}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_aba1a695008d008064578a94b9c6d6a91}{MainWindow::when\_PlotsWindow\_closed}}(\textcolor{keywordtype}{int}\ \_idx)\{}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00087}00087\ \ \ \ \ \mbox{\hyperlink{class_plots_window}{PlotsWindow}}*\ temp\ =\ \mbox{\hyperlink{class_main_window_a151e93b60309af7dabf9df16e1beb07d}{plot\_windows}}[\_idx];}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00088}00088\ \ \ \ \ QMap<int,\ PlotsWindow*>::Iterator\ it\ =\ \mbox{\hyperlink{class_main_window_a151e93b60309af7dabf9df16e1beb07d}{plot\_windows}}.find(\_idx);}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00089}00089\ \ \ \ \ \textcolor{keywordflow}{if}(it\ !=\ \mbox{\hyperlink{class_main_window_a151e93b60309af7dabf9df16e1beb07d}{plot\_windows}}.end())\{}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00090}00090\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_main_window_a151e93b60309af7dabf9df16e1beb07d}{plot\_windows}}.erase(it);}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00091}00091\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00092}00092\ \ \ \ \ \textcolor{keyword}{delete}\ temp;}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00093}00093\ \}}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00094}00094\ }
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00095}\mbox{\hyperlink{class_main_window_af6fcebbe498d831cb18cfb4206044762}{00095}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_af6fcebbe498d831cb18cfb4206044762}{MainWindow::on\_actionNowa\_seria\_triggered}}()}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00096}00096\ \{}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00097}00097\ \ \ \ \ QString\ new\_filename\ =\ QFileDialog::getSaveFileName(\textcolor{keyword}{this},\ tr(\textcolor{stringliteral}{"{}Stwórz\ nową\ serię\ pomiarową"{}}),\ QDir::currentPath(),}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00098}00098\ \ \ \ \ \ \ \ \ tr(\textcolor{stringliteral}{"{}Pliki\ serii\ pomiarowej\ -\/\ dni\ (*.srd);;Pliki\ serii\ pomiarowej\ -\/\ godziny\ (*.srh);;Wszystkie\ pliki\ (*)"{}}));}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00024}00024\ \ \ \ \ connect(\textcolor{keyword}{this},\ \&\mbox{\hyperlink{class_main_window_a211081e202d725608ca07c42207fdd8b}{MainWindow::new\_temp}},\ \mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}}-\/>thermo\_widget,\ \&\mbox{\hyperlink{class_rectangle_w_a5fc791812e3fa2d6e9244d933d162ebe}{RectangleW::changeHeight}});}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00025}00025\ \ \ \ \ connect(\textcolor{keyword}{this},\ \&\mbox{\hyperlink{class_main_window_a4a8b76d5a4b85c238612e1493590c445}{MainWindow::new\_sun}},\ \mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}}-\/>sun\_widget,\ \&\mbox{\hyperlink{class_sun_w_a0fc9d04a5f6ad15f46c048f6fde768f7}{SunW::setSunlightLevel}});}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00026}00026\ \ \ \ \ \mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}}-\/>frame\_temp-\/>setFrameShadow(QFrame::Raised);}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00027}00027\ \ \ \ \ \mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}}-\/>frame\_hum-\/>setFrameShadow(QFrame::Sunken);}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00028}00028\ \}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00030}\mbox{\hyperlink{class_main_window_a227c9fbd4c9757d4a98c333f8a905e17}{00030}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a227c9fbd4c9757d4a98c333f8a905e17}{MainWindow::paintEvent}}(QPaintEvent*)\{}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00031}00031\ \ \ \ \ setWindowTitle(tr(\textcolor{stringliteral}{"{}System\ monitorowania\ roślin"{}}));}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00032}00032\ \ \ \ \ \mbox{\hyperlink{class_main_window_a3f67911d84b8c60691917b583282bd6e}{file\_info}}-\/>setText(tr(\textcolor{stringliteral}{"{}Aktywny\ plik:\ "{}}));}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00033}00033\ \}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00035}\mbox{\hyperlink{class_main_window_aad75236c74a5c340c3e18749a9b5eb4f}{00035}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_aad75236c74a5c340c3e18749a9b5eb4f}{MainWindow::resizeEvent}}(QResizeEvent\ *event)}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00036}00036\ \{}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00037}00037\ \ \ \ \ QMainWindow::resizeEvent(event);}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00038}00038\ \ \ \ \ \textcolor{comment}{//\ Update\ the\ pixmap\ size\ based\ on\ the\ new\ size\ of\ the\ QLabel}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00039}00039\ \ \ \ \ \mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}}-\/>label\_plant\_pic-\/>setPixmap(\mbox{\hyperlink{class_main_window_ac0388509cc7fb379dcb3e1c4164b575b}{plantPicture}}.scaled(\mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}}-\/>label\_plant\_pic-\/>size(),\ Qt::KeepAspectRatio,\ Qt::SmoothTransformation));}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00040}00040\ \}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00042}\mbox{\hyperlink{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7}{00042}}\ \mbox{\hyperlink{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7}{MainWindow::\string~MainWindow}}()}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00043}00043\ \{}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00044}00044\ \ \ \ \ \textcolor{keyword}{delete}\ \mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}};}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00045}00045\ \ \ \ \ \mbox{\hyperlink{class_main_window_a9029411f21223671e111ff617fcece6a}{serial}}-\/>close();}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00046}00046\ \ \ \ \ \textcolor{keyword}{delete}\ \mbox{\hyperlink{class_main_window_a9029411f21223671e111ff617fcece6a}{serial}};}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00047}00047\ \}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00049}\mbox{\hyperlink{class_main_window_ac41b86ebb4c5b8ddcefb43630d83145a}{00049}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_ac41b86ebb4c5b8ddcefb43630d83145a}{MainWindow::on\_pushButton\_measure\_clicked}}()}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00050}00050\ \{}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00051}00051\ \ \ \ \ \textcolor{keywordflow}{if}(!\mbox{\hyperlink{class_main_window_a9029411f21223671e111ff617fcece6a}{serial}}-\/>isOpen())\{}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00052}00052\ \ \ \ \ \ \ \ \ QMessageBox::information(\textcolor{keyword}{this},\ tr(\textcolor{stringliteral}{"{}Port\ szeregowy"{}}),\ tr(\textcolor{stringliteral}{"{}Nie\ podłączono\ do\ żadnego\ portu\ szeregowego"{}}));}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00053}00053\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00054}00054\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00055}00055\ \ \ \ \ \textcolor{comment}{//\ wait\ until\ enough\ data\ is\ available}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00056}00056\ \ \ \ \ \textcolor{keywordflow}{while}(\mbox{\hyperlink{class_main_window_a9029411f21223671e111ff617fcece6a}{serial}}-\/>bytesAvailable()\ <\ 60)\{}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00057}00057\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_main_window_a9029411f21223671e111ff617fcece6a}{serial}}-\/>waitForReadyRead(5000)\ ==\ \textcolor{keyword}{false})\{}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ QMessageBox::information(\textcolor{keyword}{this},\ \mbox{\hyperlink{class_main_window_a9029411f21223671e111ff617fcece6a}{serial}}-\/>portName(),\ tr(\textcolor{stringliteral}{"{}Przekroczono\ czas\ transmisji:\ dane\ nie\ zostały\ odebrane."{}}));}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00060}00060\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00061}00061\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00062}00062\ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00063}00063\ \ \ \ \ \textcolor{comment}{//\ find\ the\ beginning\ of\ the\ frame\ in\ incoming\ data}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00064}00064\ \ \ \ \ \textcolor{keywordtype}{char}\ \textcolor{keywordtype}{byte}\ =\ \textcolor{charliteral}{'0'};}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00065}00065\ \ \ \ \ \textcolor{keywordflow}{do}\{}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00066}00066\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_main_window_a9029411f21223671e111ff617fcece6a}{serial}}-\/>read(\&\textcolor{keywordtype}{byte},\ 1);}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00067}00067\ \ \ \ \ \}\textcolor{keywordflow}{while}(\textcolor{keywordtype}{byte}\ !=\ \textcolor{charliteral}{'H'});}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00069}00069\ \ \ \ \ \textcolor{comment}{//\ parse\ the\ data\ frame}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00070}00070\ \ \ \ \ \textcolor{keywordtype}{int}\ trash,\ crc8;}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00071}00071\ \ \ \ \ QTextStream\ arduinoData(\mbox{\hyperlink{class_main_window_a9029411f21223671e111ff617fcece6a}{serial}});}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00072}00072\ \ \ \ \ arduinoData\ >>\ trash\ >>\ \mbox{\hyperlink{class_main_window_a050dcc0f15ed5d9b17a5ab4fb9945db4}{temperature}}\ >>\ \mbox{\hyperlink{class_main_window_a8bd0a2d0c52b84028f1acff3a8888cda}{humidity}}\ >>\ \mbox{\hyperlink{class_main_window_a26e55ff5290b0f8501cc1b54f46ce81b}{ground}}\ >>\ \mbox{\hyperlink{class_main_window_afba630aa201c443db23a32a8208eaeb5}{sunlight}}\ >>\ crc8;}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00073}00073\ \ \ \ \ \mbox{\hyperlink{class_main_window_a26e55ff5290b0f8501cc1b54f46ce81b}{ground}}\ =\ ((1020\ -\/\ \mbox{\hyperlink{class_main_window_a26e55ff5290b0f8501cc1b54f46ce81b}{ground}})*100)\ /\ 1020;}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00074}00074\ \ \ \ \ \mbox{\hyperlink{class_main_window_afba630aa201c443db23a32a8208eaeb5}{sunlight}}\ =\ (\mbox{\hyperlink{class_main_window_afba630aa201c443db23a32a8208eaeb5}{sunlight}}\ *\ 100)\ /\ 7000;}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00075}00075\ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_main_window_afba630aa201c443db23a32a8208eaeb5}{sunlight}}\ >\ 100)\ \mbox{\hyperlink{class_main_window_afba630aa201c443db23a32a8208eaeb5}{sunlight}}\ =\ 100;}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00076}00076\ \ \ \ \ \mbox{\hyperlink{class_main_window_a4edf1a14f965a1fab83a88cb6ef65b92}{measureDateTime}}\ =\ QDateTime::currentDateTime();}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00077}00077\ \ \ \ \ \mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}}-\/>statusbar-\/>showMessage(tr(\textcolor{stringliteral}{"{}Pobrano\ pomiar."{}}),\ 5000);}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00078}00078\ \ \ \ \ emit\ \mbox{\hyperlink{class_main_window_a211081e202d725608ca07c42207fdd8b}{new\_temp}}(\mbox{\hyperlink{class_main_window_a050dcc0f15ed5d9b17a5ab4fb9945db4}{temperature}});}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00079}00079\ \ \ \ \ emit\ \mbox{\hyperlink{class_main_window_a4a8b76d5a4b85c238612e1493590c445}{new\_sun}}(\mbox{\hyperlink{class_main_window_afba630aa201c443db23a32a8208eaeb5}{sunlight}});}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00080}00080\ \ \ \ \ \mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}}-\/>lcdGround-\/>display(\mbox{\hyperlink{class_main_window_a26e55ff5290b0f8501cc1b54f46ce81b}{ground}});}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00081}00081\ \ \ \ \ \mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}}-\/>lcd\_humidity-\/>display(\mbox{\hyperlink{class_main_window_a8bd0a2d0c52b84028f1acff3a8888cda}{humidity}});}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00082}00082\ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_main_window_a26e55ff5290b0f8501cc1b54f46ce81b}{ground}}\ <\ 10)\{}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00083}00083\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_main_window_ac0388509cc7fb379dcb3e1c4164b575b}{plantPicture}}\ =\ QPixmap(\textcolor{stringliteral}{"{}:/images/roslina4.jpg"{}});}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00084}00084\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}}-\/>label\_plant\_pic-\/>setPixmap(\mbox{\hyperlink{class_main_window_ac0388509cc7fb379dcb3e1c4164b575b}{plantPicture}}.scaled(\mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}}-\/>label\_plant\_pic-\/>size(),\ Qt::KeepAspectRatio,\ Qt::SmoothTransformation));}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00085}00085\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00086}00086\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_main_window_a26e55ff5290b0f8501cc1b54f46ce81b}{ground}}\ <\ 25)\{}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00087}00087\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_main_window_ac0388509cc7fb379dcb3e1c4164b575b}{plantPicture}}\ =\ QPixmap(\textcolor{stringliteral}{"{}:/images/roslina3.jpg"{}});}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00088}00088\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}}-\/>label\_plant\_pic-\/>setPixmap(\mbox{\hyperlink{class_main_window_ac0388509cc7fb379dcb3e1c4164b575b}{plantPicture}}.scaled(\mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}}-\/>label\_plant\_pic-\/>size(),\ Qt::KeepAspectRatio,\ Qt::SmoothTransformation));}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00089}00089\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00090}00090\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_main_window_a26e55ff5290b0f8501cc1b54f46ce81b}{ground}}\ <\ 70)\{}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00091}00091\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_main_window_ac0388509cc7fb379dcb3e1c4164b575b}{plantPicture}}\ =\ QPixmap(\textcolor{stringliteral}{"{}:/images/roslina\ zdrowa.jpg"{}});}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00092}00092\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}}-\/>label\_plant\_pic-\/>setPixmap(\mbox{\hyperlink{class_main_window_ac0388509cc7fb379dcb3e1c4164b575b}{plantPicture}}.scaled(\mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}}-\/>label\_plant\_pic-\/>size(),\ Qt::KeepAspectRatio,\ Qt::SmoothTransformation));}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00093}00093\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00094}00094\ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00095}00095\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_main_window_ac0388509cc7fb379dcb3e1c4164b575b}{plantPicture}}\ =\ QPixmap(\textcolor{stringliteral}{"{}:/images/roslina2.jpg"{}});}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00096}00096\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}}-\/>label\_plant\_pic-\/>setPixmap(\mbox{\hyperlink{class_main_window_ac0388509cc7fb379dcb3e1c4164b575b}{plantPicture}}.scaled(\mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}}-\/>label\_plant\_pic-\/>size(),\ Qt::KeepAspectRatio,\ Qt::SmoothTransformation));}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00097}00097\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00098}00098\ \}}
 \DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00099}00099\ }
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00100}00100\ \ \ \ \ \textcolor{keywordflow}{if}\ (!new\_filename.isEmpty())\ \{}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00101}00101\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_main_window_a01bb76b4959d0eb4564bd3f8e73bb654}{curr\_filename}}\ =\ new\_filename;}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00102}00102\ \ \ \ \ \ \ \ \ QFile\ file\_handler(\mbox{\hyperlink{class_main_window_a01bb76b4959d0eb4564bd3f8e73bb654}{curr\_filename}});}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00103}00103\ \ \ \ \ \ \ \ \ \textcolor{comment}{//QString\ new\_name\ =\ curr\_file\_handle-\/>fileName()\ +\ "{}.srs"{};}}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00104}00104\ \ \ \ \ \ \ \ \ \textcolor{comment}{//curr\_file\_handle-\/>rename(new\_name);}}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00105}00105\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (file\_handler.open(QIODevice::ReadWrite\ |\ QIODevice::Append\ |\ QIODevice::Text))\ \{}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ QTextStream\ out(\&file\_handler);}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00107}00107\ \ \ \ \ \ \ \ \ \ \ \ \ out\ <<\ \textcolor{stringliteral}{"{}\#2808"{}};\ \textcolor{comment}{//magic\ number\ of\ all\ files}}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00108}00108\ \ \ \ \ \ \ \ \ \ \ \ \ file\_handler.close();}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00109}00109\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_main_window_a3f67911d84b8c60691917b583282bd6e}{file\_info}}-\/>setText(tr(\textcolor{stringliteral}{"{}Aktywny\ plik:\ \%1"{}}).arg(\mbox{\hyperlink{class_main_window_ad0ff12d404bdfa15b6116ce7a6e9ed4d}{getFilename}}(\mbox{\hyperlink{class_main_window_a01bb76b4959d0eb4564bd3f8e73bb654}{curr\_filename}})));}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00110}00110\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00111}00111\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00112}00112\ }
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00113}00113\ \}}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00114}00114\ }
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00115}00115\ }
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00116}\mbox{\hyperlink{class_main_window_a3f85796ac70d169911968bd0d4910469}{00116}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a3f85796ac70d169911968bd0d4910469}{MainWindow::on\_actionWybierz\_serie\_triggered}}()}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00117}00117\ \{}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00118}00118\ \ \ \ \ QString\ new\_filename\ =\ QFileDialog::getOpenFileName(\textcolor{keyword}{this},\ tr(\textcolor{stringliteral}{"{}Wybierz\ plik\ serii\ pomiarowej"{}}),\ QDir::currentPath(),}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00119}00119\ \ \ \ \ \ \ \ \ tr(\textcolor{stringliteral}{"{}Pliki\ serii\ pomiarowej\ -\/\ dni\ (*.srd);;Pliki\ serii\ pomiarowej\ -\/\ godziny\ (*.srh);;Wszystkie\ pliki\ (*)"{}}));}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00120}00120\ \ \ \ \ \textcolor{keywordflow}{if}(new\_filename.isEmpty())\ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00121}00121\ \ \ \ \ \mbox{\hyperlink{class_main_window_a01bb76b4959d0eb4564bd3f8e73bb654}{curr\_filename}}\ =\ new\_filename;}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00122}00122\ \ \ \ \ qDebug()\ <<\ new\_filename;}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00123}00123\ \ \ \ \ QFile\ file\_handler(\mbox{\hyperlink{class_main_window_a01bb76b4959d0eb4564bd3f8e73bb654}{curr\_filename}});}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00124}00124\ \ \ \ \ \textcolor{keywordflow}{if}(!file\_handler.open(QIODevice::ReadOnly\ |\ QIODevice::Text))\{}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00125}00125\ \ \ \ \ \ \ \ \ QMessageBox::critical(\textcolor{keyword}{this},\ \textcolor{stringliteral}{"{}Wybierz\ plik\ serii\ pomiarowej"{}},\ \textcolor{stringliteral}{"{}Nie\ udało\ sie\ otworzyć\ pliku"{}});}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00126}00126\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00127}00127\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00128}00128\ \ \ \ \ QTextStream\ file\_stream(\&file\_handler);}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00129}00129\ \ \ \ \ QString\ magic\_nr;}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00130}00130\ \ \ \ \ file\_stream\ >>\ magic\_nr;}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00131}00131\ \ \ \ \ qDebug()\ <<\ magic\_nr;}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00132}00132\ \ \ \ \ \textcolor{keywordflow}{if}(magic\_nr\ !=\ \textcolor{stringliteral}{"{}\#2808"{}})\{}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00133}00133\ \ \ \ \ \ \ \ \ QMessageBox::critical(\textcolor{keyword}{this},\ \textcolor{stringliteral}{"{}Wybierz\ plik\ serii\ pomiarowej"{}},\ \textcolor{stringliteral}{"{}Niepoprawny\ plik."{}});}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00134}00134\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_main_window_a01bb76b4959d0eb4564bd3f8e73bb654}{curr\_filename}}\ =\ \textcolor{stringliteral}{"{}"{}};}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00135}00135\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00136}00136\ \ \ \ \ \mbox{\hyperlink{class_main_window_a3f67911d84b8c60691917b583282bd6e}{file\_info}}-\/>setText(tr(\textcolor{stringliteral}{"{}Aktywny\ plik:\ \%1"{}}).arg(\mbox{\hyperlink{class_main_window_ad0ff12d404bdfa15b6116ce7a6e9ed4d}{getFilename}}(\mbox{\hyperlink{class_main_window_a01bb76b4959d0eb4564bd3f8e73bb654}{curr\_filename}})));}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00137}00137\ \ \ \ \ file\_handler.close();}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00138}00138\ \}}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00139}00139\ }
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00140}00140\ }
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00141}\mbox{\hyperlink{class_main_window_a72c41a777ee634839246b4f7a068f579}{00141}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a72c41a777ee634839246b4f7a068f579}{MainWindow::on\_actionZapisz\_pomiar\_triggered}}()}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00142}00142\ \{}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00143}00143\ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_main_window_a01bb76b4959d0eb4564bd3f8e73bb654}{curr\_filename}}.isEmpty())\{}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00144}00144\ \ \ \ \ \ \ \ \ QMessageBox::information(\textcolor{keyword}{this},\ tr(\textcolor{stringliteral}{"{}Błąd\ zapisu\ do\ pliku"{}}),\ tr(\textcolor{stringliteral}{"{}Nie\ wybrano\ żadnego\ pliku\ serii\ pomiarowej"{}}));}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00145}00145\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00146}00146\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00147}00147\ \ \ \ \ QFile\ file\_handler(\mbox{\hyperlink{class_main_window_a01bb76b4959d0eb4564bd3f8e73bb654}{curr\_filename}});}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00148}00148\ \ \ \ \ \textcolor{keywordflow}{if}(!file\_handler.open(QIODevice::WriteOnly\ |\ QIODevice::Append\ |\ QIODevice::Text))\{}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00149}00149\ \ \ \ \ \ \ \ \ QMessageBox::information(\textcolor{keyword}{this},\ tr(\textcolor{stringliteral}{"{}Błąd\ zapisu\ do\ pliku"{}}),\ tr(\textcolor{stringliteral}{"{}Wybrano\ niepoprawny\ plik:\ \%1"{}}).arg(\mbox{\hyperlink{class_main_window_a01bb76b4959d0eb4564bd3f8e73bb654}{curr\_filename}}));}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00150}00150\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00151}00151\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00152}00152\ \ \ \ \ QTextStream\ file\_stream(\&file\_handler);}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00153}00153\ \ \ \ \ file\_stream\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}}\ <<\ \mbox{\hyperlink{class_main_window_a050dcc0f15ed5d9b17a5ab4fb9945db4}{temperature}}\ <<\ \textcolor{stringliteral}{"{}\ "{}}\ <<\ \mbox{\hyperlink{class_main_window_a8bd0a2d0c52b84028f1acff3a8888cda}{humidity}}\ <<\ \textcolor{stringliteral}{"{}\ "{}}\ <<\ \mbox{\hyperlink{class_main_window_a26e55ff5290b0f8501cc1b54f46ce81b}{ground}}\ <<\ \textcolor{stringliteral}{"{}\ "{}}\ <<\ \mbox{\hyperlink{class_main_window_afba630aa201c443db23a32a8208eaeb5}{sunlight}}\ <<\ \textcolor{stringliteral}{"{}\ "{}};}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00154}00154\ \ \ \ \ qDebug()\ <<\ \mbox{\hyperlink{class_main_window_ad0ff12d404bdfa15b6116ce7a6e9ed4d}{getFilename}}(\mbox{\hyperlink{class_main_window_a01bb76b4959d0eb4564bd3f8e73bb654}{curr\_filename}}).back();}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00155}00155\ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_main_window_ad0ff12d404bdfa15b6116ce7a6e9ed4d}{getFilename}}(\mbox{\hyperlink{class_main_window_a01bb76b4959d0eb4564bd3f8e73bb654}{curr\_filename}}).back()\ ==\ \textcolor{charliteral}{'d'})\ file\_stream\ <<\ \mbox{\hyperlink{class_main_window_a4edf1a14f965a1fab83a88cb6ef65b92}{measureDateTime}}.date().toString(\textcolor{stringliteral}{"{}dd-\/MM-\/yyyy"{}});}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00156}00156\ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_main_window_ad0ff12d404bdfa15b6116ce7a6e9ed4d}{getFilename}}(\mbox{\hyperlink{class_main_window_a01bb76b4959d0eb4564bd3f8e73bb654}{curr\_filename}}).back()\ ==\ \textcolor{charliteral}{'h'})\ file\_stream\ <<\ \mbox{\hyperlink{class_main_window_a4edf1a14f965a1fab83a88cb6ef65b92}{measureDateTime}}.time().toString();}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00157}00157\ \ \ \ \ \mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}}-\/>statusbar-\/>showMessage(tr(\textcolor{stringliteral}{"{}Zapisano\ do\ pliku:\ \%1"{}}).arg(\mbox{\hyperlink{class_main_window_ad0ff12d404bdfa15b6116ce7a6e9ed4d}{getFilename}}(\mbox{\hyperlink{class_main_window_a01bb76b4959d0eb4564bd3f8e73bb654}{curr\_filename}})),\ 5000);}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00158}00158\ \ \ \ \ file\_handler.close();}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00159}00159\ \}}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00160}00160\ }
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00161}\mbox{\hyperlink{class_main_window_ad0ff12d404bdfa15b6116ce7a6e9ed4d}{00161}}\ QString\ \mbox{\hyperlink{class_main_window_ad0ff12d404bdfa15b6116ce7a6e9ed4d}{MainWindow::getFilename}}(\textcolor{keyword}{const}\ QString\&\ path)\{}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00162}00162\ \ \ \ \ QFileInfo\ fileInfo(path);}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00163}00163\ \ \ \ \ \textcolor{keywordflow}{return}\ fileInfo.fileName();}
-\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00164}00164\ \}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00100}\mbox{\hyperlink{class_main_window_a65cf5cbd0025ef76431ca4b7dc059ec8}{00100}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a65cf5cbd0025ef76431ca4b7dc059ec8}{MainWindow::on\_actionWybierz\_port\_szeregowy\_triggered}}()}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00101}00101\ \{}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00102}00102\ \ \ \ \ \mbox{\hyperlink{class_main_window_a43e6e361567e132c5c70f84e5dbdc849}{com\_window}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_port_selection}{PortSelection}}(\textcolor{keyword}{this},\ \mbox{\hyperlink{class_main_window_a9029411f21223671e111ff617fcece6a}{serial}});}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00103}00103\ \ \ \ \ \mbox{\hyperlink{class_main_window_a43e6e361567e132c5c70f84e5dbdc849}{com\_window}}-\/>setModal(\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00104}00104\ \ \ \ \ \mbox{\hyperlink{class_main_window_a43e6e361567e132c5c70f84e5dbdc849}{com\_window}}-\/>show();}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00105}00105\ \}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00106}00106\ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00107}00107\ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00108}\mbox{\hyperlink{class_main_window_a4c2cb53d579f2ad515e3bba42dd284b9}{00108}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a4c2cb53d579f2ad515e3bba42dd284b9}{MainWindow::on\_actionWykresy\_triggered}}()}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00109}00109\ \{}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00110}00110\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ curr\_id\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00111}00111\ \ \ \ \ \mbox{\hyperlink{class_plots_window}{PlotsWindow}}*\ current\_plot\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_plots_window}{PlotsWindow}}(\textcolor{keyword}{this},\ \mbox{\hyperlink{class_main_window_a01bb76b4959d0eb4564bd3f8e73bb654}{curr\_filename}},\ curr\_id);}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00112}00112\ \ \ \ \ connect(\textcolor{keyword}{this},\ \&\mbox{\hyperlink{class_main_window_ae48cade726916b2542778685c80e614c}{MainWindow::lang\_update}},\ current\_plot,\ \&\mbox{\hyperlink{class_plots_window_a7aae3057a8e93c63e849700770ed22b5}{PlotsWindow::when\_lang\_update}});}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00113}00113\ \ \ \ \ \mbox{\hyperlink{class_main_window_a151e93b60309af7dabf9df16e1beb07d}{plot\_windows}}.insert(curr\_id,\ current\_plot);}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00114}00114\ \ \ \ \ connect(\mbox{\hyperlink{class_main_window_a151e93b60309af7dabf9df16e1beb07d}{plot\_windows}}[curr\_id],\ \&\mbox{\hyperlink{class_plots_window_af563bafca9eeca70a3ba510fda5724de}{PlotsWindow::window\_closed}},\ \textcolor{keyword}{this},\ \&\mbox{\hyperlink{class_main_window_aba1a695008d008064578a94b9c6d6a91}{MainWindow::when\_PlotsWindow\_closed}});}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00115}00115\ \ \ \ \ \mbox{\hyperlink{class_main_window_a151e93b60309af7dabf9df16e1beb07d}{plot\_windows}}[curr\_id]-\/>show();}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00116}00116\ \ \ \ \ curr\_id++;}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00117}00117\ \}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00118}00118\ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00119}\mbox{\hyperlink{class_main_window_aba1a695008d008064578a94b9c6d6a91}{00119}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_aba1a695008d008064578a94b9c6d6a91}{MainWindow::when\_PlotsWindow\_closed}}(\textcolor{keywordtype}{int}\ \_idx)\{}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00120}00120\ \ \ \ \ \mbox{\hyperlink{class_plots_window}{PlotsWindow}}*\ temp\ =\ \mbox{\hyperlink{class_main_window_a151e93b60309af7dabf9df16e1beb07d}{plot\_windows}}[\_idx];}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00121}00121\ \ \ \ \ QMap<int,\ PlotsWindow*>::Iterator\ it\ =\ \mbox{\hyperlink{class_main_window_a151e93b60309af7dabf9df16e1beb07d}{plot\_windows}}.find(\_idx);}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00122}00122\ \ \ \ \ \textcolor{keywordflow}{if}(it\ !=\ \mbox{\hyperlink{class_main_window_a151e93b60309af7dabf9df16e1beb07d}{plot\_windows}}.end())\{}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00123}00123\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_main_window_a151e93b60309af7dabf9df16e1beb07d}{plot\_windows}}.erase(it);}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00124}00124\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00125}00125\ \ \ \ \ \textcolor{keyword}{delete}\ temp;}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00126}00126\ \}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00127}00127\ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00128}\mbox{\hyperlink{class_main_window_af6fcebbe498d831cb18cfb4206044762}{00128}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_af6fcebbe498d831cb18cfb4206044762}{MainWindow::on\_actionNowa\_seria\_triggered}}()}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00129}00129\ \{}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00130}00130\ \ \ \ \ QString\ new\_filename\ =\ QFileDialog::getSaveFileName(\textcolor{keyword}{this},\ tr(\textcolor{stringliteral}{"{}Stwórz\ nową\ serię\ pomiarową"{}}),\ QDir::currentPath(),}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00131}00131\ \ \ \ \ \ \ \ \ tr(\textcolor{stringliteral}{"{}Pliki\ serii\ pomiarowej\ -\/\ dni\ (*.srd);;Pliki\ serii\ pomiarowej\ -\/\ godziny\ (*.srh);;Wszystkie\ pliki\ (*)"{}}));}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00132}00132\ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00133}00133\ \ \ \ \ \textcolor{keywordflow}{if}\ (!new\_filename.isEmpty())\ \{}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00134}00134\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_main_window_a01bb76b4959d0eb4564bd3f8e73bb654}{curr\_filename}}\ =\ new\_filename;}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00135}00135\ \ \ \ \ \ \ \ \ QFile\ file\_handler(\mbox{\hyperlink{class_main_window_a01bb76b4959d0eb4564bd3f8e73bb654}{curr\_filename}});}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00136}00136\ \ \ \ \ \ \ \ \ \textcolor{comment}{//QString\ new\_name\ =\ curr\_file\_handle-\/>fileName()\ +\ "{}.srs"{};}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00137}00137\ \ \ \ \ \ \ \ \ \textcolor{comment}{//curr\_file\_handle-\/>rename(new\_name);}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00138}00138\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (file\_handler.open(QIODevice::ReadWrite\ |\ QIODevice::Append\ |\ QIODevice::Text))\ \{}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00139}00139\ \ \ \ \ \ \ \ \ \ \ \ \ QTextStream\ out(\&file\_handler);}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00140}00140\ \ \ \ \ \ \ \ \ \ \ \ \ out\ <<\ \textcolor{stringliteral}{"{}\#2808"{}};\ \textcolor{comment}{//magic\ number\ of\ all\ files}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00141}00141\ \ \ \ \ \ \ \ \ \ \ \ \ file\_handler.close();}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00142}00142\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_main_window_a3f67911d84b8c60691917b583282bd6e}{file\_info}}-\/>setText(tr(\textcolor{stringliteral}{"{}Aktywny\ plik:\ \%1"{}}).arg(\mbox{\hyperlink{class_main_window_ad0ff12d404bdfa15b6116ce7a6e9ed4d}{getFilename}}(\mbox{\hyperlink{class_main_window_a01bb76b4959d0eb4564bd3f8e73bb654}{curr\_filename}})));}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00143}00143\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00144}00144\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00145}00145\ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00146}00146\ \}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00147}00147\ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00148}00148\ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00149}\mbox{\hyperlink{class_main_window_a3f85796ac70d169911968bd0d4910469}{00149}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a3f85796ac70d169911968bd0d4910469}{MainWindow::on\_actionWybierz\_serie\_triggered}}()}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00150}00150\ \{}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00151}00151\ \ \ \ \ QString\ new\_filename\ =\ QFileDialog::getOpenFileName(\textcolor{keyword}{this},\ tr(\textcolor{stringliteral}{"{}Wybierz\ plik\ serii\ pomiarowej"{}}),\ QDir::currentPath(),}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00152}00152\ \ \ \ \ \ \ \ \ tr(\textcolor{stringliteral}{"{}Pliki\ serii\ pomiarowej\ -\/\ dni\ (*.srd);;Pliki\ serii\ pomiarowej\ -\/\ godziny\ (*.srh);;Wszystkie\ pliki\ (*)"{}}));}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00153}00153\ \ \ \ \ \textcolor{keywordflow}{if}(new\_filename.isEmpty())\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00154}00154\ \ \ \ \ \mbox{\hyperlink{class_main_window_a01bb76b4959d0eb4564bd3f8e73bb654}{curr\_filename}}\ =\ new\_filename;}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00155}00155\ \ \ \ \ QFile\ file\_handler(\mbox{\hyperlink{class_main_window_a01bb76b4959d0eb4564bd3f8e73bb654}{curr\_filename}});}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00156}00156\ \ \ \ \ \textcolor{keywordflow}{if}(!file\_handler.open(QIODevice::ReadOnly\ |\ QIODevice::Text))\{}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00157}00157\ \ \ \ \ \ \ \ \ QMessageBox::critical(\textcolor{keyword}{this},\ tr(\textcolor{stringliteral}{"{}Wybierz\ plik\ serii\ pomiarowej"{}}),\ tr(\textcolor{stringliteral}{"{}Nie\ udało\ sie\ otworzyć\ pliku"{}}));}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00158}00158\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00159}00159\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00160}00160\ \ \ \ \ QTextStream\ file\_stream(\&file\_handler);}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00161}00161\ \ \ \ \ QString\ magic\_nr;}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00162}00162\ \ \ \ \ file\_stream\ >>\ magic\_nr;}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00163}00163\ \ \ \ \ \textcolor{keywordflow}{if}(magic\_nr\ !=\ \textcolor{stringliteral}{"{}\#2808"{}})\{}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00164}00164\ \ \ \ \ \ \ \ \ QMessageBox::critical(\textcolor{keyword}{this},\ tr(\textcolor{stringliteral}{"{}Wybierz\ plik\ serii\ pomiarowej"{}}),\ tr(\textcolor{stringliteral}{"{}Niepoprawny\ plik."{}}));}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00165}00165\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_main_window_a01bb76b4959d0eb4564bd3f8e73bb654}{curr\_filename}}\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00166}00166\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00167}00167\ \ \ \ \ \mbox{\hyperlink{class_main_window_a3f67911d84b8c60691917b583282bd6e}{file\_info}}-\/>setText(tr(\textcolor{stringliteral}{"{}Aktywny\ plik:\ \%1"{}}).arg(\mbox{\hyperlink{class_main_window_ad0ff12d404bdfa15b6116ce7a6e9ed4d}{getFilename}}(\mbox{\hyperlink{class_main_window_a01bb76b4959d0eb4564bd3f8e73bb654}{curr\_filename}})));}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00168}00168\ \ \ \ \ file\_handler.close();}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00169}00169\ \}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00170}00170\ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00171}00171\ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00172}\mbox{\hyperlink{class_main_window_a72c41a777ee634839246b4f7a068f579}{00172}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a72c41a777ee634839246b4f7a068f579}{MainWindow::on\_actionZapisz\_pomiar\_triggered}}()}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00173}00173\ \{}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00174}00174\ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_main_window_a01bb76b4959d0eb4564bd3f8e73bb654}{curr\_filename}}.isEmpty())\{}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00175}00175\ \ \ \ \ \ \ \ \ QMessageBox::information(\textcolor{keyword}{this},\ tr(\textcolor{stringliteral}{"{}Błąd\ zapisu\ do\ pliku"{}}),\ tr(\textcolor{stringliteral}{"{}Nie\ wybrano\ żadnego\ pliku\ serii\ pomiarowej"{}}));}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00176}00176\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00177}00177\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00178}00178\ \ \ \ \ QFile\ file\_handler(\mbox{\hyperlink{class_main_window_a01bb76b4959d0eb4564bd3f8e73bb654}{curr\_filename}});}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00179}00179\ \ \ \ \ \textcolor{keywordflow}{if}(!file\_handler.open(QIODevice::WriteOnly\ |\ QIODevice::Append\ |\ QIODevice::Text))\{}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00180}00180\ \ \ \ \ \ \ \ \ QMessageBox::information(\textcolor{keyword}{this},\ tr(\textcolor{stringliteral}{"{}Błąd\ zapisu\ do\ pliku"{}}),\ tr(\textcolor{stringliteral}{"{}Wybrano\ niepoprawny\ plik:\ \%1"{}}).arg(\mbox{\hyperlink{class_main_window_a01bb76b4959d0eb4564bd3f8e73bb654}{curr\_filename}}));}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00181}00181\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00182}00182\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00183}00183\ \ \ \ \ QTextStream\ file\_stream(\&file\_handler);}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00184}00184\ \ \ \ \ file\_stream\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}}\ <<\ \mbox{\hyperlink{class_main_window_a050dcc0f15ed5d9b17a5ab4fb9945db4}{temperature}}\ <<\ \textcolor{stringliteral}{"{}\ "{}}\ <<\ \mbox{\hyperlink{class_main_window_a8bd0a2d0c52b84028f1acff3a8888cda}{humidity}}\ <<\ \textcolor{stringliteral}{"{}\ "{}}\ <<\ \mbox{\hyperlink{class_main_window_a26e55ff5290b0f8501cc1b54f46ce81b}{ground}}\ <<\ \textcolor{stringliteral}{"{}\ "{}}\ <<\ \mbox{\hyperlink{class_main_window_afba630aa201c443db23a32a8208eaeb5}{sunlight}}\ <<\ \textcolor{stringliteral}{"{}\ "{}};}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00185}00185\ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_main_window_ad0ff12d404bdfa15b6116ce7a6e9ed4d}{getFilename}}(\mbox{\hyperlink{class_main_window_a01bb76b4959d0eb4564bd3f8e73bb654}{curr\_filename}}).back()\ ==\ \textcolor{charliteral}{'d'})\ file\_stream\ <<\ \mbox{\hyperlink{class_main_window_a4edf1a14f965a1fab83a88cb6ef65b92}{measureDateTime}}.date().toString(\textcolor{stringliteral}{"{}dd-\/MM-\/yyyy"{}});}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00186}00186\ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_main_window_ad0ff12d404bdfa15b6116ce7a6e9ed4d}{getFilename}}(\mbox{\hyperlink{class_main_window_a01bb76b4959d0eb4564bd3f8e73bb654}{curr\_filename}}).back()\ ==\ \textcolor{charliteral}{'h'})\ file\_stream\ <<\ \mbox{\hyperlink{class_main_window_a4edf1a14f965a1fab83a88cb6ef65b92}{measureDateTime}}.time().toString();}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00187}00187\ \ \ \ \ \mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}}-\/>statusbar-\/>showMessage(tr(\textcolor{stringliteral}{"{}Zapisano\ do\ pliku:\ \%1"{}}).arg(\mbox{\hyperlink{class_main_window_ad0ff12d404bdfa15b6116ce7a6e9ed4d}{getFilename}}(\mbox{\hyperlink{class_main_window_a01bb76b4959d0eb4564bd3f8e73bb654}{curr\_filename}})),\ 5000);}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00188}00188\ \ \ \ \ file\_handler.close();}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00189}00189\ \}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00190}00190\ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00191}\mbox{\hyperlink{class_main_window_ad0ff12d404bdfa15b6116ce7a6e9ed4d}{00191}}\ QString\ \mbox{\hyperlink{class_main_window_ad0ff12d404bdfa15b6116ce7a6e9ed4d}{MainWindow::getFilename}}(\textcolor{keyword}{const}\ QString\&\ path)\{}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00192}00192\ \ \ \ \ QFileInfo\ fileInfo(path);}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00193}00193\ \ \ \ \ \textcolor{keywordflow}{return}\ fileInfo.fileName();}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00194}00194\ \}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00195}00195\ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00196}\mbox{\hyperlink{class_main_window_a1957ad75cbb742933806b1e524241807}{00196}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a1957ad75cbb742933806b1e524241807}{MainWindow::on\_actionJ\_zyk\_Language\_triggered}}()}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00197}00197\ \{}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00198}00198\ \ \ \ \ QStringList\ items;}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00199}00199\ \ \ \ \ items\ <<\ tr(\textcolor{stringliteral}{"{}Polski"{}})\ <<\ tr(\textcolor{stringliteral}{"{}Angielski"{}});}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00200}00200\ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00201}00201\ \ \ \ \ \textcolor{keywordtype}{bool}\ ok;}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00202}00202\ \ \ \ \ QString\ item\ =\ QInputDialog::getItem(\textcolor{keyword}{this},\ tr(\textcolor{stringliteral}{"{}Zmień\ język"{}}),}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00203}00203\ \ \ \ \ \ \ \ \ tr(\textcolor{stringliteral}{"{}Języki:"{}}),\ items,\ 0,\ \textcolor{keyword}{false},\ \&ok);}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00204}00204\ \ \ \ \ \textcolor{keywordflow}{if}\ (ok\ \&\&\ !item.isEmpty())\ \{}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00205}00205\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (item\ ==\ tr(\textcolor{stringliteral}{"{}Angielski"{}}))\ \{}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00206}00206\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_main_window_ab490c87a05a6b375d3aa172ba0fa0a94}{lang}}\ =\ \textcolor{keyword}{new}\ QTranslator();}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00207}00207\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_main_window_ab490c87a05a6b375d3aa172ba0fa0a94}{lang}}-\/>load(\textcolor{stringliteral}{"{}:/lang\_en.qm"{}}))\ \{}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00208}00208\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ qDebug()\ <<\ qApp-\/>installTranslator(\mbox{\hyperlink{class_main_window_ab490c87a05a6b375d3aa172ba0fa0a94}{lang}});}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00209}00209\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ qDebug()\ <<\ \textcolor{stringliteral}{"{}Translation\ installed."{}};}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00210}00210\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}}-\/>retranslateUi(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00211}00211\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00212}00212\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ qDebug()\ <<\ \textcolor{stringliteral}{"{}Failed\ to\ load\ translation."{}};}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00213}00213\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00214}00214\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00215}00215\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (item\ ==\ tr(\textcolor{stringliteral}{"{}Polski"{}}))\ \{}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00216}00216\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_main_window_ab490c87a05a6b375d3aa172ba0fa0a94}{lang}}\ !=\ \textcolor{keyword}{nullptr})\ \{}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00217}00217\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ qDebug()\ <<\ qApp-\/>removeTranslator(\mbox{\hyperlink{class_main_window_ab490c87a05a6b375d3aa172ba0fa0a94}{lang}});}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00218}00218\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ \mbox{\hyperlink{class_main_window_ab490c87a05a6b375d3aa172ba0fa0a94}{lang}};}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00219}00219\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_main_window_ab490c87a05a6b375d3aa172ba0fa0a94}{lang}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00220}00220\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ qDebug()\ <<\ \textcolor{stringliteral}{"{}Translation\ removed."{}};}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00221}00221\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}}-\/>retranslateUi(\textcolor{keyword}{this});\ \ \textcolor{comment}{//\ Reset\ UI\ elements\ to\ default\ language}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00222}00222\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00223}00223\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00224}00224\ \ \ \ \ \ \ \ \ emit\ \mbox{\hyperlink{class_main_window_ae48cade726916b2542778685c80e614c}{lang\_update}}();}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00225}00225\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00226}00226\ \}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8cpp_source_l00227}00227\ }
 
 \end{DoxyCode}

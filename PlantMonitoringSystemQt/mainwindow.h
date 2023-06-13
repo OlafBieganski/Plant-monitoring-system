@@ -31,6 +31,10 @@ public:
     void paintEvent(QPaintEvent*) override;
 
 protected:
+    /**
+     * @brief Overridden function to provide the plant picture scaling
+     * @param event
+     */
     void resizeEvent(QResizeEvent *event) override;
 
 signals:
@@ -45,7 +49,7 @@ signals:
      */
     void new_sun(int _sunlight);
     /**
-     * @brief lang_update
+     * @brief Message for plot windows to change their language
      */
     void lang_update();
 
@@ -74,7 +78,9 @@ private slots:
      * @brief Insert the data from serial port to an active series file
      */
     void on_actionZapisz_pomiar_triggered();
-
+    /**
+     * @brief Show a dialog for a langauge selection
+     */
     void on_actionJ_zyk_Language_triggered();
 
 public slots:
